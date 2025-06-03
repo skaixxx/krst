@@ -264,3 +264,10 @@
     justify-content: center;
     align-items: center;
 }
+.contacts-content-bottom-picture {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

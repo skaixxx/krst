@@ -85,7 +85,7 @@ function Contacts() {
             </div>
             <div className="contacts-content-bottom">
                 <div className="contacts-content-bottom-1">
-                    <img src={mapPicture} alt="map" />
+                    <img className="contacts-content-bottom-picture" src={mapPicture} alt="map" />
                 </div>
             </div>
         </div>
