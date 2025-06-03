@@ -10,7 +10,7 @@ import SpecificEvent from "../components/Events/SpecificEvent/SpecificEvent";
 import NotFound from "../components/404/NotFound";
 const AppRoutes = () => {
     const navbar = [
-        {path: "/Home", element: <MainPage/>},
+        {path: "/", element: <MainPage/>},
         {path: "/History", element: <History/>},
         {path: "/Events", element: <Events/>},
         {path: "/Locations", element: <Locations/>},
