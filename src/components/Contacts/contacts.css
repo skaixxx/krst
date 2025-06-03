@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container-contacts {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 7.320vw;
+    margin-top: 5.49vw;
+    margin-bottom: 10.978vw;
+}
+.title-box-contacts {
+    width: 91.2153%;
+    height: 32.202vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contacts-title-stroke-box {
+    width: 100%;
+    height: 22.7273%;
+    display: flex;
+    justify-content: space-between;
+}
+.contacts-title-big-box {
+    width: 100%;
+    height: 69.3182%;
+    display: flex;
+    justify-content: space-between;
+}
+.contacts-title-container {
+    width: 49.2369%;
+    height: 77.0492%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contacts-title-sub-container {
+    width: 100%;
+    display: flex;
+}
+.contacts-title {
+    font-size: 6.4rem;
+    font-weight: bold;
+    letter-spacing: -5%;
+    line-height: 72.7%;
+}
+.contacts-title1 {
+    color: var(--secondary-color);
+}
+.contacts-title2 {
+    color: var(--accent-color);
+}
+.contacts-title3 {
+    color: var(--secondary-color);
+}
+.contacts-style-element1 {
+    width: 49.2369%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contacts-style-element2 {
+    width: 55.9543%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Форма обратной связи */
+.contact-form {
+    justify-self: end;
+    align-self: flex-end;
+    position: relative;
+    width: 49.2369%;
+    height: 78.6885%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+}
+.contact-form input {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border: 1px solid var(--secondary-color);;
+    border-radius: 2rem;
+    font-size: .8rem;
+    padding-left: .8rem;
+    height: 2rem;
+    letter-spacing: -5%;
+}
+.contact-form input::placeholder {
+    opacity: 1;
+    color: var(--secondary-color);
+}
+/* Ввод ФИО */
+.name-form-container {
+    width: 66%;
+    height: 16.6667%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.personal-info-icon {
+    position: absolute;
+    right: .8rem;
+}
+.contacts-name {
+    width: 100%;
+    height: 100%;
+}
+/* Ввод даты рождения */
+.contacts-date-birth-container {
+    width: 31.2%;
+    height: 16.6667%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.contacts-date-birth {
+    width: 100%;
+    height: 100%;
+}
+.date-birth-icon {
+
+    position: absolute;
+    right: .8rem;
+}
+/* Ввод email */
+.email-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48.4502%;
+    height: 16.6667%;
+    position: relative;
+}
+.email-icon {
+    position: absolute;
+    right: .8rem;
+}
+.contacts-email {
+    width: 100%;
+    height: 100%;
+}
+/* Ввод телефона */
+.phone-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48.4502%;
+    height: 16.6667%;
+    position: relative;
+}
+.phone-icon {
+    position: absolute;
+    right: .8rem;
+}
+.contacts-phone {
+    width: 100%;
+    height: 100%;
+}
+/* Ввод сообщения */
+.message-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 16.6667%;
+    position: relative;
+}
+.message-icon {
+    position: absolute;
+    right: .8rem;
+}
+.contacts-message {
+    width: 100%;
+    height: 100%;
+}
+/* Кнопка отправки */
+.send-button-form-container {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+/* Инфо о нас */
+.contacts-about-us {
+    height: 10.981vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 12%;
+    mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 12%,
+        rgba(0,0,0,1) 88%,
+        rgba(0,0,0,0)
+    );
+    border-top: 1px solid var(--secondary-color);
+    border-bottom: 1px solid var(--secondary-color);
+}
+.contacts-about-us-box{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+}
+.contacts-about-us-title {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: -5%;
+    line-height: 110%;
+}
+.contacts-info {
+    width: 91.2153%;
+    height: 10.2489vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.contacts-info-1 {
+    height: 100%;
+    width: 48.9567%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+.contacts-info-2 {
+    height: 100%;
+    width: 48.9567%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+.contacts-info-hashtag {
+    font-size: 2rem;
+    font-weight: 500;
+}
+.contacts-content-bottom {
+    width: 91.2153%;
+    height: 40.9956vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contacts-content-bottom-1 {
+    width: 100%;
+    height: 81.6239%;
+    background-color: #aaa;
+    border-radius: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

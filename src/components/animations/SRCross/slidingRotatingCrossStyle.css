@@ -1,0 +1,71 @@
+.sr-animation-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    width: 13.9092vw;
+    height: 100%;
+}
+.b_dot {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: grow1 0.7s 0.1s forwards;
+}
+.b_dot img {
+    height: 32%;
+} 
+.r_dot {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: grow2 0.7s 0.4s forwards;
+}
+.r_dot img {
+    height: 32%;
+}
+.cross {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    animation: rotate-slide 1s forwards;
+}
+.cross img {
+    height: 96%;
+    width: auto;
+}
+
+@keyframes grow1 {
+    0% {
+        opacity: 0;
+        transform: scale(0%);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(100%);
+    }
+}
+@keyframes grow2 {
+    0% {
+        transform: scale(0%);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(100%);
+    }
+}
+@keyframes rotate-slide {
+    0% {
+        transform: translateX(0) rotate(-180deg) scale(40%);
+
+    }
+    100% {
+        transform: translateX(70%) rotate(0) scale(100%);
+    }
+}

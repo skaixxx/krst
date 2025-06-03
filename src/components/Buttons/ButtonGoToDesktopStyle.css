@@ -1,0 +1,20 @@
+.button-container-specific-events {
+    width: 13.9092vw;
+    height: 3.6603vw;
+}
+.button-specific-events {
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1rem;
+}
+.button-specific-events:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}

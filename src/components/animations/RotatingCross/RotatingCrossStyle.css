@@ -1,0 +1,20 @@
+.rotating-cross-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rotating-cross-img {
+    height: 91%;
+    width: auto;
+    animation: rotate 1s forwards;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(-180deg) scale(0);
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
