@@ -186,6 +186,11 @@
     justify-content: center;
     height: 16.6667%;
     width: 65.5791%;
+    position: relative;
+}
+.profile-icon {
+    position: absolute;
+    right: 1rem;
 }
 .form-birthday {
     display: flex;
@@ -198,7 +203,6 @@
 .calendar-icon {
     position: absolute;
     right: 1rem;
-    top:50;
 }
 .form-phone {
     display: flex;
@@ -206,6 +210,11 @@
     justify-content: center;
     height: 16.6667%;
     width: 48.4502%;
+    position: relative;
+}
+.phone-icon {
+    position: absolute;
+    right: 1rem;
 }
 .form-email {
     display: flex;
@@ -213,6 +222,11 @@
     justify-content: center;
     height: 16.6667%;
     width: 48.4502%;
+    position: relative;
+}
+.email-icon {
+    position: absolute;
+    right: 1rem;
 }
 /* Кнопка отправки формы */
 .form-send-button {
