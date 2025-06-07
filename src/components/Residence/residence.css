@@ -72,13 +72,27 @@
     grid-area: button1;
 }
 /* Два параграфа в середине */
-.paragraph1 {
+.residence-paragraph1 {
     width: 100%;
     grid-area: paragraph2;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
 }
-.paragraph2 {
+.residence-paragraph2 {
     width: 100%;
     grid-area: paragraph3;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+.residence-paragraph-text {
+    font-size: 1rem;
+    font-weight: 400;
+}
+.residence-paragraph-title {
+    font-size: 2rem;
+    font-weight: 500;
 }
 /* Анимация бегущей строки */
 .rollingStroke-container {

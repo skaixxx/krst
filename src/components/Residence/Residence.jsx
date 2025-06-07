@@ -32,13 +32,15 @@ function Residence() {
                 <p>Найди идеальное помещение для аренды прямо сейчас.</p>
             </div>
             <div className="buttonGo-container"><ButtonGoToDesktop text="перейти"/></div>
-            <div className="paragraph1">
-                <p className="paragraph-text">
+            <div className="residence-paragraph1">
+                <p className="residence-paragraph-title">#КОЛЛАБОРАЦИЯ</p>
+                <p className="residence-paragraph-text">
                     Мы приглашаем художников, ремесленников, музыкантов, кураторов, дизайнеров, исследователей и культурных предпринимателей стать частью пространства. Здесь можно не просто арендовать мастерскую или студию — здесь можно запускать процессы, находить соавторов, взаимодействовать с публикой и местом.
                 </p>
             </div>
-            <div className="paragraph2">
-                <p className="paragraph-text">
+            <div className="residence-paragraph2">
+                <p className="residence-paragraph-title">#ПРОСТРАНСТВО</p>
+                <p className="residence-paragraph-text">
                     КРСТ — это территория, где каждый резидент становится участником большого культурного эксперимента. Работай. Исследуй. Делай шум. Резидентство в КРСТ — это когда пространство работает вместе с тобой.
                 </p>
             </div>
