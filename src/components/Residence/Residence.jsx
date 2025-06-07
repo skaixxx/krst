@@ -7,6 +7,7 @@ import "./residence.css"
 import "../general.css"
 import ButtonGoToDesktop from "../Buttons/ButtonGoToDesktop";
 import { useState } from "react";
+import ScaleCrossSlideBracketInverted from "../animations/ScaleCrossSlideBracket_inverted/ScaleCrossSlideBracket_inverted";
 function Residence() {
     const inputFocus = (current) => {
         current.target.placeholder = '';
@@ -27,7 +28,7 @@ function Residence() {
             <div className="page-title page-title3">
                 <p>ВДОХНОВЛЯЙ</p>
             </div>
-            <div className="icon"><img src={StaticImg} alt="Static"></img></div>
+            <div className="icon"><ScaleCrossSlideBracketInverted/></div>
             <div className="same-text">
                 <p>Найди идеальное помещение для аренды прямо сейчас.</p>
             </div>
