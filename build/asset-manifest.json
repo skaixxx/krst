@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0f969f8c.css",
+    "main.js": "/static/js/main.11a1b5fb.js",
+    "static/js/453.d7f79876.chunk.js": "/static/js/453.d7f79876.chunk.js",
+    "static/media/map.svg": "/static/media/map.e7cffb6b6f03dd47022e03e321a6fd27.svg",
+    "static/media/phoneIcon.svg": "/static/media/phoneIcon.607d4ca4b6d885cf02c89ffd06705c1b.svg",
+    "static/media/messageIcon.svg": "/static/media/messageIcon.54a4fbd9e2ab9548c904f79965902a41.svg",
+    "static/media/calendar.svg": "/static/media/calendar.a129311efd98cb6ff82fb280abb6a75e.svg",
+    "static/media/locationIcon.svg": "/static/media/locationIcon.8c9dafa57c0ac426aaeb471d3535d821.svg",
+    "static/media/profileIcon.svg": "/static/media/profileIcon.7fe315984a9bb9597e894976a1601365.svg",
+    "static/media/dzenIcon.svg": "/static/media/dzenIcon.4f07dd628bafa2c082ff695ddf308c16.svg",
+    "static/media/letterIcon.svg": "/static/media/letterIcon.15dfdb43bda102d164ebb64dde52d994.svg",
+    "static/media/vkIcon.svg": "/static/media/vkIcon.cf74a65fcd46421f582d85d61c428be4.svg",
+    "index.html": "/index.html",
+    "static/media/iconsStatic.svg": "/static/media/iconsStatic.754c0a689a8e5f6794b755cb07da770d.svg",
+    "static/media/tgIcon.svg": "/static/media/tgIcon.cef319bb2054f5bce6a240464aa19dbe.svg",
+    "static/media/cardButtonIconLong.svg": "/static/media/cardButtonIconLong.4aecde47c68dbcfb0f0ef29732840449.svg",
+    "static/media/cardButtonIcon.svg": "/static/media/cardButtonIcon.c0bf167edbd2931b24cf58e2159ab460.svg",
+    "static/media/arrowBtn.svg": "/static/media/arrowBtn.cf5f15a9f20911f4224d716f9ba3b269.svg",
+    "static/media/footerLogo.svg": "/static/media/footerLogo.5ad39ce138bddcb6edc0065db1bbe81c.svg",
+    "static/media/logo.svg": "/static/media/logo.e45a95209844d610022bd135a6d65149.svg",
+    "static/media/black_cross.svg": "/static/media/black_cross.8e4ff85ddbdd71f1e131323a7b147a47.svg",
+    "static/media/buttonArrow.svg": "/static/media/buttonArrow.461c11d393ce1f871be2f3ac740898e9.svg",
+    "static/media/blackBracket.svg": "/static/media/blackBracket.70c9dcb109ab4bf3065bef9c1a239a67.svg",
+    "static/media/redBracket.svg": "/static/media/redBracket.ca43ac74e7c8c2cb99e794b9a6c0507a.svg",
+    "static/media/black_dot.svg": "/static/media/black_dot.45d0103ea63940db8ce03080a21e408f.svg",
+    "static/media/red_dot.svg": "/static/media/red_dot.061c265a213888fe09829dfaffffaf02.svg",
+    "main.0f969f8c.css.map": "/static/css/main.0f969f8c.css.map",
+    "main.11a1b5fb.js.map": "/static/js/main.11a1b5fb.js.map",
+    "453.d7f79876.chunk.js.map": "/static/js/453.d7f79876.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f969f8c.css",
+    "static/js/main.11a1b5fb.js"
+  ]
+}
