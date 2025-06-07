@@ -246,8 +246,9 @@
     border-radius: 2rem;
     border: 1px solid black;
     padding-left: 0.75rem;
-    
+    outline: none;
 }
+
 /* ТУТ ДОЛЖЕН БЫТЬ КАКОЙ-ТО КОНТЕНТ */
 .bid-picture {
     width: 100%;

@@ -6,7 +6,16 @@ import emailIcon from "../../assets/residence/letterIcon.svg"
 import "./residence.css"
 import "../general.css"
 import ButtonGoToDesktop from "../Buttons/ButtonGoToDesktop";
+import { useState } from "react";
 function Residence() {
+    const inputFocus = (current) => {
+        current.target.placeholder = '';
+    };
+    const inputBlur = (current) => {
+        if (current.target.value === '') {
+            current.target.placeholder = current.target.dataset.placeholder || '';
+        } 
+    };
     return (
         <div className="grid-container-residence">
             <div className="page-title page-title1">
@@ -99,10 +108,10 @@ function Residence() {
                 <p>КАК ИМ СТАТЬ? ЗАПОЛНИ ЗАЯВКУ!</p>
             </div>
             <div className="bid-form">
-                <div className="form-name"><input className="input-r" type="name" id="name" placeholder="фио"></input><img className="profile-icon" src={profileIcon} alt="profile"/></div>
-                <div className="form-birthday"><input className="input-r" type="text" name="birthday" id="birthday" placeholder="дата рождения"></input><img className="calendar-icon" src={calendarIcon} alt="calendar"></img></div>
-                <div className="form-phone"><input className="input-r" type="tel" name="phone" id="phone" placeholder="телефон"></input><img className="phone-icon" src={phoneIcon} alt="phone"/></div>
-                <div className="form-email"><input className="input-r" type="email" name="email" id="email" placeholder="email"></input><img className="email-icon" src={emailIcon} alt="email"/></div>
+                <div className="form-name"><input className="input-r" type="name" id="name" placeholder='фио' data-placeholder='фио' onFocus={inputFocus} onBlur={inputBlur}></input><img className="profile-icon" src={profileIcon} alt="profile"/></div>
+                <div className="form-birthday"><input className="input-r" type="text" name="birthday" id="birthday" placeholder="дата рождения" data-placeholder='дата рождения' onFocus={inputFocus} onBlur={inputBlur}></input><img className="calendar-icon" src={calendarIcon} alt="calendar"></img></div>
+                <div className="form-phone"><input className="input-r" type="tel" name="phone" id="phone" placeholder="телефон" data-placeholder='телефон' onFocus={inputFocus} onBlur={inputBlur}></input><img className="phone-icon" src={phoneIcon} alt="phone"/></div>
+                <div className="form-email"><input className="input-r" type="email" name="email" id="email" placeholder="email" data-placeholder='email' onFocus={inputFocus} onBlur={inputBlur}></input><img className="email-icon" src={emailIcon} alt="email"/></div>
                 <div className="form-send-button"><ButtonGoToDesktop text="отправить"/></div>
             </div>
             <div className="bid-picture"><img src="#" alt="empty"></img></div>
