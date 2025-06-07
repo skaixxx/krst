@@ -114,7 +114,7 @@ function Residence() {
                 <div className="form-email"><input className="input-r" type="email" name="email" id="email" placeholder="email" data-placeholder='email' onFocus={inputFocus} onBlur={inputBlur}></input><img className="email-icon" src={emailIcon} alt="email"/></div>
                 <div className="form-send-button"><ButtonGoToDesktop text="отправить"/></div>
             </div>
-            <div className="bid-picture"><img src="#" alt="empty"></img></div>
+            <div className="bid-picture-container"><img src="./images/residence/residenceBottom.png" alt="bottomPhoto" className="bid-picture"></img></div>
         </div>
     );
 }

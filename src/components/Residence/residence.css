@@ -250,12 +250,16 @@
 }
 
 /* ТУТ ДОЛЖЕН БЫТЬ КАКОЙ-ТО КОНТЕНТ */
-.bid-picture {
+.bid-picture-container {
     width: 100%;
     height: 100%;
     grid-area: sameObject;
-    background-color: #bbb;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 2rem;
+}
+.bid-picture {
+    border-radius: 2rem;
+    width: 100%;
 }
