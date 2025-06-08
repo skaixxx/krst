@@ -3,7 +3,7 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 5.4905vw 20.571vw 18.1552vw 19.4729vw 16.9107vw 13.5432vw 24.3045vw 10.981vw;
+    grid-template-rows: 16.105vw 20.571vw 18.1552vw 19.4729vw 16.9107vw 13.5432vw 24.3045vw 10.981vw;
     grid-template-areas:
     ". . . . . . . . . . . . "
     "card1 card1 card1 card1 . text1 text1 text1 text1 card2 card2 card2"

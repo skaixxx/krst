@@ -11,6 +11,14 @@ import RotatingCross from '../animations/RotatingCross/RotatingCross';
 import ScaleSlideBrackets from '../animations/ScaleSlideBrackets/ScaleSlideBrackets';
 
 function Contacts() {
+    const inputFocus = (current) => {
+        current.target.placeholder = '';
+    };
+    const inputBlur = (current) => {
+        if (current.target.value === '') {
+            current.target.placeholder = current.target.dataset.placeholder || '';
+        } 
+    };
     return (
         <div className="container-contacts">
             <div className="title-box-contacts">
@@ -37,11 +45,11 @@ function Contacts() {
                         </div>
                     </div>
                     <div className="contact-form">
-                        <div className="name-form-container"><input type="text" className="contacts-name" placeholder="фио"></input><img src={personalInfoIcon} alt="persInfoIcon" className="personal-info-icon"/></div>
-                        <div className="contacts-date-birth-container"><input name="birthday" type="text" className="contacts-date-birth" placeholder="дата рождения"/><img src={calendar} alt="calendar" className="date-birth-icon"/></div>
-                        <div className="email-form-container"><input type="email" className="contacts-email" placeholder="email"></input><img src={letterIcon} alt="letterIcon" className="email-icon"/></div>
-                        <div className="phone-form-container"><input type="tel" className="contacts-phone" placeholder="телефон" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"></input><img src={phoneIcon} alt="phoneIcon" className="phone-icon"/></div>
-                        <div className="message-form-container"><input type="text" className="contacts-message" placeholder="сообщение"></input><img src={messageIcon} alt="messageIcon" className="message-icon"/></div>
+                        <div className="name-form-container"><input type="text" className="contacts-name" placeholder="фио" data-placeholder='фио' onFocus={inputFocus} onBlur={inputBlur}></input><img src={personalInfoIcon} alt="persInfoIcon" className="personal-info-icon"/></div>
+                        <div className="contacts-date-birth-container"><input name="birthday" type="text" className="contacts-date-birth" placeholder="дата рождения" data-placeholder='дата рождения' onFocus={inputFocus} onBlur={inputBlur}/><img src={calendar} alt="calendar" className="date-birth-icon"/></div>
+                        <div className="email-form-container"><input type="email" className="contacts-email" placeholder="email" data-placeholder='email' onFocus={inputFocus} onBlur={inputBlur}/><img src={letterIcon} alt="letterIcon" className="email-icon"/></div>
+                        <div className="phone-form-container"><input type="tel" className="contacts-phone" placeholder="телефон" data-placeholder='телефон' onFocus={inputFocus} onBlur={inputBlur} pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"/><img src={phoneIcon} alt="phoneIcon" className="phone-icon"/></div>
+                        <div className="message-form-container"><input type="text" className="contacts-message" placeholder="сообщение" data-placeholder='сообщение' onFocus={inputFocus} onBlur={inputBlur}/><img src={messageIcon} alt="messageIcon" className="message-icon"/></div>
                         <div className="send-button-form-container">
                             <ButtonGoToDesktop text="отправить"/>
                         </div>

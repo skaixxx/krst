@@ -6,7 +6,17 @@ import emailIcon from "../../assets/residence/letterIcon.svg"
 import "./residence.css"
 import "../general.css"
 import ButtonGoToDesktop from "../Buttons/ButtonGoToDesktop";
+import { useState } from "react";
+import ScaleCrossSlideBracketInverted from "../animations/ScaleCrossSlideBracket_inverted/ScaleCrossSlideBracket_inverted";
 function Residence() {
+    const inputFocus = (current) => {
+        current.target.placeholder = '';
+    };
+    const inputBlur = (current) => {
+        if (current.target.value === '') {
+            current.target.placeholder = current.target.dataset.placeholder || '';
+        } 
+    };
     return (
         <div className="grid-container-residence">
             <div className="page-title page-title1">
@@ -18,18 +28,20 @@ function Residence() {
             <div className="page-title page-title3">
                 <p>ВДОХНОВЛЯЙ</p>
             </div>
-            <div className="icon"><img src={StaticImg} alt="Static"></img></div>
+            <div className="icon"><ScaleCrossSlideBracketInverted/></div>
             <div className="same-text">
                 <p>Найди идеальное помещение для аренды прямо сейчас.</p>
             </div>
             <div className="buttonGo-container"><ButtonGoToDesktop text="перейти"/></div>
-            <div className="paragraph1">
-                <p className="paragraph-text">
+            <div className="residence-paragraph1">
+                <p className="residence-paragraph-title">#КОЛЛАБОРАЦИЯ</p>
+                <p className="residence-paragraph-text">
                     Мы приглашаем художников, ремесленников, музыкантов, кураторов, дизайнеров, исследователей и культурных предпринимателей стать частью пространства. Здесь можно не просто арендовать мастерскую или студию — здесь можно запускать процессы, находить соавторов, взаимодействовать с публикой и местом.
                 </p>
             </div>
-            <div className="paragraph2">
-                <p className="paragraph-text">
+            <div className="residence-paragraph2">
+                <p className="residence-paragraph-title">#ПРОСТРАНСТВО</p>
+                <p className="residence-paragraph-text">
                     КРСТ — это территория, где каждый резидент становится участником большого культурного эксперимента. Работай. Исследуй. Делай шум. Резидентство в КРСТ — это когда пространство работает вместе с тобой.
                 </p>
             </div>
@@ -99,13 +111,13 @@ function Residence() {
                 <p>КАК ИМ СТАТЬ? ЗАПОЛНИ ЗАЯВКУ!</p>
             </div>
             <div className="bid-form">
-                <div className="form-name"><input className="input-r" type="name" id="name" placeholder="фио"></input><img className="profile-icon" src={profileIcon} alt="profile"/></div>
-                <div className="form-birthday"><input className="input-r" type="text" name="birthday" id="birthday" placeholder="дата рождения"></input><img className="calendar-icon" src={calendarIcon} alt="calendar"></img></div>
-                <div className="form-phone"><input className="input-r" type="tel" name="phone" id="phone" placeholder="телефон"></input><img className="phone-icon" src={phoneIcon} alt="phone"/></div>
-                <div className="form-email"><input className="input-r" type="email" name="email" id="email" placeholder="email"></input><img className="email-icon" src={emailIcon} alt="email"/></div>
+                <div className="form-name"><input className="input-r" type="name" id="name" placeholder='фио' data-placeholder='фио' onFocus={inputFocus} onBlur={inputBlur}/><img className="profile-icon" src={profileIcon} alt="profile"/></div>
+                <div className="form-birthday"><input className="input-r" type="text" name="birthday" id="birthday" placeholder="дата рождения" data-placeholder='дата рождения' onFocus={inputFocus} onBlur={inputBlur}/><img className="calendar-icon" src={calendarIcon} alt="calendar"></img></div>
+                <div className="form-phone"><input className="input-r" type="tel" name="phone" id="phone" placeholder="телефон" data-placeholder='телефон' onFocus={inputFocus} onBlur={inputBlur}/><img className="phone-icon" src={phoneIcon} alt="phone"/></div>
+                <div className="form-email"><input className="input-r" type="email" name="email" id="email" placeholder="email" data-placeholder='email' onFocus={inputFocus} onBlur={inputBlur}/><img className="email-icon" src={emailIcon} alt="email"/></div>
                 <div className="form-send-button"><ButtonGoToDesktop text="отправить"/></div>
             </div>
-            <div className="bid-picture"><img src="#" alt="empty"></img></div>
+            <div className="bid-picture-container"><img src="./images/residence/residenceBottom.png" alt="bottomPhoto" className="bid-picture"></img></div>
         </div>
     );
 }
