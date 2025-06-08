@@ -4,7 +4,7 @@
     position: relative;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 5.4905vw 9.4436vw 9.4436vw 9.4436vw 8.7848vw 8.7848vw 6.5154vw 8.7848vw 7.2474vw 10.1025vw 17.5695vw 10.981vw;
+    grid-template-rows: 16.105vw 9.4436vw 9.4436vw 9.4436vw 8.7848vw 8.7848vw 6.5154vw 8.7848vw 7.2474vw 10.1025vw 17.5695vw 10.981vw;
     column-gap: 1rem;
     grid-template-areas:
     ". . . . . . . . . . . ." 
