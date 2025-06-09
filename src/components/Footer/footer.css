@@ -169,6 +169,10 @@
     justify-content: start;
     font-size: .8rem;
 }
+.footer-phone img{
+    height: 100%;
+    width: auto;
+}
 .footer-phone p {
     padding-left: .5rem;
 }
@@ -177,6 +181,10 @@
     display: flex;
     justify-content: start;
     font-size: .8rem;
+}
+.footer-adress img{
+    height: 100%;
+    width: auto;
 }
 .footer-adress p {
     padding-left: .5rem;
