@@ -67,7 +67,7 @@
     flex-wrap: wrap;
     justify-content: start;
     align-items: start;
-    row-gap: .5rem;
+    gap: .5rem;
 }
 .footer-round-stroke1 {
     height: 25.7576%;
@@ -125,7 +125,7 @@
     width: 100%;
     height: 100%;
     padding-left: 1rem;
-    border: 1px solid #780513;
+    border: none;
     background-color: #F2ECE4;
     border-radius: 1.25rem;
     font-size: .8rem;
