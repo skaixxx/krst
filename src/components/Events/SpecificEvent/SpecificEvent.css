@@ -131,11 +131,17 @@
     font-weight: 400;
     row-gap: 1rem;
 }
-.specific-event-big-picture {
+.specific-event-big-picture-container {
     width: 57.6707%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
-.specific-event-big-picture img {
-    width: 100%;
+.specific-event-big-picture {
+    width: auto;
     height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
 }

@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: start;
     position: relative;
-    width: 100%;
+    width: max-content;
     height: 100%;
 }
 .b_dot {

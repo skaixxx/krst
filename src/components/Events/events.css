@@ -23,7 +23,6 @@
     background-color: var(--secondary-color);
     background-origin: border-box;
     background-repeat: no-repeat;
-    background-size: cover;
 }
 .cardEvent {
     width: 100%;
