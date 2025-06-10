@@ -9,6 +9,14 @@ import tgIcon from "../../assets/footer/tgIcon.svg"
 import vkIcon from "../../assets/footer/vkIcon.svg"
 
 function Footer() {
+    const inputFocus = (current) => {
+        current.target.placeholder = '';
+    };
+    const inputBlur = (current) => {
+        if (current.target.value === '') {
+            current.target.placeholder = current.target.dataset.placeholder || '';
+        } 
+    };
     return (
         <footer className="footer">
         <div className="footer-grid">
@@ -45,7 +53,7 @@ function Footer() {
                     мероприятиях одним из первых</p>
                 </div>
                 <div className="footer-mail-input-container">
-                    <input type="email" placeholder="Введите вашу почту" className="footer-input-email"></input>
+                    <input type="email" placeholder="Введите вашу почту" className="footer-input-email" data-placeholder='Введите вашу почту' onFocus={inputFocus} onBlur={inputBlur}></input>
                     <button className="send-email-button"><img className="send-email-arrow-pic" src={arrowIcon} alt="arrow"></img></button>
                 </div>
                 <div className="footer-contacts-info">
