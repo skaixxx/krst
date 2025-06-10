@@ -262,6 +262,9 @@
         "text2 text2 text2 text2 text2 text2 text2 . . . . ."
         ". . . . . . . . . . . .";
     }
+    .pageTitle {
+        bottom: 2%;
+    }
     
 }
 @media  screen and (min-width: 1500px) {
@@ -274,5 +277,7 @@
         "text2 text2 text2 text2 text2 text2 text2 . . . . ."
         ". . . . . . . . . . . .";
     }
-    
+    .pageTitle {
+        bottom: 3%;
+    }
 }

@@ -1,5 +1,5 @@
 .rotating-cross-container {
-    width: 100%;
+    width: max-content;
     height: 100%;
     display: flex;
     justify-content: center;

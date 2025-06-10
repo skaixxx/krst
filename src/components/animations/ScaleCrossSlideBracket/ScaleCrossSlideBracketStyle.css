@@ -2,14 +2,16 @@
     display: flex;
     align-items: center;
     position: relative;
-    width: 100%;
-    height: max-content;
+    width: max-content;
+    height: 100%;
 }
 .SCSB-animation-cross {
+    height: 100%;
     z-index: 2;
     animation: scale 1s forwards;
 }
 .SCSB-animation-bracket {
+    height: 100%;
     position: absolute;
     opacity: 0;
     animation: slide .5s 1s forwards;

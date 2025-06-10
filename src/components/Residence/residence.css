@@ -54,6 +54,7 @@
 /* Анимация */
 .icon {
     width: 100%;
+    height: 100%;
     grid-area: animation;
     align-self: end;
 }

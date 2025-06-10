@@ -6,11 +6,12 @@
     height: 100%;
 }
 .SSB-element-1 {
-
+    height: 100%;
     position: absolute;
     animation: ScaleSlide1 1s linear forwards;
 }
 .SSB-element-2 {
+    height: 100%;
     position: absolute;
     animation: ScaleSlide2 1s linear forwards;
 }
