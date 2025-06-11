@@ -113,19 +113,19 @@ function MainPage() {
                     </div>
                     <div className={style.listItem}>
                         <img src={listPoint} alt="listPoint" />
-                        <p className={style.listItemText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                    </div>
-                    <div className={style.listItem}>
-                        <img src={listPoint} alt="listPoint" />
-                        <p className={style.listItemText}>Соблюдайте безопасность — не заходите в закрытые зоны, следуйте инструкциям</p>
-                    </div>
-                    <div className={style.listItem}>
-                        <img src={listPoint} alt="listPoint" />
                         <p className={style.listItemText}>Фотосъёмка разрешена, но без нарушения приватности</p>
                     </div>
                     <div className={style.listItem}>
                         <img src={listPoint} alt="listPoint" />
+                        <p className={style.listItemText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                    </div>
+                    <div className={style.listItem}>
+                        <img src={listPoint} alt="listPoint" />
                         <p className={style.listItemText}>Дети до 14 лет — только с взрослыми, животные — на поводке</p>
+                    </div>
+                    <div className={style.listItem}>
+                        <img src={listPoint} alt="listPoint" />
+                        <p className={style.listItemText}>Соблюдайте безопасность — не заходите в закрытые зоны, следуйте инструкциям</p>
                     </div>
                     <div className={style.listItem}>
                         <img src={listPoint} alt="listPoint" />

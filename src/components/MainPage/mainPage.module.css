@@ -198,6 +198,10 @@
     justify-content: center;
     align-items: center;
 }
+.mapImage {
+    width: 100%;
+    height: auto;
+}
 .rulesContainer {
     height: 38.43vw;
     width: 91.2153%;
