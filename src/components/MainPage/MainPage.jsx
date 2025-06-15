@@ -117,7 +117,7 @@ function MainPage() {
                     </div>
                     <div className={style.listItem}>
                         <img src={listPoint} alt="listPoint" />
-                        <p className={style.listItemText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                        <p className={style.listItemText}>Соблюдайте чистоту — используйте урны, возвращайте вещи на место.</p>
                     </div>
                     <div className={style.listItem}>
                         <img src={listPoint} alt="listPoint" />
