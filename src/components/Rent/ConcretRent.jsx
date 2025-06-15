@@ -1,18 +1,18 @@
-import "./Rent.css"
-import "../general.css";
-import SpecificLocationsButton from "../../components/Buttons/ButtonGoToDesktop";
-import Room1 from "../../assets/rent/room-1.png"
-import Room2 from "../../assets/rent/room-2.png"
-import Room3 from "../../assets/rent/room-3.png"
-import profileIcon from "../../assets/rent/profile.png"
-import calendarIcon from "../../assets/rent/Calendar.png"
-import phoneIcon from "../../assets/rent/email.png"
-import emailIcon from "../../assets/rent/phone.png"
-import ScaleCrossSlideBracketInverted from "../../components/animations/ScaleCrossSlideBracket_inverted/ScaleCrossSlideBracket_inverted";
-import SRCross from "../../components/animations/SRCross/SlidingRotatingCross";
+import "./ConcretRent.css"
+import "../../general.css";
+import SpecificConcretRentButton from "../../Buttons/ButtonGoToDesktop";
+import Room1 from "../../../assets/rent/room-1.png"
+import Room2 from "../../../assets/rent/room-2.png"
+import Room3 from "../../../assets/rent/room-3.png"
+import profileIcon from "../../../assets/rent/profile.png"
+import calendarIcon from "../../../assets/rent/Calendar.png"
+import phoneIcon from "../../../assets/rent/email.png"
+import emailIcon from "../../../assets/rent/phone.png"
+import ScaleCrossSlideBracketInverted from "../../../components/animations/ScaleCrossSlideBracket_inverted/ScaleCrossSlideBracket_inverted";
+import SRCross from "../../../components/animations/SRCross/SlidingRotatingCross";
 
 
-function Rent() {
+function ConcretRent() {
 
 
 return (
@@ -71,7 +71,7 @@ return (
     <h2 className="rent-metr-2">87 000 ₽</h2>
     <h6 className="rent-area-2">Цена в месяц</h6>
 </div>
-<div className="rent-btn"><SpecificLocationsButton text="арендовать"/></div>
+<div className="rent-btn"><SpecificConcretRentButton text="арендовать"/></div>
 
 </div>
 </div>
@@ -123,7 +123,7 @@ return (
         <div className="rent-birthday"><input className="input-rent" type="text" name="birthday" id="birthday" placeholder="дата рождения" data-placeholder='дата рождения'/><img className="calendar-icon" src={calendarIcon} alt="calendar"></img></div>
         <div className="rent-email"><input className="input-rent" type="email" name="email" id="email" placeholder="email" data-placeholder='email'/><img className="email-icon" src={phoneIcon} alt="email"/></div>
         <div className="rent-phone"><input className="input-rent" type="tel" name="phone" id="phone" placeholder="телефон" data-placeholder='телефон'/><img className="phone-icon" src={emailIcon} alt="phone"/></div>
-        <div className="rent-send-button"><SpecificLocationsButton text="отправить"/></div>
+        <div className="rent-send-button"><SpecificConcretRentButton text="отправить"/></div>
         </div>
 
  </div>
@@ -136,5 +136,4 @@ return (
 );
 
 }
-export default Rent;
-
+export default ConcretRent;
