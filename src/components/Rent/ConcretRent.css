@@ -248,7 +248,6 @@
 .rent-manager {
     color: rgba(120, 5, 19, 1);
 }
-/* ФОРМА ЗАЯВКИ */
 .rent-form {
     position: relative;
     width: 100%;
@@ -315,7 +314,6 @@
     position: absolute;
     right: .8rem;
 }
-/* Кнопка отправки формы */
 .rent-send-button {
     display: flex;
     position: relative;
