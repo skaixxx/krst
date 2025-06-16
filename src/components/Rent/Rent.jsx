@@ -1,10 +1,9 @@
-
 import "./rent.css"
 
 function Rent() {
     return (
         <div className="rent-page">
-            rent
+            {/* <ConcretRent/> */}
         </div>
     );
 }

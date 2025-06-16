@@ -6,7 +6,7 @@ export default function ButtonGoToDesktop({text, action}) {
         <div className="button-container-specific-events">
             <button className="button-specific-events" onClick={action}>
                 <p>{text}</p>
-                <img src={arrow} alt="arrow" />
+                <img src={arrow} alt="arrow" className="button-arrow-pic"/>
             </button>
         </div>
     );

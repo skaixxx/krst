@@ -4,13 +4,11 @@
     position: relative;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 16.105vw 9.4436vw 9.4436vw 9.4436vw 8.7848vw 8.7848vw 6.5154vw 8.7848vw 7.2474vw 10.1025vw 17.5695vw 10.981vw;
+    grid-template-rows: 16.105vw 25.549vw 8.7848vw 8.7848vw 6.5154vw 8.7848vw 7.2474vw 10.1025vw 17.5695vw 10.981vw;
     column-gap: 1rem;
     grid-template-areas:
     ". . . . . . . . . . . ." 
-    "titleText1 titleText1 titleText1 titleText1 titleText1 titleText1 titleText1 titleText1 titleText1 titleText1 animation animation"
-    "titleText2 titleText2 titleText2 titleText2 titleText2 titleText2 titleText2 . . . paragraph1 paragraph1"
-    "titleText3 titleText3 titleText3 titleText3 titleText3 titleText3 titleText3 titleText3 titleText3 . button1 button1"
+    "title title title title title title title title title title title title"
     ". . . . . . . . . . . ."
     "paragraph2 paragraph2 paragraph2 paragraph2 paragraph2 paragraph2 paragraph2 paragraph3 paragraph3 paragraph3 paragraph3 paragraph3"
     ". . . . . . . . . . . ."
@@ -22,55 +20,55 @@
     ;
     position: relative;
 }
+.residence-title-container {
+    width: 100%;
+    grid-area: title;
+    display: flex;
+    justify-content: space-between;
+}
+.residence-title-box1 {
+    width: 83.066%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.residence-title-box2 {
+    height: 100%;
+    width: 15.249%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .page-title {
-    width: fit-content;
     font-size: 9.37vw;
     font-weight: bold;
-    letter-spacing: -5%;
-    line-height: 110%;
+    letter-spacing: -0.05em;
+    line-height: 72.7%;
 }
 /* Резидентство */
 .page-title1 {
-    align-self: start;
-    grid-area: titleText1;
-    position: absolute;
     color: var(--secondary-color);
-    bottom: -16%;
 }
 /* Открывай */
 .page-title2 {
-    grid-area: titleText2;
     color: var(--accent-color);
-    position: absolute;
-    bottom: -16%;
 }
 /* Вдохновляй */
 .page-title3 {
-    grid-area: titleText3;
-    position: absolute;
     color: var(--secondary-color);
-    bottom: -16%;
 }
 /* Анимация */
 .icon {
+    height: 28.65%;
     width: 100%;
-    height: 100%;
-    grid-area: animation;
-    align-self: end;
 }
 /* текст под анимацией */
 .same-text {
     width: 100%;
-    grid-area: paragraph1;
-    position: absolute;
-    top: 65%;
 }
 /* Кнопка Перейти */
 .buttonGo-container {
-    align-self: end;
     width: 100%;
-    height: 39.3701%;
-    grid-area: button1;
 }
 /* Два параграфа в середине */
 .residence-paragraph1 {
