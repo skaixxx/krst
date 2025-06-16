@@ -40,7 +40,7 @@
     justify-content: space-between;
 }
 .page-title {
-    font-size: 9.37vw;
+    font-size: 6.4rem;
     font-weight: bold;
     letter-spacing: -0.05em;
     line-height: 72.7%;
@@ -202,6 +202,7 @@
     position: relative;
 }
 .profile-icon {
+    height: 60%;
     position: absolute;
     right: .8rem;
 }
@@ -214,6 +215,7 @@
     position: relative;
 }
 .calendar-icon {
+    height: 60%;
     position: absolute;
     right: .8rem;
 }
@@ -226,6 +228,7 @@
     position: relative;
 }
 .phone-icon {
+    height: 60%;
     position: absolute;
     right: .8rem;
 }
@@ -238,6 +241,7 @@
     position: relative;
 }
 .email-icon {
+    height: 60%;
     position: absolute;
     right: .8rem;
 }

@@ -152,6 +152,9 @@
     cursor: pointer;
     opacity: 0.9;
 }
+.send-email-arrow-pic {
+    height: 40%;
+}
 .footer-contacts-info {
     width: 100%;
     display: flex;
@@ -167,11 +170,11 @@
     width: 100%;
     display: flex;
     justify-content: start;
+    align-items: center;
     font-size: .8rem;
 }
 .footer-phone img{
-    height: 100%;
-    width: auto;
+    height: 95%;
 }
 .footer-phone p {
     padding-left: .5rem;
@@ -180,11 +183,11 @@
     width: 100%;
     display: flex;
     justify-content: start;
+    align-items: center;
     font-size: .8rem;
 }
 .footer-adress img{
-    height: 100%;
-    width: auto;
+    height: 95%;
 }
 .footer-adress p {
     padding-left: .5rem;
@@ -193,6 +196,7 @@
     width: 40%;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     row-gap: .75rem;
     font-size: .8rem;
 }

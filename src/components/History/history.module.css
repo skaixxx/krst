@@ -30,7 +30,7 @@
     color: var(--primary-color);
     font-size: 6.4rem;
     font-weight: 700;
-    letter-spacing: -5%;
+    letter-spacing: -0.05em;
     line-height: 72.7%;
     padding-bottom: 2.56vw;
 }
@@ -38,7 +38,7 @@
     color: var(--accent-color);
     font-size: 6.4rem;
     font-weight: 700;
-    letter-spacing: -5%;
+    letter-spacing: -0.05em;
     line-height: 72.9%;
 }
 .textBox1Text {
@@ -104,7 +104,7 @@
 }
 .interactiveLineElementTitle {
     font-size: 1.7rem;
-    letter-spacing: -5%;
+    letter-spacing: -0.05em;
     line-height: 110%;
     font-weight: medium;
     text-align: center;
@@ -144,7 +144,7 @@
     font-size: 6.4rem;
     font-weight: 700;
     color: var(--accent-color);
-    letter-spacing: -5%;
+    letter-spacing: -0.05em;
 }
 .container1892Col2Row {
     width: 100%;
