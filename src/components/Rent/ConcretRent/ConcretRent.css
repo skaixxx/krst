@@ -19,21 +19,25 @@
     display: flex;
     align-items: center;
 }
+.image-SRCross {
+    position: relative;
+    height: 5rem;
+}
 .tworent {
     display: flex;
-    align-items: center;
+    line-height: 10%;
 }
 .image-scaleCross {
     position: relative;
-    left: -21%;
+    left: -12%;
     bottom: 5%;
-    height: 7rem;
+    height: 5rem;
 }
 .rent-title-1 {
     width: 100%;
     margin: 0 auto;
     position: relative;
-    left: -19%;
+    left: -15%;
     font-weight: 700;
     font-size: 8rem;
     line-height: 10%;
