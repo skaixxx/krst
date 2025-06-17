@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 .container-contacts {
+    min-height: 85dvh;
     width: 100%;
     margin: 0 auto;
     position: relative;
@@ -42,6 +43,7 @@
     justify-content: space-between;
 }
 .contacts-title-sub-container {
+    height: 42.735%;
     width: 100%;
     display: flex;
 }
@@ -68,6 +70,7 @@
 }
 .contacts-style-element2 {
     width: 55.9543%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,6 +113,7 @@
     position: relative;
 }
 .personal-info-icon {
+    height: 60%;
     position: absolute;
     right: .8rem;
 }
@@ -131,7 +135,7 @@
     height: 100%;
 }
 .date-birth-icon {
-
+    height: 60%;
     position: absolute;
     right: .8rem;
 }
@@ -145,6 +149,7 @@
     position: relative;
 }
 .email-icon {
+    height: 60%;
     position: absolute;
     right: .8rem;
 }
@@ -162,6 +167,7 @@
     position: relative;
 }
 .phone-icon {
+    height: 60%;
     position: absolute;
     right: .8rem;
 }
@@ -179,6 +185,7 @@
     position: relative;
 }
 .message-icon {
+    height: 60%;
     position: absolute;
     right: .8rem;
 }

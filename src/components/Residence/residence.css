@@ -1,4 +1,5 @@
 .grid-container-residence {
+    min-height: 95dvh;
     width: 91.2153%;
     margin: 0 auto;
     position: relative;

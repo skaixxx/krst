@@ -1,5 +1,6 @@
 .grid-container-events {
     width: 91.2153%;
+    min-height: 90dvh;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -67,10 +68,10 @@
     border: none;
 }
 .cardButtonIconLong {
-    width: 100%;
+    max-width: 100%;
 }
 .cardButtonIcon {
-    width: 100%;
+    max-width: 100%;
 }
 .cardDate {
     padding-left: 1rem;

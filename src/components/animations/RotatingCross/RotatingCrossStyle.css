@@ -6,8 +6,7 @@
     align-items: center;
 }
 .rotating-cross-img {
-    height: 91%;
-    width: auto;
+    height: 100%;
     animation: rotate 1s forwards;
 }
 @keyframes rotate {
