@@ -125,6 +125,10 @@
     width: 100%;
     display: flex;
 }
+.imageTomishko {
+    width: 100%;
+    border-radius: 1rem;
+}
 /* 1892 */
 .container1892 {
     width: 100%;
@@ -135,6 +139,10 @@
 }
 .container1892Col2 {
     width: 66.212%;
+}
+.image1892 {
+    width: 100%;
+    border-radius: 1rem;
 }
 .container1892Animation {
     width: 100%;
@@ -156,20 +164,201 @@
     width: 100%;
     display: flex;
 }
+.container1905Col1 {
+    width: 66.13%;
+}
+.image1905 {
+    width: 100%;
+    border-radius: 1rem;
+}
+.container1905Col2 {
+    width: 35.63%;
+}
 /* ^1905^ */
 /* 1917 */
+.container1917 {
+    row-gap: 2.2vw;
+    display: flex;
+    flex-direction: column;
+}
+.container1917Col1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.paragraph1917 {
+    width: 57.624%;
+}
+.image1917 {
+    width: 100%;
+    border-radius: 1rem;
+}
 /* ^1917^ */
 /* 1937 */
+.container1937 {
+    display: flex;
+}
+.container1937Col1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container1937Col2 {
+    width: 50%;
+    display: flex;
+}
+.image1937 {
+    width: 100%;
+    border-radius: 1rem;
+}
 /* ^1937^ */
 /* 1941 */
+.container1941 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.container1941Col1 {
+    width: 49.44%;
+}
+.image1941 {
+    width: 100%;
+    border-radius: 1rem;
+}
+.container1941Col2 {
+    width: 49.2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 /* ^1941^ */
 /* 1958 */
+.container1958 {
+    width: 100%;
+    display: flex;
+}
+.container1958Col1 {
+    width: 66.13%;
+}
+.container1958Col2 {
+    width: 32.26%;
+}
+.image1958 {
+    width: 100%;
+    border-radius: 1rem;
+}
 /* ^1958^ */
 /* 1990 */
+.container1990 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.container1990Col1 {
+    width: 49.2%;
+}
+.image1990 {
+    width: 100%;
+    border-radius: 1rem;
+}
+.container1990Col2 {
+    width: 40.7%;
+}
 /* ^1990^ */
 /* 2006 */
+.container2006 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.container2006Col1 {
+    width: 37.48%;
+}
+.container2006Col2 {
+    width: 57.7%;
+}
+.image2006 {
+    width: 100%;
+    border-radius: 1rem;
+}
 /* ^2006^ */
 /* 2017 */
+.container2017 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.2rem;
+}
+.container2017Col1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.paragraph2017 {
+    width: 57.62%;
+}
+.container2017Col2 {
+    width: 100%;
+    display: flex;
+}
+.image2017 {
+    width: 100%;
+    border-radius: 1rem;
+}
 /* ^2017^ */
 /* 2025 */
+.container2025 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.container2025Col1 {
+    width: 40.77%;
+}
+.image2025 {
+    width: 100%;
+    border-radius: 1rem;
+}
+.container2025Col2 {
+    width: 56.67%;
+}
 /* ^2025^ */
+.famousPeopleBlock {
+    height: 61.13vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3.66vw;
+}
+.famousPeopleBlockTitle {
+    height: 26.467%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.75rem;
+}
+.famousPeopleBlockTitleText1 {
+    font-size: 6.4rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 72.7%;
+}
+.famousPeopleBlockTitleSub {
+    height: 42.08%;
+    width: 100%;
+    display: flex;
+    column-gap: 7.83vw;
+}
+.famousPeopleBlockTitleSubAnimation {
+    height: 100%;
+    width: 8.03%;
+    display: flex;
+    justify-content: start;
+}
+.famousPeopleBlockTitleText2 {
+    color: var(--accent-color);
+    font-size: 6.4rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 72.7%;
+}
