@@ -13,6 +13,7 @@ import y2025 from "../../assets/history/2025.png"
 import ScaleSlideBrackets from "../animations/ScaleSlideBrackets/ScaleSlideBrackets"
 import FamousCards from "./FamousPersonCards";
 import RotatingCross from "../animations/RotatingCross/RotatingCross";
+import DangerousCards from "./DangerousPersonCards";
 function History() {
     return (
         <div className={style.historyPage}>
@@ -283,7 +284,14 @@ function History() {
                         <FamousCards/>
                     </div>
                     <div className={style.containerDangerousPeople}>
-
+                        <div className={style.dangerousPeopleBlockTitle}>
+                            <p className={style.dangerousPeopleBlockTitleText1}>ОПАСНЫЕ</p>
+                            <div className={style.dangerousPeopleBlockTitleSub}>
+                                <div className={style.dangerousPeopleBlockTitleSubAnimation}><RotatingCross/></div>
+                                <p className={style.dangerousPeopleBlockTitleText2}>ЗАКЛЮЧЁННЫЕ</p>
+                            </div>
+                        </div>
+                        <DangerousCards/>
                     </div>
                 </div>
             </div>
