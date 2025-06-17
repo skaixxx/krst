@@ -1,13 +1,12 @@
 .rotating-cross-container {
-    width: 100%;
+    width: max-content;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .rotating-cross-img {
-    height: 91%;
-    width: auto;
+    height: 100%;
     animation: rotate 1s forwards;
 }
 @keyframes rotate {

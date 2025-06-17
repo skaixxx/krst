@@ -10,7 +10,19 @@ import mapImage from "../../assets/mainPage/map.png"
 import arrowBR from "../../assets/mainPage/arrowsBR.svg"
 import listPoint from "../../assets/mainPage/listPoint.svg"
 import SlidingRotatingCross from "../animations/SRCross/SlidingRotatingCross"
+import { useData } from "../../routes/DataContext"
+import { useNavigate } from "react-router"
 function MainPage() {
+    const { items } = useData();
+    const limitedCard = items.slice(0, 5);
+    const navigate = useNavigate();
+    const handleClick = (id) => {
+        navigate(`/Events/SpecificEvent/${id}`)
+    }
+    console.log("Data: ", limitedCard);
+    if (!limitedCard || limitedCard.length === 0) {
+        return <p>Данные загружаются...</p>
+    };
     return (
         <div className={style.mainPage}>
             <div className={style.fullScreenContainer1}>
@@ -21,26 +33,15 @@ function MainPage() {
             </div>
             <div className={style.fullScreenContainer2}>
                 <div className={style.contentContainer}>
-                    <div className={style.rowContainer1}>
-                        <div className={style.container2TextBox1}>
+                    <div className={style.container2TextBox1}>
                         <p className={style.textBox1Title}>КРСТ</p>
                         <p className={style.textBox1Text}>КРЕАТИВНАЯ РАЗВЛЕКАТЕЛЬНАЯ СОВРЕМЕННАЯ ТЕРРИТОРИЯ</p>
-                        </div>
-                        <div className={style.container2StyleElement1}>
-                            <img src={redCross} alt="redCross"/>
-                        </div>
-                    </div>
-                    <div className={style.container2StyleElement2}>
-                        <img src={redLogo} alt="redLogo" />
                     </div>
                     <div className={style.container2TextBox2}>
                         <p className={style.textBox2Title}>О НАС</p>
                         <p className={style.textBox2Text}>
                             КРСТ — это уникальный многофункциональный комплекс, где рождаются идеи, проводятся мероприятия, выставки и мастер-классы. Здесь гармонично сочетаются рестораны с разнообразной кухней, выставочные залы, где показана история данного места, а также культурные площадки, которые становятся центром притяжения для творческих людей.
                         </p>
-                    </div>
-                    <div className={style.container2StyleElement3}>
-                        <img src={arrows} alt="arrows" />
                     </div>
                 </div>
             </div>
@@ -71,6 +72,20 @@ function MainPage() {
                 </div>
             </div>
             <div className={style.cardsContent}>
+                {limitedCard.map((item) =>(
+                <div className={`card card${item.id}`} style={{
+                    backgroundImage: `url(${item.image})`,
+                    backgroundPosition: "center",
+                    backgroundSize: "cover"}}>
+                    <a className="cardEvent" key={item.id} onClick={() => handleClick(item.id)}>
+                        <div className="cardDate"><span>{item.dates}</span></div>
+                        <div className="cardBody">
+                            <div className="cardText"><p>{item.title}</p></div>
+                            <div className="cardButton"><img src={item.icon} alt="cardButton" class="cardButtonIcon"/></div>
+                        </div>
+                    </a>
+                </div>
+                ))}
                 <div className={style.animationContainer}>
                     <SlidingRotatingCross/>
                 </div>
@@ -98,19 +113,19 @@ function MainPage() {
                     </div>
                     <div className={style.listItem}>
                         <img src={listPoint} alt="listPoint" />
-                        <p className={style.listItemText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                    </div>
-                    <div className={style.listItem}>
-                        <img src={listPoint} alt="listPoint" />
-                        <p className={style.listItemText}>Соблюдайте безопасность — не заходите в закрытые зоны, следуйте инструкциям</p>
-                    </div>
-                    <div className={style.listItem}>
-                        <img src={listPoint} alt="listPoint" />
                         <p className={style.listItemText}>Фотосъёмка разрешена, но без нарушения приватности</p>
                     </div>
                     <div className={style.listItem}>
                         <img src={listPoint} alt="listPoint" />
+                        <p className={style.listItemText}>Соблюдайте чистоту — используйте урны, возвращайте вещи на место.</p>
+                    </div>
+                    <div className={style.listItem}>
+                        <img src={listPoint} alt="listPoint" />
                         <p className={style.listItemText}>Дети до 14 лет — только с взрослыми, животные — на поводке</p>
+                    </div>
+                    <div className={style.listItem}>
+                        <img src={listPoint} alt="listPoint" />
+                        <p className={style.listItemText}>Соблюдайте безопасность — не заходите в закрытые зоны, следуйте инструкциям</p>
                     </div>
                     <div className={style.listItem}>
                         <img src={listPoint} alt="listPoint" />

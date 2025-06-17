@@ -55,7 +55,7 @@ function SpecificEvent() {
                         </div>
                         <div className="specific-event-paragraph2-btn"><SpecificEventButton text="перейти"/></div>
                     </div>
-                    <div className="specific-event-big-picture"><img src={item.image} alt="pic"/></div>
+                    <div className="specific-event-big-picture-container"><img src={item.image} alt="pic" className="specific-event-big-picture"/></div>
                 </div>
             </div>
             ) : (

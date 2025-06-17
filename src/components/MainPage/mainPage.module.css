@@ -30,7 +30,7 @@
     color: var(--primary-color);
     font-size: 6.4rem;
     font-weight: 700;
-    letter-spacing: -5%;
+    letter-spacing: -0.05em;
     line-height: 72.7%;
     padding-bottom: 2.56vw;
 }
@@ -39,7 +39,7 @@
     color: var(--accent-color);
     font-size: 6.4rem;
     font-weight: 700;
-    letter-spacing: -5%;
+    letter-spacing: -0.05em;
     line-height: 72.9%;
 }
 .textBox1Text {
@@ -54,23 +54,27 @@
     display: flex;
     justify-content: center;
     align-items: start;
-    background-image: url(../../assets/mainPage/styleMainPage.svg);
+}
+.contentContainer {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1vw 10vw 24vw 10vw 5vw;
+    grid-template-areas:
+    ". . . . . . . . . . . ." 
+    "text1 text1 . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    "text2 text2 text2 text2 text2 . . . . . . ."
+    ". . . . . . . . . . . .";
+    background-image: url(../../assets/mainPage/staticMP.png);
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: contain;
     background-position: center;
     position: relative;
 }
-.contentContainer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-.rowContainer1 {
-    width: 100%;
-    display: flex;
-}
 .container2TextBox1 {
-    width: 20.48%;
+    grid-area: text1;
 }
 .textBox1Title {
     font-size: 3.4rem;
@@ -86,7 +90,7 @@
     line-height: 100%;
 }
 .container2TextBox2 {
-    width: 57.467%;
+    grid-area: text2;
 }
 .interactiveLine {
     height: 10.981vw;
@@ -151,13 +155,41 @@
 .cardsContent {
     width: 91.2153%;
     height: 62.958vw;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 13.17vw 3.66vw 3.66vw 3.66vw 7.32vw 16.8374vw 14.64vw;
+    grid-template-areas:
+    ". card1 card1 card1 card1 . card3 card3 card3 card3 card3 ."
+    ". card1 card1 card1 card1 . . . . . . ."
+    ". card1 card1 card1 card1 . anim1 anim1 . . . ."
+    ". card1 card1 card1 card1 . anim1 anim1 . card5 card5 card5"
+    ". . . . . . . . . card5 card5 card5"
+    "card2 card2 card2 text1 text1 text1 text1 text1 text1 card5 card5 card5"
+    "card2 card2 card2 . card4 card4 card4 card4 . card5 card5 card5";
+    column-gap: 1rem;
+    position: relative;
 }
 .animationContainer {
-    width: 70%;
-    height: 30%;
+    grid-area: anim1;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
+}
+.anonsText {
+    grid-area: text1;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: start;
+    line-height: 72.7%;
+    font-family: "Inter";
+    font-size: 6.4rem;
+    letter-spacing: -0.05em;
+    font-weight: 700;
+    color: var(--accent-color);
 }
 .mapContainer {
     height: 58.56vw;
@@ -165,6 +197,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.mapImage {
+    width: 100%;
+    height: auto;
 }
 .rulesContainer {
     height: 38.43vw;
@@ -188,7 +224,7 @@
 .rulesStroke1Text {
     font-size: 6.4rem;
     font-weight: 700;
-    letter-spacing: -5%;
+    letter-spacing: -0.05em;
     line-height: 72.7%;
     padding-right: 2rem;
 }
@@ -199,7 +235,7 @@
     color: var(--accent-color);
     font-size: 6.4rem;
     font-weight: 700;
-    letter-spacing: -5%;
+    letter-spacing: -0.05em;
     line-height: 72.7%;
 }
 .listContainer {
@@ -214,4 +250,56 @@
     display: flex;
     align-items: center;
     column-gap: 2rem;
+}
+@media  screen and (max-width: 799px){
+    .contentContainer {
+        grid-template-rows: 1vw 10vw 25vw 10vw 5vw;
+        grid-template-areas:
+        ". . . . . . . . . . . ." 
+        "text1 text1 . . . . . . . . . ."
+        ". . . . . . . . . . . ."
+        "text2 text2 text2 text2 text2 text2 text2 text2 text2 text2 text2 text2"
+        ". . . . . . . . . . . .";
+    }
+    
+}
+@media  screen and (max-width: 1199px) and (min-width: 800px){
+    .contentContainer {
+        grid-template-rows: 1vw 10vw 25vw 10vw 5vw;
+        grid-template-areas:
+        ". . . . . . . . . . . ." 
+        "text1 text1 . . . . . . . . . ."
+        ". . . . . . . . . . . ."
+        "text2 text2 text2 text2 text2 text2 text2 text2 . . . ."
+        ". . . . . . . . . . . .";
+    }
+    
+}
+@media  screen and (max-width: 1499px) and (min-width: 1200px){
+    .contentContainer {
+        grid-template-areas:
+        ". . . . . . . . . . . ." 
+        "text1 text1 . . . . . . . . . ."
+        ". . . . . . . . . . . ."
+        "text2 text2 text2 text2 text2 text2 text2 . . . . ."
+        ". . . . . . . . . . . .";
+    }
+    .pageTitle {
+        bottom: 2%;
+    }
+    
+}
+@media  screen and (min-width: 1500px) {
+    .contentContainer {
+        grid-template-rows: 1vw 10vw 27vw 10vw 5vw;
+        grid-template-areas:
+        ". . . . . . . . . . . ." 
+        "text1 text1 . . . . . . . . . ."
+        ". . . . . . . . . . . ."
+        "text2 text2 text2 text2 text2 text2 text2 . . . . ."
+        ". . . . . . . . . . . .";
+    }
+    .pageTitle {
+        bottom: 3%;
+    }
 }

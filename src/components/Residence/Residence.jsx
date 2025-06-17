@@ -19,20 +19,26 @@ function Residence() {
     };
     return (
         <div className="grid-container-residence">
-            <div className="page-title page-title1">
-                <p>РЕЗИДЕНТСТВО</p>
+            <div className="residence-title-container">
+                <div className="residence-title-box1">
+                    <div className="page-title page-title1">
+                        <p>РЕЗИДЕНТСТВО</p>
+                    </div>
+                    <div className="page-title page-title2">
+                        <p>ОТКРЫВАЙ</p>
+                    </div>
+                    <div className="page-title page-title3">
+                        <p>ВДОХНОВЛЯЙ</p>
+                    </div>
+                </div>
+                <div className="residence-title-box2">
+                    <div className="icon"><ScaleCrossSlideBracketInverted/></div>
+                    <div className="same-text">
+                        <p>Найди идеальное помещение для аренды прямо сейчас.</p>
+                    </div>
+                    <div className="buttonGo-container"><ButtonGoToDesktop text="перейти"/></div>
+                </div>
             </div>
-            <div className="page-title page-title2">
-                <p>ОТКРЫВАЙ</p>
-            </div>
-            <div className="page-title page-title3">
-                <p>ВДОХНОВЛЯЙ</p>
-            </div>
-            <div className="icon"><ScaleCrossSlideBracketInverted/></div>
-            <div className="same-text">
-                <p>Найди идеальное помещение для аренды прямо сейчас.</p>
-            </div>
-            <div className="buttonGo-container"><ButtonGoToDesktop text="перейти"/></div>
             <div className="residence-paragraph1">
                 <p className="residence-paragraph-title">#КОЛЛАБОРАЦИЯ</p>
                 <p className="residence-paragraph-text">

@@ -1,0 +1,175 @@
+.historyPage {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 7.32vw;
+    margin-bottom: 7.32vw;
+}
+.fullScreenContainer1 {
+    width: 100%;
+    height: 65.59vw;
+    background-image: url(../../assets/history/historyBg.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+}
+.pageTitle {
+    position: absolute;
+    bottom: 0%;
+    width: 91.2153%;
+    display: flex;
+    flex-direction: column;
+}
+.titleText1 {
+    color: var(--primary-color);
+    font-size: 6.4rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 72.7%;
+    padding-bottom: 2.56vw;
+}
+.titleText2 {
+    color: var(--accent-color);
+    font-size: 6.4rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 72.9%;
+}
+.textBox1Text {
+    font-size: 1.2rem;
+}
+.textBox2Text {
+    font-size: 1.2rem;
+}
+.interactiveLine {
+    height: 16.032vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    column-gap: 12%;
+    mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 12%,
+        rgba(0,0,0,1) 88%,
+        rgba(0,0,0,0)
+    );
+    position: relative;
+}
+.interactiveLineElements {
+    position: absolute;
+    top: 0;
+    display: inline-flex;
+    width: 91.2152%;
+    overflow: scroll;
+    scroll-snap-type: both mandatory;
+}
+.interactiveLineProgressBar {
+    position: absolute;
+    top: 5%;
+    background-color: var(--secondary-color);
+    width: 100%;
+    height: .2rem;
+}
+.interactiveLineElement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+.interactiveLineElementLink {
+    text-decoration: none;
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+.active {
+    font-size: 3.4rem;
+}
+.interactiveLineElementIndicator {
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: var(--secondary-color);
+    border-radius: 100%;
+}
+.interactiveLineElementTitle {
+    font-size: 1.7rem;
+    letter-spacing: -0.05em;
+    line-height: 110%;
+    font-weight: medium;
+    text-align: center;
+}
+.interactiveLineElementText {
+    font-size: 1rem;
+    text-align: center;
+}
+/* История карточки */
+.fullScreenContainer2 {
+    min-height: 100dvh;
+    width: 91.2152%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 7.32vw;
+}
+.wideContainer1 {
+    width: 100%;
+    display: flex;
+}
+/* 1892 */
+.container1892 {
+    width: 100%;
+    display: flex;
+}
+.container1892Col1 {
+    width: 35.1524%;
+}
+.container1892Col2 {
+    width: 66.212%;
+}
+.container1892Animation {
+    width: 100%;
+    height: 10%;
+}
+.wideContainerTitle {
+    font-size: 6.4rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    letter-spacing: -0.05em;
+}
+.container1892Col2Row {
+    width: 100%;
+    display: flex;
+}
+/* ^1892^ */
+/* 1905 */
+.container1905 {
+    width: 100%;
+    display: flex;
+}
+/* ^1905^ */
+/* 1917 */
+/* ^1917^ */
+/* 1937 */
+/* ^1937^ */
+/* 1941 */
+/* ^1941^ */
+/* 1958 */
+/* ^1958^ */
+/* 1990 */
+/* ^1990^ */
+/* 2006 */
+/* ^2006^ */
+/* 2017 */
+/* ^2017^ */
+/* 2025 */
+/* ^2025^ */
