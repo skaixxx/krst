@@ -1,9 +1,9 @@
-import "./rent.css"
+import style from "./rent.module.css"
 
 function Rent() {
     return (
-        <div className="rent-page">
-            {/* <ConcretRent/> */}
+        <div className={style.rentPage}>
+            
         </div>
     );
 }
