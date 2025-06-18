@@ -215,11 +215,67 @@
     display: flex;
     justify-content: end;
 }
-.lang-selector {
+
+.footer-lang-change .lang-select-btn {
     background-color: var(--secondary-color);
     color: var(--primary-color);
     border: none;
     font-size: 1rem;
+}
+.footer-lang-change .options {
+  position: absolute;
+  overflow-y: auto;
+  max-height: 295px;
+  padding: 10px;
+  margin-top: 10px;
+  animation-name: ArrowDown;
+  -webkit-animation-name: ArrowDown;
+  animation-duration: 0.35s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 0.35s;
+  -webkit-animation-fill-mode: both;
+}
+.footer-lang-change .options .option {
+  display: flex;
+  height: 55px;
+  cursor: pointer;
+  align-items: center;
+}
+.footer-lang-change .options .option .option-text {
+    font-size: 1,25 rem;
+}
+.footer-lang-change.active .lang-select-btn {
+     transform: rotate(-180deg);
+}
+.footer-lang-change.active .options {
+  display: block;
+  opacity: 0;
+  z-index: 10;
+  animation-name: ArrowUp;
+  -webkit-animation-name: ArrowUp;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+}
+@keyframes ArrowUp {
+  from {
+    transform: translate3d(0, 30px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes ArrowDown {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(0, 20px, 0);
+    opacity: 0;
+  }
 }
 .footer-socuals-politico-container {
     width: 100%;
