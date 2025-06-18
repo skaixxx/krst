@@ -17,6 +17,12 @@ function Footer() {
             current.target.placeholder = current.target.dataset.placeholder || '';
         } 
     };
+
+    const LangMenu = document.querySelector(".footer-lang-change"),
+    langSelectBtn = LangMenu.querySelector(".lang-select-btn");
+
+    langSelectBtn.addEventListener("click", ()=> LangMenu.classList.toggle("active"));
+    
     return (
         <footer className="footer">
         <div className="footer-grid">
