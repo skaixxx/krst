@@ -7,7 +7,7 @@ import arrowIcon from "../../assets/footer/arrowBtn.svg"
 import dzenIcon from "../../assets/footer/dzenIcon.svg"
 import tgIcon from "../../assets/footer/tgIcon.svg"
 import vkIcon from "../../assets/footer/vkIcon.svg"
-import VectorStroke from "../../assets/footer/VectorStroke.svg"
+import Vector from "../../assets/footer/Vector.svg"
 
 function Footer() {
     const inputFocus = (current) => {
@@ -75,7 +75,7 @@ function Footer() {
                  <div className="footer-lang-change">
                 <div className="lang-select-btn" name="lang" id="lang">
                     <span className="lang-btn-text">Ru</span>
-                    <i className="arrow-select"></i>
+                    <i className="arrow-select">{Vector}</i>
             </div>
             <ul className="options">
                 <li className="option">
