@@ -7,6 +7,7 @@ import arrowIcon from "../../assets/footer/arrowBtn.svg"
 import dzenIcon from "../../assets/footer/dzenIcon.svg"
 import tgIcon from "../../assets/footer/tgIcon.svg"
 import vkIcon from "../../assets/footer/vkIcon.svg"
+import VectorStroke from "../../assets/footer/VectorStroke.svg"
 
 function Footer() {
     const inputFocus = (current) => {
@@ -71,12 +72,21 @@ function Footer() {
                 </div>
             </div>
             <div className="grid-col3">
-                <div className="footer-lang-change">
-                    <select className="lang-selector" name="lang" id="lang">
-                        <option value="Ru">Ru</option>
-                        <option value="En">En</option>
-                    </select>
-                </div>
+                 <div className="footer-lang-change">
+                <div className="lang-select-btn" name="lang" id="lang">
+                    <span className="lang-btn-text">Ru</span>
+                    <i className="arrow-select"></i>
+            </div>
+            <ul className="options">
+                <li className="option">
+                    <span className="option-text">Ru</span>   
+                </li>
+                <li className="option">
+                    <span className="option-text">En</span>    
+                </li>
+            </ul>
+                
+            </div>
                 <div className="footer-socuals-politico-container">
                     <div className="footer-socials">
                         <a href="https://dzen.ru" target="_blank" rel="noreferrer" className="link-dzen"><img src={dzenIcon} alt="dzen" className="dzen-logo"></img></a>
