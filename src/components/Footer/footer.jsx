@@ -23,10 +23,12 @@ function Footer() {
     useEffect (() => {
     const LangMenu = document.querySelector(".footer-lang-change"),
     langSelectBtn = LangMenu.querySelector(".lang-select-btn");
+
+    langSelectBtn.addEventListener("click", ()=> LangMenu.classList.toggle("active"));
     })
     
 
-    langSelectBtn.addEventListener("click", ()=> LangMenu.classList.toggle("active"));
+    
     
     return (
         <footer className="footer">
