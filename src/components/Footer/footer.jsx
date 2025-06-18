@@ -8,6 +8,7 @@ import dzenIcon from "../../assets/footer/dzenIcon.svg"
 import tgIcon from "../../assets/footer/tgIcon.svg"
 import vkIcon from "../../assets/footer/vkIcon.svg"
 import Vector from "../../assets/footer/Vector.svg"
+import { useEffect } from "react"
 
 function Footer() {
     const inputFocus = (current) => {
@@ -19,8 +20,11 @@ function Footer() {
         } 
     };
 
+    useEffect (() => {
     const LangMenu = document.querySelector(".footer-lang-change"),
     langSelectBtn = LangMenu.querySelector(".lang-select-btn");
+    })
+    
 
     langSelectBtn.addEventListener("click", ()=> LangMenu.classList.toggle("active"));
     
