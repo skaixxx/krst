@@ -124,6 +124,33 @@
 .wideContainer1 {
     width: 100%;
     display: flex;
+    height: 32.94vw;
+}
+.wideContainer1Col1 {
+    height: 100%;
+    width: 66.13%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+.wideContainer1Title {
+    font-size: 3.4rem;
+    font-weight: 700;
+    line-height: 100%;
+}
+.wideContainerTextBox {
+    width: 87.26%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+.wideContainerText {
+    font-size: 1rem;
+
+}
+.wideContainer1Col2 {
+    width: 32.36%;
+    height: 100%;
 }
 .imageTomishko {
     width: 100%;
@@ -131,22 +158,38 @@
 }
 /* 1892 */
 .container1892 {
+    height: 43.78vw;
     width: 100%;
     display: flex;
 }
 .container1892Col1 {
+    height: 100%;
     width: 35.1524%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.container1892Col1Row1 {
+    width: 100%;
+    height: 42.31%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.container1892Animation {
+    height: 39.53%;
+    width: 43.38%;
+    display: flex;
+    justify-content: start;
 }
 .container1892Col2 {
+    height: 100%;
     width: 66.212%;
 }
 .image1892 {
     width: 100%;
     border-radius: 1rem;
-}
-.container1892Animation {
-    width: 100%;
-    height: 10%;
 }
 .wideContainerTitle {
     font-size: 6.4rem;
@@ -356,6 +399,45 @@
     justify-content: start;
 }
 .famousPeopleBlockTitleText2 {
+    color: var(--accent-color);
+    font-size: 6.4rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 72.7%;
+}
+.containerDangerousPeople {
+    height: 61.13vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 6.19vw;
+}
+.dangerousPeopleBlockTitle {
+    height: 26.467%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.75rem;
+}
+.dangerousPeopleBlockTitleText1 {
+    font-size: 6.4rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 72.7%;
+}
+.dangerousPeopleBlockTitleSub {
+    height: 42.08%;
+    width: 100%;
+    display: flex;
+    column-gap: 7.83vw;
+}
+.dangerousPeopleBlockTitleSubAnimation {
+    height: 100%;
+    width: 8.03%;
+    display: flex;
+    justify-content: start;
+}
+.dangerousPeopleBlockTitleText2 {
     color: var(--accent-color);
     font-size: 6.4rem;
     font-weight: 700;

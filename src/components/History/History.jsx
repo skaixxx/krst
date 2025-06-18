@@ -104,15 +104,17 @@ function History() {
                         <p className={style.wideContainer1Title}>
                         АНТОНИЙ ОСИПОВИЧ ТОМИШКО (1851–1900)
                         </p>
-                        <p>
-                            Антоний Осипович Томишко родился 6 апреля 1851 года в небольшом чешском городке Германув-Местец. 
-                        </p>
-                        <p>
-                           Самой значимой постройке Томишко за всю его жизнь была разработка тюрьмы «Кресты». 
-                        </p>
-                        <p>
-                            С точки зрения архитектуры, тюрьма «Кресты» особенно интересна благодаря своей уникальной планировке: здания тюрьмы имеют форму крестов, что облегчает наблюдение за заключёнными. До Томишко тюрьмы с подобной конструкцией возводились как в России, так и за границей, но именно Томишко воплотил этот замысел в реальность!
-                        </p>
+                        <div className={style.wideContainerTextBox}>
+                            <p className={style.wideContainerText}>
+                                Антоний Осипович Томишко родился 6 апреля 1851 года в небольшом чешском городке Германув-Местец. 
+                            </p>
+                            <p className={style.wideContainerText}>
+                               Самой значимой постройке Томишко за всю его жизнь была разработка тюрьмы «Кресты». 
+                            </p>
+                            <p className={style.wideContainerText}>
+                                С точки зрения архитектуры, тюрьма «Кресты» особенно интересна благодаря своей уникальной планировке: здания тюрьмы имеют форму крестов, что облегчает наблюдение за заключёнными. До Томишко тюрьмы с подобной конструкцией возводились как в России, так и за границей, но именно Томишко воплотил этот замысел в реальность!
+                            </p>
+                        </div>
                     </div>
                     <div className={style.wideContainer1Col2}>
                         <img src={tomishko} alt="tomishko" className={style.imageTomishko}/>
@@ -120,11 +122,13 @@ function History() {
                 </div>
                 <div className={style.container1892}>
                     <div className={style.container1892Col1}>
-                        <p className={`${style.container1892Title} ${style.wideContainerTitle}`}>
-                        1892 —
-                        </p>
-                        <div className={style.container1892Animation}>
-                            <ScaleSlideBrackets/>
+                        <div className={style.container1892Col1Row1}>
+                            <p className={`${style.container1892Title} ${style.wideContainerTitle}`}>
+                            1892 —
+                            </p>
+                            <div className={style.container1892Animation}>
+                                <ScaleSlideBrackets/>
+                            </div>
                         </div>
                     </div>
                     <div className={style.container1892Col2}>
