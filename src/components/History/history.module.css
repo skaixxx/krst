@@ -63,6 +63,8 @@
         rgba(0,0,0,0)
     );
     position: relative;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
 }
 .interactiveLineElements {
     position: absolute;
@@ -366,8 +368,11 @@
     width: 56.67%;
 }
 /* ^2025^ */
+.containerAboutPeople {
+    height: 135.07vw;
+}
 .famousPeopleBlock {
-    height: 61.13vw;
+    height: 45.26%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -406,14 +411,14 @@
     line-height: 72.7%;
 }
 .containerDangerousPeople {
-    height: 61.13vw;
+    height: 48.23%;
     width: 100%;
     display: flex;
     flex-direction: column;
     row-gap: 6.19vw;
 }
 .dangerousPeopleBlockTitle {
-    height: 26.467%;
+    height: 25.62%;
     width: 100%;
     display: flex;
     flex-direction: column;

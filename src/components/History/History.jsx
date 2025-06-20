@@ -14,7 +14,18 @@ import ScaleSlideBrackets from "../animations/ScaleSlideBrackets/ScaleSlideBrack
 import FamousCards from "./FamousPersonCards";
 import RotatingCross from "../animations/RotatingCross/RotatingCross";
 import DangerousCards from "./DangerousPersonCards";
+import { useEffect, useState } from "react";
+import Carousel from "./HistoryCarousel";
 function History() {
+    const [items, setItems] = useState([]);
+    useEffect(() => {
+        fetch('/data/history/carouselData.json')
+        .then(res => res.json())
+        .then(data => {
+            setItems(data);
+        })
+        .catch(err => console.error('Ошибка загрузки данных', err));
+    })
     return (
         <div className={style.historyPage}>
             <div className={style.fullScreenContainer1}>
@@ -24,79 +35,15 @@ function History() {
                 </div>
             </div>
             <div className={style.interactiveLine}>
-                <div className={style.interactiveLineProgressBar}></div>
-                <div className={style.interactiveLineElements}>
-                    <div className={style.interactiveLineElement}>
-                        <a href="#" className={style.interactiveLineElementLink}>
+                <Carousel>
+                    {items.map((item) => {
+                       <a href={item.id} className={style.interactiveLineElementLink}>
                             <div className={style.interactiveLineElementIndicator}></div>
-                            <p className={style.interactiveLineElementTitle}>1892</p>
-                            <p className={style.interactiveLineElementText}>ТЮРЬМА «КРЕСТЫ»</p>
+                            <p className={style.interactiveLineElementTitle}>{item.title}</p>
+                            <p className={style.interactiveLineElementText}>{item.text}</p>
                         </a>
-                    </div>
-                    <div className={style.interactiveLineElement}>
-                        <a href="#" className={style.interactiveLineElementLink}>
-                            <div className={style.interactiveLineElementIndicator}></div>
-                            <p className={style.interactiveLineElementTitle}>1905</p>
-                            <p className={style.interactiveLineElementText}>ПОСЛЕ РЕВОЛЮЦИИ</p>
-                        </a>
-                    </div>
-                    <div className={style.interactiveLineElement}>
-                        <a href="#" className={style.interactiveLineElementLink}>
-                            <div className={style.interactiveLineElementIndicator}></div>
-                            <p className={style.interactiveLineElementTitle}>1917</p>
-                            <p className={style.interactiveLineElementText}>В НАЧАЛЕ XX ВЕКА</p>
-                        </a>
-                    </div>
-                    <div className={style.interactiveLineElement}>
-                        <a href="#" className={style.interactiveLineElementLink}>
-                            <div className={style.interactiveLineElementIndicator}></div>
-                            <p className={style.interactiveLineElementTitle}>1937</p>
-                            <p className={style.interactiveLineElementText}>ГОДЫ БОЛЬШОГО ТЕРРОРА</p>
-                        </a>
-                    </div>
-                    <div className={style.interactiveLineElement}>
-                        <a href="#" className={style.interactiveLineElementLink}>
-                            <div className={style.interactiveLineElementIndicator}></div>
-                            <p className={style.interactiveLineElementTitle}>1941</p>
-                            <p className={style.interactiveLineElementText}>В БЛОКАДНЫЕ ДНИ</p>
-                        </a>
-                    </div>
-                    <div className={style.interactiveLineElement}>
-                        <a href="#" className={style.interactiveLineElementLink}>
-                            <div className={style.interactiveLineElementIndicator}></div>
-                            <p className={style.interactiveLineElementTitle}>1958</p>
-                            <p className={style.interactiveLineElementText}>В ПОСЛЕВОЕННЫЕ ГОДЫ</p>
-                        </a>
-                    </div>
-                    <div className={style.interactiveLineElement}>
-                        <a href="#" className={style.interactiveLineElementLink}>
-                            <div className={style.interactiveLineElementIndicator}></div>
-                            <p className={style.interactiveLineElementTitle}>1990</p>
-                            <p className={style.interactiveLineElementText}>ПЕРЕНАСЕЛЁННАЯ ТЮРЬМА</p>
-                        </a>
-                    </div>
-                    <div className={style.interactiveLineElement}>
-                        <a href="#" className={style.interactiveLineElementLink}>
-                            <div className={style.interactiveLineElementIndicator}></div>
-                            <p className={style.interactiveLineElementTitle}>2006</p>
-                            <p className={style.interactiveLineElementText}>Lorem ipsum</p>
-                        </a>
-                    </div>
-                    <div className={style.interactiveLineElement}>
-                        <a href="#" className={style.interactiveLineElementLink}>
-                            <div className={style.interactiveLineElementIndicator}></div>
-                            <p className={style.interactiveLineElementTitle}>2017</p>
-                            <p className={style.interactiveLineElementText}>Lorem ipsum</p>
-                        </a>
-                    </div>
-                    <div className={style.interactiveLineElement}>
-                        <a href="#" className={style.interactiveLineElementLink}>
-                            <div className={style.interactiveLineElementIndicator}></div>
-                            <p className={style.interactiveLineElementTitle}>2025</p>
-                            <p className={style.interactiveLineElementText}>Lorem ipsum</p>
-                        </a>
-                    </div>
-                </div>
+                    })}
+                </Carousel>
             </div>
             <div className={style.fullScreenContainer2}>
                 <div className={style.wideContainer1}>
@@ -120,7 +67,7 @@ function History() {
                         <img src={tomishko} alt="tomishko" className={style.imageTomishko}/>
                     </div>
                 </div>
-                <div className={style.container1892}>
+                <div className={style.container1892} id="y1892">
                     <div className={style.container1892Col1}>
                         <div className={style.container1892Col1Row1}>
                             <p className={`${style.container1892Title} ${style.wideContainerTitle}`}>
@@ -143,7 +90,7 @@ function History() {
                         </div>
                     </div>
                 </div>
-                <div className={style.container1905}>
+                <div className={style.container1905} id="y1905">
                     <div className={style.container1905Col1}>
                         <img src={y1905} alt="1905" className={style.image1905}/>
                     </div>
@@ -157,7 +104,7 @@ function History() {
                     </div>
                     
                 </div>
-                <div className={style.container1917}>
+                <div className={style.container1917} id="y1917">
                     <div className={style.container1917Col1}>
                         <p className={`${style.container1917Title} ${style.wideContainerTitle}`}>
                         1917 —
@@ -172,7 +119,7 @@ function History() {
                         <img src={y1917} alt="1917" className={style.image1917}/>
                     </div>
                 </div>
-                <div className={style.container1937}>
+                <div className={style.container1937} id="y1937">
                     <div className={style.container1937Col1}>
                         <p className={`${style.container1937Title} ${style.wideContainerTitle}`}>
                         1937 — 1938
@@ -190,7 +137,7 @@ function History() {
                         <img src={y1937} alt="1937" className={style.image1937}/>
                     </div>
                 </div>
-                <div className={style.container1941}>
+                <div className={style.container1941} id="y1941">
                     <div className={style.container1941Col1}>
                         <img src={y1941} alt="1941" className={style.image1941}/>
                     </div>
@@ -208,7 +155,7 @@ function History() {
                     </div>
                     
                 </div>
-                <div className={style.container1958}>
+                <div className={style.container1958} id="y1958">
                     <div className={style.container1958Col1}>
                         <p className={`${style.container1958Title} ${style.wideContainerTitle}`}>
                         1958 — 1960
@@ -221,7 +168,7 @@ function History() {
                         <img src={y1958} alt="1958" className={style.image1958}/>
                     </div>
                 </div>
-                <div className={style.container1990}>
+                <div className={style.container1990} id="y1990">
                     <div className={style.container1990Col1}>
                         <img src={y1990} alt="1990" className={style.image1990}/>
                     </div>
@@ -237,7 +184,7 @@ function History() {
                         </p>
                     </div>    
                 </div>
-                <div className={style.container2006}>
+                <div className={style.container2006} id="y2006">
                     <div className={style.container2006Col1}>
                         <p className={`${style.container2006Title} ${style.wideContainerTitle}`}>
                         2006 —
@@ -250,7 +197,7 @@ function History() {
                         <img src={y2006} alt="2006" className={style.image2006}/>
                     </div>    
                 </div>
-                <div className={style.container2017}>
+                <div className={style.container2017} id="y2017">
                     <div className={style.container2017Col1}>
                         <p className={`${style.container2017Title} ${style.wideContainerTitle}`}>
                         2017 —
@@ -263,7 +210,7 @@ function History() {
                         <img src={y2017} alt="2017" className={style.image2017}/>
                     </div>    
                 </div>
-                <div className={style.container2025}>
+                <div className={style.container2025} id="y2025">
                     <div className={style.container2025Col1}>
                         <img src={y2025} alt="2025" className={style.image2025}/>
                     </div>
