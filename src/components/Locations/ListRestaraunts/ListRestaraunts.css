@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.ListRestarauntPage {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 7.32vw;
+    margin-bottom: 7.32vw;
+}
+.ListRestarauntContainer {
+    width: 91.2153%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.LRTitle-1 {
+    width: 91.2153%;
+    margin: 0 auto;
+    position: relative;
+    left: -19%;
+    font-weight: 700;
+    font-size: 8rem;
+    line-height: 10%;
+}
