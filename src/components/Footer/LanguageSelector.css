@@ -1,0 +1,84 @@
+.footer-lang-change {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.lang-select-container{
+  display: inline-flex;
+  position: relative;  
+}
+
+.lang-select-btn{
+  cursor: pointer;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.arrow-select {   
+  width: 0.875rem;
+  transition: transform 0.3s ease;
+}
+
+.arrow-select.rotate {
+  transform: rotate(-180deg);
+}
+
+.options {
+  top: 125%;
+  left: 25%;
+  position: absolute;
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  pointer-events: none;
+  
+  animation-name: ArrowDown;
+  animation-duration: 0.35s;
+  animation-fill-mode: both;
+
+  -webkit-animation-name: ArrowDown;
+  -webkit-animation-duration: 0.35s;
+  -webkit-animation-fill-mode: both;
+}
+
+.options.show {   
+  
+  pointer-events: auto;
+  
+  animation-name: ArrowUp;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+
+  -webkit-animation-name: ArrowUp;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+}
+
+.options li {
+  cursor: pointer;
+}
+
+@keyframes ArrowUp {
+  from {
+    transform: translate3d(0, 30px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes ArrowDown {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(0, 20px, 0);
+    opacity: 0;
+  }
+}
