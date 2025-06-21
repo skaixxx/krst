@@ -43,6 +43,7 @@ function History() {
                 </div>
             </div>
             <div className={style.interactiveLine}>
+                <div className={style.interactiveLineProgressBar}></div>
                 <Carousel>
                     {items.map((item) => (
                        <a href={item.id} className={style.interactiveLineElementLink} key={item.id}>

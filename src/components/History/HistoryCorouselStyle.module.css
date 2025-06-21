@@ -7,21 +7,25 @@
     column-gap: 1rem;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    cursor: grab;
+    user-select: none;
+    -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
 }
 .carousel::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
 }
-.item {
-    width: 30%;
-    height: 100%;
-    text-decoration: none;
-    color: var(--secondary-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
+.carousel:active {
+  cursor: grabbing;
 }
 .active {
-    font-size: 3.4rem;
+  cursor: grabbing;
+}
+.item {
+  min-width: 15%;
+  flex: 0 0 0;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  color: black;
+  transition: transform 0.3s;
 }
