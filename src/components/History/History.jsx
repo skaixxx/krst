@@ -20,12 +20,20 @@ function History() {
     const [items, setItems] = useState([]);
     useEffect(() => {
         fetch('/data/history/carouselData.json')
-        .then(res => res.json())
-        .then(data => {
-            setItems(data);
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error(`HTTP error! status: ${res.status}`);
+            }
+            return res.json();
         })
-        .catch(err => console.error('Ошибка загрузки данных', err));
-    })
+        .then((json) => {
+            console.log('Данные загружены', json);
+            setItems(json)
+        })
+        .catch((error) => {
+            console.error('ошибка загрузки данных', error);
+        })
+    }, [])
     return (
         <div className={style.historyPage}>
             <div className={style.fullScreenContainer1}>
@@ -36,13 +44,13 @@ function History() {
             </div>
             <div className={style.interactiveLine}>
                 <Carousel>
-                    {items.map((item) => {
-                       <a href={item.id} className={style.interactiveLineElementLink}>
+                    {items.map((item) => (
+                       <a href={item.id} className={style.interactiveLineElementLink} key={item.id}>
                             <div className={style.interactiveLineElementIndicator}></div>
                             <p className={style.interactiveLineElementTitle}>{item.title}</p>
                             <p className={style.interactiveLineElementText}>{item.text}</p>
                         </a>
-                    })}
+                    ))}
                 </Carousel>
             </div>
             <div className={style.fullScreenContainer2}>

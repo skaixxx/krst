@@ -26,9 +26,9 @@ const Carousel = ({ children }) => {
     }, []);
     
     return <div className={style.carousel} ref={refContainer}>
-        {React.Children.map(children, (child, i) => (
+        {React.Children.map(children, (children, i) => (
             <div key={i} className={`${style.item} ${i === activeIndicator ? style.active : ''}`}>
-                {child}
+                {children}
             </div>
         ))}
     </div>

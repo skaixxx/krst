@@ -10,7 +10,7 @@ function Header() {
         <div className="header-container">
             <div className="logo-container"><a onClick={() => navigate("/")}><img className="logo" src={logo} alt="logo"></img></a></div>
                 <Navbar/>
-                <div className="button-container"><input type="button" onClick={() => navigate("/Residence")} class="residency-btn" value="резидентство"></input></div>
+                <div className="button-container"><input type="button" onClick={() => navigate("/Residence")} className="residency-btn" value="резидентство"></input></div>
             </div>
         </header>
     );
