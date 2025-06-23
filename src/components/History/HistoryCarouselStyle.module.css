@@ -1,0 +1,59 @@
+.carouselWrapper {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 2%;
+}
+
+.carousel {
+  height: 100%;
+  display: flex;
+  align-items: start;
+  column-gap: 1rem;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  user-select: none;
+  cursor: grab;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  position: relative;
+}
+.card {
+  height: 100%;
+  flex: 0 0 auto;
+  width: fit-content;
+  text-align: center;
+  transition: transform 0.5s ease;
+  scroll-snap-align: center;
+  text-decoration: none;
+  color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .75rem;
+  justify-content: start;
+  transform-origin: top center;
+}
+
+.dragging {
+  cursor: grabbing;
+}
+
+.indicator {
+  width: 1.25rem;
+  height: 1.25rem;
+  background: var(--secondary-color);
+  border-radius: 100%;
+}
+.active{
+  background-color: var(--accent-color);
+}
+.title {
+  font-size: 3.4rem;
+  font-weight: 500;
+}
+
+.text {
+  font-size: 1rem;
+}
