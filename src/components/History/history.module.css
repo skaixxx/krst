@@ -50,10 +50,6 @@
 .interactiveLine {
     height: 16.032vw;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     column-gap: 12%;
     mask-image: linear-gradient(
         to right,

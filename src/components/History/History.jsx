@@ -26,12 +26,9 @@ function History() {
             }
             return res.json();
         })
-        .then((json) => {
-            console.log('Данные загружены', json);
-            setItems(json)
-        })
-        .catch((error) => {
-            console.error('ошибка загрузки данных', error);
+        .then(setItems)
+        .catch((err) => {
+            console.error('ошибка загрузки данных', err);
         })
     }, [])
     return (
@@ -44,15 +41,7 @@ function History() {
             </div>
             <div className={style.interactiveLine}>
                 <div className={style.interactiveLineProgressBar}></div>
-                <Carousel>
-                    {items.map((item) => (
-                       <a href={item.id} className={style.interactiveLineElementLink} key={item.id}>
-                            <div className={style.interactiveLineElementIndicator}></div>
-                            <p className={style.interactiveLineElementTitle}>{item.title}</p>
-                            <p className={style.interactiveLineElementText}>{item.text}</p>
-                        </a>
-                    ))}
-                </Carousel>
+                <Carousel items={items} />      
             </div>
             <div className={style.fullScreenContainer2}>
                 <div className={style.wideContainer1}>
