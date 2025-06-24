@@ -28,42 +28,85 @@ function Rent() {
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div className="specific-event-stroke-container">
-                    <div className="specific-event-stroke-element">
-                        <span className="specific-event-stroke-term">4,17</span>
-                        <p>гектара<br/> общая площадь</p>
-                    </div>
-                    <div className="specific-event-stroke-element">
-                        <span className="specific-event-stroke-term">50</span>
-                        <p>кол-во<br/> помещений</p>
-                    </div>
-                    <div className="specific-event-stroke-element">
-                        <span className="specific-event-stroke-term">16</span>
-                        <p>кол-во<br/> зданий</p>
-                    </div>
+            <div className="specific-event-stroke-container">
+                <div className="specific-event-stroke-element">
+                    <span className="specific-event-stroke-term">4,17</span>
+                    <p>гектара<br/> общая площадь</p>
                 </div>
+                <div className="specific-event-stroke-element">
+                    <span className="specific-event-stroke-term">50</span>
+                    <p>кол-во<br/> помещений</p>
+                </div>
+                <div className="specific-event-stroke-element">
+                    <span className="specific-event-stroke-term">16</span>
+                    <p>кол-во<br/> зданий</p>
+                </div>
+            </div>
 
+            <div className={`${style.rentPageContainer} ${style.cardsContainer}`}>
                 <div className={style.cards}>
                     <div className={style.card}>
-                        <div className={style.cardNumber}>1</div>
-                        <div className={style.cardTitle}>КУЛИНАРНЫЙ<br/>КОРПУС</div>
-                        <div className={style.cardArea}>ОБЩАЯ ПЛОЩАДЬ<br/>48 839 м²</div>
+                        <div className={style.cardImage}>
+                            <img src="/images/rent/photo-1.png" alt="" />
+                        </div>
+                        <div className={style.cardContent}>
+                            <div className={style.cardHeader}>
+                                <div className={style.cardNumber}>1</div>
+                                <div className={style.cardTitle}>кулинарный корпус</div>
+                            </div>
+                            <div className={style.cardArea}>
+                                <div className={style.cardAreaInner}>
+                                    общая площадь <span>44 839 м²</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div className={style.card}>
-                        <div className={style.cardNumber}>2</div>
-                        <div className={style.cardTitle}>ТВОРЧЕСКИЙ<br/>ЦЕНТР</div>
-                        <div className={style.cardArea}>ОБЩАЯ ПЛОЩАДЬ<br/>7 320 м²</div>
+                        <div className={style.cardImage}>
+                            <img src="/images/rent/photo-2.png" alt="" />
+                        </div>
+                        <div className={style.cardContent}>
+                            <div className={style.cardHeader}>
+                                <div className={style.cardNumber}>2</div>
+                                <div className={style.cardTitle}>творческий центр</div>
+                            </div>
+                            <div className={style.cardArea}>
+                                <div className={style.cardAreaInner}>
+                                    общая площадь <span>7 320 м²</span></div>
+                                </div>
+                        </div>
                     </div>
                     <div className={style.card}>
-                        <div className={style.cardNumber}>3</div>
-                        <div className={style.cardTitle}>ТЕРРИТОРИЯ<br/>ДВИЖЕНИЯ</div>
-                        <div className={style.cardArea}>ОБЩАЯ ПЛОЩАДЬ<br/>8 540 м²</div>
+                        <div className={style.cardImage}>
+                            <img src="/images/rent/photo-3.png" alt="" />
+                        </div>
+                        <div className={style.cardContent}>
+                            <div className={style.cardHeader}>
+                                <div className={style.cardNumber}>3</div>
+                                <div className={style.cardTitle}>территория движения</div>
+                            </div>
+                            <div className={style.cardArea}>
+                                <div className={style.cardAreaInner}>
+                                    общая площадь <span>8 540 м²</span></div>
+                                </div>
+                        </div>
                     </div>
                     <div className={style.card}>
-                        <div className={style.cardNumber}>4</div>
-                        <div className={style.cardTitle}>ЦЕНТР<br/>РАЗВИТИЯ</div>
-                        <div className={style.cardArea}>ОБЩАЯ ПЛОЩАДЬ<br/>5 360 м²</div>
+                        <div className={style.cardImage}>
+                            <img src="/images/rent/photo-4.png" alt="" />
+                        </div>
+                        <div className={style.cardContent}>
+                            <div className={style.cardHeader}>
+                                <div className={style.cardNumber}>4</div>
+                                <div className={style.cardTitle}>центр развития</div>
+                            </div>
+                            <div className={style.cardArea}>
+                                <div className={style.cardAreaInner}>
+                                    общая площадь <span>5 360 м²</span></div>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
