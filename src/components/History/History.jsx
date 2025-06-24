@@ -16,6 +16,8 @@ import RotatingCross from "../animations/RotatingCross/RotatingCross";
 import DangerousCards from "./DangerousPersonCards";
 import { useEffect, useState } from "react";
 import Carousel from "./HistoryCarousel";
+import ScaleSlideDots from "../animations/ScaleSlideDots/ScaleSlideDots";
+import ScaleSlideDotsInverted from "../animations/ScaleSlideDots/ScaleSlideDotsInverted";
 function History() {
     const [items, setItems] = useState([]);
     useEffect(() => {
@@ -119,17 +121,23 @@ function History() {
                 </div>
                 <div className={style.container1937} id="y1937">
                     <div className={style.container1937Col1}>
-                        <p className={`${style.container1937Title} ${style.wideContainerTitle}`}>
-                        1937 — 1938
-                        </p>
-                        <p>
-                        В годы Большого террора в «Крестах» содержалось множество людей, обвинённых 
-                        в контрреволюционной деятельности. В каждой одиночной камере площадью 8 м² находилось 
-                        по 15–17 арестованных. В этот период в тюрьме оказались выдающиеся деятели науки и культуры.
-                        </p>
-                        <p>
-                            Позднее, в составе «Крестов» появились так называемые «шарашкины конторы» - особые конструкторские бюро, где работали осуждённые, в том числе из военной сферы. Эти закрытые учреждения использовали труд заключённых для решения научно-технических задач.
-                        </p>
+                        <div className={style.container1937Col1Row1}>
+                            <div className={style.container1937Animation}><ScaleSlideDotsInverted/></div>
+                            <p className={`${style.container1937Title} ${style.wideContainerTitle}`}>
+                            1937 — 
+                            </p>
+                            <p className={`${style.container1937Title} ${style.wideContainerTitle}`}>1938</p>
+                        </div>
+                        <div className={style.container1937Col1Row2}>
+                            <p>
+                            В годы Большого террора в «Крестах» содержалось множество людей, обвинённых 
+                            в контрреволюционной деятельности. В каждой одиночной камере площадью 8 м² находилось 
+                            по 15–17 арестованных. В этот период в тюрьме оказались выдающиеся деятели науки и культуры.
+                            </p>
+                            <p>
+                                Позднее, в составе «Крестов» появились так называемые «шарашкины конторы» - особые конструкторские бюро, где работали осуждённые, в том числе из военной сферы. Эти закрытые учреждения использовали труд заключённых для решения научно-технических задач.
+                            </p>
+                        </div>
                     </div>
                     <div className={style.container1937Col2}>
                         <img src={y1937} alt="1937" className={style.image1937}/>

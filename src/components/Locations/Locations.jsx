@@ -1,4 +1,5 @@
 import PhotoGallery from "./PhotoGallery";
+import style from "./Locations.module.css"
 
 const Locations = () => {
 
@@ -9,8 +10,10 @@ const Locations = () => {
     ];
     
     return(
+        <div className={style.fullscreenContainer}>
         <PhotoGallery
             photos={galleryPhotos}/>
+        </div>
     )  
 }
 
