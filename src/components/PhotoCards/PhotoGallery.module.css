@@ -2,11 +2,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 10px; /*Отредактировать*/
     padding: 0 3rem;
 }
 
 .image {
     transition: width 0.3s ease, height 0.3s ease;
-    border-radius: 1cqmin;
+    border-radius: 1cqmin; /*Отредактировать*/
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        justify-content: center;
+    }
+
+    .container {
+        transition: all 0.3s ease;
+        position: absolute;
+    }
 }
