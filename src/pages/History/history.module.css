@@ -1,0 +1,480 @@
+.historyPage {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 7.32vw;
+    margin-bottom: 7.32vw;
+}
+.fullScreenContainer1 {
+    width: 100%;
+    height: 65.59vw;
+    background-image: url(../../assets/history/historyBg.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+}
+.pageTitle {
+    position: absolute;
+    bottom: 0%;
+    width: 91.2153%;
+    display: flex;
+    flex-direction: column;
+}
+.titleText1 {
+    color: var(--primary-color);
+    font-size: 6.4rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 72.7%;
+    padding-bottom: 2.56vw;
+}
+.titleText2 {
+    color: var(--accent-color);
+    font-size: 6.4rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 72.9%;
+}
+.textBox1Text {
+    font-size: 1.2rem;
+}
+.textBox2Text {
+    font-size: 1.2rem;
+}
+.interactiveLine {
+    height: 16.032vw;
+    width: 100%;
+    column-gap: 12%;
+    mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 12%,
+        rgba(0,0,0,1) 88%,
+        rgba(0,0,0,0)
+    );
+    position: relative;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+.interactiveLineElements {
+    position: absolute;
+    top: 0;
+    display: inline-flex;
+    width: 91.2152%;
+    overflow: scroll;
+    scroll-snap-type: both mandatory;
+}
+.interactiveLineProgressBar {
+    position: absolute;
+    top: 5%;
+    background-color: var(--secondary-color);
+    width: 100%;
+    height: .2rem;
+}
+.interactiveLineElement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+.interactiveLineElementLink {
+    text-decoration: none;
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+.active {
+    font-size: 3.4rem;
+}
+.interactiveLineElementIndicator {
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: var(--secondary-color);
+    border-radius: 100%;
+}
+.interactiveLineElementTitle {
+    font-size: 1.7rem;
+    letter-spacing: -0.05em;
+    line-height: 110%;
+    font-weight: medium;
+    text-align: center;
+}
+.interactiveLineElementText {
+    font-size: 1rem;
+    text-align: center;
+}
+/* История карточки */
+.fullScreenContainer2 {
+    min-height: 100dvh;
+    width: 91.2152%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 7.32vw;
+}
+.wideContainer1 {
+    width: 100%;
+    display: flex;
+    height: 32.94vw;
+}
+.wideContainer1Col1 {
+    height: 100%;
+    width: 66.13%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+.wideContainer1Title {
+    font-size: 3.4rem;
+    font-weight: 700;
+    line-height: 100%;
+}
+.wideContainerTextBox {
+    width: 87.26%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+.wideContainerText {
+    font-size: 1rem;
+
+}
+.wideContainer1Col2 {
+    width: 32.36%;
+    height: 100%;
+}
+.imageTomishko {
+    width: 100%;
+    border-radius: 1rem;
+}
+/* 1892 */
+.container1892 {
+    height: 43.78vw;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    column-gap: 1rem;
+    position: relative;
+}
+.container1892Col1 {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.container1892Col1Row1 {
+    width: 100%;
+    height: 42.31%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.container1892Animation {
+    height: 39.53%;
+    width: 43.38%;
+    display: flex;
+    justify-content: start;
+}
+.container1892Col2 {
+    grid-column-start: 5;
+    grid-column-end: 13;
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+.image1892 {
+    width: 100%;
+    border-radius: 1rem;
+}
+.wideContainerTitle {
+    font-size: 6.41rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    letter-spacing: -0.05em;
+    line-height: 72.7%;
+}
+.container1892Col2Row {
+    width: 100%;
+    display: flex;
+}
+/* ^1892^ */
+/* 1905 */
+.container1905 {
+    width: 100%;
+    display: flex;
+}
+.container1905Col1 {
+    width: 66.13%;
+}
+.image1905 {
+    width: 100%;
+    border-radius: 1rem;
+}
+.container1905Col2 {
+    width: 35.63%;
+}
+/* ^1905^ */
+/* 1917 */
+.container1917 {
+    row-gap: 2.2vw;
+    display: flex;
+    flex-direction: column;
+}
+.container1917Col1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.paragraph1917 {
+    width: 57.624%;
+}
+.image1917 {
+    width: 100%;
+    border-radius: 1rem;
+}
+/* ^1917^ */
+/* 1937 */
+.container1937 {
+    display: flex;
+}
+.container1937Col1 {
+    width: 49.2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container1937Col1Row1 {
+    height: 36.83%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.container1937Animation {
+    width: 30.99%;
+    height: 45.25%;
+}
+.container1937Col1Row2 {
+    height: 51.33%;
+    width: 82.87%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.container1937Col2 {
+    width: 49.2%;
+    display: flex;
+}
+.image1937 {
+    width: 100%;
+    border-radius: 1rem;
+}
+/* ^1937^ */
+/* 1941 */
+.container1941 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.container1941Col1 {
+    width: 49.44%;
+}
+.image1941 {
+    width: 100%;
+    border-radius: 1rem;
+}
+.container1941Col2 {
+    width: 49.2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* ^1941^ */
+/* 1958 */
+.container1958 {
+    width: 100%;
+    display: flex;
+}
+.container1958Col1 {
+    width: 66.13%;
+}
+.container1958Col2 {
+    width: 32.26%;
+}
+.image1958 {
+    width: 100%;
+    border-radius: 1rem;
+}
+/* ^1958^ */
+/* 1990 */
+.container1990 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.container1990Col1 {
+    width: 49.2%;
+}
+.image1990 {
+    width: 100%;
+    border-radius: 1rem;
+}
+.container1990Col2 {
+    width: 40.7%;
+}
+/* ^1990^ */
+/* 2006 */
+.container2006 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.container2006Col1 {
+    width: 37.48%;
+}
+.container2006Col2 {
+    width: 57.7%;
+}
+.image2006 {
+    width: 100%;
+    border-radius: 1rem;
+}
+/* ^2006^ */
+/* 2017 */
+.container2017 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.2rem;
+}
+.container2017Col1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.paragraph2017 {
+    width: 57.62%;
+}
+.container2017Col2 {
+    width: 100%;
+    display: flex;
+}
+.image2017 {
+    width: 100%;
+    border-radius: 1rem;
+}
+/* ^2017^ */
+/* 2025 */
+.container2025 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.container2025Col1 {
+    width: 40.77%;
+}
+.image2025 {
+    width: 100%;
+    border-radius: 1rem;
+}
+.container2025Col2 {
+    width: 56.67%;
+}
+/* ^2025^ */
+.containerAboutPeople {
+    height: 135.07vw;
+}
+.famousPeopleBlock {
+    height: 45.26%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 6.19vw;
+}
+.famousPeopleBlockTitle {
+    height: 26.467%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.75rem;
+}
+.famousPeopleBlockTitleText1 {
+    font-size: 6.4rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 72.7%;
+}
+.famousPeopleBlockTitleSub {
+    height: 42.08%;
+    width: 100%;
+    display: flex;
+    column-gap: 7.83vw;
+}
+.famousPeopleBlockTitleSubAnimation {
+    height: 100%;
+    width: 8.03%;
+    display: flex;
+    justify-content: start;
+}
+.famousPeopleBlockTitleText2 {
+    color: var(--accent-color);
+    font-size: 6.4rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 72.7%;
+}
+.containerDangerousPeople {
+    height: 48.23%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 6.19vw;
+}
+.dangerousPeopleBlockTitle {
+    height: 25.62%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.75rem;
+}
+.dangerousPeopleBlockTitleText1 {
+    font-size: 6.4rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 72.7%;
+}
+.dangerousPeopleBlockTitleSub {
+    height: 42.08%;
+    width: 100%;
+    display: flex;
+    column-gap: 7.83vw;
+}
+.dangerousPeopleBlockTitleSubAnimation {
+    height: 100%;
+    width: 8.03%;
+    display: flex;
+    justify-content: start;
+}
+.dangerousPeopleBlockTitleText2 {
+    color: var(--accent-color);
+    font-size: 6.4rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 72.7%;
+}
