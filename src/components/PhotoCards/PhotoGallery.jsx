@@ -38,17 +38,15 @@ const PhotoGallery = ({photos = [], imageWidth = "18.8rem", imageHeight = "14rem
             switch(offset) {
                 case 0:
                     return {
+                        boxShadow: "0 0 6px 4px rgba(0, 0, 0, 0.35)",
                         transform: "translateX(0)",
                         zIndex: "2"
                     };
                 case -1:
-                    return {
-                        transform: "translateX(-50%)",
-                        zIndex: "1"
-                    };
                 case 1:
                     return {
-                        transform: "translateX(50%)",
+                        transform: offset === -1 ? "translateX(-50%)" : "translateX(50%)",
+                        boxShadow: "none",
                         zIndex: "1"
                     };
                 default:
@@ -68,14 +66,16 @@ const PhotoGallery = ({photos = [], imageWidth = "18.8rem", imageHeight = "14rem
                     key={index}
                     onClick={() => handleImageClick(index)}
                     className={style.container}
-                    style={calculatePosition(index)}    
-                    >
+                    style={{
+                        ...calculatePosition(index),
+                        ...calculateSize(index)
+                    }}    
+                >
                     <img
                         src={photo.url}
                         alt={photo.alt || `Фото ${index + 1}`}
                         className={style.image}
-                        style={calculateSize(index)}
-                        />
+                    />
                 </div>
             ))
         }

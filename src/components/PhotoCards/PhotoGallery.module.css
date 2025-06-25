@@ -2,13 +2,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px; /*Отредактировать*/
     padding: 0 3rem;
 }
 
+.container {
+    overflow: hidden;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+}
+
 .image {
-    transition: width 0.3s ease, height 0.3s ease;
-    border-radius: 1cqmin; /*Отредактировать*/
+    object-fit: cover;    
+    width: 100%;
+    height: 100%;
 }
 
 @media (max-width: 768px) {
@@ -16,8 +22,8 @@
         justify-content: center;
     }
 
-    .container {
-        transition: all 0.3s ease;
+    .container { 
         position: absolute;
+        border-radius: 1rem;
     }
 }
