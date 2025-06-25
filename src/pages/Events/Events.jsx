@@ -1,5 +1,5 @@
 import "./events.css";
-import "../general.css";
+import "../../components/general.css";
 import { useData } from "../../routes/DataContext";
 import { useNavigate } from "react-router-dom";
 function Events() {

@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useData } from "../../../routes/DataContext";
-import SpecificEventButton from "../../Buttons/ButtonGoToDesktop";
+import SpecificEventButton from "../../../components/Buttons/ButtonGoToDesktop";
 import "./SpecificEvent.css";
-import SlidingRotatingCross from "../../animations/SRCross/SlidingRotatingCross";
-import RotatingCross from "../../animations/RotatingCross/RotatingCross";
+import SlidingRotatingCross from "../../../components/animations/SRCross/SlidingRotatingCross";
+import RotatingCross from "../../../components/animations/RotatingCross/RotatingCross";
 import { useEffect } from "react";
 import NotFound from "../../404/NotFound";
 

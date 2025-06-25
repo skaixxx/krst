@@ -16,7 +16,6 @@ import RotatingCross from "../../components/animations/RotatingCross/RotatingCro
 import DangerousCards from "../../components/History/DangerousPersonCards";
 import { useEffect, useState } from "react";
 import Carousel from "../../components/History/HistoryCarousel";
-import ScaleSlideDots from "../../components/animations/ScaleSlideDots/ScaleSlideDots";
 import ScaleSlideDotsInverted from "../../components/animations/ScaleSlideDots/ScaleSlideDotsInverted";
 function History() {
     const [items, setItems] = useState([]);

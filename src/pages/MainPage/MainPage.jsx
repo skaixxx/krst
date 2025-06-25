@@ -1,8 +1,4 @@
-
 import style from "./mainPage.module.css"
-import redCross from "../../assets/mainPage/redCrossMP.svg"
-import redLogo from "../../assets/mainPage/redLogoMP.svg"
-import arrows from "../../assets/mainPage/arrowsMP.svg"
 import weatherIcon from "../../assets/mainPage/weather.svg"
 import peopleIcon from "../../assets/mainPage/people.svg"
 import timeIcon from "../../assets/mainPage/time.svg"

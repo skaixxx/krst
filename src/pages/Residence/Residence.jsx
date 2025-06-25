@@ -1,12 +1,10 @@
-import StaticImg from "../../assets/residence/iconsStatic.svg";
 import calendarIcon from "../../assets/residence/calendar.svg"
 import phoneIcon from "../../assets/residence/phoneIcon.svg"
 import profileIcon from "../../assets/residence/profileIcon.svg"
 import emailIcon from "../../assets/residence/letterIcon.svg"
 import "./residence.css"
-import "../general.css"
+import "../../components/general.css"
 import ButtonGoToDesktop from "../../components/Buttons/ButtonGoToDesktop";
-import { useState } from "react";
 import ScaleCrossSlideBracketInverted from "../../components/animations/ScaleCrossSlideBracket_inverted/ScaleCrossSlideBracket_inverted";
 function Residence() {
     const inputFocus = (current) => {

@@ -4,7 +4,7 @@ import personalInfoIcon from '../../assets/contacts/profileIcon.svg';
 import letterIcon from '../../assets/contacts/letterIcon.svg';
 import phoneIcon from '../../assets/contacts/phoneIcon.svg';
 import messageIcon from '../../assets/contacts/messageIcon.svg';
-import '../general.css'
+import '../../components/general.css'
 import './contacts.css'
 import ButtonGoToDesktop from '../../components/Buttons/ButtonGoToDesktop'
 import RotatingCross from '../../components/animations/RotatingCross/RotatingCross';

@@ -1,6 +1,6 @@
 {
   "name": "krst",
-  "version": "0.5.0",
+  "version": "0.5.3",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
