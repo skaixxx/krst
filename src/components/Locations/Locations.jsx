@@ -1,4 +1,4 @@
-import PhotoGallery from "./PhotoGallery";
+import PhotoGallery from "../PhotoCards/PhotoGallery";
 import style from "./Locations.module.css"
 
 const Locations = () => {

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./PhotoGallery.css"
+import style from "./PhotoGallery.module.css"
 
 const PhotoGallery = ({photos = [], imageWidth = "18.8rem", imageHeight = "14rem"}) => {
     
@@ -23,14 +23,14 @@ const PhotoGallery = ({photos = [], imageWidth = "18.8rem", imageHeight = "14rem
     }
     
     return(
-        <div className="gallery" style={{ height: `calc(${imageHeight} * 1.1)` }}>
+        <div className={style.gallery} style={{ height: `calc(${imageHeight} * 1.1)` }}>
         {
             photos.map((photo, index) => (
                 <div key={index} onClick={() => handleImageClick(index)}>
                     <img
                         src={photo.url}
                         alt={photo.alt || `Фото ${index + 1}`}
-                        className="image"
+                        className={style.image}
                         style={calculateSize(index)}
                         />
                 </div>
