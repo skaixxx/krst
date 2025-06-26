@@ -118,7 +118,20 @@
 }
 .iLineElement {
     display: flex;
+    height: 60%;
     column-gap: .75rem;
+}
+.weatherIcon {
+    width: auto;
+    height: 100%;
+}
+.peopleIcon {
+    height: 100%;
+    width: auto;
+}
+.timeIcon {
+    height: 100%;
+    width: auto;
 }
 .titleInfo {
     font-size: 2rem;
