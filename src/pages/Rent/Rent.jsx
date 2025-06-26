@@ -1,7 +1,6 @@
+import { Link } from "react-router-dom";
 import style from "./rent.module.css"
 import arrowBR from "../../assets/mainPage/arrowsBR.svg"
-// import arrowMP from "../../assets/mainPage/arrowsMP.svg"
-
 
 function Rent() {
     return (
@@ -47,7 +46,7 @@ function Rent() {
 
             <div className={`${style.rentPageContainer} ${style.cardsContainer}`}>
                 <div className={style.cards}>
-                    <div className={style.card}>
+                    <Link className={style.card} to="/Rent/1">
                         <div className={style.cardImage}>
                             <img src="/images/rent/photo-1.png" alt="" />
                         </div>
@@ -62,8 +61,8 @@ function Rent() {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className={style.card}>
+                    </Link>
+                    <Link className={style.card} to="/Rent/2">
                         <div className={style.cardImage}>
                             <img src="/images/rent/photo-2.png" alt="" />
                         </div>
@@ -77,8 +76,8 @@ function Rent() {
                                     общая площадь <span>7 320 м²</span></div>
                                 </div>
                         </div>
-                    </div>
-                    <div className={style.card}>
+                    </Link>
+                    <Link className={style.card} to="/Rent/3">
                         <div className={style.cardImage}>
                             <img src="/images/rent/photo-3.png" alt="" />
                         </div>
@@ -92,8 +91,8 @@ function Rent() {
                                     общая площадь <span>8 540 м²</span></div>
                                 </div>
                         </div>
-                    </div>
-                    <div className={style.card}>
+                    </Link>
+                    <Link className={style.card} to="/Rent/4">
                         <div className={style.cardImage}>
                             <img src="/images/rent/photo-4.png" alt="" />
                         </div>
@@ -107,7 +106,7 @@ function Rent() {
                                     общая площадь <span>5 360 м²</span></div>
                                 </div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </div>

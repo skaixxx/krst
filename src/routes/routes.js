@@ -4,6 +4,7 @@ import History from "../pages/History/History"
 import Events from "../pages/Events/Events"
 import Locations from "../pages/Locations/Locations";
 import Rent from "../pages/Rent/Rent"
+import DetailRent from "../pages/Rent/DetailRent/DetailRent"
 import Contacts from "../pages/Contacts/Contacts"
 import Residence from "../pages/Residence/Residence"
 import SpecificEvent from "../pages/Events/SpecificEvent/SpecificEvent";
@@ -16,6 +17,7 @@ const AppRoutes = () => {
         {path: "/Events", element: <Events/>},
         {path: "/Locations", element: <Locations/>},
         {path: "/Rent", element: <Rent/>},
+        {path: "/Rent/:id", element: <DetailRent/>},
         {path: "/Contacts", element: <Contacts/>},
         {path: "/Residence", element: <Residence/>},
         {path: "/Events/SpecificEvent/:id", element: <SpecificEvent/>},
