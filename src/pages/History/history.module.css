@@ -48,18 +48,16 @@
     font-size: 1.2rem;
 }
 .interactiveLine {
-    height: 16.032vw;
+    z-index: 4;
+    position: sticky;
+    top: 0;
+    height: 13.03vw;
     width: 100%;
     column-gap: 12%;
-    mask-image: linear-gradient(
-        to right,
-        rgba(0,0,0,0),
-        rgba(0,0,0,1) 12%,
-        rgba(0,0,0,1) 88%,
-        rgba(0,0,0,0)
-    );
-    position: relative;
+    display: flex;
+    align-items: center;
     overflow-x: scroll;
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
 }
 .interactiveLineElements {
@@ -71,8 +69,9 @@
     scroll-snap-type: both mandatory;
 }
 .interactiveLineProgressBar {
+    z-index: 5;
     position: absolute;
-    top: 5%;
+    top: 4%;
     background-color: var(--secondary-color);
     width: 100%;
     height: .2rem;
@@ -156,6 +155,7 @@
 }
 /* 1892 */
 .container1892 {
+    scroll-margin-top: 13.1vw;
     height: 43.78vw;
     width: 100%;
     display: grid;
@@ -217,6 +217,7 @@
 /* ^1892^ */
 /* 1905 */
 .container1905 {
+    scroll-margin-top: 13.1vw;
     width: 100%;
     display: flex;
 }
@@ -233,6 +234,7 @@
 /* ^1905^ */
 /* 1917 */
 .container1917 {
+    scroll-margin-top: 13.1vw;
     row-gap: 2.2vw;
     display: flex;
     flex-direction: column;
@@ -252,6 +254,7 @@
 /* ^1917^ */
 /* 1937 */
 .container1937 {
+    scroll-margin-top: 13.1vw;
     display: flex;
 }
 .container1937Col1 {
@@ -289,6 +292,7 @@
 /* ^1937^ */
 /* 1941 */
 .container1941 {
+    scroll-margin-top: 13.1vw;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -309,6 +313,7 @@
 /* ^1941^ */
 /* 1958 */
 .container1958 {
+    scroll-margin-top: 13.1vw;
     width: 100%;
     display: flex;
 }
@@ -325,6 +330,7 @@
 /* ^1958^ */
 /* 1990 */
 .container1990 {
+    scroll-margin-top: 13.1vw;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -342,6 +348,7 @@
 /* ^1990^ */
 /* 2006 */
 .container2006 {
+    scroll-margin-top: 13.1vw;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -359,6 +366,7 @@
 /* ^2006^ */
 /* 2017 */
 .container2017 {
+    scroll-margin-top: 13.1vw;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -383,6 +391,7 @@
 /* ^2017^ */
 /* 2025 */
 .container2025 {
+    scroll-margin-top: 13.1vw;
     width: 100%;
     display: flex;
     justify-content: space-between;
