@@ -13,9 +13,8 @@ import y2025 from "../../assets/history/2025.png"
 import historyArrowsIcon from "../../assets/history/arrowsHistory.png"
 import titleIcon from "../../assets/history/historytitle.png"
 import ScaleSlideBrackets from "../../components/animations/ScaleSlideBrackets/ScaleSlideBrackets"
-import FamousCards from "../../components/History/FamousPersonCards";
+import FamousCards from "../../components/History/PersonCards";
 import RotatingCross from "../../components/animations/RotatingCross/RotatingCross";
-import DangerousCards from "../../components/History/DangerousPersonCards";
 import { useEffect, useState } from "react";
 import Carousel from "../../components/History/HistoryCarousel";
 import ScaleSlideDotsInverted from "../../components/animations/ScaleSlideDots/ScaleSlideDotsInverted";
@@ -270,7 +269,7 @@ function History() {
                                 <p className={style.dangerousPeopleBlockTitleText2}>ЗАКЛЮЧЁННЫЕ</p>
                             </div>
                         </div>
-                        <DangerousCards/>
+                        
                     </div>
                 </div>
             </div>

@@ -1,0 +1,69 @@
+.wrapper {
+    width: 100%;
+    height: 67.55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.imageContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    gap: 1rem;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: flex;
+  filter: grayscale(100%);
+}
+
+.active {
+  filter: none;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.loader {
+  text-align: center;
+}
+.content {
+  width: 100%;
+  height: 37.59%;
+  display: flex;
+  justify-content: space-between;
+}
+.contentCol1 {
+  width: 32.26%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contentCol2 {
+  width: 57.62%;
+}
+.cardTitle {
+  font-size: 2rem;
+  font-weight: 500;
+  width: 50%;
+}
+.cardYear {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--accent-color);
+}

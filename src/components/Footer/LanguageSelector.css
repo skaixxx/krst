@@ -82,3 +82,11 @@
     opacity: 0;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .footer-lang-change {
+    position: absolute;
+    width: auto;
+    right: 0;
+  }
+}
