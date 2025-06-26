@@ -104,27 +104,27 @@ function MainPage() {
                 </div>
                 <div className={style.listContainer}>
                     <div className={style.listItem}>
-                        <img src={listPoint} alt="listPoint" />
+                        <img src={listPoint} alt="listPoint" className={style.listPointIcon}/>
                         <p className={style.listItemText}>Уважайте пространство, людей и экспонаты</p>
                     </div>
                     <div className={style.listItem}>
-                        <img src={listPoint} alt="listPoint" />
+                        <img src={listPoint} alt="listPoint" className={style.listPointIcon}/>
                         <p className={style.listItemText}>Фотосъёмка разрешена, но без нарушения приватности</p>
                     </div>
                     <div className={style.listItem}>
-                        <img src={listPoint} alt="listPoint" />
+                        <img src={listPoint} alt="listPoint" className={style.listPointIcon}/>
                         <p className={style.listItemText}>Соблюдайте чистоту — используйте урны, возвращайте вещи на место.</p>
                     </div>
                     <div className={style.listItem}>
-                        <img src={listPoint} alt="listPoint" />
+                        <img src={listPoint} alt="listPoint" className={style.listPointIcon}/>
                         <p className={style.listItemText}>Дети до 14 лет — только с взрослыми, животные — на поводке</p>
                     </div>
                     <div className={style.listItem}>
-                        <img src={listPoint} alt="listPoint" />
+                        <img src={listPoint} alt="listPoint" className={style.listPointIcon}/>
                         <p className={style.listItemText}>Соблюдайте безопасность — не заходите в закрытые зоны, следуйте инструкциям</p>
                     </div>
                     <div className={style.listItem}>
-                        <img src={listPoint} alt="listPoint" />
+                        <img src={listPoint} alt="listPoint" className={style.listPointIcon}/>
                         <p className={style.listItemText}>Запрещены курение, алкоголь, агрессия и нарушения порядка</p>
                     </div>
                 </div>
