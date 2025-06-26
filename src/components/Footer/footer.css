@@ -294,7 +294,12 @@
     }
 
     .grid-col3 {
+        position: relative;
         grid-area: auto;
+    }
+
+    .footer-mailing-text {
+        row-gap: 5px;
     }
 
     .footer-logo-container {
@@ -327,10 +332,49 @@
     }
 
     .footer-mailing-title {
+        font-weight: 400;
         font-size: 20px;
     }
 
     .footer-mailing-paragraph {
-        font-size: 12px;
+        font-size: 14px;
+    }
+
+    .footer-mail-input-container {
+        height: 40px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .footer-socuals-politico-container {
+        height: auto;
+    }
+
+    .footer-politico {
+        height: auto;
+        align-items: flex-start;
+    }
+    
+    .footer-socials {
+        height: auto;
+        justify-content: flex-start;
+        margin-bottom: 35px;
+    }
+    
+    .copyrihgt-text {
+        text-align: left;
+    }
+
+    .footer-phone, .footer-adress, .footer-work-days {
+        font-size: 14px;
+    }
+    .footer-schedule {
+        display: none;
+    }
+    
+    .days-time-container {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: .75rem;
     }
 }
