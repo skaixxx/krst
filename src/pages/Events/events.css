@@ -67,11 +67,13 @@
     background-color: transparent;
     border: none;
 }
-.cardButtonIconLong {
-    max-width: 100%;
+.shortCardIcon {
+    width: 2.25rem;
+    height: auto;
 }
-.cardButtonIcon {
-    max-width: 100%;
+.longCardIcon {
+    width: 3.25rem;
+    height: auto;
 }
 .cardDate {
     padding-left: 1rem;

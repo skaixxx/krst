@@ -23,7 +23,7 @@ function Events() {
                         <div className="cardDate"><span>{item.dates}</span></div>
                         <div className="cardBody">
                             <div className="cardText"><p>{item.title}</p></div>
-                            <div className="cardButton"><img src={item.icon} alt="cardButton" class="cardButtonIcon"/></div>
+                            <div className="cardIconBox"><img src={item.icon} alt="cardButton" class={item.iconClass}/></div>
                         </div>
                     </a>
                 </div>
