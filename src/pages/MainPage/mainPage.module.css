@@ -4,12 +4,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 7.32vw;
     margin-bottom: 7.32vw;
 }
 .fullScreenContainer1 {
     width: 100%;
-    height: 65.59vw;
+    height: 56.223vw;
     background-image: url(../../assets/mainPage/mainPage.png);
     background-repeat: no-repeat;
     background-position: top;
@@ -21,10 +20,8 @@
 }
 .pageTitle {
     position: absolute;
-    bottom: 0%;
+    bottom: 0;
     width: 91.2153%;
-    display: flex;
-    flex-direction: column;
 }
 .titleText1 {
     color: var(--primary-color);
@@ -32,10 +29,22 @@
     font-weight: 700;
     letter-spacing: -0.05em;
     line-height: 72.7%;
-    padding-bottom: 2.56vw;
+}
+.topRow {
+    width: 91.22%;
+    height: 18.74vw;
+    display: flex;
+    flex-direction: column;
+    column-gap: 1rem;
+}
+.topRow1 {
+    height: 39.1%;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-top: 1.75rem;
 }
 .titleText2 {
-    text-align: end;
     color: var(--accent-color);
     font-size: 6.4rem;
     font-weight: 700;
@@ -54,6 +63,7 @@
     display: flex;
     justify-content: center;
     align-items: start;
+    margin-bottom: 7.32vw;
 }
 .contentContainer {
     height: 100%;
@@ -108,6 +118,7 @@
     );
     border-top: 1px solid var(--secondary-color);
     border-bottom: 1px solid var(--secondary-color);
+    margin-bottom: 7.32vw;
 }
 .iLineElements {
     width: 100%;
@@ -181,6 +192,7 @@
     "card2 card2 card2 . card4 card4 card4 card4 . card5 card5 card5";
     column-gap: 1rem;
     position: relative;
+    margin-bottom: 7.32vw;
 }
 .animationContainer {
     grid-area: anim1;
@@ -210,6 +222,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 7.32vw;
 }
 .mapImage {
     width: 100%;
@@ -315,9 +328,6 @@
         "text2 text2 text2 text2 text2 text2 text2 . . . . ."
         ". . . . . . . . . . . .";
     }
-    .pageTitle {
-        bottom: 2%;
-    }
     
 }
 @media  screen and (min-width: 1500px) {
@@ -329,8 +339,5 @@
         ". . . . . . . . . . . ."
         "text2 text2 text2 text2 text2 text2 text2 . . . . ."
         ". . . . . . . . . . . .";
-    }
-    .pageTitle {
-        bottom: 3%;
     }
 }

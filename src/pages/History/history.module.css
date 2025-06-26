@@ -94,6 +94,7 @@
     overflow-x: scroll;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
+    margin-bottom: 7.32vw;
 }
 .interactiveLineElements {
     position: absolute;

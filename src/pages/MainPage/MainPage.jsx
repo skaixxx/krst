@@ -24,9 +24,9 @@ function MainPage() {
             <div className={style.fullScreenContainer1}>
                 <div className={style.pageTitle}>
                         <p className={style.titleText1}>ОБЩЕСТВЕННОЕ</p>
-                        <p className={style.titleText2}>ПРОСТРАНСТВО</p>
                 </div>
             </div>
+            <div className={style.topRow}><div className={style.topRow1}><p className={style.titleText2}>ПРОСТРАНСТВО</p></div></div>
             <div className={style.fullScreenContainer2}>
                 <div className={style.contentContainer}>
                     <div className={style.container2TextBox1}>
