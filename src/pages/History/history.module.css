@@ -262,17 +262,37 @@
 .container1905 {
     scroll-margin-top: 13.1vw;
     width: 100%;
+    height: 29.28vw;
     display: flex;
+    position: relative;
 }
 .container1905Col1 {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    height: 100%;
     width: 66.13%;
 }
 .image1905 {
     width: 100%;
+    height: 100%;
     border-radius: 1rem;
 }
 .container1905Col2 {
+    position: absolute;
+    right: 0;
+    z-index: 2;
     width: 35.63%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.container1905Title {
+    padding-right: 7%;
+    padding-bottom: 3rem;
+}
+.container1905Text {
+    width: 66.66%;
 }
 /* ^1905^ */
 /* 1917 */
@@ -298,10 +318,17 @@
 /* 1937 */
 .container1937 {
     scroll-margin-top: 13.1vw;
+    width: 100%;
+    height: 43.92vw;
     display: flex;
+    position: relative;
 }
 .container1937Col1 {
-    width: 49.2%;
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    width: 51.68%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -313,6 +340,8 @@
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
+    padding-left: 1%;
+    column-gap: 2rem;
 }
 .container1937Animation {
     width: 30.99%;
@@ -325,6 +354,9 @@
     flex-wrap: wrap;
 }
 .container1937Col2 {
+    position: absolute;
+    right: 0;
+    z-index: 1;
     width: 49.2%;
     display: flex;
 }
@@ -337,10 +369,15 @@
 .container1941 {
     scroll-margin-top: 13.1vw;
     width: 100%;
+    height: 43.92vw;
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 .container1941Col1 {
+    position: absolute;
+    z-index: 1;
+    left: 0;
     width: 49.44%;
 }
 .image1941 {
@@ -348,22 +385,58 @@
     border-radius: 1rem;
 }
 .container1941Col2 {
-    width: 49.2%;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    width: 52.8%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: end;
+}
+.container1941Col2Row1 {
+    width: 100%;
+    height: 36.83%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.75rem;
+}
+.container1941Col2Row1Box1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.container1941Title1 {
+    padding-left: 15%;
+}
+.container1941Col2Row2 {
+    width: 77.05%;
+    height: 51.33%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
 }
 /* ^1941^ */
 /* 1958 */
 .container1958 {
     scroll-margin-top: 13.1vw;
     width: 100%;
+    height: 29.28vw;
     display: flex;
 }
 .container1958Col1 {
+    height: 100%;
     width: 66.13%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+}
+.container1958Text {
+    width: 87.25%;
 }
 .container1958Col2 {
+    height: 100%;
     width: 32.26%;
 }
 .image1958 {
@@ -375,11 +448,13 @@
 .container1990 {
     scroll-margin-top: 13.1vw;
     width: 100%;
+    height: 29.28vw;
     display: flex;
     justify-content: space-between;
 }
 .container1990Col1 {
     width: 49.2%;
+    height: 100%;
 }
 .image1990 {
     width: 100%;
@@ -387,20 +462,37 @@
 }
 .container1990Col2 {
     width: 40.7%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+}
+.container1990Col2Row2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
 }
 /* ^1990^ */
 /* 2006 */
 .container2006 {
     scroll-margin-top: 13.1vw;
     width: 100%;
+    height: 29.28vw;
     display: flex;
     justify-content: space-between;
 }
 .container2006Col1 {
     width: 37.48%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
 }
 .container2006Col2 {
     width: 57.7%;
+    height: 100%;
 }
 .image2006 {
     width: 100%;
@@ -411,9 +503,10 @@
 .container2017 {
     scroll-margin-top: 13.1vw;
     width: 100%;
+    height: 43.92vw;
     display: flex;
     flex-direction: column;
-    row-gap: 2.2rem;
+    row-gap: 1.5rem;
 }
 .container2017Col1 {
     width: 100%;
@@ -425,10 +518,12 @@
 }
 .container2017Col2 {
     width: 100%;
+    height: 66.66%;
     display: flex;
 }
 .image2017 {
     width: 100%;
+    height: 100%;
     border-radius: 1rem;
 }
 /* ^2017^ */
@@ -436,18 +531,44 @@
 .container2025 {
     scroll-margin-top: 13.1vw;
     width: 100%;
+    height: 29.28vw;
     display: flex;
-    justify-content: space-between;
+    position: relative;
 }
 .container2025Col1 {
+    position: absolute;
+    z-index: 1;
+    left: 0;
     width: 40.77%;
+    height: 100%;
 }
 .image2025 {
     width: 100%;
     border-radius: 1rem;
+    filter: grayscale(100%);
 }
 .container2025Col2 {
-    width: 56.67%;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    width: 62.12%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    row-gap: 3rem;
+}
+.container2025Col2Row1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.container2025Anim {
+    width: 24.55%;
+    height: 100%;
+}
+.paragraph2025 {
+    width: 79.2%;
 }
 /* ^2025^ */
 .containerAboutPeople {
