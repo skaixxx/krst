@@ -1,0 +1,29 @@
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+}
+
+.container {
+    overflow: hidden;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.image {
+    object-fit: cover;    
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        justify-content: center;
+    }
+
+    .container { 
+        position: absolute;
+        border-radius: 1rem;
+    }
+}

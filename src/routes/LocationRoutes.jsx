@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router";
 import { LocationProvider } from "./LocationsContext";
-import Locations from "../components/Locations/Locations"
-import SpecificLocations from "../components/Locations/SpecificLocations/SpecificLocations"
+import Locations from "../pages/Locations/Locations"
+import SpecificLocations from "../pages/Locations/SpecificLocations/SpecificLocations"
 const LocationRoutes = () => {
     const navbar = [
         {path: "/Locations", element: <Locations/>},

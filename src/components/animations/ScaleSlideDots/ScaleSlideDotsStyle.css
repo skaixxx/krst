@@ -3,13 +3,15 @@
     align-items: center;
     position: relative;
     width: 100%;
-    height: max-content;
+    height: 100%;
 }
 .SSD-animation-dot1 {
+    height: 100%;
     position: absolute;
     animation: ScaleSlide1 1s linear forwards;
 }
 .SSD-animation-dot2 {
+    height: 100%;
     position: absolute;
     animation: ScaleSlide2 1s linear forwards;
 }

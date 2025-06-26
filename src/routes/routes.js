@@ -1,14 +1,14 @@
 import { Route, Routes } from "react-router";
-import MainPage from "../components/MainPage/MainPage"
-import History from "../components/History/History"
-import Events from "../components/Events/Events"
-import Locations from "../components/Locations/Locations";
-import Rent from "../components/Rent/Rent"
-import DetailRent from "../components/Rent/DetailRent/DetailRent"
-import Contacts from "../components/Contacts/Contacts"
-import Residence from "../components/Residence/Residence"
-import SpecificEvent from "../components/Events/SpecificEvent/SpecificEvent";
-import NotFound from "../components/404/NotFound";
+import MainPage from "../pages/MainPage/MainPage"
+import History from "../pages/History/History"
+import Events from "../pages/Events/Events"
+import Locations from "../pages/Locations/Locations";
+import Rent from "../pages/Rent/Rent"
+import DetailRent from "../pages/Rent/DetailRent/DetailRent"
+import Contacts from "../pages/Contacts/Contacts"
+import Residence from "../pages/Residence/Residence"
+import SpecificEvent from "../pages/Events/SpecificEvent/SpecificEvent";
+import NotFound from "../pages/404/NotFound";
 import { DataProvider } from "./DataContext";
 const AppRoutes = () => {
     const navbar = [
