@@ -10,6 +10,7 @@ import y1990 from "../../assets/history/1990.png"
 import y2006 from "../../assets/history/2006.png"
 import y2017 from "../../assets/history/2017.png"
 import y2025 from "../../assets/history/2025.png"
+import titleIcon from "../../assets/history/historytitle.png"
 import ScaleSlideBrackets from "../../components/animations/ScaleSlideBrackets/ScaleSlideBrackets"
 import FamousCards from "../../components/History/FamousPersonCards";
 import RotatingCross from "../../components/animations/RotatingCross/RotatingCross";
@@ -37,9 +38,13 @@ function History() {
             <div className={style.fullScreenContainer1}>
                 <div className={style.pageTitle}>
                         <p className={style.titleText1}>ИСТОРИЯ</p>
-                        <p className={style.titleText2}>КРЕСТОВ</p>
+                </div>
+                <div className={style.dateContainer}>
+                    <div className={style.dateContainerRow1}><p className={style.dateContainerRowText}>1884–</p></div>
+                    <div className={style.dateContainerRow2}><p className={style.dateContainerRowText}>2025</p></div>
                 </div>
             </div>
+            <div className={style.topRow}><div className={style.topRow1}><img src={titleIcon} alt="titleIcon" className={style.titleIcon}/><p className={style.titleText2}>КРЕСТОВ</p></div></div>
             <div className={style.interactiveLine}>
                 <Carousel items={items} />
                 <div className={style.interactiveLineProgressBar}></div>      
