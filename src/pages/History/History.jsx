@@ -41,8 +41,8 @@ function History() {
                 </div>
             </div>
             <div className={style.interactiveLine}>
-                <div className={style.interactiveLineProgressBar}></div>
-                <Carousel items={items} />      
+                <Carousel items={items} />
+                <div className={style.interactiveLineProgressBar}></div>      
             </div>
             <div className={style.fullScreenContainer2}>
                 <div className={style.wideContainer1}>

@@ -5,83 +5,40 @@ const Carousel = ({ items }) => {
   const containerRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const sectionLength = items.length;
-  const extendedItems = [...items, ...items, ...items];
-  const pos = useRef({
-    isDragging: false,
-    startX: 0,
-    scrollLeft: 0,
-  });
 
+  const extendedItems = [...items, ...items, ...items];
+
+  const dragStartX = useRef(0);
+  const scrollStartX = useRef(0);
+  const isDragging = useRef(false);
+
+  // При монтировании ставим прокрутку на центральный клон первого элемента
   useEffect(() => {
     const container = containerRef.current;
-    const initialScroll = container.scrollWidth / 3 - container.offsetWidth / 2;
-    container.scrollLeft = initialScroll;
-    updateActiveIndex();
+    if (!container) return;
 
-    const onMouseDown = (e) => {
-      pos.current.isDragging = true;
-      pos.current.startX = e.pageX - container.offsetLeft;
-      pos.current.scrollLeft = container.scrollLeft;
-      container.style.cursor = "grabbing";
-      e.preventDefault();
-    };
+    const centerCloneIndex = sectionLength; // центральный клон первого элемента
+    const centerItem = container.children[centerCloneIndex];
+    if (!centerItem) return;
 
-    const onMouseMove = (e) => {
-      if (!pos.current.isDragging) return;
-      const x = e.pageX - container.offsetLeft;
-      const walk = (pos.current.startX - x) * 1; // скорость прокрутки
-      container.scrollLeft = pos.current.scrollLeft + walk;
-    };
+    const containerCenter = container.offsetWidth / 2;
+    const itemBox = centerItem.getBoundingClientRect();
+    const containerBox = container.getBoundingClientRect();
+    const itemCenter = itemBox.left - containerBox.left + itemBox.width / 2;
 
-    const onMouseUp = () => {
-      if (!pos.current.isDragging) return;
-      pos.current.isDragging = false;
-      container.style.cursor = "grab";
-      updateActiveIndex();
-    };
+    const scrollOffset = itemCenter - containerCenter;
 
-    const onTouchStart = (e) => {
-      pos.current.isDragging = true;
-      pos.current.startX = e.touches[0].pageX - container.offsetLeft;
-      pos.current.scrollLeft = container.scrollLeft;
-    };
+    container.scrollLeft += scrollOffset;
 
-    const onTouchMove = (e) => {
-      if (!pos.current.isDragging) return;
-      const x = e.touches[0].pageX - container.offsetLeft;
-      const walk = (pos.current.startX - x) * 1;
-      container.scrollLeft = pos.current.scrollLeft + walk;
-    };
-
-    const onTouchEnd = () => {
-      pos.current.isDragging = false;
-      updateActiveIndex();
-    };
-
-    container.addEventListener("mousedown", onMouseDown);
-    container.addEventListener("mousemove", onMouseMove);
-    container.addEventListener("mouseup", onMouseUp);
-    container.addEventListener("mouseleave", onMouseUp);
-    container.addEventListener("touchstart", onTouchStart, { passive: true });
-    container.addEventListener("touchmove", onTouchMove, { passive: true });
-    container.addEventListener("touchend", onTouchEnd);
-    container.style.cursor = "grab";
-
-    return () => {
-      container.removeEventListener("mousedown", onMouseDown);
-      container.removeEventListener("mousemove", onMouseMove);
-      container.removeEventListener("mouseup", onMouseUp);
-      container.removeEventListener("mouseleave", onMouseUp);
-      container.removeEventListener("touchstart", onTouchStart);
-      container.removeEventListener("touchmove", onTouchMove);
-      container.removeEventListener("touchend", onTouchEnd);
-    };
-  }, []);
+    setActiveIndex(0);
+  }, [sectionLength]);
 
   const updateActiveIndex = () => {
     const container = containerRef.current;
+    if (!container) return;
+
     const children = Array.from(container.children);
-    const center = container.scrollLeft + container.offsetWidth / 2;
+    const containerCenter = container.offsetWidth / 2;
 
     let closestIndex = 0;
     let closestDistance = Infinity;
@@ -90,7 +47,7 @@ const Carousel = ({ items }) => {
       const box = child.getBoundingClientRect();
       const containerBox = container.getBoundingClientRect();
       const childCenter = box.left - containerBox.left + box.width / 2;
-      const distance = Math.abs(childCenter - container.offsetWidth / 2);
+      const distance = Math.abs(childCenter - containerCenter);
 
       if (distance < closestDistance) {
         closestDistance = distance;
@@ -98,22 +55,66 @@ const Carousel = ({ items }) => {
       }
     });
 
-    setActiveIndex(closestIndex);
+    setActiveIndex(closestIndex % sectionLength);
   };
 
+  // Обработчик прокрутки
   const handleScroll = () => {
     updateActiveIndex();
   };
 
+  // Drag and Swipe handlers
+  const onMouseDown = (e) => {
+    isDragging.current = true;
+    dragStartX.current = e.pageX;
+    scrollStartX.current = containerRef.current.scrollLeft;
+  };
+
+  const onMouseMove = (e) => {
+    if (!isDragging.current) return;
+    const deltaX = e.pageX - dragStartX.current;
+    containerRef.current.scrollLeft = scrollStartX.current - deltaX;
+  };
+
+  const onMouseUp = (e) => {
+    if (!isDragging.current) return;
+    isDragging.current = false;
+    updateActiveIndex();
+  };
+
+  const onTouchStart = (e) => {
+    isDragging.current = true;
+    dragStartX.current = e.touches[0].pageX;
+    scrollStartX.current = containerRef.current.scrollLeft;
+  };
+
+  const onTouchMove = (e) => {
+    if (!isDragging.current) return;
+    const deltaX = e.touches[0].pageX - dragStartX.current;
+    containerRef.current.scrollLeft = scrollStartX.current - deltaX;
+  };
+
+  const onTouchEnd = (e) => {
+    if (!isDragging.current) return;
+    isDragging.current = false;
+    updateActiveIndex();
+  };
+
+  // Клик по элементу — скроллим и активируем
   const handleClick = (index, id) => {
     const container = containerRef.current;
+    if (!container) return;
+
     const child = container.children[index];
     const containerCenter = container.offsetWidth / 2;
     const childBox = child.getBoundingClientRect();
     const containerBox = container.getBoundingClientRect();
     const childCenter = childBox.left - containerBox.left + childBox.width / 2;
     const scrollOffset = childCenter - containerCenter;
+
     container.scrollLeft += scrollOffset;
+
+    setActiveIndex(index % sectionLength);
 
     setTimeout(() => {
       const target = document.querySelector(`${id}`);
@@ -130,10 +131,18 @@ const Carousel = ({ items }) => {
         className={styles.carousel}
         ref={containerRef}
         onScroll={handleScroll}
+        onMouseDown={onMouseDown}
+        onMouseMove={onMouseMove}
+        onMouseUp={onMouseUp}
+        onMouseLeave={onMouseUp}
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+        style={{ userSelect: isDragging.current ? "none" : "auto" }}
       >
         {extendedItems.map((item, index) => {
           const trueIndex = index % sectionLength;
-          const isActive = activeIndex === index;
+          const isActive = trueIndex === activeIndex;
 
           return (
             <a
@@ -147,6 +156,7 @@ const Carousel = ({ items }) => {
               style={{
                 transform: `scale(${isActive ? 1 : 0.75})`,
                 transition: "transform 0.3s ease",
+                cursor: "pointer",
               }}
             >
               <div
