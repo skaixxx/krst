@@ -10,6 +10,7 @@ import y1990 from "../../assets/history/1990.png"
 import y2006 from "../../assets/history/2006.png"
 import y2017 from "../../assets/history/2017.png"
 import y2025 from "../../assets/history/2025.png"
+import historyArrowsIcon from "../../assets/history/arrowsHistory.png"
 import titleIcon from "../../assets/history/historytitle.png"
 import ScaleSlideBrackets from "../../components/animations/ScaleSlideBrackets/ScaleSlideBrackets"
 import FamousCards from "../../components/History/FamousPersonCards";
@@ -102,7 +103,7 @@ function History() {
                         <p className={`${style.container1905Title} ${style.wideContainerTitle}`}>
                         — 1905
                         </p>
-                        <p>
+                        <p className={style.container1905Text}>
                             После революции сюда перемещали политических заключённых, которым была разрешена относительная свобода передвижения в пределах тюрьмы.
                         </p>
                     </div>
@@ -152,9 +153,18 @@ function History() {
                         <img src={y1941} alt="1941" className={style.image1941}/>
                     </div>
                     <div className={style.container1941Col2}>
-                        <p className={`${style.container1941Title} ${style.wideContainerTitle}`}>
-                        1941 — 1944
-                        </p>
+                        
+                        <div className={style.container1941Col2Row1}>
+                            <div className={style.container1941Col2Row1Box1}>
+                                <p className={`${style.container1941Title1} ${style.wideContainerTitle}`}>
+                                1941
+                                </p>
+                            </div>
+                            <p className={`${style.container1941Title2} ${style.wideContainerTitle}`}>
+                            — 1944
+                            </p>
+                        </div>
+                        <div className={style.container1941Col2Row2}>
                         <p>
                         В блокадные дни «Кресты» стали не только тюрьмой, но и укреплённым пунктом обороны. Персонал организовал защиту комплекса — 
                         на набережной Невы, прямо напротив главных ворот, возвели пулемётный дот.
@@ -162,6 +172,7 @@ function History() {
                         <p>
                             Тюремные корпуса регулярно подвергались артобстрелам. Один из самых разрушительных ударов пришёлся на 7 ноября 1941 года: снаряды снесли Северные ворота, под обломками погибли двое часовых. Голод и лишения не щадили никого — за время блокады от истощения умерли десятки заключённых и несколько сотрудников.
                         </p>
+                        </div>
                     </div>
                     
                 </div>
@@ -170,7 +181,7 @@ function History() {
                         <p className={`${style.container1958Title} ${style.wideContainerTitle}`}>
                         1958 — 1960
                         </p>
-                        <p>
+                        <p className={style.container1958Text}>
                             В послевоенные годы тюрьма «Кресты» столкнулась с острой нехваткой средств на ремонт и содержание. Чтобы решить проблему, в 1958 году начальник учреждения подполковник Н.Е. Орловский организовал на территории картонажную фабрику. Всего за год удалось создать полноценное производство с заготовительным цехом, которое быстро стало приносить доход. К 1960 году мастерские возглавил И.К. Капустин, сформировав постоянный штат рабочих.
                         </p>
                     </div>
@@ -183,15 +194,19 @@ function History() {
                         <img src={y1990} alt="1990" className={style.image1990}/>
                     </div>
                     <div className={style.container1990Col2}>
-                        <p className={`${style.container1990Title} ${style.wideContainerTitle}`}>
-                        90 — Е
-                        </p>
-                        <p>
-                           В тюрьме одиночные камеры переделали под размещение шести человек, из-за чего общее число заключённых достигло 12 тысяч.
-                        </p>
-                        <p>
-                           Перенаселённая тюрьма не справлялась и люди страдали от тесноты, голода и холода. Этот период оставил тяжёлые воспоминания на судьбах многих людей. 
-                        </p>
+                        <div className={style.container1990Col2Row1}>
+                            <p className={`${style.container1990Title} ${style.wideContainerTitle}`}>
+                            90 — Е
+                            </p>
+                        </div>
+                        <div className={style.container1990Col2Row2}>
+                            <p>
+                               В тюрьме одиночные камеры переделали под размещение шести человек, из-за чего общее число заключённых достигло 12 тысяч.
+                            </p>
+                            <p>
+                               Перенаселённая тюрьма не справлялась и люди страдали от тесноты, голода и холода. Этот период оставил тяжёлые воспоминания на судьбах многих людей. 
+                            </p>
+                        </div>
                     </div>    
                 </div>
                 <div className={style.container2006} id="y2006">
@@ -225,9 +240,12 @@ function History() {
                         <img src={y2025} alt="2025" className={style.image2025}/>
                     </div>
                     <div className={style.container2025Col2}>
-                        <p className={`${style.container2025Title} ${style.wideContainerTitle}`}>
-                        — 2025
-                        </p>
+                        <div className={style.container2025Col2Row1}>
+                            <p className={`${style.container2025Title} ${style.wideContainerTitle}`}>
+                            — 2025
+                            </p>
+                            <img src={historyArrowsIcon} alt="arrows" className={style.container2025Anim}/>
+                        </div>
                         <p className={style.paragraph2025}>
                            В 2017 году завершилось строительство нового тюремного комплекса, состоящего из двух восьмиэтажных крестообразных корпусов. 22 декабря того же года последние заключённые были переведены из старых «Крестов» в новый следственный изолятор в Колпино, который в народе сразу прозвали «Новые Кресты» или «Кресты-2». Исторический комплекс на Арсенальной набережной окончательно прекратил функционировать как тюрьма.
                         </p>
