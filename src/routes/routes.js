@@ -5,6 +5,7 @@ import Events from "../pages/Events/Events"
 import Locations from "../pages/Locations/Locations";
 import Rent from "../pages/Rent/Rent"
 import DetailRent from "../pages/Rent/DetailRent/DetailRent"
+import Placement from "../pages/Rent/Placement/Placement";
 import Contacts from "../pages/Contacts/Contacts"
 import Residence from "../pages/Residence/Residence"
 import SpecificEvent from "../pages/Events/SpecificEvent/SpecificEvent";
@@ -16,8 +17,9 @@ const AppRoutes = () => {
         {path: "/History", element: <History/>},
         {path: "/Events", element: <Events/>},
         {path: "/Locations", element: <Locations/>},
-        {path: "/Rent", element: <Rent/>},
-        {path: "/Rent/:id", element: <DetailRent/>},
+        {path: "/rent", element: <Rent/>},
+        {path: "/rent/:id", element: <DetailRent/>},
+        {path: "/rent/:id/:place", element: <Placement/>},
         {path: "/Contacts", element: <Contacts/>},
         {path: "/Residence", element: <Residence/>},
         {path: "/Events/SpecificEvent/:id", element: <SpecificEvent/>},
