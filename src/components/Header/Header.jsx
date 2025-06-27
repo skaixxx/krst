@@ -1,17 +1,13 @@
 import "./header.css"
 import "../general.css"
-import logo from "../../assets/header/logo.svg"
-import { useNavigate } from "react-router";
 import Navbar from "./Navbar";
+import useMediaQuery from "./useMediaQuery";
+import MinHeader from "./Mobile/MinHeader";
 function Header() {
-    const navigate = useNavigate();
+    const isMobile = useMediaQuery('(max-width: 768px)');
     return (
         <header className="header">
-        <div className="header-container">
-            <div className="logo-container"><a onClick={() => navigate("/")}><img className="logo" src={logo} alt="logo"></img></a></div>
-                <Navbar/>
-                <div className="button-container"><input type="button" onClick={() => navigate("/Residence")} className="residency-btn" value="резидентство"></input></div>
-            </div>
+                {isMobile ? <MinHeader/> : <Navbar/>};
         </header>
     );
 }
