@@ -1,4 +1,4 @@
-import "./MinHeaderStyle.css";
+import styles from "./MinHeaderStyle.module.css";
 import logo from "../../../assets/header/logo.svg";
 import menuIcon from "../../../assets/header/mobile/burgerMenu.svg";
 import NavItem from "../NavItem";
@@ -17,16 +17,16 @@ const navLinks = [
 export default function MinHeader() {
     const navRefs = useRef({});
     return (
-        <div className="min-header-container">
-            <div className="min-header-logo-container">
-                <img src={logo} alt="logo" />
+        <div className={styles.minHeader}>
+            <div className={styles.logoContainer}>
+                <img src={logo} alt="logo" className={styles.logoPic}/>
             </div>
-            <div className="min-header-menu-button-container">
-                <img src={menuIcon} alt={menuIcon} />
+            <div className={styles.burgerMenu}>
+                <img src={menuIcon} alt={menuIcon} className={styles.burgerMenuIcon}/>
                 {navLinks.map(({ to, label }) => (
                 <div
                     key={to}
-                    className="min-nav-link-wrapper"
+                    className={styles.burgerWrapper}
                     ref={(el) => navRefs.current[to] = el}
                 >
                     <NavItem to={to} label={label} />
