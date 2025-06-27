@@ -1,7 +1,7 @@
 import arrow from "./buttonArrow.svg"
 import "./ButtonGoToDesktopStyle.css"
 
-export default function ButtonGoToDesktop({text, action}) {
+export default function ButtonGoToDesktop({ text, action }) {
     return (
         <div className="button-container-specific-events">
             <button className="button-specific-events" onClick={action}>
