@@ -22,7 +22,7 @@ export default function MinHeader() {
                 <img src={logo} alt="logo" className={styles.logoPic}/>
             </div>
             <div className={styles.burgerMenu}>
-                <img src={menuIcon} alt={menuIcon} className={styles.burgerMenuIcon}/>
+                <div className={styles.burgerMenuIconLink}><img src={menuIcon} alt={menuIcon} className={styles.burgerMenuIcon}/></div>
                 {navLinks.map(({ to, label }) => (
                 <div
                     key={to}

@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import logo from "../../assets/header/logo.svg"
 import { useNavigate } from "react-router";
+import styles from "./header.module.css"
 const navLinks = [
   { to: '/History', label: 'история' },
   { to: '/Events', label: 'мероприятия' },
@@ -35,14 +36,14 @@ export default function Navbar() {
   
 
   return (
-    <div className="header-container">
-      <div className="logo-container"><a onClick={() => navigate("/")}><img className="logo" src={logo} alt="logo"></img></a></div>
-      <nav className={`navigation ${!showIndicator ? 'no-indicator' : ''}`}>
-        <div className="nav-links">
+    <div className={styles.headerContainer}>
+      <div className={styles.logoContainer}><a onClick={() => navigate("/")}><img className={styles.logo} src={logo} alt="logo"></img></a></div>
+      <nav className={`${styles.navigation} ${!showIndicator ? `${styles.noIndicator}` : ''}`}>
+        <div className={styles.navLinks}>
           {navLinks.map(({ to, label }) => (
             <div
               key={to}
-              className="nav-link-wrapper"
+              className={styles.navLinkWrapper}
               ref={(el) => navRefs.current[to] = el}
               showIndicator={showIndicator}
             >
@@ -55,7 +56,7 @@ export default function Navbar() {
 
         </div>
       </nav>
-      <div className="button-container"><input type="button" onClick={() => navigate("/Residence")} className="residency-btn" value="резидентство"></input></div>
+      <div className={styles.buttonContainer}><input type="button" onClick={() => navigate("/Residence")} className={styles.residencyBtn} value="резидентство"></input></div>
     </div>
   );
 }

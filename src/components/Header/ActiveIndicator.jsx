@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-
+import styles from "./header.module.css"
 export default function ActiveIndicator({ style }) {
   return (
     <motion.div
-      className="active-indicator"
+      className={styles.activeIndicator}
       animate={{
         width: style.width,
         left: style.left,
