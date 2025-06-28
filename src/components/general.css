@@ -16,9 +16,9 @@ html {
     background-color: var(--primary-color);
     font-size: 1.464vw;
 }
-/* 
-@media screen and (max-width: 767px) {
+
+/* @media (max-width: 768px)  {
     html {
-        font-size: 3.74vw;
+        font-size: calc(14px + 6 * (100vw - 375px) / 393);
     }
 } */

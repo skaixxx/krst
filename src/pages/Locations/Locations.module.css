@@ -1,4 +1,52 @@
 .fullscreenContainer {
-    padding-top: 12vw;
-    height: 100dvh;
+    margin-top: 11rem;
+    margin-bottom: 7.5rem;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.contentContainer {
+    display: flex;
+    padding: 0 3rem;
+    gap: 5rem;
+}
+
+.titleBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+}
+
+.titleWithIcon {
+    display: flex;
+    gap: 3rem; 
+}
+
+.title {
+    align-self: flex-end;
+    font-size: 6.4rem;
+    line-height: 72.7%;   
+}
+
+.subtitle {
+    color: var(--accent-color);
+    align-self: flex-end;
+    font-size: 6.4rem;
+    line-height: 72.7%; 
+}
+
+.icon {
+    height: 5rem;
+    display: flex;
+    align-self: center;
+    
+}
+
+.textContainer {
+    display: flex;
+    gap: 3.25rem; 
+    flex-direction: column;
+    justify-content: space-between;   
 }
