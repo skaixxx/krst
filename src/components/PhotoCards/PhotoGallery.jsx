@@ -1,29 +1,52 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import style from "./PhotoGallery.module.css"
 
-const PhotoGallery = ({photos = [], imageWidth = "18.8rem", imageHeight = "14rem"}) => {
+const PhotoGallery = ({
+    photos = [],
+    desktopSize = { width: "18.8rem", height: "14rem" },
+    mobileSize = { width: "33rem", height: "26rem" }}) => {
     
     const [selectedIndex, setSelectedIndex] = useState(0);
+    const [windowWidth, setWindowWidth]     = useState(window.innerWidth);
 
+    const isMobile = windowWidth <= 768;
+
+    // Добавляем обработчик изменения размера окна
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);        
+        }
+
+        window.addEventListener('resize', handleResize);
+
+        // Убираем обработчик при размонтировании компонента
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+    
     const handleImageClick = (index) => {
         setSelectedIndex(index);
     }
     
     const calculateSize = (index) => {
+        
+        const {width, height } = isMobile ? mobileSize : desktopSize;
+
         if (index === selectedIndex) {
             return {
-                width: `calc(${imageWidth} * 1.2)`,
-                height: `calc(${imageHeight} * 1.2)`,
+                width: `calc(${width} * 1.2)`,
+                height: `calc(${height} * 1.2)`,
             };
         }
         return {
-            width: imageWidth,
-            height: imageHeight
+            width: width,
+            height: height
         };
     }
 
     const calculatePosition = (index) =>  {
-        if (window.innerWidth <= 768){
+        if (windowWidth <= 768){
             
             const totalPhotos = photos.length;
             let offset = index - selectedIndex;
@@ -45,7 +68,7 @@ const PhotoGallery = ({photos = [], imageWidth = "18.8rem", imageHeight = "14rem
                 case -1:
                 case 1:
                     return {
-                        transform: offset === -1 ? "translateX(-50%)" : "translateX(50%)",
+                        transform: offset === -1 ? `translateX(calc(-${windowWidth / 2}px + 50% + 3rem))` : `translateX(calc(${windowWidth / 2}px - 50% - 3rem))`,
                         boxShadow: "none",
                         zIndex: "1"
                     };
@@ -59,7 +82,13 @@ const PhotoGallery = ({photos = [], imageWidth = "18.8rem", imageHeight = "14rem
     }
     
     return(
-        <div className={style.gallery} style={{ height: `calc(${imageHeight} * 1.1)` }}>
+        <div
+            className={style.gallery}
+            style={{ 
+                height: isMobile
+                    ? `calc(${mobileSize.height} * 1.2)`
+                    : `calc(${desktopSize.height} * 1.2)`       
+            }}>
         {
             photos.map((photo, index) => (
                 <div
