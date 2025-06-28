@@ -3,7 +3,7 @@ body {
     height: 100vh;
 }
 .header {
-    z-index: 2;
+    z-index: 97;
     position: absolute;
     top: 3.29vw;
     font-family: 'Inter', sans-serif;

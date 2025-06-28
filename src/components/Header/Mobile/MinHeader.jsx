@@ -21,7 +21,7 @@ export default function MinHeader() {
     const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
     return (
-        <div className={styles.minHeader}>
+        <div className={clsx(styles.minHeader, {[styles.active]: menuOpen})}>
             <div className={clsx(styles.burgerMenu, {[styles.active]: menuOpen})}>
                 <div className={clsx(styles.burgerMenuContainer, {[styles.active]: menuOpen})}>
                     <div className={styles.logoContainer} onClick={() => navigate("/")}>

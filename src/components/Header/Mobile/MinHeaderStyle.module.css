@@ -1,8 +1,14 @@
 .minHeader {
-    z-index: 20;
     margin: 0 auto;
     width: 87.7333%;
     height: 20.5333vw;
+}
+.minHeader.active {
+    position: absolute;
+    z-index: 98;
+    margin: 0 auto;
+    width: 100%;
+
 }
 .logoContainer {
     height: 5rem;
@@ -21,15 +27,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    animation: roll1 1s ease;
-}
-@keyframes roll1 {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-100%);
-    }
 }
 @keyframes roll2 {
     0% {
@@ -40,11 +37,11 @@
     }
 }
 .burgerMenu.active {
-    animation: roll2 .5s ease;
+    position: absolute;
     z-index: 99;
-    position: fixed;
+    animation: roll2 .5s ease;
     left: 0;
-    height: 100vh;
+    height: 110dvh;
     width: 100%;
     background-color: var(--primary-color);
     display: flex;
