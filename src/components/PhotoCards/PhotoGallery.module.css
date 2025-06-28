@@ -20,6 +20,7 @@
 @media (max-width: 768px) {
     .gallery {
         justify-content: center;
+        position: relative;
     }
 
     .container { 
