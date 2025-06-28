@@ -1,4 +1,76 @@
 .fullscreenContainer {
-    padding-top: 12vw;
-    height: 100dvh;
+    margin-top: 11rem;
+    margin-bottom: 7.5rem;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.contentContainer {
+    display: flex;
+    padding: 0 3rem;
+    justify-content: space-between;
+}
+
+.titleBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.75rem
+}
+
+.titleWithIcon {
+    display: flex;
+    gap: 3rem; 
+}
+
+.title {
+    transition: opacity 0.3s ease;
+    align-self: flex-start;
+    font-size: 6.4rem;
+    line-height: 72.7%;   
+}
+
+.subtitle {
+    transition: opacity 0.3s ease;
+    color: var(--accent-color);
+    align-self: flex-start;
+    font-size: 6.4rem;
+    line-height: 72.7%; 
+}
+
+.icon {
+    height: 5rem;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.textContainer {
+    display: flex;
+    gap: 3.25rem; 
+    flex-direction: column;
+    justify-content: space-between;
+    width: 15rem;   
+}
+
+.description {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.fadeOut {
+    opacity: 0;
+}
+
+.fadeIn {
+    opacity: 1;
+}
+
+.description.fadeOut {
+    transform: translateY(0.5rem);
+}
+
+.description.fadeIn {
+    transform: translateY(0);
 }
