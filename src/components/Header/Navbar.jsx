@@ -47,7 +47,7 @@ export default function Navbar() {
               ref={(el) => navRefs.current[to] = el}
               showIndicator={showIndicator}
             >
-              <NavItem to={to} label={label} />
+              <NavItem to={to} label={label} className={styles.navLink}/>
             </div>
           ))}
           <AnimatePresence>

@@ -7,7 +7,7 @@ function Header() {
     const isMobile = useMediaQuery('(max-width: 768px)');
     return (
         <header className={styles.header}>
-                {isMobile ? <MinHeader/> : <Navbar/>};
+                {isMobile ? <MinHeader/> : <Navbar/>}
         </header>
     );
 }
