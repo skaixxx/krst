@@ -4,7 +4,7 @@ import style from "./PhotoGallery.module.css"
 const PhotoGallery = ({
     photos = [],
     desktopSize = { width: "18.8rem", height: "14rem" },
-    mobileSize = { width: "33rem", height: "26rem" },
+    mobileSize = { width: "13rem", height: "11rem" },
     onPhotoSelect }) => {
     
     const [selectedIndex, setSelectedIndex] = useState(0);
@@ -74,7 +74,7 @@ const PhotoGallery = ({
                 case -1:
                 case 1:
                     return {
-                        transform: offset === -1 ? `translateX(calc(-${windowWidth / 2}px + 50% + 3rem))` : `translateX(calc(${windowWidth / 2}px - 50% - 3rem))`,
+                        transform: offset === -1 ? `translateX(calc(-${windowWidth / 2}px + 50% + 1.5rem))` : `translateX(calc(${windowWidth / 2}px - 50% - 1.5rem))`,
                         boxShadow: "none",
                         zIndex: "1"
                     };

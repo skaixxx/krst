@@ -66,9 +66,9 @@ const Locations = () => {
                     </div>
                     <div className={style.titleWithIcon}>
                         {displayedIndex === 1 && (
-                            <div className={`${style.icon} ${isAnimating ? style.fadeOut : style.fadeIn}`} style={{width: "9rem"}}>
+                            <div className={`${style.icon} ${isAnimating ? style.fadeOut : style.fadeIn}`} style={{width: window.innerWidth <= 768 ? "5rem" : "9rem"}}>
                                 <ScaleSlideDots/>
-                            </div>
+                            </div> // !!!
                         )}
                         {displayedIndex === 2 && (
                             <div className={`${style.icon} ${isAnimating ? style.fadeOut : style.fadeIn}`}>

@@ -74,3 +74,44 @@
 .description.fadeIn {
     transform: translateY(0);
 }
+
+@media (max-width: 768px) {
+
+    .fullscreenContainer{
+        margin-top: 9rem;
+        margin-bottom: 7rem;
+        gap: 3.6rem;    
+    }
+
+    .contentContainer {
+        padding: 0 1.5rem;
+        flex-direction: column;
+        gap: 3.5rem;    
+    }
+
+    .titleBlock {
+        gap: 1.5rem
+    }
+
+    .titleWithIcon {
+        gap: 1rem    
+    }
+
+    .title {
+        font-size: 3.5rem;    
+    }
+
+    .subtitle {
+        font-size: 3.5rem;    
+    }
+
+    .icon {
+        height: 2.5rem;
+    }
+
+    .textContainer {
+        width: 100%;
+        gap: 2.9rem;
+    }
+
+}
