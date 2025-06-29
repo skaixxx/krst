@@ -24,8 +24,8 @@ export default function MinHeader() {
     const navigate = useNavigate();
     const location = useLocation();
     const isLightLogo = ['/', '/History'].includes(location.pathname);
-    const logo = isLightLogo ? lightLogo : darkLogo;
-    const burgerLogo = isLightLogo? menuIconLight : menuIcon;
+    const logo = !menuOpen && isLightLogo ? lightLogo : darkLogo;
+    const burgerLogo = !menuOpen && isLightLogo? menuIconLight : menuIcon;
     return (
         <div className={clsx(styles.minHeader, {[styles.active]: menuOpen})}>
             <div className={clsx(styles.burgerMenu, {[styles.active]: menuOpen})}>

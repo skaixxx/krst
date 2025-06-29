@@ -67,3 +67,11 @@
   font-weight: 500;
   color: var(--accent-color);
 }
+@media screen and (max-width: 768px) {
+  .cardTitle {
+    font-size: 1.43rem;
+  }
+  .cardYear {
+    font-size: .71rem;
+  }
+}

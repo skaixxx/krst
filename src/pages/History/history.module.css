@@ -654,3 +654,87 @@
     letter-spacing: -0.05em;
     line-height: 72.7%;
 }
+@media screen and (max-width: 768px) {
+    .dateContainerRowText {
+        display: none;
+    }
+    .titleText1 {
+        font-size: 3.43rem;
+    }
+    .titleText2 {
+        font-size: 3.43rem;
+    }
+    .textBox1Text {
+        font-size: 1rem;
+    }
+    .wideContainer1Title {
+        font-size: 1.43rem;
+    }
+    .wideContainerTitle {
+        font-size: 3.43rem;
+    }
+    .famousPeopleBlockTitleText1 {
+        font-size: 3.43rem;
+    }
+    .famousPeopleBlockTitleText2 {
+        font-size: 3.43rem;
+    }
+    .dangerousPeopleBlockTitleText1 {
+        font-size: 3.43rem;
+    }
+    .dangerousPeopleBlockTitleSubAnimation {
+        display: none;
+    }
+    .dangerousPeopleBlockTitleText2 {
+        font-size: 3.43rem;
+        width: 100%;
+        word-wrap: break-word;
+    }
+    .wideContainer1 {
+        height: 100dvh;
+        width: 100%;
+        flex-direction: column;
+        justify-content: start;
+    }
+    .wideContainer1Col1 {
+        width: 100%;
+        height: max-content;
+    }
+    .wideContainer1Col2 {
+        width: 100%;
+        height: 17.7rem;
+    }
+    .imageTomishko {
+        height: 100%;
+    }
+    .container1892 {
+        height: 25.93rem;
+    }
+    .container1905 {
+        height: 17.21rem;
+    }
+    .container1917 {
+        height: 23.29rem;
+    }
+    .container1937 {
+        height: 30.57rem;
+    }
+    .container1941 {
+        height: 29.36rem;
+    }
+    .container1958 {
+        height: 30.36rem;
+    }
+    .container1990 {
+        height: 20.64rem;
+    }
+    .container2006 {
+        height: 18.21rem;
+    }
+    .container2017 {
+        height: 25.71rem;
+    }
+    .container2025 {
+        height: 20.86rem;
+    }
+}

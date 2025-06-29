@@ -66,3 +66,11 @@
 .text {
   font-size: 1rem;
 }
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 1.43rem;
+  }
+  .text {
+    font-size: .71rem;
+  }
+}
