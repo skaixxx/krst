@@ -667,6 +667,10 @@
     .textBox1Text {
         font-size: 1rem;
     }
+    .interactiveLine {
+        height: 5.71rem;
+        margin-bottom: 0;
+    }
     .wideContainer1Title {
         font-size: 1.43rem;
     }
@@ -706,6 +710,7 @@
     }
     .imageTomishko {
         height: 100%;
+        width: auto;
     }
     .container1892 {
         height: 25.93rem;
