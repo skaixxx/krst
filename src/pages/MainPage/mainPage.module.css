@@ -341,3 +341,66 @@
         ". . . . . . . . . . . .";
     }
 }
+@media screen and (max-width: 768px) {
+    .titleText1 {
+        font-size: 2.57rem;
+    }
+    .titleText2 {
+        font-size: 2.57rem;
+    }
+    .textBox1Title {
+        font-size: 2.57rem;
+    }
+    .textBox2Title {
+        font-size: 2.57rem;
+    }
+    .fullScreenContainer2 {
+        height: 60dvh;
+    }
+    .textBox2Text {
+        width: 100%;
+    }
+    .interactiveLine {
+        height: max-content;
+    }
+    .weatherIcon {
+        width: 3.21rem;
+    }
+    .peopleIcon {
+        width: 3.21rem;
+    }
+    .timeIcon {
+        width: 3.21rem;
+    }
+    .iLineElement {
+        flex-direction: column;
+        align-items: center;
+    }
+    .titleInfo {
+        font-size: 1.43rem;
+        text-align: center;
+    }
+    .anonsText {
+        font-size: 1rem;
+    }
+    .rulesStroke1 {
+        height: 2.57rem;
+    }
+    .rulesStroke1Text {
+        font-size: 2.57rem;
+    }
+    .rulesStroke2Text {
+        font-size: 2.57rem;
+    }
+    .rulesContainer {
+        height: max-content;
+    }
+    .listContainer {
+        width: 100%;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    .listItem {
+        width: 100%;
+    }
+}
