@@ -1,11 +1,13 @@
 import styles from "./MinHeaderStyle.module.css";
-import logo from "../../../assets/header/logo.svg";
+import darkLogo from "../../../assets/header/logo.svg";
+import lightLogo from "../../../assets/header/mobile/logoLight.svg"
 import menuIcon from "../../../assets/header/mobile/burgerMenu.svg";
+import menuIconLight from "../../../assets/header/mobile/menuLight.svg"
 import closeMenuIcon from "../../../assets/header/mobile/closeMobMenu.svg"
 import NavItem from "../NavItem";
 import { useRef, useState } from "react";
 import clsx from "clsx";
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 
 const navLinks = [
   { to: '/History', label: 'история' },
@@ -20,12 +22,16 @@ export default function MinHeader() {
     const navRefs = useRef({});
     const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
+    const location = useLocation();
+    const isLightLogo = ['/', '/History'].includes(location.pathname);
+    const logo = isLightLogo ? lightLogo : darkLogo;
+    const burgerLogo = isLightLogo? menuIconLight : menuIcon;
     return (
         <div className={clsx(styles.minHeader, {[styles.active]: menuOpen})}>
             <div className={clsx(styles.burgerMenu, {[styles.active]: menuOpen})}>
                 <div className={clsx(styles.burgerMenuContainer, {[styles.active]: menuOpen})}>
                     <div className={styles.logoContainer} onClick={() => navigate("/")}>
-                        <img src={logo} alt="logo" className={styles.logoPic}/>
+                        <img src={logo} alt="logo" className={styles.logoPic} key={logo}/>
                     </div>
                     <div className={styles.burgerMenuLinks}>
                         {navLinks.map(({ to, label }) => (
@@ -39,7 +45,7 @@ export default function MinHeader() {
                     ))}
                     </div>
                     <div className={styles.burgerMenuIconLink} onClick={() => setMenuOpen(prev => !prev)}>
-                        <img src={!menuOpen ? `${menuIcon}` : `${closeMenuIcon}`} alt={menuIcon} className={styles.burgerMenuIcon}/></div>
+                        <img src={!menuOpen ? `${burgerLogo}` : `${closeMenuIcon}`} alt={menuIcon} className={styles.burgerMenuIcon}/></div>
                 </div>
             </div>
         </div>
