@@ -5,13 +5,18 @@ import timeIcon from "../../assets/mainPage/time.svg"
 import mapImage from "../../assets/mainPage/map.png"
 import arrowBR from "../../assets/mainPage/arrowsBR.svg"
 import listPoint from "../../assets/mainPage/listPoint.svg"
+import mobBg from "../../assets/mainPage/mobileStaticMP.png"
+import fsBg from "../../assets/mainPage/staticMP.png"
 import SlidingRotatingCross from "../../components/animations/SRCross/SlidingRotatingCross"
 import { useData } from "../../routes/DataContext"
 import { useNavigate } from "react-router"
+import useMediaQuery from "../../components/Header/useMediaQuery"
 function MainPage() {
     const { items } = useData();
     const limitedCard = items.slice(0, 5);
     const navigate = useNavigate();
+    const isMobile = useMediaQuery('(max-width: 768px)');
+    const bgSectionStyle = isMobile ? mobBg : fsBg;
     const handleClick = (id) => {
         navigate(`/Events/SpecificEvent/${id}`)
     }
@@ -28,16 +33,24 @@ function MainPage() {
             </div>
             <div className={style.topRow}><div className={style.topRow1}><p className={style.titleText2}>ПРОСТРАНСТВО</p></div></div>
             <div className={style.fullScreenContainer2}>
-                <div className={style.contentContainer}>
+                <div className={style.contentContainer} style={
+                    {backgroundImage: `url(${bgSectionStyle})`}
+                }>
                     <div className={style.container2TextBox1}>
                         <p className={style.textBox1Title}>КРСТ</p>
                         <p className={style.textBox1Text}>КРЕАТИВНАЯ РАЗВЛЕКАТЕЛЬНАЯ СОВРЕМЕННАЯ ТЕРРИТОРИЯ</p>
                     </div>
                     <div className={style.container2TextBox2}>
                         <p className={style.textBox2Title}>О НАС</p>
+                        {isMobile ?
+                        <p className={style.textBox2Text}>
+                            КРСТ — это комплекс, где рождаются идеи, проводятся мероприятия, выставки и мастер-классы. Здесь гармонично сочетаются рестораны с разнообразной кухней, выставочные залы, а также культурные площадки.
+                        </p>
+                        :
                         <p className={style.textBox2Text}>
                             КРСТ — это уникальный многофункциональный комплекс, где рождаются идеи, проводятся мероприятия, выставки и мастер-классы. Здесь гармонично сочетаются рестораны с разнообразной кухней, выставочные залы, где показана история данного места, а также культурные площадки, которые становятся центром притяжения для творческих людей.
                         </p>
+                        }
                     </div>
                 </div>
             </div>

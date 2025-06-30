@@ -75,9 +75,8 @@
     ". . . . . . . . . . . ." 
     "text1 text1 . . . . . . . . . ."
     ". . . . . . . . . . . ."
-    "text2 text2 text2 text2 text2 . . . . . . ."
+    "text2 text2 text2 text2 text2 text2 text2 . . . . ."
     ". . . . . . . . . . . .";
-    background-image: url(../../assets/mainPage/staticMP.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -295,52 +294,6 @@
     height: 100%;
     width: auto;
 }
-@media  screen and (max-width: 799px){
-    .contentContainer {
-        grid-template-rows: 1vw 10vw 25vw 10vw 5vw;
-        grid-template-areas:
-        ". . . . . . . . . . . ." 
-        "text1 text1 . . . . . . . . . ."
-        ". . . . . . . . . . . ."
-        "text2 text2 text2 text2 text2 text2 text2 text2 text2 text2 text2 text2"
-        ". . . . . . . . . . . .";
-    }
-    
-}
-@media  screen and (max-width: 1199px) and (min-width: 800px){
-    .contentContainer {
-        grid-template-rows: 1vw 10vw 25vw 10vw 5vw;
-        grid-template-areas:
-        ". . . . . . . . . . . ." 
-        "text1 text1 . . . . . . . . . ."
-        ". . . . . . . . . . . ."
-        "text2 text2 text2 text2 text2 text2 text2 text2 . . . ."
-        ". . . . . . . . . . . .";
-    }
-    
-}
-@media  screen and (max-width: 1499px) and (min-width: 1200px){
-    .contentContainer {
-        grid-template-areas:
-        ". . . . . . . . . . . ." 
-        "text1 text1 . . . . . . . . . ."
-        ". . . . . . . . . . . ."
-        "text2 text2 text2 text2 text2 text2 text2 . . . . ."
-        ". . . . . . . . . . . .";
-    }
-    
-}
-@media  screen and (min-width: 1500px) {
-    .contentContainer {
-        grid-template-rows: 1vw 10vw 27vw 10vw 5vw;
-        grid-template-areas:
-        ". . . . . . . . . . . ." 
-        "text1 text1 . . . . . . . . . ."
-        ". . . . . . . . . . . ."
-        "text2 text2 text2 text2 text2 text2 text2 . . . . ."
-        ". . . . . . . . . . . .";
-    }
-}
 @media screen and (max-width: 768px) {
     .titleText1 {
         font-size: 2.57rem;
@@ -355,10 +308,30 @@
         font-size: 2.57rem;
     }
     .fullScreenContainer2 {
-        height: 60dvh;
+        min-height: 29.21rem;
     }
     .textBox2Text {
         width: 100%;
+        height: 100%;
+        text-align: justify;
+    }
+    .contentContainer {
+        overflow: hidden;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 7.79rem 7.21rem 10.21rem 3.57rem;
+        grid-template-areas:
+        "text1 text1 . . . . "
+        ". . . . . ."
+        "text2 text2 text2 text2 text2 text2"
+        ". . . . . .";
+        column-gap: 1rem;
+    }
+    .container2TextBox2 {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     .interactiveLine {
         height: max-content;
