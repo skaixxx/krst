@@ -30,7 +30,7 @@ export default function MinHeader() {
         <div className={clsx(styles.minHeader, {[styles.active]: menuOpen})}>
             <div className={clsx(styles.burgerMenu, {[styles.active]: menuOpen})}>
                 <div className={clsx(styles.burgerMenuContainer, {[styles.active]: menuOpen})}>
-                    <div className={styles.logoContainer} onClick={() => navigate("/")}>
+                    <div className={styles.logoContainer} onClick={() => `${navigate("/")} ${setMenuOpen(false)}` }>
                         <img src={logo} alt="logo" className={styles.logoPic} key={logo}/>
                     </div>
                     <div className={styles.burgerMenuLinks}>
