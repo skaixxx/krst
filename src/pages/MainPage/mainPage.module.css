@@ -310,10 +310,15 @@
     .fullScreenContainer2 {
         min-height: 29.21rem;
     }
+    .textBox1Text {
+        width: 100%;
+        height: 100%;
+        font-size: 1rem;
+    }
     .textBox2Text {
         width: 100%;
         height: 100%;
-        text-align: justify;
+        font-size: 1rem;
     }
     .contentContainer {
         overflow: hidden;
