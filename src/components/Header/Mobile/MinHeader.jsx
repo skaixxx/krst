@@ -34,15 +34,17 @@ export default function MinHeader() {
                         <img src={logo} alt="logo" className={styles.logoPic} key={logo}/>
                     </div>
                     <div className={styles.burgerMenuLinks}>
-                        {navLinks.map(({ to, label }) => (
+                        {navLinks.map(({ to, label }, index) => { 
+                            const isLast = index === navLinks.length -1;
+                            return(
                         <div
                             key={to}
                             className={clsx(styles.burgerWrapper, {[styles.active]: menuOpen})}
                             ref={(el) => navRefs.current[to] = el}
                         >
-                            <NavItem to={to} label={label} onClick={() => setMenuOpen(false)} className={styles.navLinkMobile}/>
+                            <NavItem to={to} label={label} onClick={() => setMenuOpen(false)} className={`${styles.navLinkMobile} ${isLast ? styles.navLinkMobileLast : ""}`}/>
                         </div>
-                    ))}
+                    )})}
                     </div>
                     <div className={styles.burgerMenuIconLink} onClick={() => setMenuOpen(prev => !prev)}>
                         <img src={!menuOpen ? `${burgerLogo}` : `${closeMenuIcon}`} alt={menuIcon} className={styles.burgerMenuIcon}/></div>
