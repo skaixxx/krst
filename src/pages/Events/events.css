@@ -220,3 +220,54 @@
     width: 100%;
     justify-self: start;
 }
+
+@media (max-width: 768px) {
+
+    .grid-container-events {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 9.4rem 4.7rem 6.8rem 3.2rem 2.2rem 2.2rem 4.3rem 4.7rem 2.2rem 6.5rem 4.7rem 2.2rem 6.5rem 2.2rem 1.5rem 3.2rem 6.5rem 7.2rem;
+        grid-template-areas:
+        ". . . . . ."
+        "card1 card1 text1 text1 text1 text1"
+        "card1 card1 . card2 card2 card2"
+        "text2 text2 . card2 card2 card2 "
+        "text2 text2 . . . ."
+        ". . card3 card3 card3 ."
+        "card6 card6 card3 card3 card3 ."
+        "card6 card6 text3 text3 text3 text3"
+        ". . . . . ."
+        "card4 card4 card4 . card10 card10"
+        "text4 text4 text4 text4 card10 card10"
+        ". . . . . ."
+        "card5 card5 card5 . card7 card7"
+        ". . . . card7 card7"
+        "card8 card8 . . card7 card7"
+        "card8 card8 . . . ."
+        "card8 card8 . card9 card9 card9"
+        ". . . . . .";
+    }
+    
+    .TextBox {
+        font-size: 3.5rem;
+    }
+
+    .TextBox2 span {
+        top: auto;
+        bottom: 0;
+    }
+
+    .TextBox3 {
+        position: relative;
+    }
+
+    .TextBox3 span {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .TextBox4 span {
+        position: absolute;
+        bottom: 0;
+    }
+}
