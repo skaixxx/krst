@@ -1,12 +1,11 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import style from "./detailRent.module.css";
 import arrowBR from "../../../assets/mainPage/arrowsBR.svg"
-import Card from "../../../components/Card/card";
+import Card from "../../../components/Card/Сard";
 
 function DetailRent() {
 	const { id } = useParams();
 	const navigate = useNavigate();
-
 	const goToPlace = (placeId) => {
 		navigate(`/rent/${id}/${placeId}`);
 	};
@@ -53,7 +52,7 @@ function DetailRent() {
 					<Card
 						title="ГАРМОНИЯ"
 						btnText="перейти"
-						btnAction={goToPlace('1')}
+						btnAction={goToPlace(1)}
 					>
 						Помещение идеально подходит для мастер-классов по керамике: здесь всё продумано до мелочей для удобства участников.
 					</Card>
