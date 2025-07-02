@@ -10,7 +10,6 @@ import icon2 from '../../../assets/card/icons/icon-2.svg';
 function DetailRent() {
 	const { id } = useParams();
 	const navigate = useNavigate();
-
 	const goToPlace = (placeId) => {
 		navigate(`/rent/${id}/${placeId}`);
 	};
