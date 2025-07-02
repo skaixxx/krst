@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import style from "./detailRent.module.css";
 import arrowBR from "../../../assets/mainPage/arrowsBR.svg"
-import Card from "../../../components/Card/card";
+import Card from "../../../components/Card/Сard";
 
 import img1 from "../../../assets/card/1-min.png"
 import icon1 from '../../../assets/card/icons/icon-1.svg';
