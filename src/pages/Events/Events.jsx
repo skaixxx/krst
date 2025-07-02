@@ -2,16 +2,34 @@ import "./events.css";
 import "../../components/general.css";
 import { useData } from "../../routes/DataContext";
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 function Events() {
+    
     const { items } = useData();
     const navigate = useNavigate();
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    const isMobile = windowWidth <= 768;
+
     const handleClick = (id) => {
         navigate(`/Events/SpecificEvent/${id}`)
     }
-    console.log("Data: ", items);
-    if (!items || items.length === 0) {
-        return <p>Данные загружаются...</p>
-    };
+
+    useEffect(() => {
+
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        // Убираем обработчик при размонтировании компонента
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+
+    }, []);
+
     return (
         <div className="grid-container-events">
             {items.map((item) =>(
@@ -23,7 +41,12 @@ function Events() {
                         <div className="cardDate"><span>{item.dates}</span></div>
                         <div className="cardBody">
                             <div className="cardText"><p>{item.title}</p></div>
-                            <div className="cardIconBox"><img src={item.icon} alt="cardButton" class={item.iconClass}/></div>
+                            <div className="cardIconBox">
+                                <img 
+                                    src={isMobile ? item.iconMobile : item.icon}
+                                    alt="cardButton"
+                                    className={isMobile ? item.iconClassMobile : item.iconClass}/>
+                            </div>
                         </div>
                     </a>
                 </div>

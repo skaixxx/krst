@@ -247,8 +247,79 @@
         ". . . . . .";
     }
     
+    .cardDate {
+        font-size: 1.2rem;
+    }
+
+    .card1 a {
+        gap: 0.4rem;    
+    }
+    
+    .card1 a .cardBody {
+        flex-direction: column;    
+        flex: 1;    
+    }
+    
+    .card1 a .cardBody  .cardText{
+        justify-self: start;
+        width: 100%;
+    }
+
+    .card4 a .cardDate {
+        width: 100%;
+    }
+    
+    .card5 a .cardBody {
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    .card6 a .cardBody {
+        flex-direction: column;
+        flex: 1;    
+    }
+
+    .card6 a .cardBody  .cardText{
+        justify-self: start;
+        width: 100%;
+    }
+
+    .card7 a .cardBody {
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .card7 a .cardBody  .cardText{
+        justify-self: start;
+        width: 100%;
+    }
+
+    .card10 {
+        position: absolute;
+        width: 80%;
+        right: 0;
+    }
+
     .TextBox {
         font-size: 3.5rem;
+    }
+
+    .cardIconBox {
+        display: flex;
+    }
+
+    .shortCardIcon {
+        width: 2rem;
+        height: auto;
+    }
+
+    .longCardIcon {
+        width: 2.5rem;
+        height: auto;
+    }
+
+    .cardText {
+        font-size: 0.9rem;
     }
 
     .TextBox2 span {
