@@ -102,6 +102,9 @@
     font-size: 1.79rem;
     border-radius: 2rem;
 }
+.navLinkMobileLast {
+    background-color: var(--accent-color);
+}
 .hidden {
     display: none;
 }

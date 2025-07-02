@@ -1,15 +1,16 @@
 .fullscreenContainer {
+    margin: 0 auto;
     margin-top: 11rem;
     margin-bottom: 7.5rem;
-    
+    width: 91.21%;
     display: flex;
     flex-direction: column;
     gap: 6rem;
 }
 
 .contentContainer {
+    width: 100%;
     display: flex;
-    padding: 0 3rem;
     justify-content: space-between;
 }
 
