@@ -9,9 +9,13 @@ if (data.length === 0) return <div>Загрузка...</div>;
     <div className={styles.wrapper}>
      <PhotoGallery photos={data} onPhotoSelect={setActiveIndex} isMonochrome={true}/>
       <div className={styles.underPhotoContent}>
-        <p>{data[activeIndex].name}</p>
-        <p>{data[activeIndex].description}</p>
-        <p>{data[activeIndex].year}</p>
+        <div className={styles.column1}>
+          <p className={styles.cardYear}>{data[activeIndex].year}</p>
+          <p className={styles.cardTitle}>{data[activeIndex].name}</p>
+        </div>
+        <div className={styles.column2}>
+          <p className={styles.cardParagraph}>{data[activeIndex].description}</p>
+        </div>
       </div>
     </div>
   );

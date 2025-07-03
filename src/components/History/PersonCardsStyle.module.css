@@ -5,11 +5,55 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
 .underPhotoContent {
-  height: 100%;
+  height: 28.67%;
   color: var(--secondary-color);
+  display: flex;
+  justify-content: space-between;
+}
+.column1 {
+  height: 100%;
+  width: 31.78%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.column2 {
+  height: 100%;
+  width: 57.4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+.cardTitle {
+  font-size: 2rem;
+  font-weight: 500;
+  width: min-content;
+}
+.cardYear {
+  font-size: 2rem;
+  color: var(--accent-color);
+  font-weight: 500;
+}
+.cardParagraph {
+  font-size: 1rem;
 }
 @media screen and (max-width: 768px) {
+  .wrapper {
+    height: max-content;
+  }
+  .underPhotoContent {
+    flex-direction: column;
+    justify-content: start;
+  }
+  .column1 {
+    width: 100%;
+    flex-direction: row-reverse;
+  }
+  .column2 {
+    width: 100%;
+  }
   .cardTitle {
     font-size: 1.43rem;
   }

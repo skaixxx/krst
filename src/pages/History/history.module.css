@@ -742,4 +742,13 @@
     .container2025 {
         height: 20.86rem;
     }
+    .containerAboutPeople {
+        min-height: 301vw;
+    }
+    .famousPeopleBlock {
+        height: 126vw;
+    }
+    .containerDangerousPeople {
+        height: 167.2vw;
+    }
 }
