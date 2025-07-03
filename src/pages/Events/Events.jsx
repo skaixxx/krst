@@ -37,7 +37,7 @@ function Events() {
                     backgroundImage: `url(${item.image})`,
                     backgroundPosition: "center",
                     backgroundSize: "cover"}}>
-                    <a className="cardEvent" key={item.id} onClick={() => handleClick(item.id)}>
+                    <div className="cardEvent" key={item.id} onClick={() => handleClick(item.id)}>
                         <div className="cardDate"><span>{item.dates}</span></div>
                         <div className="cardBody">
                             <div className="cardText"><p>{item.title}</p></div>
@@ -48,7 +48,7 @@ function Events() {
                                     className={isMobile ? item.iconClassMobile : item.iconClass}/>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
             ))}
             <div className="TextBox TextBox1"><span>КУДА</span></div>
