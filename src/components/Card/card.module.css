@@ -64,6 +64,9 @@
 }
 
 .cardTag {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	border: 1px solid hsla(0, 0%, 8%, 1);
 	border-radius: 25px;
 	padding: 10px 20px;
