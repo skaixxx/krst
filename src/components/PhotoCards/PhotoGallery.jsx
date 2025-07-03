@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import style from "./PhotoGallery.module.css"
+import { filter } from "framer-motion/client";
 
 const PhotoGallery = ({
     photos = [],
+    isMonochrome = false,
     desktopSize = { width: "18.8rem", height: "14rem" },
     mobileSize = { width: "13rem", height: "11rem" },
     onPhotoSelect }) => {
@@ -28,7 +30,6 @@ const PhotoGallery = ({
     
     const handleImageClick = (index) => {
         setSelectedIndex(index);
-        
         // Вызываем функцию обратного вызова, если она предоставлена
         if(onPhotoSelect) {
             onPhotoSelect(index);
@@ -109,7 +110,7 @@ const PhotoGallery = ({
                     <img
                         src={photo.url}
                         alt={photo.alt || `Фото ${index + 1}`}
-                        className={style.image}
+                        className={isMonochrome? style.imageMonoChrome : style.image}
                     />
                 </div>
             ))

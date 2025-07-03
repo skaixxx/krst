@@ -20,6 +20,8 @@ import Carousel from "../../components/History/HistoryCarousel";
 import ScaleSlideDotsInverted from "../../components/animations/ScaleSlideDots/ScaleSlideDotsInverted";
 function History() {
     const [items, setItems] = useState([]);
+    const [data1, setData1] = useState([]);
+    const [data2, setData2] = useState([]);
     useEffect(() => {
         fetch('/data/history/carouselData.json')
         .then((res) => {
@@ -29,6 +31,28 @@ function History() {
             return res.json();
         })
         .then(setItems)
+        .catch((err) => {
+            console.error('ошибка загрузки данных', err);
+        })
+        fetch('/data/history/famousPeople.json')
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error(`Fetch data error: ${res.status}`);
+            }
+            return res.json()
+        })
+        .then(setData1)
+        .catch((err) => {
+            console.error('ошибка загрузки данных', err);
+        })
+        fetch('/data/history/dangerousPeople.json')
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error(`Fetch data error: ${res.status}`);
+            }
+            return res.json()
+        })
+        .then(setData2)
         .catch((err) => {
             console.error('ошибка загрузки данных', err);
         })
@@ -259,7 +283,7 @@ function History() {
                                 <p className={style.famousPeopleBlockTitleText2}>ЛИЧНОСТИ</p>
                             </div>
                         </div>
-                        <FamousCards/>
+                        <FamousCards data={data1}/>
                     </div>
                     <div className={style.containerDangerousPeople}>
                         <div className={style.dangerousPeopleBlockTitle}>
@@ -269,7 +293,7 @@ function History() {
                                 <p className={style.dangerousPeopleBlockTitleText2}>ЗАКЛЮЧЁННЫЕ</p>
                             </div>
                         </div>
-                        
+                        <FamousCards data={data2}/>
                     </div>
                 </div>
             </div>
