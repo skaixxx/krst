@@ -135,17 +135,17 @@
     height: 100%;
     grid-area: card5;
 }
-.card5 a {
+.card5 .cardEvent {
     display: flex;
     justify-content: start;
 }
-.card5 a .cardBody {
+.card5 .cardEvent .cardBody {
     padding-top: 0.5rem;
     display: flex;
     height: 100%;
     flex-direction: column;
 }
-.card5 a .cardBody .cardText {
+.card5 .cardEvent .cardBody .cardText {
     width: 100%;
     justify-self: start;
 }
@@ -171,17 +171,17 @@
     height: 100%;
     grid-area: card8;
 }
-.card8 a {
+.card8 .cardEvent {
     display: flex;
     justify-content: start;
 }
-.card8 a .cardBody {
+.card8 .cardEvent .cardBody {
     padding-top: 0.5rem;
     display: flex;
     height: 100%;
     flex-direction: column;
 }
-.card8 a .cardBody .cardText {
+.card8 .cardEvent .cardBody .cardText {
     width: 100%;
     justify-self: start;
 }
@@ -206,17 +206,17 @@
     grid-area: card10;
     align-self: flex-end;
 }
-.card10 a {
+.card10 .cardEvent {
     display: flex;
     justify-content: start;
 }
-.card10 a .cardBody {
+.card10 .cardEvent .cardBody {
     padding-top: 0.5rem;
     display: flex;
     height: 100%;
     flex-direction: column;
 }
-.card10 a .cardBody .cardText {
+.card10 .cardEvent .cardBody .cardText {
     width: 100%;
     justify-self: start;
 }
@@ -225,7 +225,7 @@
 
     .grid-container-events {
         grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: 9rem 4.7rem 6.8rem 3.2rem 2.2rem 2.2rem 4.3rem 4.7rem 2.2rem 6.5rem 4.7rem 2.2rem 6.5rem 2.2rem 1.5rem 3.2rem 6.5rem 7.2rem;
+        grid-template-rows: 9.4rem 4.7rem 6.8rem 3.2rem 2.2rem 2.2rem 4.3rem 4.7rem 2.2rem 6.5rem 4.7rem 2.2rem 6.5rem 2.2rem 1.5rem 3.2rem 6.5rem 7.2rem;
         grid-template-areas:
         ". . . . . ."
         "card1 card1 text1 text1 text1 text1"
@@ -251,45 +251,45 @@
         font-size: 1.2rem;
     }
 
-    .card1 a {
+    .card1 .cardEvent {
         gap: 0.4rem;    
     }
     
-    .card1 a .cardBody {
+    .card1 .cardEvent .cardBody {
         flex-direction: column;    
         flex: 1;    
     }
     
-    .card1 a .cardBody  .cardText{
+    .card1 .cardEvent .cardBody  .cardText{
         justify-self: start;
         width: 100%;
     }
 
-    .card4 a .cardDate {
+    .card4 .cardEvent .cardDate {
         width: 100%;
     }
     
-    .card5 a .cardBody {
+    .card5 .cardEvent .cardBody {
         flex-direction: row;
         gap: 3rem;
     }
 
-    .card6 a .cardBody {
+    .card6 .cardEvent .cardBody {
         flex-direction: column;
         flex: 1;    
     }
 
-    .card6 a .cardBody  .cardText{
+    .card6 .cardEvent .cardBody  .cardText{
         justify-self: start;
         width: 100%;
     }
 
-    .card7 a .cardBody {
+    .card7 .cardEvent .cardBody {
         flex-direction: column;
         flex: 1;
     }
 
-    .card7 a .cardBody  .cardText{
+    .card7 .cardEvent .cardBody  .cardText{
         justify-self: start;
         width: 100%;
     }
