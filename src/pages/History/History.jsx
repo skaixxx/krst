@@ -96,8 +96,8 @@ function History() {
                     </div>
                 </div>
                 <div className={style.container1892} id="y1892">
-                    <div className={style.container1892Col1}>
-                        <div className={style.container1892Col1Row1}>
+                    <div className={style.container1892Row1}>
+                        <div className={style.container1892Row1Col1}>
                             <p className={`${style.container1892Title} ${style.wideContainerTitle}`}>
                             1892 —
                             </p>
@@ -105,9 +105,12 @@ function History() {
                                 <ScaleSlideBrackets/>
                             </div>
                         </div>
+                        <div className={style.container1892Row1Col2}> 
+                            <img src={y1892} alt="1892" className={style.image1892}/>
+                        </div>
                     </div>
-                    <div className={style.container1892Col2}>
-                        <img src={y1892} alt="1892" className={style.image1892}/>
+                    <div className={style.container1892Row2}>
+                        
                         <div className={style.container1892Col2Row}>
                             <p>
                                Тюрьма «Кресты» была построена на Выборгской стороне Петербурга в 1884–1892 годах. Комплекс занимал 4,5 га и включал более 20 зданий, главные из которых — два пятиэтажных корпуса в форме крестов.
