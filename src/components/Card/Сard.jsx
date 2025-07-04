@@ -1,7 +1,7 @@
 import ButtonGoToDesktop from "../Buttons/ButtonGoToDesktop";
 import style from "./card.module.css";
 
-export default function Card({data, reverse, btnText, btnAction}) {
+export default function Card({ data, reverse, btnText, btnAction }) {	
 	return (
 		<div className={`${style.card} ${reverse ? style.cardReverse : ''}`}>
 			<div className={style.cardImg}>
@@ -13,8 +13,8 @@ export default function Card({data, reverse, btnText, btnAction}) {
 						<h3 className={style.cardTitle}>{data.title}</h3>
 
 						<div className={style.cardTags}>
-							{data.tags.map((tag) => (
-								<div className={style.cardTag}>{tag.name}</div>
+							{data.tags.map((tag, index) => (
+								<div key={index} className={style.cardTag}>{tag.name}</div>
 							))}
 						</div>
 					</div>
@@ -25,10 +25,10 @@ export default function Card({data, reverse, btnText, btnAction}) {
 					<ButtonGoToDesktop text={btnText} action={btnAction} />
 					
 					<div className={style.cardContentInfo}>
-						{data.info.map((infoItem, index) => (
+						{data.specs.map((spec, index) => (
 							<div key={index} className={style.cardInfo}>
-								<img src={infoItem.icon} alt="" />
-								<span>{infoItem.label}</span>
+								<img src={spec.icon} alt="" />
+								<span>{spec.value}</span>
 							</div>
 						))}
 					</div>

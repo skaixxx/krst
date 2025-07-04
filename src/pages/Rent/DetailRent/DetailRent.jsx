@@ -1,11 +1,10 @@
 import { useParams, useNavigate } from 'react-router-dom';
+import { useEffect } from "react";
+import { places } from '../../../data/places';
 import style from "./detailRent.module.css";
 import arrowBR from "../../../assets/mainPage/arrowsBR.svg"
 import Card from "../../../components/Card/Сard";
 
-import img1 from "../../../assets/card/1-min.png"
-import icon1 from '../../../assets/card/icons/icon-1.svg';
-import icon2 from '../../../assets/card/icons/icon-2.svg';
 
 function DetailRent() {
 	const { id } = useParams();
@@ -14,37 +13,10 @@ function DetailRent() {
 		navigate(`/rent/${id}/${placeId}`);
 	};
 
-	const cards = [
-		{
-			id: 1,
-			title: 'ГАРМОНИЯ',
-			image: img1,
-			text: 'Помещение идеально подходит для мастер-классов по керамике: здесь всё продумано до мелочей для удобства участников.',
-			info: [
-				{
-					icon: icon1,
-					label: '87 000 руб',
-				},
-				{
-					icon: icon2,
-					label: '120 М²',
-				},
-			],
-			tags: [
-				{ name: '#проектор', },
-				{ name: '#гардеробная', },
-				{ name: '#зонаочистки', }
-			]
-		},
-		{
-			id: 2,
-			title: 'ФАНТАЗИЯ',
-			image: img1,
-			text: 'Уютный и вдохновляющий зал с большими окнами,<br> идеально подходящий для проведения мастер-классов по живописи. ',
-			info: [],
-			tags: [],
-		},
-	]
+	useEffect(() => {
+        window.scrollTo(0, 0)
+	}, [])
+	
     return (
 		<div className={style.detailRent}>
 			<div className={style.detailRentContainer}>
@@ -83,7 +55,7 @@ function DetailRent() {
 				</div>
 
 				<div className={style.cardList}>
-					{cards.map((card, index) => (
+					{places.map((card, index) => (						
 						<Card
 							key={card.id}
 							data={card}
@@ -96,8 +68,6 @@ function DetailRent() {
 					))}
 				</div>
 			</div>
-			
-			
         </div>
     );
 }
