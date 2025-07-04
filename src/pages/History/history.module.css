@@ -481,6 +481,8 @@
 }
 .image1958 {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 1rem;
 }
 /* ^1958^ */
@@ -905,6 +907,31 @@
     }
     .container1958 {
         height: 30.36rem;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .container1958Col1 {
+        display: contents;
+    }
+    .container1958Col1Row1 {
+        width: 100%;
+        height: 8.24%;
+        order: 1;
+    }
+    .container1958Col2 {
+        width: 100%;
+        height: 33.65%;
+        order: 2;
+    }
+    .container1958Col1Row2 {
+        width: 100%;
+        order: 3;
+    }
+    .container1958Text {
+        width: 100%;
     }
     .container1990 {
         height: 20.64rem;
