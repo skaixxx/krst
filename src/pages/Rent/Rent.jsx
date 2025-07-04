@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import style from "./rent.module.css"
 import arrowBR from "../../assets/mainPage/arrowsBR.svg"
+// import ScaleSlideBrackets from "../../components/animations/ScaleSlideBrackets/ScaleSlideBrackets"
 
 function Rent() {
     return (
@@ -9,6 +10,7 @@ function Rent() {
                 <h1 className={style.rentPageTitle}>
                     <span>
                         АРЕНДА У НАС
+                        {/* <ScaleSlideBrackets/> */}
                         <img src={arrowBR} alt="arrows"/>
                     </span>
                     <span>ЛЕГКО И БЫСТРО</span>
