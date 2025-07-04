@@ -208,17 +208,18 @@
     position: relative;
 }
 .container1892Row1 {
-    height: 100%;
+    height: 66.89%;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: start;
-    position: relative;
+    position: absolute;
+    top: 0;
 }
 .container1892Row1Col1 {
-    z-index: 3;
+    z-index: 2;
     width: 35.15%;
-    height: 42.3%;
+    height: 63.25%;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -226,9 +227,9 @@
     left: 0;
 }
 .container1892Row1Col2{
-    z-index: 2;
+    z-index: 1;
     width: 66.21%;
-    height: 42.31%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -236,10 +237,12 @@
     right:0;
 }
 .container1892Row2 {
+    height: 28.1%;
     width: 66.21%;
     position: absolute;
     right: 0;
     bottom: 0;
+    display: flex;
 }
 .container1892Title {
     padding-left: 4%;
@@ -251,16 +254,10 @@
     display: flex;
     justify-content: start;
 }
-.container1892Col2 {
-    grid-column-start: 5;
-    grid-column-end: 13;
-    grid-row-start: 1;
-    z-index: 2;
-    height: 100%;
-    width: 100%;
-}
 .image1892 {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 1rem;
 }
 .wideContainerTitle {
@@ -283,22 +280,35 @@
     display: flex;
     position: relative;
 }
-.container1905Col1 {
+.container1905Row1 {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+.container1905Row1Col1 {
+    width: 66.13%;
     position: absolute;
     left: 0;
     z-index: 1;
-    height: 100%;
-    width: 66.13%;
+}
+.container1905Row1Col2 {
+    width: 35.63%;
+    position: absolute;
+    right: 0;
+    z-index: 2;
 }
 .image1905 {
     width: 100%;
     height: 100%;
     border-radius: 1rem;
 }
-.container1905Col2 {
+.container1905Row2 {
     position: absolute;
     right: 0;
-    z-index: 2;
+    bottom: 25%;
     width: 35.63%;
     display: flex;
     flex-direction: column;
@@ -317,18 +327,26 @@
     scroll-margin-top: 13.1vw;
     row-gap: 2.2vw;
     display: flex;
-    flex-direction: column;
-}
-.container1917Col1 {
-    width: 100%;
-    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
+.container1917Col1 {
+    width: 33.06%;
+}
+.container1917Col2 {
+    width: 57.62%;
+}
 .paragraph1917 {
-    width: 57.624%;
+    width: 100%;
+}
+.container1917Row2 {
+    width: 100%;
 }
 .image1917 {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     border-radius: 1rem;
 }
 /* ^1917^ */
@@ -379,6 +397,9 @@
 }
 .image1937 {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
     border-radius: 1rem;
 }
 /* ^1937^ */
@@ -399,6 +420,8 @@
 }
 .image1941 {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 1rem;
 }
 .container1941Col2 {
@@ -676,6 +699,7 @@
     }
     .fullScreenContainer2 {
         row-gap: 30vh;
+        width: 89.33%;
     }
     .dateContainerRowText {
         display: none;
@@ -717,10 +741,14 @@
         word-wrap: break-word;
     }
     .wideContainer1 {
-        height: 100dvh;
+        height: max-content;
         width: 100%;
         flex-direction: column;
         justify-content: start;
+    }
+    .wideContainerTextBox {
+        width: 100%;
+        margin-bottom: 1.43rem;
     }
     .wideContainer1Col1 {
         width: 100%;
@@ -729,35 +757,151 @@
     .wideContainer1Col2 {
         width: 100%;
         height: 17.7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .imageTomishko {
         height: 100%;
-        width: auto;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
     }
     .container1892 {
         height: 25.93rem;
-        grid-template-rows: 1fr 1fr;
+        flex-direction: column;
     }
-    .container1892Col1 {
-        width: 100%;
-        grid-column-end: 13;
-        grid-row-start: 1;
-        grid-row-end: 2 ;
+    .container1892Row1 {
+        height: 39.39%;
+    }
+    .container1892Row1Col1 {
+        padding: 0;
+        width: 49.25%;
+        top: 20%;
+    }
+    .container1892Row1Col2 {
+        width: 57.91%;
+        height: 100%;
     }
     .container1892Row2 {
         width: 100%;
+        height: 52.34%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.43rem;
     }
     .container1905 {
         height: 17.21rem;
     }
+    .container1905Row1 {
+        height: 59.32%;
+    }
+    .container1905Row1Col1 {
+        height: 100%;
+        width: 57.61%;
+    }
+    .container1905Row1Col2 {
+        width: 49.85%;
+        top: 20%;
+    }
+    .container1905Row2 {
+        position: absolute;
+        left: 0;
+        bottom: 0%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .container1905Text {
+        width: 100%;
+    }
     .container1917 {
         height: 23.29rem;
+        width: 100%;
+        position: relative;
+    }
+    .container1917Col1 {
+        width: 46.27%;
+        height: 10.74%;
+        order: 1;
+        position: absolute;
+        left: 0;
+        z-index: 2;
+        padding-left: 2%;
+    }
+    .container1917Col2 {
+        width: 100%;
+        order: 3;
+        position: absolute;
+        bottom: 0;
+    }
+    .container1917Row2 {
+        order: 2;
+        width: 57.91%;
+        height: 43.87%;
+        position: absolute;
+        right: 0;
+        z-index: 1;
     }
     .container1937 {
         height: 30.57rem;
+        position: relative;
+    }
+    .container1937Animation {
+        display: none;
+    }
+    .container1937Col1 {
+        display: contents;
+    }
+    .container1937Col1Row1 {
+        width: 54.93%;
+        height: 20.8%;
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        top: 5%;
+    }
+    .container1937Col1Row2 {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+    .container1937Col2 {
+        z-index: 1;
+        height: 33.41%;
+        width: 59.4%;
+        position: absolute;
+        right: 0;
+        top: 0;
     }
     .container1941 {
         height: 29.36rem;
+        width: 100%;
+        position: relative;
+    }
+    .container1941Col2 {
+        display: contents;
+    }
+    .container1941Col2Row1 {
+        width: 62.69%;
+        height: 26.76%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+    }
+    .container1941Col2Row1Box1 {
+        justify-content: end;
+    }
+    .container1941Col2Row2 {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+    .container1941Col1 {
+        width: 48.66%;
+        height: 34.8%;
     }
     .container1958 {
         height: 30.36rem;

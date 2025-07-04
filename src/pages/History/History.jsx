@@ -110,25 +110,27 @@ function History() {
                         </div>
                     </div>
                     <div className={style.container1892Row2}>
-                        
-                        <div className={style.container1892Col2Row}>
                             <p>
                                Тюрьма «Кресты» была построена на Выборгской стороне Петербурга в 1884–1892 годах. Комплекс занимал 4,5 га и включал более 20 зданий, главные из которых — два пятиэтажных корпуса в форме крестов.
                             </p>
                             <p>
                                Первоначально тюрьма была предназначена для размещения 1150 заключённых, которых собирались размещать в 960 камерах. Позднее количество камер, задуманных как одиночные, увеличилось до 999, каждая площадью 8 м².
                             </p>
-                        </div>
                     </div>
                 </div>
                 <div className={style.container1905} id="y1905">
-                    <div className={style.container1905Col1}>
-                        <img src={y1905} alt="1905" className={style.image1905}/>
+                    <div className={style.container1905Row1}>
+                        <div className={style.container1905Row1Col1}>
+                            <img src={y1905} alt="1905" className={style.image1905}/>
+                        </div>
+                        <div className={style.container1905Row1Col2}>
+                            <p className={`${style.container1905Title} ${style.wideContainerTitle}`}>
+                            — 1905
+                            </p>
+                        </div>
                     </div>
-                    <div className={style.container1905Col2}>
-                        <p className={`${style.container1905Title} ${style.wideContainerTitle}`}>
-                        — 1905
-                        </p>
+                    <div className={style.container1905Row2}>
+                        
                         <p className={style.container1905Text}>
                             После революции сюда перемещали политических заключённых, которым была разрешена относительная свобода передвижения в пределах тюрьмы.
                         </p>
@@ -140,13 +142,15 @@ function History() {
                         <p className={`${style.container1917Title} ${style.wideContainerTitle}`}>
                         1917 —
                         </p>
+                    </div>
+                    <div className={style.container1917Col2}>
                         <p className={style.paragraph1917}>
                         После революции в тюрьме произошли большие изменения. В жёстких условиях и под строгим надзором оказались сторонники монархии.
                         В начале XX века «Кресты» превратились в лагерь принудительного труда для особо опасных преступников. Особенно часто там содержали тех, кто был склонён к побегу, так как считалось, что 
                         из этой тюрьмы невозможно выбраться.
                         </p>
                     </div>
-                    <div className={style.container1917Col2}>
+                    <div className={style.container1917Row2}>
                         <img src={y1917} alt="1917" className={style.image1917}/>
                     </div>
                 </div>
