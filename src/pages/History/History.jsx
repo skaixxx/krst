@@ -18,7 +18,11 @@ import RotatingCross from "../../components/animations/RotatingCross/RotatingCro
 import { useEffect, useState } from "react";
 import Carousel from "../../components/History/HistoryCarousel";
 import ScaleSlideDotsInverted from "../../components/animations/ScaleSlideDots/ScaleSlideDotsInverted";
+import useMediaQuery from "../../components/Header/useMediaQuery";
+import ScaleCrossSlideBracket from "../../components/animations/ScaleCrossSlideBracket/ScaleCrossSlideBracket";
+import ScaleCrossSlideBracketInverted from "../../components/animations/ScaleCrossSlideBracket_inverted/ScaleCrossSlideBracket_inverted";
 function History() {
+    const isMobile = useMediaQuery('(max-width: 768px)')
     const [items, setItems] = useState([]);
     const [data1, setData1] = useState([]);
     const [data2, setData2] = useState([]);
@@ -245,12 +249,22 @@ function History() {
                 </div>
                 <div className={style.container2006} id="y2006">
                     <div className={style.container2006Col1}>
-                        <p className={`${style.container2006Title} ${style.wideContainerTitle}`}>
-                        2006 —
-                        </p>
-                        <p>
-                           В 2000-х власти обратили внимание на хроническую переполненность СИЗО. Ранее, в годы репрессий и в 1990-е, в камерах площадью 8 м² содержали по 20 и более человек. В 2006 году приняли решение о строительстве нового комплекса «Кресты-2» на 35 га в Колпино.
-                        </p>
+                        <div className={style.container2006Col1Row1}>
+                            {isMobile? 
+                            <p className={`${style.container2006Title} ${style.wideContainerTitle}`}>
+                            2006
+                            </p>
+                            :
+                            <p className={`${style.container2006Title} ${style.wideContainerTitle}`}>
+                            2006 —
+                            </p>
+                            }
+                        </div>
+                         <div className={style.container2006Col1Row2}>
+                            <p>
+                            В 2000-х власти обратили внимание на хроническую переполненность СИЗО. Ранее, в годы репрессий и в 1990-е, в камерах площадью 8 м² содержали по 20 и более человек. В 2006 году приняли решение о строительстве нового комплекса «Кресты-2» на 35 га в Колпино.
+                            </p>
+                        </div>
                     </div>
                     <div className={style.container2006Col2}>
                         <img src={y2006} alt="2006" className={style.image2006}/>
@@ -258,12 +272,16 @@ function History() {
                 </div>
                 <div className={style.container2017} id="y2017">
                     <div className={style.container2017Col1}>
-                        <p className={`${style.container2017Title} ${style.wideContainerTitle}`}>
-                        2017 —
-                        </p>
-                        <p className={style.paragraph2017}>
-                           В 2017 году завершилось строительство нового тюремного комплекса, состоящего из двух восьмиэтажных крестообразных корпусов. 22 декабря того же года последние заключённые были переведены из старых «Крестов» в новый следственный изолятор в Колпино, который в народе сразу прозвали «Новые Кресты» или «Кресты-2». Исторический комплекс на Арсенальной набережной окончательно прекратил функционировать как тюрьма.
-                        </p>
+                        <div className={style.container2017Col1Row1}>
+                            <p className={`${style.container2017Title} ${style.wideContainerTitle}`}>
+                            2017 —
+                            </p>
+                        </div>
+                        <div className={style.container2017Col1Row2}>
+                            <p className={style.paragraph2017}>
+                            В 2017 году завершилось строительство нового тюремного комплекса, состоящего из двух восьмиэтажных крестообразных корпусов. 22 декабря того же года последние заключённые были переведены из старых «Крестов» в новый следственный изолятор в Колпино, который в народе сразу прозвали «Новые Кресты» или «Кресты-2». Исторический комплекс на Арсенальной набережной окончательно прекратил функционировать как тюрьма.
+                            </p>
+                        </div>
                     </div>
                     <div className={style.container2017Col2}>
                         <img src={y2017} alt="2017" className={style.image2017}/>
@@ -280,9 +298,11 @@ function History() {
                             </p>
                             <img src={historyArrowsIcon} alt="arrows" className={style.container2025Anim}/>
                         </div>
-                        <p className={style.paragraph2025}>
-                           В 2017 году завершилось строительство нового тюремного комплекса, состоящего из двух восьмиэтажных крестообразных корпусов. 22 декабря того же года последние заключённые были переведены из старых «Крестов» в новый следственный изолятор в Колпино, который в народе сразу прозвали «Новые Кресты» или «Кресты-2». Исторический комплекс на Арсенальной набережной окончательно прекратил функционировать как тюрьма.
-                        </p>
+                        <div className={style.container2025Col2Row2}>
+                            <p className={style.paragraph2025}>
+                            21 февраля 2025 года состоялась официальная продажа тюремного комплекса «Кресты». Группа компаний «КВС» выступила покупателем, заплатив за объект 1,136 миллиарда рублей. Официальное оформление сделки произошло 4 марта с подписанием договора купли-продажи.
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div className={style.containerAboutPeople}>
@@ -300,8 +320,8 @@ function History() {
                         <div className={style.dangerousPeopleBlockTitle}>
                             <p className={style.dangerousPeopleBlockTitleText1}>ОПАСНЫЕ</p>
                             <div className={style.dangerousPeopleBlockTitleSub}>
-                                <div className={style.dangerousPeopleBlockTitleSubAnimation}><RotatingCross/></div>
                                 <p className={style.dangerousPeopleBlockTitleText2}>ЗАКЛЮЧЁННЫЕ</p>
+                                <div className={style.dangerousPeopleBlockTitleSubAnimation}><ScaleCrossSlideBracketInverted/></div>
                             </div>
                         </div>
                         <FamousCards data={data2}/>

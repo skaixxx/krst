@@ -500,6 +500,9 @@
 }
 .image1990 {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     border-radius: 1rem;
 }
 .container1990Col2 {
@@ -538,6 +541,9 @@
 }
 .image2006 {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     border-radius: 1rem;
 }
 /* ^2006^ */
@@ -566,6 +572,8 @@
 .image2017 {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+
     border-radius: 1rem;
 }
 /* ^2017^ */
@@ -586,6 +594,8 @@
 }
 .image2025 {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 1rem;
     filter: grayscale(100%);
 }
@@ -700,12 +710,13 @@
         margin-bottom: 20vh;
     }
     .fullScreenContainer2 {
-        row-gap: 30vh;
+        row-gap: 10vh;
         width: 89.33%;
     }
     .dateContainerRowText {
         display: none;
     }
+    /* ШРИФТЫ */
     .titleText1 {
         font-size: 3.43rem;
     }
@@ -734,12 +745,11 @@
     .dangerousPeopleBlockTitleText1 {
         font-size: 3.43rem;
     }
-    .dangerousPeopleBlockTitleSubAnimation {
-        display: none;
-    }
     .dangerousPeopleBlockTitleText2 {
+        margin-top: -5%;
+        max-width: 100%;
         font-size: 3.43rem;
-        width: 100%;
+        line-height: 110%;
         word-wrap: break-word;
     }
     .wideContainer1 {
@@ -769,6 +779,7 @@
         object-fit: cover;
         object-position: top;
     }
+    /* БЛОКИ */
     .container1892 {
         height: 25.93rem;
         flex-direction: column;
@@ -935,23 +946,156 @@
     }
     .container1990 {
         height: 20.64rem;
+        width: 100%;
+        position: relative;
+    }
+    .container1990Col2 {
+        display: contents;
+    }
+    .container1990Col2Row1 {
+        width: 48.36%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+    }
+    .container1990Col2Row2 {
+        width: 48.5%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        row-gap: 1rem;
+    }
+    .container1990Col1 {
+        width: 48.36%;
+        height: 77.51%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
     }
     .container2006 {
         height: 18.21rem;
+        width: 100%;
+        position: relative;
+    }
+    .container2006Col1 {
+        display: contents;
+    }
+    .container2006Col1Row1 {
+        width: 48.66%;
+    }
+    .container2006Col1Row2 {
+        width: 48.36%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .container2006Col2 {
+        width: 48.66%;
+        height: 74.51%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
     }
     .container2017 {
         height: 25.71rem;
+        width: 100%;
+        position: relative;
+    }
+    .container2017Col1 {
+        display: contents;
+    }
+    .container2017Col1Row1 {
+        width: 48.06%;
+        height: 9.72%;
+        position: absolute;
+        top: 10%;
+        left: 0;
+        z-index: 2;
+    }
+    .container2017Col1Row2 {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+    .paragraph2017 {
+        width: 100%;
+    }
+    .container2017Col2 {
+        width: 65.67%;
+        height: 39.72%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+    .image2017 {
+        object-position: 25%;
     }
     .container2025 {
         height: 20.86rem;
+        width: 100%;
+        position: relative;
+    }
+    .container2025Col1 {
+        width: 59.4%;
+        height: 48.97%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .container2025Anim {
+        width: 38.37%;
+        height: 38.89%;
+        justify-content: center;
+        align-items: center;
+    }
+    .container2025Col2 {
+        display: contents;
+
+    }
+    .container2025Col2Row1 {
+        width: 51.34%;
+        height: 30.82%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container2025Col2Row2 {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+    .paragraph2025 {
+        width: 100%;
     }
     .containerAboutPeople {
         min-height: 301vw;
     }
     .famousPeopleBlock {
-        height: 126vw;
+        height: max-content;
+    }
+    .famousPeopleBlockTitleSub {
+        height: 2.5rem;
     }
     .containerDangerousPeople {
-        height: 167.2vw;
+        height: max-content;
+    }
+    .dangerousPeopleBlockTitleSub {
+        width: 81.5%;
+        position: relative;
+    }
+    .dangerousPeopleBlockTitleSubAnimation {
+        position: absolute;
+        bottom: 8%;
+        right: 10%;
+        height: 2.5rem;
+        width: 19.85%;
     }
 }
