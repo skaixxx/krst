@@ -14,13 +14,13 @@ import useMediaQuery from "../../components/Header/useMediaQuery"
 function MainPage() {
     
     const { items } = useData();
-
-    const limitedCard = items.map(item =>
-        item.id === 4 ? items.find(item => item.id === 8) : item).slice(0, 5);
         
     const navigate = useNavigate();
     const isMobile = useMediaQuery('(max-width: 768px)');
     const bgSectionStyle = isMobile ? mobBg : fsBg;
+
+    const limitedCard = items.map(item =>
+    item.id === 4 && isMobile? items.find(item => item.id === 8) : item).slice(0, 5);
 
     const handleClick = (id) => {
         navigate(`/Events/SpecificEvent/${id}`)
