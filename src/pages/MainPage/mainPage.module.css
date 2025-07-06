@@ -361,7 +361,7 @@
     }
 
     .cardsContent {
-        height: 115.2vw;
+        height: max-content;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: 6.5rem 2.5rem 2.5rem 3.2rem 5.7rem 4rem 6.5rem;
         grid-template-areas: 
