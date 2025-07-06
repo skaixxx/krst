@@ -5,10 +5,11 @@ import letterIcon from '../../assets/contacts/letterIcon.svg';
 import phoneIcon from '../../assets/contacts/phoneIcon.svg';
 import messageIcon from '../../assets/contacts/messageIcon.svg';
 import '../../components/general.css'
-import './contacts.css'
+import style from './contacts.module.css'
 import ButtonGoToDesktop from '../../components/Buttons/ButtonGoToDesktop'
 import RotatingCross from '../../components/animations/RotatingCross/RotatingCross';
 import ScaleSlideBrackets from '../../components/animations/ScaleSlideBrackets/ScaleSlideBrackets';
+import clsx from 'clsx';
 
 function Contacts() {
     const inputFocus = (current) => {
@@ -20,80 +21,80 @@ function Contacts() {
         } 
     };
     return (
-        <div className="container-contacts">
-            <div className="title-box-contacts">
-                <div className="contacts-title-stroke-box">
-                    <div className="contacts-title contacts-title1">
+        <div className={style.containerContacts}>
+            <div className={style.titleBoxContacts}>
+                <div className={style.contactsTitleStrokeBox}>
+                    <div className={clsx(style.contactsTitle, style.contactsTitle1)}>
                         <p>КОНТАКТЫ</p>
                     </div> 
-                    <div className="contacts-style-element1">
+                    <div className={style.contactsStyleElement1}>
                         <ScaleSlideBrackets/>
                     </div>
                 </div>
-                <div className="contacts-title-big-box">
-                    <div className="contacts-title-container">
-                        <div className="contacts-title-sub-container">
-                            <div className="contacts-title contacts-title2">
+                <div className={style.contactsTitleBigBox}>
+                    <div className={style.contactsTitleContainer}>
+                        <div className={style.contactsTitleSubContainer}>
+                            <div className={clsx(style.contactsTitle, style.contactsTitle2)}>
                                 <p>ДЛЯ</p>
                             </div>
-                            <div className="contacts-style-element2">
+                            <div className={style.contactsStyleElement2}>
                                 <RotatingCross/>
                             </div>
                         </div>
-                        <div className="contacts-title contacts-title3">
+                        <div className={clsx(style.contactsTitle, style.contactsTitle3)}>
                             <p>СВЯЗИ</p>
                         </div>
                     </div>
-                    <div className="contact-form">
-                        <div className="name-form-container"><input type="text" className="contacts-name" placeholder="фио" data-placeholder='фио' onFocus={inputFocus} onBlur={inputBlur}></input><img src={personalInfoIcon} alt="persInfoIcon" className="personal-info-icon"/></div>
-                        <div className="contacts-date-birth-container"><input name="birthday" type="text" className="contacts-date-birth" placeholder="дата рождения" data-placeholder='дата рождения' onFocus={inputFocus} onBlur={inputBlur}/><img src={calendar} alt="calendar" className="date-birth-icon"/></div>
-                        <div className="email-form-container"><input type="email" className="contacts-email" placeholder="email" data-placeholder='email' onFocus={inputFocus} onBlur={inputBlur}/><img src={letterIcon} alt="letterIcon" className="email-icon"/></div>
-                        <div className="phone-form-container"><input type="tel" className="contacts-phone" placeholder="телефон" data-placeholder='телефон' onFocus={inputFocus} onBlur={inputBlur} pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"/><img src={phoneIcon} alt="phoneIcon" className="phone-icon"/></div>
-                        <div className="message-form-container"><input type="text" className="contacts-message" placeholder="сообщение" data-placeholder='сообщение' onFocus={inputFocus} onBlur={inputBlur}/><img src={messageIcon} alt="messageIcon" className="message-icon"/></div>
-                        <div className="send-button-form-container">
+                    <div className={style.contactForm}>
+                        <div className={style.nameFormContainer}><input type="text" className={style.contactsName} placeholder="фио" data-placeholder='фио' onFocus={inputFocus} onBlur={inputBlur}></input><img src={personalInfoIcon} alt="persInfoIcon" className={style.personalInfoIcon}/></div>
+                        <div className={style.contactsDateBirthContainer}><input name="birthday" type="text" className={style.contactsDateBirth} placeholder="дата рождения" data-placeholder='дата рождения' onFocus={inputFocus} onBlur={inputBlur}/><img src={calendar} alt="calendar" className={style.dateBirthIcon}/></div>
+                        <div className={style.emailFormContainer}><input type="email" className={style.contactsEmail} placeholder="email" data-placeholder='email' onFocus={inputFocus} onBlur={inputBlur}/><img src={letterIcon} alt="letterIcon" className={style.emailIcon}/></div>
+                        <div className={style.phoneFormContainer}><input type="tel" className={style.contactsPhone} placeholder="телефон" data-placeholder='телефон' onFocus={inputFocus} onBlur={inputBlur} pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"/><img src={phoneIcon} alt="phoneIcon" className={style.phoneIcon}/></div>
+                        <div className={style.messageFormContainer}><input type="text" className={style.contactsMessage} placeholder="сообщение" data-placeholder='сообщение' onFocus={inputFocus} onBlur={inputBlur}/><img src={messageIcon} alt="messageIcon" className={style.messageIcon}/></div>
+                        <div className={style.sendButtonFormContainer}>
                             <ButtonGoToDesktop text="отправить"/>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="contacts-about-us">
-                <div className="contacts-about-us-box">
-                    <p className="contacts-about-us-title">EMAIL</p>
-                    <p className="contacts-about-us-text">krst@krst.ru</p>
+            <div className={style.contactsAboutUs}>
+                <div className={style.contactsAboutUsBox}>
+                    <p className={style.contactsAboutUsTitle}>EMAIL</p>
+                    <p className={style.contactsAboutUsText}>krst@krst.ru</p>
                 </div>
-                <div className="contacts-about-us-box">
-                    <p className="contacts-about-us-title">ТЕЛЕФОН</p>
-                    <p className="contacts-about-us-text">+7 (888) 888-88-88</p>
+                <div className={style.contactsAboutUsBox}>
+                    <p className={style.contactsAboutUsTitle}>ТЕЛЕФОН</p>
+                    <p className={style.contactsAboutUsText}>+7 (888) 888-88-88</p>
                 </div>
-                <div className="contacts-about-us-box">
-                    <p className="contacts-about-us-title">АДРЕС</p>
-                    <p className="contacts-about-us-text">Санкт-Петербург, Арсенальная наб. 7</p>
+                <div className={style.contactsAboutUsBox}>
+                    <p className={style.contactsAboutUsTitle}>АДРЕС</p>
+                    <p className={style.contactsAboutUsText}>Санкт-Петербург, Арсенальная наб. 7</p>
                 </div>
             </div>
-            <div className="contacts-info">
-                <div className="contacts-info-1">
-                    <p className='contacts-info-hashtag'>
+            <div className={style.contactsInfo}>
+                <div className={style.contactsInfo1}>
+                    <p className={style.contactsInfoHashtag}>
                         #ЦЕНИМ
                     </p>
-                    <p className="contacts-info-text">
+                    <p className={style.contactsInfoText}>
                         Мы ценим каждого нашего клиента и всегда стремимся 
                         к общению. Нам важна ваша обратная связь, ведь именно 
                         благодаря вам мы становимся лучше.
                     </p>
                 </div>
-                <div className="contacts-info-2">
-                    <p className='contacts-info-hashtag'>
+                <div className={style.contactsInfo2}>
+                    <p className={style.contactsInfoHashtag}>
                         #СВЯЗЬ
                     </p>
-                    <p className="contacts-info-text">
+                    <p className={style.contactsInfoText}>
                         Свяжитесь с нами любым удобным способом — мы всегда 
                         готовы ответить на ваши вопросы и помочь!
                     </p>
                 </div>
             </div>
-            <div className="contacts-content-bottom">
-                <div className="contacts-content-bottom-1">
-                    <img className="contacts-content-bottom-picture" src={mapPicture} alt="map" />
+            <div className={style.contactsContentBottom}>
+                <div className={style.contactsContentBottom1}>
+                    <img className={style.contactsContentBottomPicture} src={mapPicture} alt="map" />
                 </div>
             </div>
         </div>

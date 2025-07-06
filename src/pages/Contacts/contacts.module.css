@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.container-contacts {
+.containerContacts {
     min-height: 85dvh;
     width: 100%;
     margin: 0 auto;
@@ -16,59 +16,59 @@
     margin-top: 16.105vw;
     margin-bottom: 10.978vw;
 }
-.title-box-contacts {
+.titleBoxContacts {
     width: 91.2153%;
     height: 32.202vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.contacts-title-stroke-box {
+.contactsTitleStrokeBox {
     width: 100%;
     height: 22.7273%;
     display: flex;
     justify-content: space-between;
 }
-.contacts-title-big-box {
+.contactsTitleBigBox {
     width: 100%;
     height: 69.3182%;
     display: flex;
     justify-content: space-between;
 }
-.contacts-title-container {
+.contactsTitleContainer {
     width: 49.2369%;
     height: 77.0492%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.contacts-title-sub-container {
+.contactsTitleSubContainer {
     height: 42.735%;
     width: 100%;
     display: flex;
 }
-.contacts-title {
+.contactsTitle {
     font-size: 6.4rem;
     font-weight: bold;
     letter-spacing: -5%;
     line-height: 72.7%;
 }
-.contacts-title1 {
+.contactsTitle1 {
     color: var(--secondary-color);
 }
-.contacts-title2 {
+.contactsTitle2 {
     color: var(--accent-color);
 }
-.contacts-title3 {
+.contactsTitle3 {
     color: var(--secondary-color);
 }
-.contacts-style-element1 {
+.contactsStyleElement1 {
     width: 49.2369%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.contacts-style-element2 {
+.contactsStyleElement2 {
     width: 55.9543%;
     height: 100%;
     display: flex;
@@ -76,7 +76,7 @@
     align-items: center;
 }
 /* Форма обратной связи */
-.contact-form {
+.contactForm {
     justify-self: end;
     align-self: flex-end;
     position: relative;
@@ -87,7 +87,7 @@
     flex-wrap: wrap;
     row-gap: 1rem;
 }
-.contact-form input {
+.contactForm input {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     border: none;
@@ -99,12 +99,12 @@
     letter-spacing: -0.05em;
     outline: none;
 }
-.contact-form input::placeholder {
+.contactForm input::placeholder {
     opacity: 1;
     color: var(--secondary-color);
 }
 /* Ввод ФИО */
-.name-form-container {
+.nameFormContainer {
     width: 66%;
     height: 16.6667%;
     display: flex;
@@ -112,17 +112,17 @@
     justify-content: center;
     position: relative;
 }
-.personal-info-icon {
+.personalInfoIcon {
     height: 60%;
     position: absolute;
     right: .8rem;
 }
-.contacts-name {
+.contactsName {
     width: 100%;
     height: 100%;
 }
 /* Ввод даты рождения */
-.contacts-date-birth-container {
+.contactsDateBirthContainer {
     width: 31.2%;
     height: 16.6667%;
     display: flex;
@@ -130,17 +130,17 @@
     justify-content: center;
     position: relative;
 }
-.contacts-date-birth {
+.contactsDateBirth {
     width: 100%;
     height: 100%;
 }
-.date-birth-icon {
+.dateBirthIcon {
     height: 60%;
     position: absolute;
     right: .8rem;
 }
 /* Ввод email */
-.email-form-container {
+.emailFormContainer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,17 +148,17 @@
     height: 16.6667%;
     position: relative;
 }
-.email-icon {
+.emailIcon {
     height: 60%;
     position: absolute;
     right: .8rem;
 }
-.contacts-email {
+.contactsEmail {
     width: 100%;
     height: 100%;
 }
 /* Ввод телефона */
-.phone-form-container {
+.phoneFormContainer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -166,17 +166,17 @@
     height: 16.6667%;
     position: relative;
 }
-.phone-icon {
+.phoneIcon {
     height: 60%;
     position: absolute;
     right: .8rem;
 }
-.contacts-phone {
+.contactsPhone {
     width: 100%;
     height: 100%;
 }
 /* Ввод сообщения */
-.message-form-container {
+.messageFormContainer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -184,24 +184,24 @@
     height: 16.6667%;
     position: relative;
 }
-.message-icon {
+.messageIcon {
     height: 60%;
     position: absolute;
     right: .8rem;
 }
-.contacts-message {
+.contactsMessage {
     width: 100%;
     height: 100%;
 }
 /* Кнопка отправки */
-.send-button-form-container {
+.sendButtonFormContainer {
     width: 100%;
     display: flex;
     justify-content: end;
     align-items: end;
 }
 /* Инфо о нас */
-.contacts-about-us {
+.contactsAboutUs {
     height: 10.981vw;
     width: 100%;
     display: flex;
@@ -218,51 +218,51 @@
     border-top: 1px solid var(--secondary-color);
     border-bottom: 1px solid var(--secondary-color);
 }
-.contacts-about-us-box{
+.contactsAboutUsBox{
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: space-evenly;
 }
-.contacts-about-us-title {
+.contactsAboutUsTitle {
     font-size: 2rem;
     font-weight: 500;
     letter-spacing: -0.05em;
     line-height: 110%;
 }
-.contacts-info {
+.contactsInfo {
     width: 91.2153%;
     height: 10.2489vw;
     display: flex;
     justify-content: space-between;
     align-items: end;
 }
-.contacts-info-1 {
+.contactsInfo1 {
     height: 100%;
     width: 48.9567%;
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
 }
-.contacts-info-2 {
+.contactsInfo2 {
     height: 100%;
     width: 48.9567%;
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
 }
-.contacts-info-hashtag {
+.contactsInfoHashtag {
     font-size: 2rem;
     font-weight: 500;
 }
-.contacts-content-bottom {
+.contactsContentBottom {
     width: 91.2153%;
     height: 40.9956vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.contacts-content-bottom-1 {
+.contactsContentBottom1 {
     width: 100%;
     height: 81.6239%;
     background-color: #aaa;
@@ -272,7 +272,7 @@
     justify-content: center;
     align-items: center;
 }
-.contacts-content-bottom-picture {
+.contactsContentBottomPicture {
     width: 100%;
     height: auto;
     display: flex;
