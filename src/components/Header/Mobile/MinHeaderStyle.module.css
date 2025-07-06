@@ -103,6 +103,7 @@
     border-radius: 2rem;
 }
 .navLinkMobileLast {
+    margin-top: 4.29rem;
     background-color: var(--accent-color);
 }
 .hidden {
