@@ -5,7 +5,7 @@ export default function NavItem( { to, label, onClick, className}, ref) {
         <NavLink
         to={to}
         ref={ref}
-        className={({ isActive}) => isActive ? `${className} ${styles.active}` : `${className}`}
+        className={({ isActive}) => isActive ? `${className} ${styles.navLinkActive}` : `${className}`}
         onClick={onClick}
         >
             {label}

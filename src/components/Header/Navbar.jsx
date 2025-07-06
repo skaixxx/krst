@@ -1,18 +1,15 @@
 import NavItem from './NavItem';
-import ActiveIndicator from './ActiveIndicator';
 import { useState, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
 import logo from "../../assets/header/logo.svg"
 import { useNavigate } from "react-router";
 import styles from "./header.module.css"
 const navLinks = [
-  { to: '/History', label: 'история' },
-  { to: '/Events', label: 'мероприятия' },
-  { to: '/Locations', label: 'локации' },
-  { to: '/Rent', label: 'аренда' },
-  { to: '/Contacts', label: 'контакты' },
-  
+  { to: '/History', label: 'история'},
+  { to: '/Events', label: 'мероприятия'},
+  { to: '/Locations', label: 'локации'},
+  { to: '/Rent', label: 'аренда'},
+  { to: '/Contacts', label: 'контакты'}, 
 ];
 
 export default function Navbar() {
@@ -21,20 +18,27 @@ export default function Navbar() {
   const location = useLocation();
   const navRefs = useRef({});
   const navigate = useNavigate();
-  useEffect(() => {
-    const activeLink = navRefs.current[location.pathname];
+  const updateIndicatorStyle = () => {
+    const activeLink = document.querySelector(`.${styles.navLinkActive}`);
     if (activeLink) {
+      const { offsetLeft, offsetWidth } = activeLink;
+      const center = offsetLeft + offsetWidth / 2;
+      console.log(center)
       setIndicatorStyle({
-        width: `${activeLink.offsetWidth}px`,
-        left: `${activeLink.offsetLeft}px`,
-      });
+        width: `${offsetWidth * 1.2}px`,
+        left: `${center - (offsetWidth * 1.2) / 2}px`,
+        opacity: 1,
+      })
       setShowIndicator(true);
     } else {
-      setShowIndicator(false);
-    }
-  }, [location.pathname]);
-  
-
+        setShowIndicator(false);
+      }
+  }
+  useEffect(() => {
+    updateIndicatorStyle();
+    window.addEventListener('resize', updateIndicatorStyle);
+    return () => {window.removeEventListener('resize', updateIndicatorStyle);};
+  }, [location.pathname])
   return (
     <div className={styles.headerContainer}>
       <div className={styles.logoContainer}><a onClick={() => navigate("/")}><img className={styles.logo} src={logo} alt="logo"></img></a></div>
@@ -50,10 +54,8 @@ export default function Navbar() {
               <NavItem to={to} label={label} className={styles.navLink}/>
             </div>
           ))}
-          <AnimatePresence>
-            {showIndicator && <ActiveIndicator style={indicatorStyle} />}
-          </AnimatePresence>
-
+          {showIndicator && <div className={styles.activeIndicator} style={indicatorStyle}></div>}
+          
         </div>
       </nav>
       <div className={styles.buttonContainer}><input type="button" onClick={() => navigate("/Residence")} className={styles.residencyBtn} value="резидентство"></input></div>

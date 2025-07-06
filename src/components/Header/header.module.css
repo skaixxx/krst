@@ -76,23 +76,32 @@ body {
     display: flex;
     align-items: center;
     z-index: 2;
+    position: relative;
 }
 .navLink:hover {
     cursor: pointer;
     color: var(--primary-color);
 }
+
 .activeIndicator {
+    width: 0;
     position: absolute;
     bottom: 23%;
+    left: 0;
     height: 50%;
+    opacity: 0;
     background-color: var(--primary-color);
     border-radius: 2rem;
     z-index: 1;
+    transition: width .3s ease, left .3s ease, visibility .5s ease;
 }
-.navLink.active {
+.navLinkActive {
     color: var(--secondary-color);
 }
-.noIndicator .navLink.active  {
+.navLinkActive:hover {
+    color: var(--secondary-color);
+}
+.noIndicator .navLinkActive  {
     color: var(--primary-color);
 }
 .residencyBtn {
