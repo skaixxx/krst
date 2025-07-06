@@ -193,6 +193,7 @@
     position: relative;
     margin-bottom: 7.32vw;
 }
+
 .animationContainer {
     grid-area: anim1;
     width: 100%;
@@ -358,8 +359,28 @@
         font-size: 1.43rem;
         text-align: center;
     }
+
+    .cardsContent {
+        height: 115.2vw;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 6.5rem 2.5rem 2.5rem 3.2rem 5.7rem 4rem 6.5rem;
+        grid-template-areas: 
+        "card1 card1 . card3 card3 card3"
+        "card1 card1 . . . ."
+        "card1 card1 . . card8 card8"
+        ". . . . card8 card8"
+        "text1 text1 text1 text1 card8 card8"
+        "card2 card2 card2 . . ."
+        "card2 card2 card2 card5 card5 card5";   
+    }
+
+    .animationContainer {
+        display: none;
+    }
+
     .anonsText {
-        font-size: 1rem;
+        font-size: 3.5rem;
+        color: var(--secondary-color);
     }
     .rulesStroke1 {
         height: 2.57rem;

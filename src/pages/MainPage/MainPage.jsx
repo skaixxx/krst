@@ -12,11 +12,16 @@ import { useData } from "../../routes/DataContext"
 import { useNavigate } from "react-router"
 import useMediaQuery from "../../components/Header/useMediaQuery"
 function MainPage() {
+    
     const { items } = useData();
-    const limitedCard = items.slice(0, 5);
+
+    const limitedCard = items.map(item =>
+        item.id === 4 ? items.find(item => item.id === 8) : item).slice(0, 5);
+        
     const navigate = useNavigate();
     const isMobile = useMediaQuery('(max-width: 768px)');
     const bgSectionStyle = isMobile ? mobBg : fsBg;
+
     const handleClick = (id) => {
         navigate(`/Events/SpecificEvent/${id}`)
     }
@@ -90,7 +95,12 @@ function MainPage() {
                         <div className="cardDate"><span>{item.dates}</span></div>
                         <div className="cardBody">
                             <div className="cardText"><p>{item.title}</p></div>
-                            <div className="cardIconBox"><img src={item.icon} alt="cardButton" class={item.iconClass}/></div>
+                            <div className="cardIconBox">
+                                <img
+                                    src={isMobile ? item.iconMobile : item.icon} alt="cardButton"
+                                    class={isMobile ? item.iconClassMobile : item.iconClass}
+                                />
+                            </div>
                         </div>
                     </a>
                 </div>
