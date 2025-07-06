@@ -14,6 +14,7 @@
   justify-content: space-between;
   row-gap: 2.14rem;
 }
+
 .column1 {
   height: 100%;
   width: 31.78%;
@@ -21,6 +22,7 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
 .column2 {
   height: 100%;
   width: 57.4%;
@@ -28,38 +30,60 @@
   flex-direction: column;
   justify-content: stretch;
 }
+
 .cardTitle {
   font-size: 2rem;
   font-weight: 500;
   width: min-content;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
 .cardYear {
   font-size: 2rem;
   color: var(--accent-color);
   font-weight: 500;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
 .cardParagraph {
   font-size: 1rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
+.fadeOut {
+    opacity: 0;
+    transform: translateY(0.5rem);
+}
+
+.fadeIn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 @media screen and (max-width: 768px) {
   .wrapper {
     height: max-content;
   }
+
   .underPhotoContent {
     flex-direction: column;
     justify-content: start;
   }
+
   .column1 {
     width: 100%;
     flex-direction: row-reverse;
   }
+
   .column2 {
     width: 100%;
   }
+
   .cardTitle {
     font-size: 1.43rem;
     width: auto;
   }
+
   .cardYear {
     font-size: 1.43rem;
   }
