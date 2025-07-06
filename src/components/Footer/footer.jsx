@@ -8,16 +8,55 @@ import dzenIcon from "../../assets/footer/dzenIcon.svg"
 import tgIcon from "../../assets/footer/tgIcon.svg"
 import vkIcon from "../../assets/footer/vkIcon.svg"
 import LanguageSelector from "./LanguageSelector"
+import { useRef, useState } from "react"
 
 function Footer() {
-    const inputFocus = (current) => {
-        current.target.placeholder = '';
+    
+    const[email, setEmail] = useState('');
+    const[isFocused, setIsFocused] = useState(false);
+    
+    const caretRef = useRef(null);
+    const inputRef = useRef(null);
+    
+    const handleFocus = (e) => {
+        setIsFocused(true);
+        e.target.placeholder = '';    
     };
-    const inputBlur = (current) => {
-        if (current.target.value === '') {
-            current.target.placeholder = current.target.dataset.placeholder || '';
-        } 
+    
+    const handleBlur = (e) => {
+        setIsFocused(false);
+        if (e.target.value === '') {
+            e.target.placeholder = e.target.dataset.placeholder || '';
+        }
     };
+
+    const handleChange = (e) => {
+        setEmail(e.target.value);
+        if(isFocused) positionCaret();
+    }
+
+    const positionCaret  = () => {
+
+        if(!inputRef.current || !caretRef.current) return;
+
+        // Создаем временный span для измерения ширины текста
+        const tempSpan = document.createElement('span');
+
+        tempSpan.style.visibility = 'hidden';
+        tempSpan.style.whiteSpace = 'pre';
+
+        tempSpan.style.fontSize = window.getComputedStyle(inputRef.current).fontSize;
+        tempSpan.style.fontFamily = window.getComputedStyle(inputRef.current).fontFamily;
+
+        tempSpan.textContent = inputRef.current.value;
+
+        document.body.appendChild(tempSpan);
+        const width = tempSpan.getBoundingClientRect().width;
+        document.body.removeChild(tempSpan);
+        
+        // Устанавливаем позицию каретки
+        caretRef.current.style.left = `calc(1rem + ${width}px)`; // 1rem - это padding-left инпута
+    }
 
     return (
         <footer className="footer">
@@ -55,7 +94,21 @@ function Footer() {
                     мероприятиях одним из первых</p>
                 </div>
                 <div className="footer-mail-input-container">
-                    <input type="email" placeholder="Введите вашу почту" className="footer-input-email" data-placeholder='Введите вашу почту' onFocus={inputFocus} onBlur={inputBlur}></input>
+                    <input
+                        ref={inputRef}
+                        type="email"
+                        value={email}
+                        placeholder="Введите вашу почту"
+                        data-placeholder='Введите вашу почту'
+                        className="footer-input-email"
+                        onChange={handleChange}
+                        onFocus={handleFocus}
+                        onBlur={handleBlur}
+                    />
+                    <div
+                        ref={caretRef}
+                        className="custom-caret"
+                    />
                     <button className="send-email-button"><img className="send-email-arrow-pic" src={arrowIcon} alt="arrow"></img></button>
                 </div>
                 <div className="footer-contacts-info">
