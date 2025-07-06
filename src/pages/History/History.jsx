@@ -22,10 +22,25 @@ import useMediaQuery from "../../components/Header/useMediaQuery";
 import ScaleCrossSlideBracket from "../../components/animations/ScaleCrossSlideBracket/ScaleCrossSlideBracket";
 import ScaleCrossSlideBracketInverted from "../../components/animations/ScaleCrossSlideBracket_inverted/ScaleCrossSlideBracket_inverted";
 function History() {
-    const isMobile = useMediaQuery('(max-width: 768px)')
+    const isMobile = useMediaQuery('(max-width: 768px)');
     const [items, setItems] = useState([]);
-    const [data1, setData1] = useState([]);
-    const [data2, setData2] = useState([]);
+   
+    const [data1, setData1] = useState({ 
+        desktopSize: {
+            width: "", 
+            height: ""
+        }, 
+        items: [] 
+    });
+
+    const [data2, setData2] = useState({
+        desktopSize: {
+            width: "", 
+            height: ""
+        }, 
+        items: [] 
+    });
+     
     useEffect(() => {
         fetch('/data/history/carouselData.json')
         .then((res) => {
