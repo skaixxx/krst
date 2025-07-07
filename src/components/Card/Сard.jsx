@@ -18,7 +18,7 @@ export default function Card({ data, reverse, btnText, btnAction }) {
 							))}
 						</div>
 					</div>
-					<p dangerouslySetInnerHTML={{ __html: data.text }}></p>
+					<p className={style.cardDescription} dangerouslySetInnerHTML={{ __html: data.text }}></p>
 				</div>
 				
 				<div className={style.cardContentBottom}>

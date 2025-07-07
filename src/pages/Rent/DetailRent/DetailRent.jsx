@@ -60,7 +60,7 @@ function DetailRent() {
 							key={card.id}
 							data={card}
 							reverse={index % 2 === 1}
-							btnText="перейти"
+							btnText="арендовать"
 							btnAction={() => goToPlace(card.id)}
 						>
 							{card.text}

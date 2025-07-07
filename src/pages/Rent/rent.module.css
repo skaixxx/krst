@@ -64,9 +64,17 @@
     max-width: 80%;
 }
 
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 768px) {
     .rentPageContainer {
         gap: 60px;
+    }
+
+    .rentPageTitle {
+        font-size: 3rem;
+    }
+
+    .rentPageTitle img {
+        max-width: 20vw;
     }
 
     .rentPageBlock {
@@ -189,7 +197,7 @@
     line-height: 100%;
 }
 
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 768px) {
     .cardsContainer {
         overflow-x: auto;
     }

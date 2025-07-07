@@ -140,3 +140,30 @@ div.placementTitle {
         padding: 8px 16px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .placementContainer {
+        gap: 70px;
+    }
+
+    .placementTitle {
+        font-size: 3rem;
+    }
+
+    .placementBlock {
+        grid-template-columns: 1fr;
+    }
+
+    .placementBlockRight {
+        gap: 30px;
+    }
+
+    .formSection {
+        flex-direction: column !important;
+        gap: 30px;
+    }
+
+    .specValue {
+        font-size: 2.5rem;
+    }
+}
