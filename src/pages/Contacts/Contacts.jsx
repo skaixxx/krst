@@ -25,6 +25,7 @@ function Contacts() {
     return (
         <div className={style.containerContacts}>
             <div className={style.titleBoxContacts}>
+                {!isMobile &&
                 <div className={style.contactsTitleStrokeBox}>
                     <div className={clsx(style.contactsTitle, style.contactsTitle1)}>
                         <p>КОНТАКТЫ</p>
@@ -33,26 +34,52 @@ function Contacts() {
                         <ScaleSlideBrackets/>
                     </div>
                 </div>
+                }
                 <div className={style.contactsTitleBigBox}>
+                    {isMobile ? 
                     <div className={style.contactsTitleContainer}>
-                        <div className={style.contactsTitleSubContainer}>
-                            <div className={clsx(style.contactsTitle, style.contactsTitle2)}>
-                                <p>ДЛЯ</p>
-                            </div>
-                            <div className={style.contactsStyleElement2}>
-                                <RotatingCross/>
+                        <div className={style.contactsTitleStroke1}>
+                            <div className={clsx(style.contactsTitle, style.contactsTitle1)}>
+                            <p>КОНТАКТЫ</p>
+                            </div> 
+                            <div className={style.contactsStyleElement1}>
+                            <ScaleSlideBrackets/>
                             </div>
                         </div>
-                        <div className={clsx(style.contactsTitle, style.contactsTitle3)}>
-                            <p>СВЯЗИ</p>
+                        <div className={style.contactsTitleStroke2}>
+                            <div className={style.contactsStyleElement2}>
+                                    <RotatingCross/>
+                            </div>
+                            <div className={clsx(style.contactsTitle, style.contactsTitle2)}>
+                                    <p>ДЛЯ</p>
+                            </div>
+                            <div className={clsx(style.contactsTitle, style.contactsTitle3)}>
+                                <p>СВЯЗИ</p>
+                            </div>
                         </div>
                     </div>
+                    :
+                    <div className={style.contactsTitleContainer}>
+                        <div className={style.contactsTitleSubContainer}>
+                            
+                            
+                        </div>
+                        
+                    </div>
+                    }
                     <div className={style.contactForm}>
                         <div className={style.nameFormContainer}><input type="text" className={style.contactsName} placeholder="фио" data-placeholder='фио' onFocus={inputFocus} onBlur={inputBlur}></input><img src={personalInfoIcon} alt="persInfoIcon" className={style.personalInfoIcon}/></div>
                         <div className={style.contactsDateBirthContainer}><input name="birthday" type="text" className={style.contactsDateBirth} placeholder="дата рождения" data-placeholder='дата рождения' onFocus={inputFocus} onBlur={inputBlur}/><img src={calendar} alt="calendar" className={style.dateBirthIcon}/></div>
                         <div className={style.emailFormContainer}><input type="email" className={style.contactsEmail} placeholder="email" data-placeholder='email' onFocus={inputFocus} onBlur={inputBlur}/><img src={letterIcon} alt="letterIcon" className={style.emailIcon}/></div>
                         <div className={style.phoneFormContainer}><input type="tel" className={style.contactsPhone} placeholder="телефон" data-placeholder='телефон' onFocus={inputFocus} onBlur={inputBlur} pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"/><img src={phoneIcon} alt="phoneIcon" className={style.phoneIcon}/></div>
-                        <div className={style.messageFormContainer}><input type="text" className={style.contactsMessage} placeholder="сообщение" data-placeholder='сообщение' onFocus={inputFocus} onBlur={inputBlur}/><img src={messageIcon} alt="messageIcon" className={style.messageIcon}/></div>
+                        <div className={style.messageFormContainer}>
+                            {isMobile? 
+                            <textarea type="text" className={style.contactsMessageArea} placeholder="сообщение" data-placeholder='сообщение' onFocus={inputFocus} onBlur={inputBlur} />
+                            :
+                            <input type="text" className={style.contactsMessage} placeholder="сообщение" data-placeholder='сообщение' onFocus={inputFocus} onBlur={inputBlur}/>
+                            }
+                            <img src={messageIcon} alt="messageIcon" className={style.messageIcon}/>
+                        </div>
                         <div className={style.sendButtonFormContainer}>
                             <ButtonGoToDesktop text="отправить"/>
                         </div>
