@@ -96,6 +96,7 @@
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
     margin-bottom: 7.32vw;
+    background-color: var(--primary-color);
 }
 .interactiveLineElements {
     position: absolute;
@@ -108,7 +109,7 @@
 .interactiveLineProgressBar {
     z-index: 9;
     position: absolute;
-    top: 4%;
+    top: 10%;
     background-color: var(--secondary-color);
     width: 100%;
     height: .2rem;
@@ -119,6 +120,7 @@
         rgba(0,0,0,1) 88%,
         rgba(0,0,0,0)
     );
+    
 }
 .interactiveLineElement {
     display: flex;
@@ -729,6 +731,9 @@
     .interactiveLine {
         height: 5.71rem;
         margin-bottom: 0;
+    }
+    .interactiveLineProgressBar {
+        top: 5%;
     }
     .wideContainer1Title {
         font-size: 1.43rem;
