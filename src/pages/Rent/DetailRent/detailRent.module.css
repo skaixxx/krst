@@ -55,9 +55,10 @@
 
 .descBlockBlockRow {
 	display: grid;
-	grid-template-columns: minmax(auto, 610px) max-content;
+	grid-template-columns: 1fr max-content;
 	justify-content: space-between;
 	align-items: center;
+	gap: 15vw;
 }
 
 .descBlockItemTitle {
@@ -73,13 +74,12 @@
 }
 
 .descBlockItemText {
-	font-size: 20px;
-	line-height: 100%;
+	font-size: 1rem;
+	line-height: 120%;
 }
 
 .statBlockList {
 	display: flex;
-	justify-content: space-between;
 	gap: 60px;
 }
 
@@ -91,7 +91,7 @@
 
 .statBlockNumber {
 	font-weight: 700;
-	font-size: 68px;
+	font-size: 2.5rem;
 	line-height: 100%;
 }
 
@@ -103,4 +103,60 @@
 .cardList {
 	display: grid;
 	gap: 60px;
+}
+
+@media screen and (max-width: 768px) {
+	.descBlock {
+		gap: 15px;
+	}
+
+	.descBlockItem {
+		gap: 10px;
+	}
+
+	.descBlockItemTitle {
+		font-size: 1.5rem;
+	}
+
+	.detailRentContainer {
+		gap: 70px;
+	}
+
+	.detailRentTitle {
+		font-size: 3rem;
+	}
+
+	.detailRentTitle img {
+		max-width: 15vw;
+	}
+
+	.detailRentTitleWrap {
+		gap: 2vw;
+	}
+
+	.descBlockBlockRow {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.cardList {
+		gap: 50px;
+	}
+
+	.statBlockList {
+		gap: 10vw;
+	}
+
+	.statBlockItem {
+		gap: 10px;
+	}
+
+	.statBlockNumber {
+		font-weight: 500;
+		font-size: 3rem;
+	}
+
+	.statBlockText {
+		font-size: 1rem;
+	}
 }
