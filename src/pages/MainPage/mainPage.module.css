@@ -28,7 +28,7 @@
     font-size: 6.4rem;
     font-weight: 700;
     letter-spacing: -0.05em;
-    line-height: 72.7%;
+    line-height: 93%;
 }
 .topRow {
     width: 91.22%;
@@ -107,18 +107,34 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    column-gap: 12%;
-    mask-image: linear-gradient(
-        to right,
-        rgba(0,0,0,0),
-        rgba(0,0,0,1) 12%,
-        rgba(0,0,0,1) 88%,
-        rgba(0,0,0,0)
-    );
-    border-top: 1px solid var(--secondary-color);
-    border-bottom: 1px solid var(--secondary-color);
+    position: relative;
     margin-bottom: 7.32vw;
 }
+
+.interactiveLine::before,
+.interactiveLine::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--secondary-color) 12%,
+        var(--secondary-color) 88%,
+        transparent
+    );
+}
+
+.interactiveLine::before {
+    top: 0;
+}
+
+.interactiveLine::after {
+    bottom: 0;
+}
+
 .iLineElements {
     width: 100%;
     height: 100%;
@@ -130,6 +146,8 @@
     display: flex;
     height: 60%;
     column-gap: .75rem;
+    justify-content: center;
+    flex: 1;
 }
 .weatherIcon {
     width: auto;
@@ -332,6 +350,7 @@
         ". . . . . .";
         column-gap: 1rem;
     }
+    
     .container2TextBox2 {
         height: 100%;
         width: 100%;
@@ -339,25 +358,41 @@
         flex-direction: column;
         justify-content: center;
     }
+    
     .interactiveLine {
         height: max-content;
     }
+    
     .weatherIcon {
         width: 3.21rem;
     }
+    
     .peopleIcon {
         width: 3.21rem;
     }
+    
     .timeIcon {
         width: 3.21rem;
     }
+    
+    .iLineElements {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        width: 91.2153%;
+    }
+
     .iLineElement {
         flex-direction: column;
         align-items: center;
     }
+
     .titleInfo {
         font-size: 1.43rem;
         text-align: center;
+    }
+
+    .topRow1 {
+        margin-top: 0.8rem;        
     }
 
     .cardsContent {
@@ -382,23 +417,33 @@
         font-size: 3.5rem;
         color: var(--secondary-color);
     }
+    
     .rulesStroke1 {
         height: 2.57rem;
     }
+    
     .rulesStroke1Text {
         font-size: 2.57rem;
     }
+    
+    .rulesStroke2 {
+        margin-top: 0.5rem;    
+    }
+
     .rulesStroke2Text {
         font-size: 2.57rem;
     }
+    
     .rulesContainer {
         height: max-content;
     }
+    
     .listContainer {
         width: 100%;
         flex-wrap: nowrap;
         flex-direction: column;
     }
+    
     .listItem {
         width: 100%;
     }
