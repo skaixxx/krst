@@ -85,7 +85,6 @@
     }
 
     .contentContainer {
-        padding: 0 1.5rem;
         flex-direction: column;
         gap: 3.5rem;    
     }

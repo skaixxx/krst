@@ -19,17 +19,37 @@ const navLinks = [
 ];
 
 export default function MinHeader() {
+    
     const navRefs = useRef({});
+    
     const [menuOpen, setMenuOpen] = useState(false);
+    const [isClosing, setIsClosing] = useState(false);
+
     const navigate = useNavigate();
     const location = useLocation();
     const isLightLogo = ['/', '/History'].includes(location.pathname);
     const logo = !menuOpen && isLightLogo ? lightLogo : darkLogo;
     const burgerLogo = !menuOpen && isLightLogo? menuIconLight : menuIcon;
+
+    const handleMenuToggle = () => {
+        if(menuOpen) {
+            setIsClosing(true);
+            setTimeout(() => {
+                setMenuOpen(false);
+                setIsClosing(false);
+            }, 500);
+        } else {
+            setMenuOpen(true);
+        }
+    }
+    
     return (
         <div className={clsx(styles.minHeader, {[styles.active]: menuOpen})}>
-            <div className={clsx(styles.burgerMenu, {[styles.active]: menuOpen})}>
-                <div className={clsx(styles.burgerMenuContainer, {[styles.active]: menuOpen})}>
+            <div className={clsx(styles.burgerMenu, {
+                [styles.active]: menuOpen && !isClosing,
+                [styles.closing]: isClosing
+                })}>
+                <div className={clsx(styles.burgerMenuContainer, {[styles.active]: menuOpen && !isClosing})}>
                     <div className={styles.logoContainer} onClick={() => `${navigate("/")} ${setMenuOpen(false)}` }>
                         <img src={logo} alt="logo" className={styles.logoPic} key={logo}/>
                     </div>
@@ -46,7 +66,7 @@ export default function MinHeader() {
                         </div>
                     )})}
                     </div>
-                    <div className={styles.burgerMenuIconLink} onClick={() => setMenuOpen(prev => !prev)}>
+                    <div className={styles.burgerMenuIconLink} onClick={handleMenuToggle}>
                         <img src={!menuOpen ? `${burgerLogo}` : `${closeMenuIcon}`} alt={menuIcon} className={styles.burgerMenuIcon}/></div>
                 </div>
             </div>
