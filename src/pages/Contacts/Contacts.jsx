@@ -6,12 +6,14 @@ import phoneIcon from '../../assets/contacts/phoneIcon.svg';
 import messageIcon from '../../assets/contacts/messageIcon.svg';
 import '../../components/general.css'
 import style from './contacts.module.css'
+import useMediaQuery from "../../components/Header/useMediaQuery";
 import ButtonGoToDesktop from '../../components/Buttons/ButtonGoToDesktop'
 import RotatingCross from '../../components/animations/RotatingCross/RotatingCross';
 import ScaleSlideBrackets from '../../components/animations/ScaleSlideBrackets/ScaleSlideBrackets';
 import clsx from 'clsx';
 
 function Contacts() {
+    const isMobile = useMediaQuery('(max-width: 768px)');
     const inputFocus = (current) => {
         current.target.placeholder = '';
     };
@@ -66,10 +68,12 @@ function Contacts() {
                     <p className={style.contactsAboutUsTitle}>ТЕЛЕФОН</p>
                     <p className={style.contactsAboutUsText}>+7 (888) 888-88-88</p>
                 </div>
-                <div className={style.contactsAboutUsBox}>
-                    <p className={style.contactsAboutUsTitle}>АДРЕС</p>
-                    <p className={style.contactsAboutUsText}>Санкт-Петербург, Арсенальная наб. 7</p>
-                </div>
+                {!isMobile &&
+                    <div className={style.contactsAboutUsBox}>
+                        <p className={style.contactsAboutUsTitle}>АДРЕС</p>
+                        <p className={style.contactsAboutUsText}>Санкт-Петербург, Арсенальная наб. 7</p>
+                    </div>
+                }
             </div>
             <div className={style.contactsInfo}>
                 <div className={style.contactsInfo1}>
@@ -95,6 +99,11 @@ function Contacts() {
             <div className={style.contactsContentBottom}>
                 <div className={style.contactsContentBottom1}>
                     <img className={style.contactsContentBottomPicture} src={mapPicture} alt="map" />
+                    {isMobile && 
+                        <div className={style.onMapAdress}>
+                            <p className={style.contactsAboutUsText}>Санкт-Петербург, Арсенальная наб. 7</p>
+                        </div>
+                    }
                 </div>
             </div>
         </div>
