@@ -332,9 +332,12 @@
         font-size: 1rem;
     }
     .contactsContentBottom {
+        height: 14.29rem;
         order: 4;
+        width: 100%;
     }
     .contactsContentBottom1 {
+        height: 100%;
         border-radius: .5rem;
     }
     .contactsContentBottomPicture {
@@ -355,9 +358,11 @@
         width: 100%;
     }
     .contactsAboutUs {
+        width: 100vw;
         height: max-content;
         order: 5;
         padding: 1.43rem 0;
+        overflow: hidden;
     }
     .contactsAboutUsBox {
         row-gap: 0.71rem;
@@ -412,5 +417,12 @@
         height: 1.43rem;
         top: 10%;
         right: 2.5%;
+    }
+}
+@media (orientation: landscape) {
+    .containerContacts {
+        width: 89.33%;
+        row-gap: 10vh;
+        margin-top: 30vh;
     }
 }
