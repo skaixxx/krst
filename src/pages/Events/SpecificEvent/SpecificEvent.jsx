@@ -1,13 +1,16 @@
 import { useParams } from "react-router-dom";
 import { useData } from "../../../routes/DataContext";
 import SpecificEventButton from "../../../components/Buttons/ButtonGoToDesktop";
-import "./SpecificEvent.css";
+import style from "./SpecificEvent.module.css";
 import SlidingRotatingCross from "../../../components/animations/SRCross/SlidingRotatingCross";
 import RotatingCross from "../../../components/animations/RotatingCross/RotatingCross";
 import { useEffect } from "react";
 import NotFound from "../../404/NotFound";
+import clsx from "clsx";
+import useMediaQuery from "../../../components/Header/useMediaQuery";
 
 function SpecificEvent() {
+    const isMobile = useMediaQuery('(max-width: 768px)');
     const { id } = useParams();
     const { items } = useData();
     const item = items.find((item) => item.id === Number(id));
@@ -15,47 +18,62 @@ function SpecificEvent() {
         window.scrollTo(0, 0)
     }, [])
     return (
-        <div className="specific-event">
+        <div className={style.specificEvent}>
             {item ? (
-            <div className="container-specific-event">
-                <div className="specific-event-title-container">
-                    <div className="specific-event-title-container-sub1">
-                        <div className="specific-event-title specific-event-title1">
+            <div className={style.container1}>
+                <div className={style.titleContainer}>
+                    <div className={style.titleContainerSub1}>
+                        <div className={clsx(style.title1, style.title)}>
                             <p>{item.title1}</p>
                         </div>
-                        <div className="specific-event-animation">
+                        <div className={style.animation1}>
                             <SlidingRotatingCross/>
                         </div>
                     </div>
-                    <div className="specific-event-title-container-sub2">
-                        <div className="specific-event-animation2"><RotatingCross/></div>
-                        <div className="specific-event-title specific-event-title2">
+                    <div className={style.titleContainerSub2}>
+                        {!isMobile &&
+                        <div className={style.animation2}><RotatingCross/></div>
+                        }
+                        <div className={clsx(style.title2, style.title)}>
                             <p>{item.title2}</p>
                         </div>
                     </div>
 
                 </div>
-                <div className="specific-event-main-info-block">
-                    <div className="specific-event-paragraph1"><p>{item.paragraph1}</p></div>
-                    <div className="specific-event-date-price-container">
-                        <div className="specific-event-date-container"><span className="specific-event-date">{item.dates}</span></div>
-                        <div className="specific-event-price-container"><span className="specific-event-price">от {item.price} ₽</span></div>
+                <div className={style.mainInfoBlock}>
+                    <div className={style.paragraph1}><p>{item.paragraph1}</p></div>
+                {isMobile ?
+                    <div className={style.datePriceContainer}>
+                        <div className={style.dateContainer}>
+                            <span className={style.date}>{item.dates}</span>
+                            <span className={style.subText}>Период проведения</span>
+                        </div>
+                        <div className={style.priceContainer}>
+                            <span className={style.price}>от {item.price} ₽</span>
+                            <span className={style.subText}>Стоимость билета</span>
+                        </div>
                     </div>
+                    :
+                     <div className={style.datePriceContainer}>
+                        <div className={style.dateContainer}><span className={style.date}>{item.dates}</span></div>
+                        <div className={style.priceContainer}><span className={style.price}>от {item.price} ₽</span></div>
+                    </div>
+                }
                 </div>
-                <div className="specific-event-stroke-container">
-                    <div className="specific-event-stroke-element"><img src={item.inIcon1} alt="icon"/><p>{item.inText1}</p></div>
-                    <div className="specific-event-stroke-element"><img src={item.inIcon2} alt="icon"/><p>{item.inText2}</p></div>
-                    <div className="specific-event-stroke-element"><img src={item.inIcon3} alt="icon"/><p>{item.inText3}</p></div>
+                <div className={style.strokeContainer}>
+                    <div className={style.strokeElement}><img src={item.inIcon1} alt="icon" className={style.strokeElementIcon}/><p>{item.inText1}</p></div>
+                    <div className={style.strokeElement}><img src={item.inIcon2} alt="icon" className={style.strokeElementIcon}/><p>{item.inText2}</p></div>
+                    <div className={style.strokeElement}><img src={item.inIcon3} alt="icon" className={style.strokeElementIcon}/><p>{item.inText3}</p></div>
                 </div>
-                <div className="specific-event-content-container">
-                    <div className="specific-event-paragraph2">
-                        <div className="specific-event-paragraph2-text">
+                <div className={style.contentContainer}>
+                    <div className={style.paragraph2}>
+                        <div className={style.paragraph2Text}>
                             <p>{item.paragraph2}</p>
                             <p>{item.paragraph3}</p>
                         </div>
-                        <div className="specific-event-paragraph2-btn"><SpecificEventButton text="перейти"/></div>
+                        <div className={style.btnContainer}><SpecificEventButton text="перейти"/></div>
                     </div>
-                    <div className="specific-event-big-picture-container"><img src={item.image} alt="pic" className="specific-event-big-picture"/></div>
+                    <div className={style.bigPictureContainer}><img src={item.image} alt="pic" className={style.bigPicture}/></div>
                 </div>
             </div>
             ) : (

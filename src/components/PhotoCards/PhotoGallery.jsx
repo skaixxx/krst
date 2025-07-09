@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import style from "./PhotoGallery.module.css"
-import { filter } from "framer-motion/client";
+import clsx from "clsx";
 
 const PhotoGallery = ({
     photos = [],
@@ -11,9 +11,8 @@ const PhotoGallery = ({
     
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [windowWidth, setWindowWidth]     = useState(window.innerWidth);
-
     const isMobile = windowWidth <= 768;
-
+    
     // Добавляем обработчик изменения размера окна
     useEffect(() => {
         const handleResize = () => {
@@ -51,7 +50,6 @@ const PhotoGallery = ({
             height: height
         };
     }
-
     const calculatePosition = (index) =>  {
         if (windowWidth <= 768){
             
@@ -68,6 +66,7 @@ const PhotoGallery = ({
             switch(offset) {
                 case 0:
                     return {
+                        filter: "grayscale(0%)",
                         boxShadow: "0 0 6px 4px rgba(0, 0, 0, 0.35)",
                         transform: "translateX(0)",
                         zIndex: "2"
@@ -101,7 +100,7 @@ const PhotoGallery = ({
                 <div
                     key={index}
                     onClick={() => handleImageClick(index)}
-                    className={style.container}
+                    className={isMonochrome ? clsx(style.monochrome, style.container) : style.container}
                     style={{
                         ...calculatePosition(index),
                         ...calculateSize(index)
@@ -110,7 +109,7 @@ const PhotoGallery = ({
                     <img
                         src={photo.url}
                         alt={photo.alt || `Фото ${index + 1}`}
-                        className={isMonochrome? style.imageMonoChrome : style.image}
+                        className={style.image}
                     />
                 </div>
             ))

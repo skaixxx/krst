@@ -1,6 +1,6 @@
 {
   "name": "krst",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
@@ -15,6 +15,7 @@
     "react-router": "^7.5.0",
     "react-router-dom": "^7.5.2",
     "react-scripts": "5.0.1",
+    "swiper": "^11.2.10",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

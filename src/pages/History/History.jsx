@@ -19,8 +19,8 @@ import { useEffect, useState } from "react";
 import Carousel from "../../components/History/HistoryCarousel";
 import ScaleSlideDotsInverted from "../../components/animations/ScaleSlideDots/ScaleSlideDotsInverted";
 import useMediaQuery from "../../components/Header/useMediaQuery";
-import ScaleCrossSlideBracket from "../../components/animations/ScaleCrossSlideBracket/ScaleCrossSlideBracket";
 import ScaleCrossSlideBracketInverted from "../../components/animations/ScaleCrossSlideBracket_inverted/ScaleCrossSlideBracket_inverted";
+import ScrollToTopBtn from "../../components/History/ScrollToTop";
 function History() {
     const isMobile = useMediaQuery('(max-width: 768px)');
     const [items, setItems] = useState([]);
@@ -78,7 +78,7 @@ function History() {
     }, [])
     return (
         <div className={style.historyPage}>
-            <div className={style.fullScreenContainer1}>
+            <div className={style.fullScreenContainer1} id="triggerForScrollBtn">
                 <div className={style.pageTitle}>
                         <p className={style.titleText1}>ИСТОРИЯ</p>
                 </div>
@@ -113,7 +113,9 @@ function History() {
                     <div className={style.wideContainer1Col2}>
                         <img src={tomishko} alt="tomishko" className={style.imageTomishko}/>
                     </div>
+                    
                 </div>
+                <ScrollToTopBtn triggerID="triggerForScrollBtn"/>
                 <div className={style.container1892} id="y1892">
                     <div className={style.container1892Row1}>
                         <div className={style.container1892Row1Col1}>
