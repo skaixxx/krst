@@ -32,7 +32,8 @@ function Contacts() {
                     </div> 
                     <div className={style.contactsStyleElement1}>
                         <ScaleSlideBrackets/>
-                    </div>
+                    </div>                 
+                    
                 </div>
                 }
                 <div className={style.contactsTitleBigBox}>
@@ -61,8 +62,15 @@ function Contacts() {
                     :
                     <div className={style.contactsTitleContainer}>
                         <div className={style.contactsTitleSubContainer}>
-                            
-                            
+                            <div className={clsx(style.contactsTitle, style.contactsTitle2)}>
+                            <p>ДЛЯ</p>
+                            </div>
+                            <div className={style.contactsStyleElement2}>
+                            <RotatingCross/>
+                            </div>
+                        </div>
+                        <div className={clsx(style.contactsTitle, style.contactsTitle3)}>
+                                <p>СВЯЗИ</p>
                         </div>
                         
                     </div>
