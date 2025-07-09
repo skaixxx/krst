@@ -66,7 +66,7 @@ const PhotoGallery = ({
             switch(offset) {
                 case 0:
                     return {
-                        filter: "grayscale(10%)",
+                        filter: "grayscale(0%)",
                         boxShadow: "0 0 6px 4px rgba(0, 0, 0, 0.35)",
                         transform: "translateX(0)",
                         zIndex: "2"
