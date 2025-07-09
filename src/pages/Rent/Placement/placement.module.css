@@ -60,6 +60,10 @@ div.placementTitle {
     gap: 20px;
 }
 
+.placementBlockLeft {
+    min-width: 0;
+}
+
 .placementBlockRight {
     height: 100%;
     display: grid;
@@ -75,6 +79,7 @@ div.placementTitle {
     max-width: 100%;
     width: 100%;
     max-height: 30vw;
+    min-height: 200px;
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
@@ -142,8 +147,12 @@ div.placementTitle {
 }
 
 @media screen and (max-width: 768px) {
+    .placement {
+        margin-top: 32vw;
+    }
+
     .placementContainer {
-        gap: 70px;
+        gap: 50px;
     }
 
     .placementTitle {
@@ -165,5 +174,9 @@ div.placementTitle {
 
     .specValue {
         font-size: 2.5rem;
+    }
+
+    .rollingStrokeContainer {
+        gap: 10px;
     }
 }

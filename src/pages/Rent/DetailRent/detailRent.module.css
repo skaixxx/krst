@@ -2,6 +2,12 @@
 	color: var(--accent-color);
 }
 
+.detailRentAnimation {
+	display: flex;
+	width: 16%;
+	max-height: 80%;
+}
+
 .detailRent {
 	min-height: 100vh;
     width: 100%;
@@ -106,6 +112,10 @@
 }
 
 @media screen and (max-width: 768px) {
+	.detailRent {
+		margin-top: 32vw;
+	}
+
 	.descBlock {
 		gap: 15px;
 	}
@@ -119,7 +129,7 @@
 	}
 
 	.detailRentContainer {
-		gap: 70px;
+		gap: 50px;
 	}
 
 	.detailRentTitle {

@@ -33,3 +33,9 @@
         transform: translateX(150%);
     }
 }
+
+@media screen and (max-width: 768px) {
+    .SCSBi-animation-cross {
+        position: absolute;
+    }
+}

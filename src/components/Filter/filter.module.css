@@ -1,0 +1,167 @@
+.filter {
+	position: relative;
+	min-height: 50px;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	justify-content: space-between;
+	border: 1px solid #151515;
+	border-radius: 25px;
+	padding: 8px 10px;
+}
+
+.filterPlaceholder {
+	opacity: 0.5;
+	color: #5B5B5B;
+}
+
+.filterTags {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 10px;
+}
+
+.filterActions {
+	display: flex;
+	align-items: center;
+}
+
+.filterBtn {
+	width: 24px;
+	height: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: none;
+	border: none;
+	border-right: 1px solid #151515;
+	padding: 0;
+	margin-right: 10px;
+	padding-right: 10px;
+	box-sizing: content-box;
+	cursor: pointer;
+}
+.filterBtn:last-child {
+	border-right: none;
+	margin-right: 0;
+	padding-right: 0;
+}
+
+.filterMenu {
+	min-height: 275px;
+	width: 100%;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	background-color: #F2ECE4;
+	border-radius: 25px;
+	box-shadow: 0px 4px 4px 0px #00000040;
+	padding: 30px;
+}
+.filterMenuHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.filterMenuTitle {
+	font-weight: 500;
+	font-size: 1.9rem;
+	line-height: 100%;
+	text-transform: uppercase;
+}
+.filterMenuCloseBtn {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+}
+.filterMenuGroup {
+	max-width: 90%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.filterMenuGroupTitle {
+	max-width: 80%;
+	font-weight: 400;
+	font-size: 1.15rem;
+	line-height: 100%;
+	padding-bottom: 4px;
+	border-bottom: 1px solid #000000;
+}
+.filterMenuGroupTags {
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+	list-style: none;
+}
+
+.filterTag {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 14px;
+	line-height: 100%;
+	border: 1px solid #151515;
+	border-radius: 25px;
+	padding: 10px 20px;
+	cursor: pointer;
+
+	img {
+		width: 10px;
+	}
+}
+
+.filterTag.active {
+	color: #F2ECE4;
+	background-color: #780513;
+	border-color: #780513;
+}
+.filterTag.active .filterTagDelete {
+	color: #F2ECE4;
+}
+.filterTagDelete {
+	display: flex;
+	align-items: center;
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+	.filter {
+		min-height: auto;
+		padding: 7px;
+	}
+
+	.filterTags {
+		gap: 5px;
+	}
+
+	.filterMenu {
+		gap: 20px;
+		padding: 20px;
+	}
+
+	.filterMenuGroup {
+		max-width: 100%;
+	}
+
+	.filterMenuGroupTitle {
+		max-width: 100%;
+	}
+
+	.filterMenuGroupTags {
+		gap: 10px;
+	}
+
+	.filterTag {
+		gap: 5px;
+		padding: 5px 10px;
+	}
+}

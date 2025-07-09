@@ -29,12 +29,22 @@
 
 .rentPageTitle span {
     display: flex;
+    align-items: center;
     gap: 5vw;
 }
 
 .rentPageTitle span:last-child {
     align-self: center;
     color: var(--accent-color);
+}
+
+.rentPageTitleIconMobile {
+    display: none;
+}
+
+.rentPageTitleIcon {
+    width: 20vw;
+    height: 70%;
 }
 
 .rentPageBlock {
@@ -44,6 +54,9 @@
 
 .rentPageBlockImg {
     width: 100%;
+    min-height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
 .rentPageBlockRow {
@@ -65,16 +78,35 @@
 }
 
 @media screen and (max-width: 768px) {
+    .rentPage {
+        margin-top: 32vw;
+    }
+
     .rentPageContainer {
         gap: 60px;
     }
 
     .rentPageTitle {
-        font-size: 3rem;
+        position: relative;
+        font-size: 3.5rem;
+        display: inline;
     }
 
-    .rentPageTitle img {
+    .rentPageTitleIconMobile {
+        display: inline-block;
         max-width: 20vw;
+        width: 20vw;
+        height: 23%;
+        margin-left: 10vw;
+    }
+
+    .rentPageTitle span {
+        display: inline;
+    }
+
+    .rentPageTitleIcon {
+        max-width: 20vw;
+        display: none;
     }
 
     .rentPageBlock {
@@ -102,7 +134,8 @@
 
 .card {
     flex: 1;
-    height: 765px;
+    min-height: 765px;
+    height: 50vw;
     position: relative;
     border-radius: 30px;
     color: #FFFFFF;
@@ -199,16 +232,18 @@
 
 @media screen and (max-width: 768px) {
     .cardsContainer {
+        max-width: 100%;
         overflow-x: auto;
     }
 
     .cards {
-        overflow-x: visible;
+        padding: 20px;
     }
 
     .card {
         width: 220px;
-        height: 350px;
+        min-height: 350px;
+        padding: 20px;
     }
 
     .cardHeader {
@@ -223,6 +258,24 @@
     }
 
     .cardTitle {
+        font-size: 20px;
+        line-height: 110.00000000000001%;
+    }
+
+    .cardArea {
+        position: static;
+        transform: none;
+        margin-top: auto;
+    }
+    
+    .cardAreaInner {
+        position: static;
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    .cardArea span {
+        font-weight: 300;
         font-size: 20px;
         line-height: 110.00000000000001%;
     }

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import style from "./rent.module.css"
-import arrowBR from "../../assets/mainPage/arrowsBR.svg"
-// import ScaleSlideBrackets from "../../components/animations/ScaleSlideBrackets/ScaleSlideBrackets"
+import ScaleSlideBrackets from "../../components/animations/ScaleSlideBracketsToRight/ScaleSlideBracketsToRight"
 
 function Rent() {
     return (
@@ -9,11 +8,16 @@ function Rent() {
             <div className={style.rentPageContainer}>
                 <h1 className={style.rentPageTitle}>
                     <span>
-                        АРЕНДА У НАС
-                        {/* <ScaleSlideBrackets/> */}
-                        <img src={arrowBR} alt="arrows"/>
+                        АРЕНДА 
+                        <div className={style.rentPageTitleIconMobile}>
+                            <ScaleSlideBrackets/>
+                        </div>
+                        <span> У&nbsp;НАС</span>
+                        <div className={style.rentPageTitleIcon}>
+                            <ScaleSlideBrackets/>
+                        </div>
                     </span>
-                    <span>ЛЕГКО И БЫСТРО</span>
+                    <span> ЛЕГКО И БЫСТРО</span>
                 </h1>
 
                 <div className={style.rentPageBlock}>

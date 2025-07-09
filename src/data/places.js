@@ -2,7 +2,16 @@ export const places = [
 	{
 		id: 1,
 		title: 'ГАРМОНИЯ',
+		area: '120 М²',
 		image: '/images/places/place-1-min.png',
+		images: [
+			{
+				image: '/images/places/place-1-min.png',
+			},
+			{
+				image: '/images/places/place-1-min.png',
+			},
+		],
 		text: 'Помещение идеально подходит для мастер-классов по керамике: здесь всё продумано до мелочей для удобства участников.',
 		detail: {
 			title: '#ОПИСАНИЕ',
@@ -30,7 +39,16 @@ export const places = [
 	{
 		id: 2,
 		title: 'ФАНТАЗИЯ',
+		area: '110 М²',
 		image: '/images/places/place-2-min.png',
+		images: [
+			{
+				image: '/images/places/place-2-min.png',
+			},
+			{
+				image: '/images/places/place-2-min.png',
+			},
+		],
 		text: 'Уютный и вдохновляющий зал с большими окнами, идеально подходящий для проведения мастер-классов по живописи.',
 		detail: {
 			title: '#ОПИСАНИЕ',
@@ -59,7 +77,16 @@ export const places = [
 	{
 		id: 3,
 		title: 'ПЕРСПЕКТИВА',
+		area: '140 М²',
 		image: '/images/places/place-3-min.png',
+		images: [
+			{
+				image: '/images/places/place-2-min.png',
+			},
+			{
+				image: '/images/places/place-2-min.png',
+			},
+		],
 		text: 'Светлый и просторный зал, идеально подходящий для создания фотостудии. Помещение оснащено современным оборудованием и удобной мебелью.',
 		detail: {
 			title: '#ОПИСАНИЕ',
@@ -70,12 +97,12 @@ export const places = [
 			{
 				icon: '/images/card/icon-2.svg',
 				label: 'Площадь',
-				value: '110 М²',
+				value: '140 М²',
 			},
 			{
 				icon: '/images/card/icon-1.svg',
 				label: 'Цена в месяц',
-				value: '140 000 ₽',
+				value: '110 000 ₽',
 			},
 		],
 		tags: [
@@ -87,7 +114,16 @@ export const places = [
 	{
 		id: 4,
 		title: 'МЕЛОДИЯ',
+		area: '120 М²',
 		image: '/images/places/place-4-min.png',
+		images: [
+			{
+				image: '/images/places/place-2-min.png',
+			},
+			{
+				image: '/images/places/place-2-min.png',
+			},
+		],
 		text: 'В данном помещении каждый найдет всё необходимое для раскрытия своего потенциала: удобная мебель, качественный звук и продуманное освещение.',
 		detail: {
 			title: '#ОПИСАНИЕ',

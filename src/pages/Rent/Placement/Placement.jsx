@@ -4,9 +4,11 @@ import { places } from "../../../data/places.js"
 
 import style from "./placement.module.css"
 
+import Slider from "../../../components/Slider/Slider.jsx";
+import ButtonGoToDesktop from "../../../components/Buttons/ButtonGoToDesktop";
+
 import SlidingRotatingCross from '../../../components/animations/SRCross/SlidingRotatingCross';
 import ScaleCrossSlideBracketInverted from '../../../components/animations/ScaleCrossSlideBracket_inverted/ScaleCrossSlideBracket_inverted';
-import ButtonGoToDesktop from "../../../components/Buttons/ButtonGoToDesktop";
 
 import calendarIcon from "../../../assets/residence/calendar.svg"
 import phoneIcon from "../../../assets/residence/phoneIcon.svg"
@@ -53,7 +55,7 @@ function Placement() {
 
 				<div className={style.placementBlock}>
 					<div className={style.placementBlockLeft}>
-						<img src={placement.image} alt="" />
+						<Slider list={placement.images}></Slider>
 					</div>
 					<div className={style.placementBlockRight}>
 						<div className={style.placementBlockRightItem}>
