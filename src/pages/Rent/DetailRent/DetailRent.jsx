@@ -1,9 +1,11 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { places } from '../../../data/places';
 import style from "./detailRent.module.css";
 import arrowBR from "../../../assets/mainPage/arrowsBR.svg"
 import Card from "../../../components/Card/Сard";
+import ScaleSlideDotsInverted from '../../../components/animations/ScaleSlideDots/ScaleSlideDotsInverted';
+import Filter from '../../../components/Filter/Filter';
 
 
 function DetailRent() {
@@ -12,10 +14,36 @@ function DetailRent() {
 	const goToPlace = (placeId) => {
 		navigate(`/rent/${id}/${placeId}`);
 	};
+	const [selectedTags, setSelectedTags] = useState([]);
 
 	useEffect(() => {
         window.scrollTo(0, 0)
 	}, [])
+
+	const tagGroups = [
+		{
+			title: 'Удобства',
+			tags: [
+				'#проектор',
+				'#гардеробная',
+				'#зонаочистки',
+				'#шкафы',
+				'#декор',
+				'#высокиепотолки',
+				'#трековаясистема',
+				'#кондиционер',
+				'#звукоизоляция',
+				'#зеркала',
+				'#аудиосистема',
+			]
+		}
+	];
+
+	const filteredPlaces = selectedTags.length === 0
+  	? places
+  	: places.filter(place =>
+    	place.tags.some(tagObj => selectedTags.includes(tagObj.name))
+    );
 	
     return (
 		<div className={style.detailRent}>
@@ -25,7 +53,10 @@ function DetailRent() {
 						<span>
 							СПИСОК
 						</span>
-						<img src={arrowBR} alt="arrows" />
+						<span className={style.detailRentAnimation}>
+							<ScaleSlideDotsInverted></ScaleSlideDotsInverted>
+						</span>
+						{/* <img src={arrowBR} alt="arrows" /> */}
 						<span>Т<span className={style.accent}>Ц</span></span>
 					</span>
 					<span>ПОМЕЩЕНИЙ</span>
@@ -54,8 +85,14 @@ function DetailRent() {
 					</div>
 				</div>
 
+				<Filter
+					tags={tagGroups}
+					selectedTags={selectedTags}
+					onChange={setSelectedTags}
+				></Filter>
+
 				<div className={style.cardList}>
-					{places.map((card, index) => (						
+					{filteredPlaces.map((card, index) => (						
 						<Card
 							key={card.id}
 							data={card}
