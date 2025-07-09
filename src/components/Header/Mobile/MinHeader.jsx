@@ -28,8 +28,6 @@ export default function MinHeader() {
     const navigate = useNavigate();
     const location = useLocation();
     const isLightLogo = ['/', '/History'].includes(location.pathname);
-    const logo = !menuOpen && isLightLogo ? lightLogo : darkLogo;
-    const burgerLogo = !menuOpen && isLightLogo? menuIconLight : menuIcon;
 
     const handleMenuToggle = () => {
         if(menuOpen) {
@@ -44,30 +42,32 @@ export default function MinHeader() {
     }
     
     return (
-        <div className={clsx(styles.minHeader, {[styles.active]: menuOpen})}>
+        <div className={styles.minHeader}>
+            <div className={styles.staticElements}>
+                <div className={styles.logoContainer} onClick={() => `${navigate("/")} ${setMenuOpen(false)}` }>
+                    <img src={isLightLogo ? lightLogo : darkLogo} alt="logo" className={styles.logoPic}/>
+                </div>
+                <div className={styles.burgerMenuIconLink} onClick={handleMenuToggle}>
+                    <img src={isLightLogo ? menuIconLight : menuIcon} alt="menu" className={styles.burgerMenuIcon}/>
+                </div>    
+            </div>    
             <div className={clsx(styles.burgerMenu, {
                 [styles.active]: menuOpen && !isClosing,
                 [styles.closing]: isClosing
-                })}>
-                <div className={clsx(styles.burgerMenuContainer, {[styles.active]: menuOpen && !isClosing})}>
-                    <div className={styles.logoContainer} onClick={() => `${navigate("/")} ${setMenuOpen(false)}` }>
-                        <img src={logo} alt="logo" className={styles.logoPic} key={logo}/>
-                    </div>
-                    <div className={styles.burgerMenuLinks}>
-                        {navLinks.map(({ to, label }, index) => { 
-                            const isLast = index === navLinks.length -1;
-                            return(
-                        <div
-                            key={to}
-                            className={clsx(styles.burgerWrapper, {[styles.active]: menuOpen})}
-                            ref={(el) => navRefs.current[to] = el}
-                        >
+                })}
+            >
+                <div className={styles.logoContainer} onClick={() => `${navigate("/")} ${setMenuOpen(false)}` }>
+                    <img src={darkLogo} alt="logo" className={styles.logoPic}/>
+                </div>
+                <div className={styles.burgerMenuLinks}>
+                    {navLinks.map(({ to, label }, index) => { 
+                        const isLast = index === navLinks.length -1;
+                        return(
                             <NavItem to={to} label={label} onClick={() => setMenuOpen(false)} className={`${styles.navLinkMobile} ${isLast ? styles.navLinkMobileLast : ""}`}/>
-                        </div>
-                    )})}
-                    </div>
-                    <div className={styles.burgerMenuIconLink} onClick={handleMenuToggle}>
-                        <img src={!menuOpen ? `${burgerLogo}` : `${closeMenuIcon}`} alt={menuIcon} className={styles.burgerMenuIcon}/></div>
+                )})}
+                </div>
+                <div className={styles.burgerMenuIconLink} onClick={handleMenuToggle}>
+                    <img src={closeMenuIcon} alt="close" className={styles.burgerMenuIcon}/>
                 </div>
             </div>
         </div>

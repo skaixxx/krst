@@ -1,33 +1,81 @@
+
 .minHeader {
-    margin: 0 auto;
-    width: 87.7333%;
+    position: relative;
     height: 20.5333vw;
-    padding-top: 1rem;
+    width: 100%;
 }
-.minHeader.active {
+
+.staticElements {
     position: absolute;
-    z-index: 98;
-    margin: 0 auto;
-    width: 100%;
-}
-.logoContainer {
-    height: 2.64rem;
-    width: 2.64rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-.logoPic {
-    width: 100%;
-    height: 100%;
-}
-.burgerMenu {
-    height: 100%;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 1.5rem;
+    height: 100%;    
+}
+
+.burgerMenu {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    height: 110dvh;
+    padding: 0 1.5rem;
+    transform: translateY(-100%);
+}
+
+.burgerMenu.active {
+    animation: rollIn .5s ease;
+    transform: translateY(0%);
+}
+
+.burgerMenu.closing {
+    animation: rollOut .5s ease;
+}
+
+.logoContainer,
+.burgerMenuIconLink {
+    width: 2.64rem;
+    height: 2.64rem;
+}
+
+.burgerMenu .logoContainer,
+.burgerMenu .burgerMenuIconLink {
+    margin-top: 1.5rem;
+}
+
+.burgerMenuLinks {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.71rem;    
+}
+
+.navLinkMobile {
+    width: 51.45vw;
+    height: 10.67vw;
+    font-size: 1.79rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navLinkMobileLast {
+    margin-top: 4.29rem;
+    background-color: var(--accent-color);
+}
+
+.logoPic,
+.burgerMenuIcon {
+    width: 100%;
+    height: 100%;
 }
 
 @keyframes rollIn {
@@ -48,30 +96,46 @@
     }
 }
 
-.burgerMenu.active {
-    position: absolute;
-    z-index: 99;
-    animation: rollIn .5s ease;
-    left: 0;
-    height: 110dvh;
-    width: 100%;
-    background-color: var(--primary-color);
-    display: flex;
-    justify-content: center;
-    align-items: start;
+
+
+/* .minHeader {
+    margin: 0 auto;
+    height: 20.5333vw;
+    padding-top: 1rem;
 }
 
-.burgerMenu.closing {
+.minHeader.active {
     position: absolute;
-    z-index: 100;
-    animation: rollOut .5s ease;
-    left: 0;
-    height: 110dvh;
-    width: 100%;
-    background-color: var(--primary-color);
+    z-index: 98;
+    margin: 0 auto;
+} */
+
+/* .staticElements {
+    height: 100%;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.minHeader.active .staticElements {
+    position: absolute;
+}
+
+.logoContainer {
+    height: 2.64rem;
+    width: 2.64rem;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.burgerMenu {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .burgerMenuContainer {
@@ -81,6 +145,7 @@
     justify-content: space-between;
     align-items: center;
 }
+
 .burgerMenuContainer.active {
     width: 87.7333%;
     padding-top: 1rem;
@@ -89,48 +154,18 @@
     justify-content: space-between;
     align-items: start;
 }
-.burgerMenuIconLink {
-    width: 2.64rem;
-    height: 2.64rem;
-    transition: all .5s ease;
-}
-.burgerMenuIcon {
-    width: 100%;
-    height: 100%;
-}
+
 .burgerWrapper {
     display: none;
 }
+
 .burgerWrapper.active {
     height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.burgerMenuLinks {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.71rem;
-}
-.navLinkMobile {
-    width: 51.45vw;
-    height: 10.67vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    text-decoration: none;
-    font-size: 1.79rem;
-    border-radius: 2rem;
-}
-.navLinkMobileLast {
-    margin-top: 4.29rem;
-    background-color: var(--accent-color);
-}
+
 .hidden {
     display: none;
-}
+} */

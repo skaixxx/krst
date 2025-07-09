@@ -126,3 +126,10 @@ body {
     cursor: pointer;
     opacity: 0.9;
 }
+
+@media (max-width: 768px) {
+    .header {
+        display: inline;
+        top: 0;    
+    }
+}
