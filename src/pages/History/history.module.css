@@ -801,6 +801,7 @@
     }
     /* БЛОКИ */
     .container1892 {
+        scroll-margin-top: 12vh;
         height: 25.93rem;
         flex-direction: column;
     }
@@ -824,6 +825,7 @@
         gap: 1.43rem;
     }
     .container1905 {
+        scroll-margin-top: 12vh;
         height: 17.21rem;
     }
     .container1905Row1 {
@@ -850,6 +852,7 @@
         width: 100%;
     }
     .container1917 {
+        scroll-margin-top: 12vh;
         height: 23.29rem;
         width: 100%;
         position: relative;
@@ -878,6 +881,7 @@
         z-index: 1;
     }
     .container1937 {
+        scroll-margin-top: 12vh;
         height: 30.57rem;
         position: relative;
     }
@@ -909,6 +913,7 @@
         top: 0;
     }
     .container1941 {
+        scroll-margin-top: 12vh;
         height: 29.36rem;
         width: 100%;
         position: relative;
@@ -937,6 +942,7 @@
         height: 34.8%;
     }
     .container1958 {
+        scroll-margin-top: 12vh;
         height: 30.36rem;
         width: 100%;
         position: relative;
@@ -965,6 +971,7 @@
         width: 100%;
     }
     .container1990 {
+        scroll-margin-top: 12vh;
         height: 20.64rem;
         width: 100%;
         position: relative;
@@ -995,6 +1002,7 @@
         bottom: 0;
     }
     .container2006 {
+        scroll-margin-top: 12vh;
         height: 18.21rem;
         width: 100%;
         position: relative;
@@ -1020,6 +1028,7 @@
         left: 0;
     }
     .container2017 {
+        scroll-margin-top: 12vh;
         height: 25.71rem;
         width: 100%;
         position: relative;
@@ -1055,6 +1064,7 @@
         object-position: 25%;
     }
     .container2025 {
+        scroll-margin-top: 12vh;
         height: 20.86rem;
         width: 100%;
         position: relative;

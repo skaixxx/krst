@@ -1,13 +1,14 @@
 import React, { useRef, useEffect, useState } from "react";
 import styles from "./HistoryCarouselStyle.module.css";
+import useMediaQuery from "../Header/useMediaQuery";
 
 const Carousel = ({ items }) => {
   const containerRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const sectionLength = items.length;
-
+  const isMobile = useMediaQuery('(max-width: 768px)');
   const extendedItems = [...items, ...items, ...items];
-
+  const currentActiveIndex = useState(null);
   const dragStartX = useRef(0);
   const scrollStartX = useRef(0);
   const isDragging = useRef(false);
@@ -52,6 +53,17 @@ const Carousel = ({ items }) => {
       if (distance < closestDistance) {
         closestDistance = distance;
         closestIndex = index;
+      }
+      if (isMobile && currentActiveIndex.current !== closestIndex) {
+        currentActiveIndex.current = closestIndex;
+        const tempIndex = closestIndex % items.length;
+        const item = items[tempIndex];
+        if (item && item.id) {
+          const target = document.querySelector(`${item.id}`);
+          if (target) {
+            target.scrollIntoView({behavior: "smooth"})
+          }
+        }
       }
     });
 
