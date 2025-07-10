@@ -7,7 +7,7 @@ const Carousel = ({ items }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const sectionLength = items.length;
   const isMobile = useMediaQuery('(max-width: 768px)');
-  const extendedItems = [...items, ...items, ...items];
+  const extendedItems = [...items];
   const currentActiveIndex = useState(null);
   const dragStartX = useRef(0);
   const scrollStartX = useRef(0);

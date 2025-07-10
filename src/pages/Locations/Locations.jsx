@@ -5,6 +5,7 @@ import ButtonGoToDesktop from "../../components/Buttons/ButtonGoToDesktop";
 import PhotoGallery from "../../components/PhotoCards/PhotoGallery";
 import style from "./Locations.module.css"
 import { useEffect, useState } from "react";
+import Restraunts from "./Lists/Restraunts";
 
 const Locations = () => {
 

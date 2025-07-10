@@ -17,6 +17,7 @@ const AppRoutes = () => {
         {path: "/History", element: <History/>},
         {path: "/Events", element: <Events/>},
         {path: "/Locations", element: <Locations/>},
+        {path: "/Locations/:id", element: ""},
         {path: "/Rent", element: <Rent/>},
         {path: "/Rent/:id", element: <DetailRent/>},
         {path: "/Rent/:id/:place", element: <Placement/>},
