@@ -284,6 +284,7 @@
     bottom: 0;
     border-radius: .2rem .2rem .5rem .5rem;
 }
+
 @media screen and (max-width: 768px) {
     .containerContacts {
         width: 89.33%;
@@ -340,10 +341,12 @@
         height: 100%;
         border-radius: .5rem;
     }
+    
     .contactsContentBottomPicture {
         object-fit: cover;
         border-radius: .5rem;
     }
+
     .contactsInfo {
         order: 3;
         flex-direction: column;
@@ -351,12 +354,15 @@
         height: max-content;
         row-gap: 1.43rem;
     }
+
     .contactsInfo1 {
         width: 100%;
     }
+
     .contactsInfo2 {
         width: 100%;
     }
+
     .contactsAboutUs {
         width: 100vw;
         height: max-content;
@@ -364,35 +370,45 @@
         padding: 1.43rem 0;
         overflow: hidden;
     }
+
     .contactsAboutUsBox {
         row-gap: 0.71rem;
     }
+
     .contactsAboutUsTitle {
         font-size: 1.43rem;
     }
+
     .contactsAboutUsText {
         font-size: 1rem;
     }
+
     .contactForm {
         width: 100%;
         height: max-content;
         order: 6;
     }
+
     .nameFormContainer {
         width: 100%;
     }
+
     .contactsDateBirthContainer {
         width: 100%;
     }
+
     .emailFormContainer {
         width: 100%;
     }
+
     .phoneFormContainer {
         width: 100%;
     }
+
     .messageFormContainer {
         height: 5.79rem;
     }
+
     .contactsMessageArea {
         height: 100%;
         width: 100%;
@@ -405,19 +421,31 @@
         padding-top: 2.5%;
         padding-left: 3%;
         outline: none;
+        resize: none;
     }
+
     .contactsMessageArea::placeholder {
         color: var(--secondary-color);
     }
+
     .contactForm input {
         font-size: 1rem;
         font-weight: 400;
     }
+
     .messageIcon {
         height: 1.43rem;
         top: 10%;
         right: 2.5%;
     }
+
+    .contactsName,
+    .contactsDateBirth,
+    .contactsEmail,
+    .contactsPhone,
+    .contactsMessageArea {
+    padding-right: 2.5rem;
+}
 }
 @media (orientation: landscape) and (max-width: 768px) {
     .containerContacts {
