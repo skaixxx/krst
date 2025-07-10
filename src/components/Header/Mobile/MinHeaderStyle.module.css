@@ -16,12 +16,13 @@
 }
 
 .burgerMenu {
+    overflow-y: scroll;
     position: absolute;
     width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: var(--primary-color);
-    height: 110dvh;
+    height: 100dvh;
     padding: 0 1.5rem;
     transform: translateY(-100%);
 }
@@ -96,7 +97,19 @@
     }
 }
 
-
+@media screen and (orientation: landscape) {
+    .burgerMenuLinks {
+        row-gap: 3vh;
+    }
+    .navLinkMobile {
+        width: 13.79rem;
+        height: 10vh;
+        font-size: 1.43rem;
+    }
+    .navLinkMobileLast {
+        margin-top: 0;
+    }
+}
 
 /* .minHeader {
     margin: 0 auto;
