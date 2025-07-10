@@ -6,11 +6,13 @@ import PhotoGallery from "../../components/PhotoCards/PhotoGallery";
 import style from "./Locations.module.css"
 import { useEffect, useState } from "react";
 import Restraunts from "./Lists/Restraunts";
+import { useNavigate, useParams } from "react-router";
 
 const Locations = () => {
 
     const galleryPhotos = [
         {
+            id: "restraunts",
             url: "./images/locations/restaurants.png",
             alt: "Рестораны",
             title: "СПИСОК",
@@ -18,6 +20,7 @@ const Locations = () => {
             description: "Вкус, который запомнится: уникальные блюда и атмосфера наших ресторанов!"
         },
         {
+            id: "masterClasses",
             url: "./images/locations/masterClasses.png",
             alt: "Мастер-классы",
             title: "МАСТЕР  —",
@@ -25,6 +28,7 @@ const Locations = () => {
             description: "Освойте новые навыки и вдохновитесь: вместе с нами вы сможете достичь невероятного!"
         },
         {
+            id: "Exquisites",
             url: "./images/locations/excursions.png",
             alt: "Экскурсии",
             title: "ЭКСКУРСИИ",
@@ -37,6 +41,13 @@ const Locations = () => {
     const [selectedIndex, setSelectedIndex] = useState(0)
     const [displayedIndex, setDisplayedIndex] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
+    const [actualId, setActualId] = useState("");
+    const id = useParams();
+    const subNav = useNavigate()
+    const pageTransition = (actualId) => {
+        subNav(`/Locations/:${id}/${actualId}`);
+    }
+    
 
     useEffect(() => {
         if (selectedIndex !== displayedIndex) {
@@ -44,6 +55,8 @@ const Locations = () => {
             const timer = setTimeout(() => {
                 setDisplayedIndex(selectedIndex);
                 setIsAnimating(false);
+                setActualId(galleryPhotos[displayedIndex].id)
+                console.log("Actual id", actualId);
             }, 300);
         
             return () => clearTimeout(timer);
@@ -63,7 +76,8 @@ const Locations = () => {
                             <div className={`${style.icon} ${isAnimating ? style.fadeOut : style.fadeIn}`}>
                                 <ScaleCrossSlideBracket/>
                             </div>
-                        )}
+                        )
+                        }
                     </div>
                     <div className={style.titleWithIcon}>
                         {displayedIndex === 1 && (
