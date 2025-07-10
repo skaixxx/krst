@@ -310,7 +310,7 @@
     }
     .grid-container-residence {
         grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: 36.53vw 86.93vw 13.33vw 82.4vw 13.33vw 14.13vw 13.33vw 94.93vw;
+        grid-template-rows: 9rem 86.93vw 13.33vw 82.4vw 13.33vw 14.13vw 13.33vw 94.93vw;
         column-gap: 1rem;
         grid-template-areas:
         ". . . . . ." 
