@@ -1,0 +1,172 @@
+.accent {
+	color: var(--accent-color);
+}
+
+.detailRentAnimation {
+	display: flex;
+	width: 16%;
+	max-height: 80%;
+}
+
+.ListRestarauntPage {
+	min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 7.32vw;
+	margin-top: 16.105vw;
+    margin-bottom: 10.978vw;
+}
+
+.ListRestarauntContainer {
+	max-width: 91%;
+    width: 100%;
+    display: grid;
+    gap: 100px;
+    margin: 0 auto;
+}
+
+.ListRestarauntTitle {
+	display: flex;
+    flex-direction: column;
+    letter-spacing: -0.05em;
+    line-height: 100%;
+    font-weight: 700;
+    font-size: 6.4rem;
+}
+
+.ListRestarauntBlock1 {
+	justify-content: space-between;
+}
+
+.ListRestarauntTitle > span {
+    display: flex;
+    gap: 5vw;
+}
+
+.ListRestarauntTitle > span:last-child {
+    align-self: center;
+    color: var(--accent-color);
+}
+
+.ListRestarauntBlock {
+	display: grid;
+    row-gap: 60px;
+}
+
+.ListRestarauntMain {
+    width: 100%;
+}
+
+.LRdescribe {
+	display: grid;
+	grid-template-columns: 1fr max-content;
+	justify-content: space-between;
+	align-items: center;
+	gap: 15vw;
+}
+
+.lropis {
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 100%;
+	text-transform: uppercase;
+}
+
+.lrmain {
+	display: grid;
+	gap: 20px;
+}
+
+.lrdes {
+	font-size: 1rem;
+	line-height: 120%;
+}
+
+.LrpriceBlock {
+	display: flex;
+	gap: 60px;
+}
+
+.lrprice {
+	display: flex;
+	flex-direction: column;
+	gap: 17px;
+}
+
+.lrprice1 {
+	font-weight: 700;
+	font-size: 2.5rem;
+	line-height: 100%;
+}
+
+.lrprice2 {
+	font-size: 24px;
+	line-height: 100%;
+}
+
+.ListRestarauntsFilter {
+	display: grid;
+	gap: 60px;
+}
+
+@media screen and (max-width: 768px) {
+	.ListRestarauntPage {
+		margin-top: 32vw;
+	}
+
+	.ListRestarauntBlock {
+		gap: 15px;
+	}
+
+	.lrmain {
+		gap: 10px;
+	}
+
+	.lropis {
+		font-size: 1.5rem;
+	}
+
+	.ListRestarauntContainer {
+		gap: 50px;
+	}
+
+	.ListRestarauntTitle {
+		font-size: 3rem;
+	}
+
+	.ListRestarauntTitle img {
+		max-width: 15vw;
+	}
+
+	.ListRestarauntBlock1 {
+		gap: 2vw;
+	}
+
+	.LRdescribe {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.ListRestarauntsFilter {
+		gap: 50px;
+	}
+
+	.LrpriceBlock {
+		gap: 10vw;
+	}
+
+	.lrprice {
+		gap: 10px;
+	}
+
+	.lrprice1 {
+		font-weight: 500;
+		font-size: 3rem;
+	}
+
+	.lrprice2 {
+		font-size: 1rem;
+	}
+}

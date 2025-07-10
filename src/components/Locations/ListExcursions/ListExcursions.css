@@ -1,0 +1,172 @@
+.accent {
+	color: var(--accent-color);
+}
+
+.detailRentAnimation {
+	display: flex;
+	width: 16%;
+	max-height: 80%;
+}
+
+.ListExcursionPage {
+	min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 7.32vw;
+	margin-top: 16.105vw;
+    margin-bottom: 10.978vw;
+}
+
+.ListExcursionContainer {
+	max-width: 91%;
+    width: 100%;
+    display: grid;
+    gap: 100px;
+    margin: 0 auto;
+}
+
+.ListExcursionTitle {
+	display: flex;
+    flex-direction: column;
+    letter-spacing: -0.05em;
+    line-height: 100%;
+    font-weight: 700;
+    font-size: 6.4rem;
+}
+
+.ListExcursionBlock1 {
+	justify-content: space-between;
+}
+
+.ListExcursionTitle > span {
+    display: flex;
+    gap: 5vw;
+}
+
+.ListExcursionTitle > span:last-child {
+    align-self: center;
+    color: var(--accent-color);
+}
+
+.ListExcursionBlock {
+	display: grid;
+    row-gap: 60px;
+}
+
+.ListExcursionMain {
+    width: 100%;
+}
+
+.LEdescribe {
+	display: grid;
+	grid-template-columns: 1fr max-content;
+	justify-content: space-between;
+	align-items: center;
+	gap: 15vw;
+}
+
+.leopis {
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 100%;
+	text-transform: uppercase;
+}
+
+.lemain {
+	display: grid;
+	gap: 20px;
+}
+
+.ledes {
+	font-size: 1rem;
+	line-height: 120%;
+}
+
+.LepriceBlock {
+	display: flex;
+	gap: 60px;
+}
+
+.leprice {
+	display: flex;
+	flex-direction: column;
+	gap: 17px;
+}
+
+.leprice1 {
+	font-weight: 700;
+	font-size: 2.5rem;
+	line-height: 100%;
+}
+
+.leprice2 {
+	font-size: 24px;
+	line-height: 100%;
+}
+
+.ListExcursionsFilter {
+	display: grid;
+	gap: 60px;
+}
+
+@media screen and (max-width: 768px) {
+	.ListExcursionPage {
+		margin-top: 32vw;
+	}
+
+	.ListExcursionBlock {
+		gap: 15px;
+	}
+
+	.lemain {
+		gap: 10px;
+	}
+
+	.leopis {
+		font-size: 1.5rem;
+	}
+
+	.ListExcursionContainer {
+		gap: 50px;
+	}
+
+	.ListExcursionTitle {
+		font-size: 3rem;
+	}
+
+	.ListExcursionTitle img {
+		max-width: 15vw;
+	}
+
+	.ListExcursionBlock1 {
+		gap: 2vw;
+	}
+
+	.LEdescribe {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.ListExcursionsFilter {
+		gap: 50px;
+	}
+
+	.LepriceBlock {
+		gap: 10vw;
+	}
+
+	.leprice {
+		gap: 10px;
+	}
+
+	.leprice1 {
+		font-weight: 500;
+		font-size: 3rem;
+	}
+
+	.leprice2 {
+		font-size: 1rem;
+	}
+}
