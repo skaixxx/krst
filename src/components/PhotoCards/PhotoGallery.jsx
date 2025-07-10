@@ -43,6 +43,7 @@ const PhotoGallery = ({
             return {
                 width: `calc(${width} * 1.2)`,
                 height: `calc(${height} * 1.2)`,
+                filter: "grayscale(0%)",
             };
         }
         return {
