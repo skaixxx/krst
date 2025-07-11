@@ -120,17 +120,20 @@
     width: 100%;
     height: 20%;
     position: relative;
+    display: flex;
+    border-radius: 1.25rem;
+    background-color: #F2ECE4;
 }
 .footer-input-email {
     width: 100%;
     height: 100%;
     padding-left: 1rem;
     border: none;
-    background-color: #F2ECE4;
-    border-radius: 1.25rem;
     font-size: .8rem;
     outline: none;
-    caret-color: transparent; /* скрываем стандартную каретку */
+    caret-color: transparent;
+    background-color: transparent;
+    padding-right: 0.45rem;
 }
 
 .custom-caret {
@@ -156,7 +159,7 @@
 }
 
 .send-email-button {
-    width: 21.25%;
+    width: 6rem;
     height: 100%;
     border: none;
     background-color: #780513;
@@ -164,7 +167,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
     top: 0;
     right: 0;
 }
