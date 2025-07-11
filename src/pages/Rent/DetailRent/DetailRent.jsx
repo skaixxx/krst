@@ -9,12 +9,15 @@ import Filter from '../../../components/Filter/Filter';
 
 
 function DetailRent() {
+	
+	const [selectedTags, setSelectedTags] = useState([]);
+	const [isFilterOpen, setIsFilterOpen] = useState(false);
+
 	const { id } = useParams();
 	const navigate = useNavigate();
 	const goToPlace = (placeId) => {
 		navigate(`/rent/${id}/${placeId}`);
 	};
-	const [selectedTags, setSelectedTags] = useState([]);
 
 	useEffect(() => {
         window.scrollTo(0, 0)
@@ -89,6 +92,8 @@ function DetailRent() {
 					tags={tagGroups}
 					selectedTags={selectedTags}
 					onChange={setSelectedTags}
+					isOpen={isFilterOpen}
+					onToggle={setIsFilterOpen}
 				></Filter>
 
 				<div className={style.cardList}>

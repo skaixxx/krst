@@ -48,6 +48,14 @@
 	padding-right: 0;
 }
 
+.filterBtnArrow {
+	transition: transform 0.2s ease
+}
+
+.filterBtnArrowRotated {
+	transform: rotate(180deg);		
+}
+
 .filterMenu {
 	min-height: 275px;
 	width: 100%;
@@ -121,9 +129,11 @@
 	background-color: #780513;
 	border-color: #780513;
 }
+
 .filterTag.active .filterTagDelete {
 	color: #F2ECE4;
 }
+
 .filterTagDelete {
 	display: flex;
 	align-items: center;

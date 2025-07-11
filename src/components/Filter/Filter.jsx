@@ -6,14 +6,18 @@ import iconArrowDown from '../../assets/filter/arrow-down.svg'
 
 import IconClose from './IconClose'
 
-export default function Filter({tags, selectedTags, onChange}) {
-	const [isOpen, setIsOpen] = useState(false);
-	const togglePopup = () => setIsOpen(!isOpen);
-	const closePopup = () => setIsOpen(false);
+export default function Filter({tags, selectedTags, onChange, isOpen, onToggle}) {
+	
+	const togglePopup = () => onToggle(!isOpen);
+	const closePopup = () => onToggle(false);
 
-	const toggleTag = (tag) => {
+	const toggleTag = (tag, e) => {
+		
+		e.stopPropagation();
+		
 		const isSelected = selectedTags.includes(tag);
 		const newTags = isSelected
+
 		? selectedTags.filter(t => t !== tag)
 		: [...selectedTags, tag];
 
@@ -32,7 +36,7 @@ export default function Filter({tags, selectedTags, onChange}) {
 						<div key={index} className={style.filterTag}>
 						<span>{tag}</span>
 						<button
-							onClick={() => toggleTag(tag)}
+							onClick={(e) => toggleTag(tag, e)}
 							className={style.filterTagDelete}
 						>
 							<IconClose />
@@ -48,7 +52,10 @@ export default function Filter({tags, selectedTags, onChange}) {
 					<img src={iconClose} alt="" />
 				</button>
 				<button className={style.filterBtn} onClick={togglePopup}>
-					<img src={iconArrowDown} alt="" />
+					<img 
+						src={iconArrowDown}
+						alt=""
+						className={`${style.filterBtnArrow} ${isOpen ? style.filterBtnArrowRotated : ''}`}/>
 				</button>
 			</div>
 
@@ -70,7 +77,7 @@ export default function Filter({tags, selectedTags, onChange}) {
 									return (
 										<li key={tagIndex}>
 											<div
-												onClick={() => toggleTag(tag)}
+												onClick={(e) => toggleTag(tag, e)}
 												className={`${style.filterTag} ${isActive ? style.active : ''}`}
 											>
 												<span>{tag}</span>
