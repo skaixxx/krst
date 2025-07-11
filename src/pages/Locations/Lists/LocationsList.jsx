@@ -5,8 +5,6 @@ import clsx from "clsx";
 import RotatingCross from "../../../components/animations/RotatingCross/RotatingCross";
 import ScaleSlideDotsInverted from "../../../components/animations/ScaleSlideDots/ScaleSlideDotsInverted";
 
-
-
 export default function LocationsList() {
     const data = {
         Restraunts: {
