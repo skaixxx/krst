@@ -5,14 +5,13 @@ import ButtonGoToDesktop from "../../components/Buttons/ButtonGoToDesktop";
 import PhotoGallery from "../../components/PhotoCards/PhotoGallery";
 import style from "./Locations.module.css"
 import { useEffect, useState } from "react";
-import Restraunts from "./Lists/Restraunts";
-import { useNavigate, useParams } from "react-router";
+import { useNavigate } from "react-router";
 
 const Locations = () => {
 
     const galleryPhotos = [
         {
-            id: "restraunts",
+            id: "Restraunts",
             url: "./images/locations/restaurants.png",
             alt: "Рестораны",
             title: "СПИСОК",
@@ -20,7 +19,7 @@ const Locations = () => {
             description: "Вкус, который запомнится: уникальные блюда и атмосфера наших ресторанов!"
         },
         {
-            id: "masterClasses",
+            id: "MasterClasses",
             url: "./images/locations/masterClasses.png",
             alt: "Мастер-классы",
             title: "МАСТЕР  —",
@@ -36,19 +35,17 @@ const Locations = () => {
             description: "Раскройте тайны прошлого в увлекательных экскурсиях по нашему музею!"
         }
     ];
-    
+    const navigate = useNavigate();
     // Состояние для хранения выбранного индекса
     const [selectedIndex, setSelectedIndex] = useState(0)
     const [displayedIndex, setDisplayedIndex] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
     const [actualId, setActualId] = useState("");
-    const id = useParams();
-    const subNav = useNavigate()
-    const pageTransition = (actualId) => {
-        subNav(`/Locations/:${id}/${actualId}`);
-    }
     
-
+    const handleNavigation = () => {
+        const activeCard = galleryPhotos[displayedIndex];
+        navigate(`/Locations/${activeCard.id}`)
+    }
     useEffect(() => {
         if (selectedIndex !== displayedIndex) {
             setIsAnimating(true) // Запускаем анимацию
@@ -97,7 +94,7 @@ const Locations = () => {
                     <p className={`${style.description} ${isAnimating ? style.fadeOut : style.fadeIn}`}>
                         {galleryPhotos[displayedIndex].description} 
                     </p>
-                    <ButtonGoToDesktop text="перейти"/>                        
+                    <ButtonGoToDesktop text="перейти" action={handleNavigation}/>                        
                 </div>            
             </div>
         </div>

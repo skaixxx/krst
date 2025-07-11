@@ -1,0 +1,73 @@
+.container {
+    min-height: 100dvh;
+    display: flex;
+    width: 91.2153%;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16.11vw;
+    margin-bottom: 7.32vw;
+    row-gap: 5rem;
+}
+.titleContainer {
+    height: 17.2vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.titleText {
+    font-size: 6.4rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 72.9%;
+}
+.titleText2 {
+    color: var(--accent-color);
+}
+.fullscreenPicContainer {
+    width: 100%;
+}
+.fullscreenPic {
+    width: 100%;
+    height: auto;
+}
+.descriptionRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.descriptionBox1 {
+    width: 48.96%;
+}
+.descriptionTitle {
+    font-size: 2rem;
+    font-weight: 500;
+}
+.descriptionRowCol1 {
+    width: 40.69%;
+    display: flex;
+    justify-content: space-between;
+}
+.descriptionBox2 {
+    width: 51.87%;
+}
+.descriptionPrice {
+    font-size: 3.4rem;
+    font-weight: 700;
+}
+.descriptionBox3 {
+    width: 25.25%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.descriptionPlaces {
+    font-size: 3.4rem;
+    font-weight: 700;
+}
+.filterRow {
+    height: 2.5rem;
+    width: 100%;
+    display: flex;
+}
