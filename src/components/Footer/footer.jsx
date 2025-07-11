@@ -8,36 +8,26 @@ import dzenIcon from "../../assets/footer/dzenIcon.svg"
 import tgIcon from "../../assets/footer/tgIcon.svg"
 import vkIcon from "../../assets/footer/vkIcon.svg"
 import LanguageSelector from "./LanguageSelector"
-import { useRef, useState } from "react"
+import { useRef } from "react"
 
 function Footer() {
     
-    const[email, setEmail] = useState('');
-    const[isFocused, setIsFocused] = useState(false);
-    
     const caretRef = useRef(null);
     const inputRef = useRef(null);
-    
-    const handleFocus = (e) => {
-        setIsFocused(true);
-        e.target.placeholder = '';    
-    };
-    
-    const handleBlur = (e) => {
-        setIsFocused(false);
-        if (e.target.value === '') {
-            e.target.placeholder = e.target.dataset.placeholder || '';
-        }
-    };
-
-    const handleChange = (e) => {
-        setEmail(e.target.value);
-        if(isFocused) positionCaret();
-    }
 
     const positionCaret  = () => {
 
         if(!inputRef.current || !caretRef.current) return;
+
+        // Получаем значение 1rem в пикселях
+        const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+        const remInPixels = rootFontSize;
+
+        // Получаем позицию курсора
+        const caretPosition = inputRef.current.selectionStart;
+        
+        // Получаем текст до курсора
+        const textBeforeCaret = inputRef.current.value.substring(0, caretPosition);
 
         // Создаем временный span для измерения ширины текста
         const tempSpan = document.createElement('span');
@@ -48,14 +38,23 @@ function Footer() {
         tempSpan.style.fontSize = window.getComputedStyle(inputRef.current).fontSize;
         tempSpan.style.fontFamily = window.getComputedStyle(inputRef.current).fontFamily;
 
-        tempSpan.textContent = inputRef.current.value;
+        tempSpan.textContent = textBeforeCaret;
 
         document.body.appendChild(tempSpan);
         const width = tempSpan.getBoundingClientRect().width;
         document.body.removeChild(tempSpan);
         
-        // Устанавливаем позицию каретки
-        caretRef.current.style.left = `calc(1rem + ${width}px)`; // 1rem - это padding-left инпута
+        // Автоматическая прокрутка input при достижении границы
+        const inputWidth = inputRef.current.clientWidth - remInPixels * 1.1;
+        const scrollLeft = width - inputWidth
+
+        if (scrollLeft > 0) 
+        {
+            inputRef.current.scrollLeft = scrollLeft;
+        } else {
+            inputRef.current.scrollLeft = 0;
+            caretRef.current.style.left = `calc(1rem + ${width}px)`;
+        }
     }
 
     return (
@@ -96,14 +95,10 @@ function Footer() {
                 <div className="footer-mail-input-container">
                     <input
                         ref={inputRef}
-                        type="email"
-                        value={email}
-                        placeholder="Введите вашу почту"
                         data-placeholder='Введите вашу почту'
                         className="footer-input-email"
-                        onChange={handleChange}
-                        onFocus={handleFocus}
-                        onBlur={handleBlur}
+                        onChange={positionCaret}
+                        onSelect={positionCaret}
                     />
                     <div
                         ref={caretRef}
