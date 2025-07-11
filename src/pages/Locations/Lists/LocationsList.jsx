@@ -1,8 +1,9 @@
 import { useParams } from "react-router"
 import style from "./LocationsList.module.css"
 import NotFound from "../../404/NotFound";
-import { picture } from "framer-motion/client";
 import clsx from "clsx";
+import RotatingCross from "../../../components/animations/RotatingCross/RotatingCross";
+import ScaleSlideDotsInverted from "../../../components/animations/ScaleSlideDots/ScaleSlideDotsInverted";
 
 
 
@@ -54,8 +55,14 @@ export default function LocationsList() {
                     <p className={clsx(style.titleText1, style.titleText)}>
                         {current.title}
                     </p>
+                    <div className={style.titleAnimationContainer1}>
+                        <ScaleSlideDotsInverted/>
+                    </div>
                 </div>
                 <div className={style.titleRow2}>
+                    <div className={style.titleAnimationContainer2}>
+                        <RotatingCross/>
+                    </div>
                     <p className={clsx(style.titleText2, style.titleText)}>
                         {current.subtitle}
                     </p>
