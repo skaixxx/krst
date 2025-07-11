@@ -89,22 +89,41 @@
     justify-content: end;
     color: var(--secondary-color);
 }
+
 .strokeContainer {
+    position: relative;
     height: 9.5168vw;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    mask-image: linear-gradient(
-        to right,
-        rgba(0,0,0,0),
-        rgba(0,0,0,1) 8%,
-        rgba(0,0,0,1) 92%,
-        rgba(0,0,0,0)
-    );
-    border-bottom: 1px solid var(--secondary-color);
-    border-top: 1px solid var(--secondary-color);
 }
+
+
+.strokeContainer::before,
+.strokeContainer::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--secondary-color) 12%,
+        var(--secondary-color) 88%,
+        transparent
+    );    
+}
+
+.strokeContainer::before {
+    top: 0;
+}
+
+.strokeContainer::after {
+    bottom: 0;
+}
+
 .strokeElement {
     display: flex;
     justify-content: center;
@@ -160,6 +179,7 @@
     .container1 {
         row-gap: 5vh;
         margin-bottom: 10vh;
+        margin-top: 9rem;
     }
     .titleContainer {
         width: 89.33%;
@@ -223,7 +243,8 @@
     }
     .strokeContainer {
         width: 100%;
-        height: 8.14rem;
+        height: fit-content;
+        padding: 1rem 0;
     }
     .strokeElement {
         height: 73.68%;

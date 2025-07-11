@@ -26,9 +26,9 @@ function SpecificEvent() {
                         <div className={clsx(style.title1, style.title)}>
                             <p>{item.title1}</p>
                         </div>
-                        <div className={style.animation1}>
-                            <SlidingRotatingCross/>
-                        </div>
+                        {!isMobile || item.id !== 9 &&
+                            <div className={style.animation1}><SlidingRotatingCross/></div>
+                        }   
                     </div>
                     <div className={style.titleContainerSub2}>
                         {!isMobile &&
@@ -37,6 +37,9 @@ function SpecificEvent() {
                         <div className={clsx(style.title2, style.title)}>
                             <p>{item.title2}</p>
                         </div>
+                        {isMobile && item.id === 9 &&
+                            <div className={style.animation1}><SlidingRotatingCross/></div>
+                        } 
                     </div>
 
                 </div>
