@@ -9,7 +9,7 @@ import NotFound from "../../404/NotFound";
 import clsx from "clsx";
 import useMediaQuery from "../../../components/Header/useMediaQuery";
 import { eventsData } from "../../../data/events";
-import { CardsProvider } from "../../../routes/LocationsContext";
+import { CardsProvider } from "../../../routes/CardsContext";
 function SpecificEvent() {
     const isMobile = useMediaQuery('(max-width: 768px)');
     const { id } = useParams();
