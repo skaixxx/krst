@@ -3,7 +3,10 @@ import styles from "./HistoryCarouselStyle.module.css";
 import useMediaQuery from "../Header/useMediaQuery";
 
 const Carousel = ({ items }) => {
+ 
+  const cardsRefs    = useRef([]);
   const containerRef = useRef(null);
+
   const [activeIndex, setActiveIndex] = useState(0);
   const sectionLength = items.length;
   const isMobile = useMediaQuery('(max-width: 768px)');
@@ -136,6 +139,26 @@ const Carousel = ({ items }) => {
     }, 300);
   };
 
+  // Нахождение ширины для элементов 
+  useEffect(() => {
+
+    if (cardsRefs.current.length === 0) return;
+    let maxWidth = 0;
+
+    // 1. Сначала получаем все ширины
+    cardsRefs.current.forEach(card => {
+      const width = card.getBoundingClientRect().width;
+      if (width > maxWidth) maxWidth = width;
+    });
+
+    // 2. Затем устанавливаем максимальную ширину
+    cardsRefs.current.forEach(card => {
+      card.style.flex = `0 0 ${maxWidth}px`;
+      card.style.width = `${maxWidth}px`;
+    });
+
+  }, [items]);
+
   return (
     <div className={styles.carouselWrapper}>
       <div className={styles.decorativeLine} />
@@ -157,7 +180,7 @@ const Carousel = ({ items }) => {
           const isActive = trueIndex === activeIndex;
 
           return (
-            <a
+            <a  
               key={index}
               href={`#${item.id}`}
               className={styles.card}
@@ -170,6 +193,7 @@ const Carousel = ({ items }) => {
                 transition: "transform 0.3s ease",
                 cursor: "pointer",
               }}
+              ref={el => cardsRefs.current[index] = el}
             >
               <div
                 className={`${styles.indicator} ${

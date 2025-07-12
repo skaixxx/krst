@@ -3,7 +3,7 @@
   width: 100%;
   overflow: hidden;
   position: absolute;
-  top: 6.5%;
+  top: 10%;
 }
 
 .carousel {
@@ -64,11 +64,12 @@
 
 .text {
   font-size: 1rem;
+  white-space: nowrap;
 }
 @media screen and (max-width: 768px) {
-  .carouselWrapper {
+  /* .carouselWrapper {
     top: 0;
-  }
+  } */
   .title {
     font-size: 1.43rem;
   }
