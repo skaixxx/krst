@@ -10,7 +10,6 @@ import Contacts from "../pages/Contacts/Contacts"
 import Residence from "../pages/Residence/Residence"
 import SpecificEvent from "../pages/Events/SpecificEvent/SpecificEvent";
 import NotFound from "../pages/404/NotFound";
-import { DataProvider } from "./DataContext";
 import LocationsList from "../pages/Locations/Lists/LocationsList";
 const AppRoutes = () => {
     const navbar = [
@@ -27,14 +26,12 @@ const AppRoutes = () => {
         {path: "/Events/SpecificEvent/:id", element: <SpecificEvent/>},
         {path: "*", element:<NotFound/>}
     ]
-    return (
-        <DataProvider>
+    return(
         <Routes>
             {navbar.map((route) =>(
                 <Route key={route.path} path={route.path} element={route.element}/>
             ))}
         </Routes>
-        </DataProvider>
         );
 };
 export default AppRoutes;

@@ -95,8 +95,9 @@
     font-size: 3.4rem;
     font-weight: 700;
 }
-.filterRow {
-    height: 2.5rem;
+.cardsList {
+    height: max-content;
     width: 100%;
     display: flex;
+    flex-direction: column;
 }

@@ -8,19 +8,16 @@ import listPoint from "../../assets/mainPage/listPoint.svg"
 import mobBg from "../../assets/mainPage/mobileStaticMP.png"
 import fsBg from "../../assets/mainPage/staticMP.png"
 import SlidingRotatingCross from "../../components/animations/SRCross/SlidingRotatingCross"
-import { useData } from "../../routes/DataContext"
+import { eventsData } from "../../data/events"
 import { useNavigate } from "react-router"
 import useMediaQuery from "../../components/Header/useMediaQuery"
 function MainPage() {
-    
-    const { items } = useData();
-        
     const navigate = useNavigate();
     const isMobile = useMediaQuery('(max-width: 768px)');
     const bgSectionStyle = isMobile ? mobBg : fsBg;
 
-    const limitedCard = items.map(item =>
-    item.id === 4 && isMobile? items.find(item => item.id === 8) : item).slice(0, 5);
+    const limitedCard = eventsData.map(item =>
+    item.id === 4 && isMobile? eventsData.find(item => item.id === 8) : item).slice(0, 5);
 
     const handleClick = (id) => {
         navigate(`/Events/SpecificEvent/${id}`)

@@ -3,9 +3,9 @@ import "../../components/general.css";
 import { useData } from "../../routes/DataContext";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { CardsProvider } from "../../routes/LocationsContext";
+import { eventsData } from "../../data/events";
 function Events() {
-    
-    const { items } = useData();
     const navigate = useNavigate();
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -31,8 +31,9 @@ function Events() {
     }, []);
 
     return (
+        <CardsProvider data={eventsData}>
         <div className="grid-container-events">
-            {items.map((item) =>(
+            {eventsData.map((item) =>(
                 <div className={`card card${item.id}`} style={{
                     backgroundImage: `url(${item.image})`,
                     backgroundPosition: "center",
@@ -56,7 +57,7 @@ function Events() {
             <div className="TextBox TextBox3"><span>ИДЕШЬ</span></div>
             <div className="TextBox TextBox4"><span>СЕГОДНЯ?</span></div>
         </div>
-
+    </CardsProvider>
     );
 }
 export default Events;

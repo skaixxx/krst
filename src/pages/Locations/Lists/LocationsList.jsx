@@ -4,8 +4,14 @@ import NotFound from "../../404/NotFound";
 import clsx from "clsx";
 import RotatingCross from "../../../components/animations/RotatingCross/RotatingCross";
 import ScaleSlideDotsInverted from "../../../components/animations/ScaleSlideDots/ScaleSlideDotsInverted";
+import Card from "../../../components/Card/Сard";
+import Filter from "../../../components/Filter/Filter";
+import { useState } from "react";
+import { restraunts } from "../../../data/Restraunts";
 
 export default function LocationsList() {
+    const [selectedTags, setSelectedTags] = useState([]);
+    const [isFilterOpen, setIsFilterOpen] = useState(false);
     const data = {
         Restraunts: {
             tag: "#ОПИСАНИЕ",
@@ -16,7 +22,8 @@ export default function LocationsList() {
             price: "2 500 ₽",
             priceDescription: "Средний чек",
             places: "65",
-            placesDescription: "Заведений"
+            placesDescription: "Заведений",
+            buttonText: "забронировать"
         },
         MasterClasses: {
             tag: "#ОПИСАНИЕ",
@@ -27,7 +34,8 @@ export default function LocationsList() {
             price: "1 500 ₽",
             priceDescription: "Средний чек",
             places: "15",
-            placesDescription: "Мест в группе"
+            placesDescription: "Мест в группе",
+            buttonText: "записаться"
         },
         Exquisites: {
             tag: "#ОПИСАНИЕ",
@@ -38,9 +46,30 @@ export default function LocationsList() {
             price: "4 часа",
             priceDescription: "Средняя продолжительность",
             places: "10 +",
-            placesDescription: "Уникальных маршрутов"
+            placesDescription: "Уникальных маршрутов",
+            buttonText: "купить"
         }
     }
+    const tagGroups = [
+        {
+            title: 'Кухня',
+            tags: [
+                '#европейская',
+                '#завтраки',
+                '#грузинская',
+                '#семейный',
+                '#авторская',
+                '#детскоеменю',
+                '#китайская',
+            ]
+        }
+    ];
+
+    const filteredPlaces = selectedTags.length === 0
+    ? restraunts
+    : restraunts.filter(restraunts =>
+        restraunts.tags.some(tagObj => selectedTags.includes(tagObj.name))
+    );
     const { id } = useParams();
     const current = data[id];
     if (!current) {
@@ -85,8 +114,28 @@ export default function LocationsList() {
                     </div>
                 </div>
             </div>
-            <div className={style.filterRow}>
-                filter here
+            <div className={style.cardsList}>
+                <Filter
+					tags={tagGroups}
+					selectedTags={selectedTags}
+					onChange={setSelectedTags}
+					isOpen={isFilterOpen}
+					onToggle={setIsFilterOpen}
+				></Filter>
+
+				<div className={style.cardList}>
+					{filteredPlaces.map((card, index) => (						
+						<Card
+							key={card.id}
+							data={card}
+							reverse={index % 2 === 1}
+							btnText={current.buttonText}
+							btnAction={""}
+						>
+							{card.text}
+						</Card>
+					))}
+				</div>
             </div>
         </div>
     )
