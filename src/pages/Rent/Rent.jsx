@@ -35,17 +35,17 @@ function Rent() {
                 </div>
             </div>
 
-            <div className="specific-event-stroke-container">
-                <div className="specific-event-stroke-element">
-                    <span className="specific-event-stroke-term">4,17</span>
+            <div className={style.specificEventStrokeContainer}>
+                <div className={style.specificEventStrokeElement}>
+                    <span className={style.specificEventStrokeTerm}>4,17</span>
                     <p>гектара<br/> общая площадь</p>
                 </div>
-                <div className="specific-event-stroke-element">
-                    <span className="specific-event-stroke-term">50</span>
+                <div className={style.specificEventStrokeElement}>
+                    <span className={style.specificEventStrokeTerm}>50</span>
                     <p>кол-во<br/> помещений</p>
                 </div>
-                <div className="specific-event-stroke-element">
-                    <span className="specific-event-stroke-term">16</span>
+                <div className={style.specificEventStrokeElement}>
+                    <span className={style.specificEventStrokeTerm}>16</span>
                     <p>кол-во<br/> зданий</p>
                 </div>
             </div>

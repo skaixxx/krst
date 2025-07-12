@@ -77,6 +77,52 @@
     max-width: 80%;
 }
 
+.specificEventStrokeContainer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    position: relative;
+    max-width: 91%;
+    width: 100%;            
+}
+
+.specificEventStrokeContainer::before,
+.specificEventStrokeContainer::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--secondary-color) 12%,
+        var(--secondary-color) 88%,
+        transparent
+    );
+}
+
+.specificEventStrokeContainer::before {
+    top: 0;
+}
+
+.specificEventStrokeContainer::after {
+    bottom: 0;
+}
+
+.specificEventStrokeElement {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.specificEventStrokeTerm {
+    font-weight: 700;
+    font-size: 3rem;
+}
+
 @media screen and (max-width: 768px) {
     .rentPage {
         margin-top: 9rem;
