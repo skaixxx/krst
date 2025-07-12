@@ -1,6 +1,5 @@
 import "./events.css";
 import "../../components/general.css";
-import { useData } from "../../routes/DataContext";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { CardsProvider } from "../../routes/CardsContext";

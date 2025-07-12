@@ -11,6 +11,7 @@ import Residence from "../pages/Residence/Residence"
 import SpecificEvent from "../pages/Events/SpecificEvent/SpecificEvent";
 import NotFound from "../pages/404/NotFound";
 import LocationsList from "../pages/Locations/Lists/LocationsList";
+import SpecificLocations from "../pages/Locations/SpecificLocations/SpecificLocations";
 const AppRoutes = () => {
     const navbar = [
         {path: "/", element: <MainPage/>},
@@ -18,6 +19,7 @@ const AppRoutes = () => {
         {path: "/Events", element: <Events/>},
         {path: "/Locations", element: <Locations/>},
         {path: "/Locations/:id", element: <LocationsList/>},
+        {path: "/Locations/:id/:special", element: <SpecificLocations/>},
         {path: "/Rent", element: <Rent/>},
         {path: "/Rent/:id", element: <DetailRent/>},
         {path: "/Rent/:id/:place", element: <Placement/>},

@@ -1,6 +1,7 @@
 export const restraunts = [
     {
-		id: 1,
+		id: "nomad",
+		special: "nomad",
 		title: 'NOMAD',
 		area: '40 мест',
 		image: '/images/locations/Restraunts/nomad.png',
@@ -28,7 +29,8 @@ export const restraunts = [
 		]
 	},
 	{
-		id: 2,
+		id: "starikHinkalich",
+		special: "starikHinkalich",
 		title: 'СТАРИК ХИНКАЛЫЧ',
 		area: '40 мест',
 		image: '/images/locations/Restraunts/nomad.png',
@@ -61,7 +63,7 @@ export const restraunts = [
 		]
 	},
 	{
-		id: 3,
+		id: "marsala",
 		title: 'MARSALA',
 		area: '60 мест',
 		image: '/images/locations/Restraunts/nomad.png',
@@ -95,7 +97,7 @@ export const restraunts = [
 		]
 	},
 	{
-		id: 4,
+		id: "baklazhan",
 		title: 'БАКЛАЖАН',
 		area: '40 мест',
 		image: '/images/locations/Restraunts/nomad.png',
@@ -129,7 +131,7 @@ export const restraunts = [
 		]
 	},
 	{
-		id: 5,
+		id: "tigerLily",
 		title: 'TIGER LILY',
 		area: '70 мест',
 		image: '/images/locations/Restraunts/nomad.png',
@@ -162,7 +164,7 @@ export const restraunts = [
 		]
 	},
 	{
-		id: 6,
+		id: "leth",
 		title: 'LETH',
 		area: '30 мест',
 		image: '/images/locations/Restraunts/nomad.png',

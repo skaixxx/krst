@@ -1,4 +1,4 @@
-import { useParams } from "react-router"
+import { useNavigate, useParams } from "react-router"
 import style from "./LocationsList.module.css"
 import NotFound from "../../404/NotFound";
 import clsx from "clsx";
@@ -71,6 +71,10 @@ export default function LocationsList() {
         restraunts.tags.some(tagObj => selectedTags.includes(tagObj.name))
     );
     const { id } = useParams();
+    const navigate = useNavigate()
+    const handleNavigation = ( id, special) => {
+        navigate(`/Locations/${id}/${special}`)
+    }
     const current = data[id];
     if (!current) {
         return <NotFound/>
@@ -130,7 +134,7 @@ export default function LocationsList() {
 							data={card}
 							reverse={index % 2 === 1}
 							btnText={current.buttonText}
-							btnAction={""}
+							btnAction={() => handleNavigation( id, card.special)}
 						>
 							{card.text}
 						</Card>

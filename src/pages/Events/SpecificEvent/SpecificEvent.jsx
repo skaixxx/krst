@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-import { useData } from "../../../routes/DataContext";
 import SpecificEventButton from "../../../components/Buttons/ButtonGoToDesktop";
 import style from "./SpecificEvent.module.css";
 import SlidingRotatingCross from "../../../components/animations/SRCross/SlidingRotatingCross";
@@ -9,7 +8,6 @@ import NotFound from "../../404/NotFound";
 import clsx from "clsx";
 import useMediaQuery from "../../../components/Header/useMediaQuery";
 import { eventsData } from "../../../data/events";
-import { CardsProvider } from "../../../routes/CardsContext";
 function SpecificEvent() {
     const isMobile = useMediaQuery('(max-width: 768px)');
     const { id } = useParams();
@@ -18,7 +16,6 @@ function SpecificEvent() {
         window.scrollTo(0, 0)
     }, [])
     return (
-        <CardsProvider data={eventsData}>
         <div className={style.specificEvent}>
             {item ? (
             <div className={style.container1}>
@@ -84,7 +81,6 @@ function SpecificEvent() {
                 <NotFound/>
             )}
         </div>
-        </CardsProvider>
     );
 }
 
