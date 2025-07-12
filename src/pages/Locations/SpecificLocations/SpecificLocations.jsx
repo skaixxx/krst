@@ -8,13 +8,28 @@ import NotFound from "../../404/NotFound";
 import clsx from "clsx";
 import useMediaQuery from "../../../components/Header/useMediaQuery";
 import { restraunts } from "../../../data/Restraunts";
+import { masterClasses } from "../../../data/masterClasses";
+import { exquisites } from "../../../data/exquisites";
 function SpecificLocations() {
-    const isMobile = useMediaQuery('(max-width: 768px)');
-    const { special } = useParams();
-    const item = restraunts.find((item) => item.id === special);
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
+    const isMobile = useMediaQuery('(max-width: 768px)');
+    const { id, special } = useParams();
+    console.log("start id ", id)
+    var item = "";
+    if (id === "Restraunts") {
+        item = restraunts.find((item) => item.id === special);
+        console.log(id)
+    } else if (id === "MasterClasses") {
+        item = masterClasses.find((item) => item.id === special);
+        console.log(id)
+    } else if (id === "Exquisites") {
+        item = exquisites.find((item) => item.id === special);
+        console.log(id)
+    } else {
+        return <NotFound/>
+    }
     return (
         <div className={style.specific}>
             {item ? (

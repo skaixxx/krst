@@ -11,7 +11,7 @@ const Locations = () => {
 
     const galleryPhotos = [
         {
-            id: "Restraunts",
+            id: "restraunts",
             url: "./images/locations/restaurants.png",
             alt: "Рестораны",
             title: "СПИСОК",
@@ -19,7 +19,7 @@ const Locations = () => {
             description: "Вкус, который запомнится: уникальные блюда и атмосфера наших ресторанов!"
         },
         {
-            id: "MasterClasses",
+            id: "masterClasses",
             url: "./images/locations/masterClasses.png",
             alt: "Мастер-классы",
             title: "МАСТЕР  —",
@@ -27,7 +27,7 @@ const Locations = () => {
             description: "Освойте новые навыки и вдохновитесь: вместе с нами вы сможете достичь невероятного!"
         },
         {
-            id: "Exquisites",
+            id: "exquisites",
             url: "./images/locations/excursions.png",
             alt: "Экскурсии",
             title: "ЭКСКУРСИИ",

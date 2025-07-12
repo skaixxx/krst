@@ -7,13 +7,12 @@ import ScaleSlideDotsInverted from "../../../components/animations/ScaleSlideDot
 import Card from "../../../components/Card/Сard";
 import Filter from "../../../components/Filter/Filter";
 import { useState } from "react";
-import { restraunts } from "../../../data/Restraunts";
-
+import { DataPick } from "../../../components/Locations/DataPick";
 export default function LocationsList() {
     const [selectedTags, setSelectedTags] = useState([]);
     const [isFilterOpen, setIsFilterOpen] = useState(false);
     const data = {
-        Restraunts: {
+        restraunts: {
             tag: "#ОПИСАНИЕ",
             description: "В КРСТ представлены рестораны на любой вкус — от уютных кафе до премиальных заведений. Здесь вы легко найдете место для деловой встречи, семейного ужина или дружеских посиделок.",
             title: "СПИСОК",
@@ -25,7 +24,7 @@ export default function LocationsList() {
             placesDescription: "Заведений",
             buttonText: "забронировать"
         },
-        MasterClasses: {
+        masterClasses: {
             tag: "#ОПИСАНИЕ",
             description: "Бывшая тюрьма, ставшая творческим пространством, теперь открыта для мастер-классов по искусству. Здесь, среди исторических стен, профессиональные художники делятся своим опытом, помогая каждому раскрыть творческий потенциал.",
             title: "МАСТЕР  —",
@@ -37,7 +36,7 @@ export default function LocationsList() {
             placesDescription: "Мест в группе",
             buttonText: "записаться"
         },
-        Exquisites: {
+        exquisites: {
             tag: "#ОПИСАНИЕ",
             description: "КРСТ — уникальное пространство, где история встречается с современным искусством. Бывшая тюрьма, сохранившая дух прошлого, теперь центр творчества и культуры. Наши экскурсии раскрывают истории этих стен через искусство, архитектуру и городские легенды.",
             title: "ЭКСКУРСИИ",
@@ -65,12 +64,10 @@ export default function LocationsList() {
         }
     ];
 
-    const filteredPlaces = selectedTags.length === 0
-    ? restraunts
-    : restraunts.filter(restraunts =>
-        restraunts.tags.some(tagObj => selectedTags.includes(tagObj.name))
-    );
+    
     const { id } = useParams();
+    const someData = DataPick(id);
+    console.log("data: ", someData);
     const navigate = useNavigate()
     const handleNavigation = ( id, special) => {
         navigate(`/Locations/${id}/${special}`)
@@ -79,6 +76,11 @@ export default function LocationsList() {
     if (!current) {
         return <NotFound/>
     }
+    const filteredPlaces = selectedTags.length === 0
+    ? someData
+    : someData.filter(someData =>
+        someData.tags.some(tagObj => selectedTags.includes(tagObj.name))
+    );
     return (
         <div className={style.container}>
             <div className={style.titleContainer}>
