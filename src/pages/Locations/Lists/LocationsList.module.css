@@ -108,3 +108,45 @@
     flex-direction: column;
     row-gap: 3.2rem;
 }
+@media screen and (max-width: 768px) {
+    .titleText {
+        font-size: 3.43rem;
+    }
+    .container {
+        margin-top: 9rem;
+        width: 89.33%;
+        row-gap: 0;
+    }
+    .fullscreenPicContainer {
+        margin-top: 5rem;
+    }
+    .descriptionTitle {
+        font-size: 1.43rem;
+    }
+    .descriptionRow {
+        margin-top: 1.07rem;
+        margin-bottom: 2.57rem;
+        height: max-content;
+        flex-direction: column;
+        row-gap: 2.85rem;
+    }
+    .descriptionRowCol1 {
+        width: 100%;
+        justify-content: start;
+        row-gap: 2.71rem;
+    }
+    .descriptionPrice {
+        font-size: 2.57rem;
+        font-weight: 500;
+    }
+    .descriptionPlaces {
+        font-size: 2.57rem;
+        font-weight: 500;
+    }
+    .descriptionBox1 {
+       width: 100%;
+    }
+    .descriptionBox3 {
+        align-items: start;
+    }
+}

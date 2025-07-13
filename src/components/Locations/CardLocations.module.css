@@ -257,3 +257,61 @@
     height: 100%;
     fill: var(--secondary-color);
 }
+@media screen and (max-width:768px) {
+    .cardTitle.variant1 {
+        margin: 1.43rem 0;
+        font-size: 2.57rem;
+        font-weight: 500;
+        line-height: 110%;
+        color: var(--secondary-color);
+    }
+    .card.variant1 {
+        width: 100%;
+        height: max-content;
+        flex-direction: column;
+    }
+    .cardImageContainer.variant1 {
+        position: static;
+        height: 17.86rem;
+        width: 100%;
+        z-index: 2;
+    }
+    .cardContent.variant1 {
+        position: static;
+        width: 100%;
+        height: max-content;
+    }
+    .cardImageContainer.variant1::after {
+        display: none;
+    }
+    .cardTagsBox {
+        width: 100%;
+        margin-bottom: 1.43rem;
+    }
+    .cardTag.variant1 {
+        color: var(--secondary-color);
+        border: 1px solid var(--secondary-color);
+        font-size: 0.857rem;
+        padding: 0.46rem 0.71rem;
+    }
+    .cardTextBox.variant1 {
+        display: none;
+    }
+    .priceBox.variant1 {
+        color: var(--secondary-color);
+    }
+    .subBox.variant1 {
+        color: var(--secondary-color);
+    }
+    .bottomRow {
+        margin-top: 5rem;
+        flex-direction: row-reverse;
+        align-items: end;
+    }
+    .minInfoBox.variant1 {
+        width: auto;
+        align-items: start;
+        flex-direction: column;
+        row-gap: 0.71rem;
+    }
+}
