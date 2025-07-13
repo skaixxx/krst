@@ -8,6 +8,7 @@ import Card from "../../../components/Card/Сard";
 import Filter from "../../../components/Filter/Filter";
 import { useState } from "react";
 import { DataPick } from "../../../components/Locations/DataPick";
+import CardLocations from "../../../components/Locations/CardLocations";
 export default function LocationsList() {
     const [selectedTags, setSelectedTags] = useState([]);
     const [isFilterOpen, setIsFilterOpen] = useState(false);
@@ -121,26 +122,16 @@ export default function LocationsList() {
                 </div>
             </div>
             <div className={style.cardsList}>
-                <Filter
-					tags={tagGroups}
-					selectedTags={selectedTags}
-					onChange={setSelectedTags}
-					isOpen={isFilterOpen}
-					onToggle={setIsFilterOpen}
-				></Filter>
-
 				<div className={style.cardList}>
-					{filteredPlaces.map((card, index) => (						
-						<Card
+                    {someData.map((card)  => (
+                        <CardLocations
 							key={card.id}
 							data={card}
-							reverse={index % 2 === 1}
 							btnText={current.buttonText}
 							btnAction={() => handleNavigation( id, card.special)}
 						>
-							{card.text}
-						</Card>
-					))}
+						</CardLocations>
+                    ))}				
 				</div>
             </div>
         </div>

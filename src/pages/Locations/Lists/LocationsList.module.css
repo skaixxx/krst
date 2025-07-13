@@ -101,3 +101,8 @@
     display: flex;
     flex-direction: column;
 }
+.cardList {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3.2rem;
+}
