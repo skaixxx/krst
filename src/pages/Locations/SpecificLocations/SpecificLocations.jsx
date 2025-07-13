@@ -30,6 +30,9 @@ function SpecificLocations() {
     } else {
         return <NotFound/>
     }
+    const words = item.title.split(" ");
+    const firstWord = words[0];
+    const afterWord = words.slice(1).join(" ")
     return (
         <div className={style.specific}>
             {item ? (
@@ -37,18 +40,16 @@ function SpecificLocations() {
                 <div className={style.titleContainer}>
                     <div className={style.titleContainerSub1}>
                         <div className={clsx(style.title1, style.title)}>
-                            <p>{item.title}</p>
+                            <p>{firstWord}</p>
                         </div>
-                        {!isMobile || item.id !== 9 &&
-                            <div className={style.animation1}><SlidingRotatingCross/></div>
-                        }   
+                            <div className={style.animation1}><SlidingRotatingCross/></div>  
                     </div>
                     <div className={style.titleContainerSub2}>
-                        {!isMobile &&
+                        {!isMobile && afterWord &&
                         <div className={style.animation2}><RotatingCross/></div>
                         }
                         <div className={clsx(style.title2, style.title)}>
-                            <p>{item.title2}</p>
+                            <p>{afterWord}</p>
                         </div>
                         {isMobile && item.id === 9 &&
                             <div className={style.animation1}><SlidingRotatingCross/></div>
@@ -57,35 +58,39 @@ function SpecificLocations() {
 
                 </div>
                 <div className={style.mainInfoBlock}>
-                    <div className={style.paragraph1}><p>{item.paragraph1}</p></div>
+                    <div className={style.paragraph1}><p>{item.text1}</p></div>
                 {isMobile ?
                     <div className={style.datePriceContainer}>
                         <div className={style.dateContainer}>
-                            <span className={style.date}>{item.dates}</span>
-                            <span className={style.subText}>Период проведения</span>
+                            <span className={style.date}>{item.subText2}</span>
+                            <span className={style.subText}>{item.subText4}</span>
                         </div>
                         <div className={style.priceContainer}>
-                            <span className={style.price}>от {item.price} ₽</span>
-                            <span className={style.subText}>Стоимость билета</span>
+                            <span className={style.price}>{item.price1}</span>
+                            <span className={style.subText}>{item.subText3}</span>
                         </div>
                     </div>
                     :
                      <div className={style.datePriceContainer}>
-                        <div className={style.dateContainer}><span className={style.date}>{item.sub}</span></div>
+                        <div className={style.dateContainer}><span className={style.date}>{item.subText1} {item.subText2}</span></div>
                         <div className={style.priceContainer}><span className={style.price}>{item.price1}</span></div>
                     </div>
                 }
                 </div>
                 <div className={style.strokeContainer}>
-                    <div className={style.strokeElement}><img src={item.inIcon1} alt="icon" className={style.strokeElementIcon}/><p>{item.inText1}</p></div>
-                    <div className={style.strokeElement}><img src={item.inIcon2} alt="icon" className={style.strokeElementIcon}/><p>{item.inText2}</p></div>
-                    <div className={style.strokeElement}><img src={item.inIcon3} alt="icon" className={style.strokeElementIcon}/><p>{item.inText3}</p></div>
+                    {[...Object.values(item.iconsInside || {}),
+                    ...Object.values(item.subIconsText || {}),
+                    ]
+                    .filter(Boolean)
+                    .map((item, index) => (
+                        <div key={index} className={style.strokeElement}>{<img src={item} alt="icon" className={style.strokeElementIcon}/>}<p>{item}</p></div>
+                    ))}
                 </div>
                 <div className={style.contentContainer}>
                     <div className={style.paragraph2}>
                         <div className={style.paragraph2Text}>
-                            <p>{item.paragraph2}</p>
-                            <p>{item.paragraph3}</p>
+                            <p>{item.insideText1}</p>
+                            <p>{item.insideText2}</p>
                         </div>
                         <div className={style.btnContainer}><SpecificEventButton text="перейти"/></div>
                     </div>
