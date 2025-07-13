@@ -31,7 +31,7 @@
 }
 .topRow {
     width: 91.22%;
-    height: 18.74vw;
+    height: 15vw;
     display: flex;
     flex-direction: column;
     column-gap: 1rem;
@@ -61,7 +61,7 @@
     display: flex;
     justify-content: center;
     align-items: start;
-    margin-bottom: 7.32vw;
+    margin-bottom: 3rem;
 }
 .contentContainer {
     height: 100%;
@@ -322,7 +322,8 @@
         font-size: 2.57rem;
     }
     .fullScreenContainer2 {
-        min-height: 29.21rem;
+        min-height: 20rem;
+        flex: 0;
     }
     .textBox1Text {
         width: 100%;

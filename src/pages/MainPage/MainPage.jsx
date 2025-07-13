@@ -20,7 +20,6 @@ function MainPage() {
     
     const containerRef = useRef(null);
     const animationRef = useRef(null);
-    const scrollWrapperRef = useRef(null);
 
     const navigate = useNavigate();
     const isMobile = useMediaQuery('(max-width: 768px)');
@@ -74,17 +73,6 @@ function MainPage() {
 
     }, []);
 
-    // useEffect(() => {
-    //     animationRef.current = lottie.loadAnimation({
-    //         container: containerRef.current,
-    //         renderer: 'svg',
-    //         loop: true,
-    //         autoplay: true,
-    //         animationData: AnimationData
-    //     });
-    //     return () => animationRef.current?.destroy();
-    // }, []);
-
     if (!limitedCard || limitedCard.length === 0) {
         return <p>Данные загружаются...</p>
     };
@@ -98,26 +86,6 @@ function MainPage() {
             </div>
             <div className={style.topRow}><div className={style.topRow1}><p className={style.titleText2}>ПРОСТРАНСТВО</p></div></div>
             <div ref={containerRef} className={style.fullScreenContainer2}>
-                {/* <div className={style.contentContainer} style={
-                    {backgroundImage: `url(${bgSectionStyle})`}
-                }> */}
-                    {/* <div className={style.container2TextBox1}>
-                        <p className={style.textBox1Title}>КРСТ</p>
-                        <p className={style.textBox1Text}>КРЕАТИВНАЯ РАЗВЛЕКАТЕЛЬНАЯ СОВРЕМЕННАЯ ТЕРРИТОРИЯ</p>
-                    </div>
-                    <div className={style.container2TextBox2}>
-                        <p className={style.textBox2Title}>О НАС</p>
-                        {isMobile ?
-                        <p className={style.textBox2Text}>
-                            КРСТ — это комплекс, где рождаются идеи, проводятся мероприятия, выставки и мастер-классы. Здесь гармонично сочетаются рестораны с разнообразной кухней, выставочные залы, а также культурные площадки.
-                        </p>
-                        :
-                        <p className={style.textBox2Text}>
-                            КРСТ — это уникальный многофункциональный комплекс, где рождаются идеи, проводятся мероприятия, выставки и мастер-классы. Здесь гармонично сочетаются рестораны с разнообразной кухней, выставочные залы, где показана история данного места, а также культурные площадки, которые становятся центром притяжения для творческих людей.
-                        </p>
-                        }
-                    </div> */}
-                {/* </div> */}
             </div>
             <div className={style.interactiveLine}>
                 <div className={style.iLineElements}>
