@@ -101,6 +101,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    row-gap: 3.2rem;
 }
 .cardList {
     display: flex;

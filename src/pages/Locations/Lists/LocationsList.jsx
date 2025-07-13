@@ -68,19 +68,19 @@ export default function LocationsList() {
     const TagGroup = [
         {
             title: "",
-            tags: {UniqueTags}
+            tags: UniqueTags
         }
     ]
-    console.log("Tags:", TagGroup)
     const current = data[id];
     if (!current) {
         return <NotFound/>
     }
-    const filteredPlaces = UniqueTags.length === 0
+    const filteredPlaces = selectedTags.length === 0
     ? someData
     : someData.filter(someData =>
-        someData.tags.some(tagObj => UniqueTags.includes(tagObj.name))
+        someData.tags.some(tagObj => selectedTags.includes(tagObj.name))
     );
+
     return (
         <div className={style.container}>
             <div className={style.titleContainer}>

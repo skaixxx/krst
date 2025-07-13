@@ -57,6 +57,7 @@
 }
 
 .filterMenu {
+	z-index: 3;
 	min-height: 275px;
 	width: 100%;
 	position: absolute;
