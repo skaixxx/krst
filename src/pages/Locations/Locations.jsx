@@ -27,7 +27,7 @@ const Locations = () => {
             description: "Освойте новые навыки и вдохновитесь: вместе с нами вы сможете достичь невероятного!"
         },
         {
-            id: "exquisites",
+            id: "excursions",
             url: "./images/locations/excursions.png",
             alt: "Экскурсии",
             title: "ЭКСКУРСИИ",
