@@ -11,7 +11,17 @@ import SlidingRotatingCross from "../../components/animations/SRCross/SlidingRot
 import { eventsData } from "../../data/events"
 import { useNavigate } from "react-router"
 import useMediaQuery from "../../components/Header/useMediaQuery"
+import { useEffect, useRef } from 'react';
+
+import lottie from "lottie-web";
+import AnimationData from '../../assets/animation/main/mainAnimationData.json';
+
 function MainPage() {
+    
+    const containerRef = useRef(null);
+    const animationRef = useRef(null);
+    const scrollWrapperRef = useRef(null);
+
     const navigate = useNavigate();
     const isMobile = useMediaQuery('(max-width: 768px)');
     const bgSectionStyle = isMobile ? mobBg : fsBg;
@@ -22,10 +32,63 @@ function MainPage() {
     const handleClick = (id) => {
         navigate(`/Events/SpecificEvent/${id}`)
     }
-    console.log("Data: ", limitedCard);
+
+    useEffect(() => {
+    
+        // Инициализация анимации
+        animationRef.current = lottie.loadAnimation({
+        container: containerRef.current,
+        renderer: 'svg',
+        loop: false,
+        autoplay: false,
+        animationData: AnimationData // Используем JSON
+        });
+
+        const handleScroll = () => {
+            if (!containerRef.current || !animationRef.current) return;
+
+            // Получаем позицию элемента относительно viewport
+            const { top, height } = containerRef.current.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+            
+            // Рассчитываем прогресс скролла (0-1)
+            const scrollProgress = Math.max(0, Math.min(1, 
+                (-top + viewportHeight * 0.5) / (height + viewportHeight * 0.5)
+            ));
+
+            // Переходим к соответствующему кадру
+            const totalFrames = animationRef.current.totalFrames;
+            animationRef.current.goToAndStop(scrollProgress * totalFrames, true);
+        };
+
+        // Добавляем обработчики
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('resize', handleScroll);
+        handleScroll(); // Инициализация
+
+        return () => {
+        window.removeEventListener('scroll', handleScroll);
+        window.removeEventListener('resize', handleScroll);
+        animationRef.current?.destroy();
+        };
+
+    }, []);
+
+    // useEffect(() => {
+    //     animationRef.current = lottie.loadAnimation({
+    //         container: containerRef.current,
+    //         renderer: 'svg',
+    //         loop: true,
+    //         autoplay: true,
+    //         animationData: AnimationData
+    //     });
+    //     return () => animationRef.current?.destroy();
+    // }, []);
+
     if (!limitedCard || limitedCard.length === 0) {
         return <p>Данные загружаются...</p>
     };
+
     return (
         <div className={style.mainPage}>
             <div className={style.fullScreenContainer1}>
@@ -34,11 +97,11 @@ function MainPage() {
                 </div>
             </div>
             <div className={style.topRow}><div className={style.topRow1}><p className={style.titleText2}>ПРОСТРАНСТВО</p></div></div>
-            <div className={style.fullScreenContainer2}>
-                <div className={style.contentContainer} style={
+            <div ref={containerRef} className={style.fullScreenContainer2}>
+                {/* <div className={style.contentContainer} style={
                     {backgroundImage: `url(${bgSectionStyle})`}
-                }>
-                    <div className={style.container2TextBox1}>
+                }> */}
+                    {/* <div className={style.container2TextBox1}>
                         <p className={style.textBox1Title}>КРСТ</p>
                         <p className={style.textBox1Text}>КРЕАТИВНАЯ РАЗВЛЕКАТЕЛЬНАЯ СОВРЕМЕННАЯ ТЕРРИТОРИЯ</p>
                     </div>
@@ -53,8 +116,8 @@ function MainPage() {
                             КРСТ — это уникальный многофункциональный комплекс, где рождаются идеи, проводятся мероприятия, выставки и мастер-классы. Здесь гармонично сочетаются рестораны с разнообразной кухней, выставочные залы, где показана история данного места, а также культурные площадки, которые становятся центром притяжения для творческих людей.
                         </p>
                         }
-                    </div>
-                </div>
+                    </div> */}
+                {/* </div> */}
             </div>
             <div className={style.interactiveLine}>
                 <div className={style.iLineElements}>
