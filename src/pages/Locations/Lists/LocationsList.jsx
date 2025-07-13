@@ -65,23 +65,22 @@ export default function LocationsList() {
     const UniqueTags = [
     ...new Set(someData.flatMap(obj => obj.tags.map(tag =>  tag.name)))
     ];
-    console.log(UniqueTags)
     const TagGroup = [
         {
-            title: "a",
+            title: "",
             tags: UniqueTags
         }
     ]
-    console.log("Tags:", TagGroup)
     const current = data[id];
     if (!current) {
         return <NotFound/>
     }
-    const filteredPlaces = UniqueTags.length === 0
+    const filteredPlaces = selectedTags.length === 0
     ? someData
     : someData.filter(someData =>
-        someData.tags.some(tagObj => UniqueTags.includes(tagObj.name))
+        someData.tags.some(tagObj => selectedTags.includes(tagObj.name))
     );
+
     return (
         <div className={style.container}>
             <div className={style.titleContainer}>
