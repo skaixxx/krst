@@ -32,7 +32,7 @@ export default function CardLocations({ data, float, btnText, btnAction }) {
                         </div>
                         <div className={`${style.subBox} ${varClass}`}>
                             <img src={data.cardIcon2} alt="icon2" className={style.cardIcon}/>
-                            <p className={style.subText}>{data.sub}</p>
+                            <p className={style.subText}>{data.subText2}</p>
                         </div>
                     </div>
                 </div>

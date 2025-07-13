@@ -65,10 +65,11 @@ export default function LocationsList() {
     const UniqueTags = [
     ...new Set(someData.flatMap(obj => obj.tags.map(tag =>  tag.name)))
     ];
+    console.log(UniqueTags)
     const TagGroup = [
         {
-            title: "",
-            tags: {UniqueTags}
+            title: "a",
+            tags: UniqueTags
         }
     ]
     console.log("Tags:", TagGroup)
