@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import NotFound from "../../404/NotFound";
 import clsx from "clsx";
 import useMediaQuery from "../../../components/Header/useMediaQuery";
-import { restraunts } from "../../../data/Restraunts";
+import { restraunts } from "../../../data/restraunts";
 import { masterClasses } from "../../../data/masterClasses";
 import { excursions } from "../../../data/excursions";
 function SpecificLocations() {

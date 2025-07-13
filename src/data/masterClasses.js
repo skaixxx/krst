@@ -24,9 +24,9 @@ export const masterClasses = [
         insideText1: "Вы откроете язык запахов, где цитрусовые искрятся, древесные ноты согревают, а цветочные аккорды рассказывают без слов.",
         insideText2: "Научитесь составлять пирамиды из эфиров, чувствуя, как звучат вместе сандал и ваниль, роза и пачули. Здесь точные расчеты встречаются с вдохновением — один точный капелька переворачивает всю композицию.",
         iconsInside: {
-            icon1: "",
-            icon2: "",
-            icon3: "",
+            icon1: "/images/locations/MasterClasses/Parfurm/icon_1.svg",
+            icon2: "/images/locations/MasterClasses/Parfurm/icon_2.svg",
+            icon3: "/images/locations/MasterClasses/Parfurm/icon_3.svg",
         },
         subIconsText: {
             text1: "Стойкий запах",
@@ -53,9 +53,9 @@ export const masterClasses = [
         insideText1: "Каждое занятие наполнено увлекательными историями о кузнецах, их традициях и технике работы с металлом, что сделает ваше времяпрепровождение не только обучающим, но и увлекательным.",
         insideText2: "Не упустите возможность прикоснуться к истории и освоить древнее, но все ещё актуальное ремесло под руководством профессионалов своего дела!",
         iconsInside: {
-            icon1: "",
-            icon2: "",
-            icon3: "",
+            icon1: "/images/locations/MasterClasses/Blacksmithing/icon_1.svg",
+            icon2: "/images/locations/MasterClasses/Blacksmithing/icon_2.svg",
+            icon3: "/images/locations/MasterClasses/Blacksmithing/icon_3.svg",
         },
         subIconsText: {
             text1: "Придумай и выкуй",
@@ -83,9 +83,9 @@ export const masterClasses = [
         insideText1: "Под руководством мастера участники освоят основные техники ручной лепки, научатся формировать изделия и украшать их различными способами.",
         insideText2: "После завершения работы все изделия проходят обязательную просушку и профессиональный обжиг. Занятие подходит для начинающих, все необходимые материалы предоставляются.",
         iconsInside: {
-            icon1: "",
-            icon2: "",
-            icon3: "",
+            icon1: "/images/locations/MasterClasses/Ceramics/icon_1.svg",
+            icon2: "/images/locations/MasterClasses/Ceramics/icon_2.svg",
+            icon3: "/images/locations/MasterClasses/Ceramics/icon_3.svg",
         },
         subIconsText: {
             text1: "Яркая роспись",
@@ -113,9 +113,9 @@ export const masterClasses = [
         insideText1: "Вдохновляющая атмосфера и все необходимые инструменты помогут вам раскрыть творческий потенциал.Познакомьтесь с искусством создания цветочных композиций.",
         insideText2: "Вы освоите основные принципы работы с растениями, научитесь сочетать цвета и формы, создавая выразительные букеты. Под руководством флориста соберете собственную композицию!",
         iconsInside: {
-            icon1: "",
-            icon2: "",
-            icon3: "",
+            icon1: "/images/locations/MasterClasses/Floristry/icon_1.svg",
+            icon2: "/images/locations/MasterClasses/Floristry/icon_2.svg",
+            icon3: "/images/locations/MasterClasses/Floristry/icon_3.svg",
         },
         subIconsText: {
             text1: "Оформи букет",
@@ -143,9 +143,9 @@ export const masterClasses = [
         insideText1: "Мы разберём технические приёмы, но главное — научимся видеть и анализировать, что делает изображение выразительным.",
         insideText2: "На наших занятиях вы будете экспериментировать с разными материалами, изучать основы композиции и колористики, а также вдохновляться работами великих мастеров.",
         iconsInside: {
-            icon1: "",
-            icon2: "",
-            icon3: "",
+            icon1: "/images/locations/MasterClasses/Painting/icon_1.svg",
+            icon2: "/images/locations/MasterClasses/Painting/icon_2.svg",
+            icon3: "/images/locations/MasterClasses/Painting/icon_3.svg",
         },
         subIconsText: {
             text1: "Работа с цветом",
@@ -173,9 +173,9 @@ export const masterClasses = [
         insideText1: "Вы научитесь основам: подготовке воска и парафина, работе с фитилями, добавлению оттенков и ароматов. Разберём тонкости процесса - как добиться ровной поверхности, создавать слои и текстуры.",
         insideText2: "Это ремесло, где ваша внимательность превращается в ровный гладкий край, а творческая смелость — в необычные цветовые переходы.",
         iconsInside: {
-            icon1: "",
-            icon2: "",
-            icon3: "",
+            icon1: "/images/locations/MasterClasses/Candles/icon_1.svg",
+            icon2: "/images/locations/MasterClasses/Candles/icon_2.svg",
+            icon3: "/images/locations/MasterClasses/Candles/icon_3.svg",
         },
         subIconsText: {
             text1: "Ручная работа",

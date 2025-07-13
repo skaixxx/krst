@@ -1,4 +1,4 @@
-import { restraunts } from "../../data/Restraunts";
+import { restraunts } from "../../data/restraunts";
 import { excursions } from "../../data/excursions";
 import { masterClasses } from "../../data/masterClasses";
 export function DataPick(id) {
