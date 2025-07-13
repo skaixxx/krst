@@ -9,12 +9,14 @@ import Filter from "../../../components/Filter/Filter";
 import { useEffect, useState } from "react";
 import { DataPick } from "../../../components/Locations/DataPick";
 import CardLocations from "../../../components/Locations/CardLocations";
+import useMediaQuery from "../../../components/Header/useMediaQuery";
 export default function LocationsList() {
     useEffect(() => {
             window.scrollTo(0, 0)
     }, [])
     const [selectedTags, setSelectedTags] = useState([]);
     const [isFilterOpen, setIsFilterOpen] = useState(false);
+    const isMobile = useMediaQuery('(max-width: 768px)');
     const data = {
         restraunts: {
             title:"",
@@ -134,7 +136,7 @@ export default function LocationsList() {
                         <CardLocations
 							key={card.id}
 							data={card}
-                            float= {(index % 3) + 1}
+                            float= {isMobile? 1 : (index % 3) + 1}
 							btnText={current.buttonText}
 							btnAction={() => handleNavigation( id, card.special)}
 						>
