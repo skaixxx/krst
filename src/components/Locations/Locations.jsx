@@ -1,49 +1,104 @@
-import "./Locations.css"
-import "../general.css";
+import ScaleCrossSlideBracket from "../../components/animations/ScaleCrossSlideBracket/ScaleCrossSlideBracket";
+import ScaleSlideDots from "../../components/animations/ScaleSlideDots/ScaleSlideDots";
+import RotatingCross from "../../components/animations/RotatingCross/RotatingCross";
+import ButtonGoToDesktop from "../../components/Buttons/ButtonGoToDesktop";
+import PhotoGallery from "../../components/PhotoCards/PhotoGallery";
+import style from "./Locations.module.css"
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
-import { useEffect } from "react";
 
+const Locations = () => {
 
-function Locations() {
+    const galleryPhotos = [
+        {
+            id: "restraunts",
+            url: "./images/locations/restaurants.png",
+            alt: "Рестораны",
+            title: "СПИСОК",
+            subtitle: "РЕСТОРАНОВ",
+            description: "Вкус, который запомнится: уникальные блюда и атмосфера наших ресторанов!"
+        },
+        {
+            id: "masterClasses",
+            url: "./images/locations/masterClasses.png",
+            alt: "Мастер-классы",
+            title: "МАСТЕР  —",
+            subtitle: "КЛАССЫ",
+            description: "Освойте новые навыки и вдохновитесь: вместе с нами вы сможете достичь невероятного!"
+        },
+        {
+            id: "exquisites",
+            url: "./images/locations/excursions.png",
+            alt: "Экскурсии",
+            title: "ЭКСКУРСИИ",
+            subtitle: "ПО МУЗЕЮ",
+            description: "Раскройте тайны прошлого в увлекательных экскурсиях по нашему музею!"
+        }
+    ];
     const navigate = useNavigate();
+    // Состояние для хранения выбранного индекса
+    const [selectedIndex, setSelectedIndex] = useState(0)
+    const [displayedIndex, setDisplayedIndex] = useState(0);
+    const [isAnimating, setIsAnimating] = useState(false);
+    const [actualId, setActualId] = useState("");
+    
+    const handleNavigation = () => {
+        const activeCard = galleryPhotos[displayedIndex];
+        navigate(`/Locations/${activeCard.id}`)
+    }
     useEffect(() => {
-        navigate(`/Locations/restraunts`)
-    }, [navigate]);
-           
-    return null;
+        if (selectedIndex !== displayedIndex) {
+            setIsAnimating(true) // Запускаем анимацию
+            const timer = setTimeout(() => {
+                setDisplayedIndex(selectedIndex);
+                setIsAnimating(false);
+                setActualId(galleryPhotos[displayedIndex].id)
+                console.log("Actual id", actualId);
+            }, 300);
+        
+            return () => clearTimeout(timer);
+        }
+    }, [selectedIndex, displayedIndex]);
+
+    return(
+        <div className={style.fullscreenContainer}>
+            <PhotoGallery
+                photos={galleryPhotos}
+                onPhotoSelect={setSelectedIndex}/>
+            <div className={style.contentContainer}>
+                <div className={style.titleBlock}>
+                    <div className={style.titleWithIcon}>
+                        <h1 className={`${style.title} ${isAnimating ? style.fadeOut : style.fadeIn}`}>{galleryPhotos[displayedIndex].title}</h1>
+                        {displayedIndex === 0 && (
+                            <div className={`${style.icon} ${isAnimating ? style.fadeOut : style.fadeIn}`}>
+                                <ScaleCrossSlideBracket/>
+                            </div>
+                        )
+                        }
+                    </div>
+                    <div className={style.titleWithIcon}>
+                        {displayedIndex === 1 && (
+                            <div className={`${style.icon} ${isAnimating ? style.fadeOut : style.fadeIn}`} style={{width: window.innerWidth <= 768 ? "5rem" : "9rem"}}>
+                                <ScaleSlideDots/>
+                            </div> // !!!
+                        )}
+                        {displayedIndex === 2 && (
+                            <div className={`${style.icon} ${isAnimating ? style.fadeOut : style.fadeIn}`}>
+                                <RotatingCross/>
+                            </div>
+                        )}
+                        <h1 className={`${style.subtitle} ${isAnimating ? style.fadeOut : style.fadeIn}`}>{galleryPhotos[displayedIndex].subtitle}</h1>
+                    </div> 
+                </div>
+                <div className={style.textContainer}>
+                    <p className={`${style.description} ${isAnimating ? style.fadeOut : style.fadeIn}`}>
+                        {galleryPhotos[displayedIndex].description} 
+                    </p>
+                    <ButtonGoToDesktop text="перейти" action={handleNavigation}/>                        
+                </div>            
+            </div>
+        </div>
+    )  
 }
+
 export default Locations;
-
-
-// function Locations() {
-//     const { items } = useData();
-//         const navigate = useNavigate();
-//         const handleClick = (id) => {
-//                 navigate(`/Locations/SpecificLocations/${id}`)
-//         }
-    //  console.log("Data: ", items);
-    // if (!items || items.length === 0) {
-    //     return <p>Данные загружаются...</p>
-    // };
-    // return (
-//     <div className="grid-container-locations">
-//     {items.map((item) =>(
-//     <a className={`locationsCard${item.id}`} key={item.id} onClick={() => handleClick(item.id)} style={{
-//         backgroundImage: `url(${item.image})`,
-//         backgroundPosition: "center",
-//         backgroundSize: "cover",
-//         //width: `23,5 rem`,
-//         //height: `17,5 rem`,
-//         cursor: "pointer"
-//     }}> 
-//     </a>
-
-    
-//         ))}
-
-//     </div>
-    
-         
-//              );
-// }
-// export default Locations;

@@ -1,0 +1,108 @@
+.container {
+    min-height: 100dvh;
+    display: flex;
+    width: 91.2153%;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16.11vw;
+    margin-bottom: 7.32vw;
+    row-gap: 5rem;
+}
+.titleContainer {
+    height: 17.2vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.titleRow1 {
+    width: 100%;
+    height: 42.55%;
+    display: flex;
+}
+.titleAnimationContainer1 {
+    height: 100%;
+    width: 46.55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titleRow2 {
+    width: 100%;
+    height: 42.55%;
+    display: flex;
+}
+.titleAnimationContainer2 {
+    height: 100%;
+    width: 25.36%;
+    display: flex;
+    justify-content: center;
+}
+.titleText {
+    font-size: 6.4rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 72.9%;
+}
+.titleText1 {
+    width: 43.66%;
+}
+.titleText2 {
+    color: var(--accent-color);
+}
+.fullscreenPicContainer {
+    width: 100%;
+    height: max-content;
+}
+.fullscreenPic {
+    border-radius: .75rem;
+    width: 100%;
+    height: auto;
+}
+.descriptionRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.descriptionBox1 {
+    width: 48.96%;
+}
+.descriptionTitle {
+    font-size: 2rem;
+    font-weight: 500;
+}
+.descriptionRowCol1 {
+    width: 40.69%;
+    display: flex;
+    justify-content: space-between;
+}
+.descriptionBox2 {
+    width: 51.87%;
+}
+.descriptionPrice {
+    font-size: 3.4rem;
+    font-weight: 700;
+}
+.descriptionBox3 {
+    width: 28.21%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.descriptionPlaces {
+    font-size: 3.4rem;
+    font-weight: 700;
+}
+.cardsList {
+    height: max-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.cardList {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3.2rem;
+}
