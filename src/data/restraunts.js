@@ -8,7 +8,7 @@ export const restraunts = [
 		id: "nomad",
 		special: "nomad",
 		title: 'NOMAD',
-		image: "/images/locations/Restraunts/Nomad.png",
+		image: "/images/locations/Restraunts/nomad.png",
 		text: 'Самые вкусные и фотогеничные завтраки в Петербурге. У нас вы можете попробовать шакшуку, омлет с крабом или наш фирменный скрембл с мортаделлой или форелью.',
 		subText1: 'доступно',
 		subText2: '80 мест',
