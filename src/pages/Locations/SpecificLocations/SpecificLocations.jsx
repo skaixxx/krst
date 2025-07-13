@@ -7,9 +7,9 @@ import { useEffect } from "react";
 import NotFound from "../../404/NotFound";
 import clsx from "clsx";
 import useMediaQuery from "../../../components/Header/useMediaQuery";
-import { restraunts } from "../../../data/Restraunts";
+import { restraunts } from "../../../data/restraunts";
 import { masterClasses } from "../../../data/masterClasses";
-import { exquisites } from "../../../data/exquisites";
+import { excursions } from "../../../data/excursions";
 function SpecificLocations() {
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -24,8 +24,8 @@ function SpecificLocations() {
     } else if (id === "MasterClasses") {
         item = masterClasses.find((item) => item.id === special);
         console.log(id)
-    } else if (id === "Exquisites") {
-        item = exquisites.find((item) => item.id === special);
+    } else if (id === "excursions") {
+        item = excursions.find((item) => item.id === special);
         console.log(id)
     } else {
         return <NotFound/>

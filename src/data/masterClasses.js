@@ -2,6 +2,7 @@ import iconRubLight from "../assets/Locations/Icons/icon1.svg";
 import iconCalLight from "../assets/Locations/Icons/icon2.svg";
 import iconRubDark from "../assets/Locations/Icons/icon3.svg";
 import iconCalDark from "../assets/Locations/Icons/icon4.svg";
+
 export const masterClasses = [
     {
         id: "parfum",

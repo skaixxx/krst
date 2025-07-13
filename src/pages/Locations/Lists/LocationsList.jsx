@@ -42,7 +42,7 @@ export default function LocationsList() {
             description: "КРСТ — уникальное пространство, где история встречается с современным искусством. Бывшая тюрьма, сохранившая дух прошлого, теперь центр творчества и культуры. Наши экскурсии раскрывают истории этих стен через искусство, архитектуру и городские легенды.",
             title: "ЭКСКУРСИИ",
             subtitle: "ПО МУЗЕЮ",
-            picture: "/images/locations/Exquisites/ExquisitesMainPhoto.png",
+            picture: "/images/locations/Excursions/ExcursionsMainPhoto.png",
             price: "4 часа",
             priceDescription: "Средняя продолжительность",
             places: "10 +",
