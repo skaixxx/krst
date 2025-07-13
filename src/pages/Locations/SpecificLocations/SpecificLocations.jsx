@@ -78,12 +78,10 @@ function SpecificLocations() {
                 }
                 </div>
                 <div className={style.strokeContainer}>
-                    {[...Object.values(item.iconsInside || {}),
-                    ...Object.values(item.subIconsText || {}),
-                    ]
-                    .filter(Boolean)
-                    .map((item, index) => (
-                        <div key={index} className={style.strokeElement}>{<img src={item} alt="icon" className={style.strokeElementIcon}/>}<p>{item}</p></div>
+                    {Object.values(item.iconsInside).map((item, index) => (
+                        <div key={index} className={style.strokeElement}><img src={item} alt="icon" className={style.strokeElementIcon}/>
+                            <p>{}</p>
+                        </div>
                     ))}
                 </div>
                 <div className={style.contentContainer}>
