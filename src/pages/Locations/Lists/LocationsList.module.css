@@ -45,6 +45,7 @@
     font-weight: 700;
     letter-spacing: -0.05em;
     line-height: 72.9%;
+    text-wrap: nowrap;
 }
 .titleText1 {
     width: 43.66%;

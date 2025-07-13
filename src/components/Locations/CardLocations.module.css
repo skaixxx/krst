@@ -1,4 +1,4 @@
-.card {
+.card.variant1 {
     width: 100%;
     height: 31.33vw;
     position: relative;
@@ -9,10 +9,43 @@
     border-radius: .75rem;
     box-sizing: border-box;
 }
-.cardImageContainer {
+.card.variant2 {
+    width: 100%;
+    height: 31.33vw;
+    position: relative;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: .75rem;
+    box-sizing: border-box;
+}
+.card.variant3 {
+    width: 100%;
+    height: 31.33vw;
+    position: relative;
+    border: none;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: .75rem;
+    box-sizing: border-box;
+}
+.cardImageContainer.variant1 {
     z-index: 1;
     position: absolute;
     width: 100%;
+    height: 100%;
+    border-radius: .75rem;
+}
+.cardImageContainer.variant2 {
+    width: 49.2%;
+    height: 100%;
+    border-radius: .75rem;
+}
+.cardImageContainer.variant3 {
+    width: 49.2%;
     height: 100%;
     border-radius: .75rem;
 }
@@ -30,23 +63,22 @@
 .cardTitleBox {
     width: 100%;
 }
-.cardTitle {
+.cardTitle.variant1 {
     font-size: 3.4rem;
     font-weight: bold;
     color: var(--primary-color);
 }
-.cardText {
-    color: var(--primary-color);
+.cardTitle.variant2 {
+    font-size: 3.4rem;
+    font-weight: bold;
+    color: var(--secondary-color);
 }
-.priceText {
-    color: var(--primary-color);
-    text-wrap: nowrap;
+.cardTitle.variant3 {
+    font-size: 3.4rem;
+    font-weight: bold;
+    color: var(--secondary-color);
 }
-.subText {
-    color: var(--primary-color);
-    text-wrap: nowrap;
-}
-.cardContent {
+.cardContent.variant1 {
     position: absolute;
     z-index: 2;
     width: 96.79%;
@@ -55,20 +87,71 @@
     flex-direction: column;
     justify-content: space-between;
 }
-.cardTagsBox {
+.cardContent.variant2 {
+    padding-right: 1rem;
+    width: 47.59%;
+    height: 90.47%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--secondary-color);
+}
+.cardContent.variant3 {
+    padding-left: 1rem;
+    width: 47.59%;
+    height: 90.47%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--secondary-color);
+}
+.cardTagsBox.variant1 {
     display: flex;
     width: auto;
     height: auto;
     column-gap: .5rem;
     color: var(--primary-color);
 }
-.cardTag {
+.cardTagsBox.variant2 {
+    display: flex;
+    width: auto;
+    height: auto;
+    column-gap: .5rem;
+    color: var(--secondary-color);
+}
+.cardTagsBox.variant3 {
+    display: flex;
+    width: auto;
+    height: auto;
+    column-gap: .5rem;
+    color: var(--secondary-color);
+}
+.cardTag.variant1 {
     padding: .5rem 1rem;
     border-radius: 2rem;
     border: 1px solid var(--primary-color);
 }
-.cardTextBox {
+.cardTag.variant2 {
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+    border: 1px solid var(--secondary-color);
+}
+.cardTag.variant3 {
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+    border: 1px solid var(--secondary-color);
+}
+.cardTextBox.variant1 {
     width: 31.67%;
+    color: var(--primary-color);
+}
+.cardTextBox.variant2 {
+    width: 100%;
+    color: var(--secondary-color);
+}
+.cardTextBox.variant3 {
+    width: 100%;
+    color: var(--secondary-color);
 }
 .bottomRow {
     width: 100%;
@@ -76,25 +159,78 @@
     display: flex;
     justify-content: space-between;
 }
-.minInfoBox {
+.minInfoBox.variant1 {
     height: 100%;
     display: flex;
     width: 27.86%;
     justify-content: space-between;
     align-items: center;
 }
-.priceBox {
-    height: 48%;
+.minInfoBox.variant2 {
+    height: 100%;
     display: flex;
+    width: auto;
+    justify-content: space-between;
     align-items: center;
-    column-gap: .25rem;
+    column-gap: 1.5rem;
 }
-.subBox {
+.minInfoBox.variant3 {
+    height: 100%;
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+.priceBox.variant1 {
     height: 48%;
     display: flex;
     align-items: center;
     column-gap: .25rem;
+    color: var(--primary-color);
+    text-wrap: nowrap;
+}
+.priceBox.variant2 {
+    height: 48%;
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+    color: var(--secondary-color);
+    text-wrap: nowrap;
+}
+.priceBox.variant3 {
+    height: 48%;
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+    color: var(--secondary-color);
+    text-wrap: nowrap;
+}
+.subBox.variant1 {
+    height: 48%;
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+    color: var(--primary-color);
+    text-wrap: nowrap;
+}
+.subBox.variant2 {
+    height: 48%;
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+    color: var(--secondary-color);
+    text-wrap: nowrap;
+}
+.subBox.variant3 {
+    height: 48%;
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+    color: var(--secondary-color);
+    text-wrap: nowrap;
 }
 .cardIcon {
     height: 100%;
+    fill: var(--secondary-color);
 }

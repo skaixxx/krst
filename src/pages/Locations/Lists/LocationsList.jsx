@@ -123,10 +123,11 @@ export default function LocationsList() {
             </div>
             <div className={style.cardsList}>
 				<div className={style.cardList}>
-                    {someData.map((card)  => (
+                    {someData.map((card, index)  => (
                         <CardLocations
 							key={card.id}
 							data={card}
+                            float= {(index % 3) + 1}
 							btnText={current.buttonText}
 							btnAction={() => handleNavigation( id, card.special)}
 						>
