@@ -30,6 +30,9 @@ function SpecificLocations() {
     } else {
         return <NotFound/>
     }
+    const words = item.title.split(" ");
+    const firstWord = words[0];
+    const afterWord = words.slice(1).join(" ")
     return (
         <div className={style.specific}>
             {item ? (
@@ -37,18 +40,16 @@ function SpecificLocations() {
                 <div className={style.titleContainer}>
                     <div className={style.titleContainerSub1}>
                         <div className={clsx(style.title1, style.title)}>
-                            <p>{item.title}</p>
+                            <p>{firstWord}</p>
                         </div>
-                        {!isMobile || item.id !== 9 &&
-                            <div className={style.animation1}><SlidingRotatingCross/></div>
-                        }   
+                            <div className={style.animation1}><SlidingRotatingCross/></div>  
                     </div>
                     <div className={style.titleContainerSub2}>
-                        {!isMobile &&
+                        {!isMobile && afterWord &&
                         <div className={style.animation2}><RotatingCross/></div>
                         }
                         <div className={clsx(style.title2, style.title)}>
-                            <p>{item.title2}</p>
+                            <p>{afterWord}</p>
                         </div>
                         {isMobile && item.id === 9 &&
                             <div className={style.animation1}><SlidingRotatingCross/></div>
