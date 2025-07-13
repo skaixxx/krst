@@ -78,8 +78,8 @@ function SpecificLocations() {
                 }
                 </div>
                 <div className={style.strokeContainer}>
-                    {Object.values(item.iconsInside).map((item, index) => (
-                        <div key={index} className={style.strokeElement}><img src={item} alt="icon" className={style.strokeElementIcon}/>
+                    {Object.values(item.iconsInside).map((icon, index) => (
+                        <div key={index} className={style.strokeElement}><img src={icon} alt="icon" className={style.strokeElementIcon}/>
                             <p>{}</p>
                         </div>
                     ))}

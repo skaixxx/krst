@@ -13,7 +13,7 @@ export const restraunts = [
 		subText2: '80 мест',
 		subText3: 'Средний чек',
 		subText4: 'Вместимость ресторана',
-		text1: 'NOMAND — культовое место для гурманов, где утро начинается с лучших завтраков в городе. Наше меню это европейский comfort food в сердце Петроградской стороны.',
+		text1: 'NOMAD — культовое место для гурманов, где утро начинается с лучших завтраков в городе. Наше меню это европейский comfort food в сердце Петроградской стороны.',
 		cardIcon1Desktop: iconRubLight,
 		cardIcon2Desktop: iconCapacityLight,
 		cardIcon1Mobile: iconRubDark,
