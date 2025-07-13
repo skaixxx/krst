@@ -277,6 +277,18 @@
 }
 
 @media screen and (max-width: 768px) {
+    
+    .specificEventStrokeContainer {
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
+    
+    .specificEventStrokeElement {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;        
+    }
+    
     .cardsContainer {
         max-width: 100%;
         overflow-x: auto;
@@ -325,4 +337,5 @@
         font-size: 20px;
         line-height: 110.00000000000001%;
     }
+
 }

@@ -19,7 +19,8 @@
     margin: 0 auto;
 }
 
-.placementTitle {
+.placementTitleTop,
+.placementTitleBottom {
 	flex: 1;
 	display: flex;
     flex-direction: column;
@@ -35,12 +36,13 @@
     gap: 5vw;
 }
 
-div.placementTitle {
+.placementTitleBottom {
     align-self: center;
     color: var(--accent-color);
 }
 
-.placementTitleIcons {
+.placementTitleIconsTop,
+.placementTitleIconsBottom {
 	flex: 1;
 	display: flex;
 	justify-content: center;
@@ -155,7 +157,8 @@ div.placementTitle {
         gap: 50px;
     }
 
-    .placementTitle {
+    .placementTitleTop,
+    .placementTitleBottom {
         font-size: 3rem;
     }
 
@@ -178,5 +181,29 @@ div.placementTitle {
 
     .rollingStrokeContainer {
         gap: 10px;
+    }
+
+    .placementHeader {
+        gap: 0.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .placementTitleWrap {
+        align-items: center;       
+    }
+
+    .placementTitleTop {
+        flex: 0 0 auto;
+    }
+
+    .placementTitleIconsTop,
+    .placementTitleIconsBottom {
+        height: 2.5rem;
+    }
+
+    .placementTitleIconsTop {
+        width: 4rem;
+        flex: 0 0 auto;
     }
 }

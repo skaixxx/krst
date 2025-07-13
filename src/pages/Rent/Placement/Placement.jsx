@@ -8,7 +8,7 @@ import Slider from "../../../components/Slider/Slider.jsx";
 import ButtonGoToDesktop from "../../../components/Buttons/ButtonGoToDesktop";
 
 import SlidingRotatingCross from '../../../components/animations/SRCross/SlidingRotatingCross';
-import ScaleCrossSlideBracketInverted from '../../../components/animations/ScaleCrossSlideBracket_inverted/ScaleCrossSlideBracket_inverted';
+import ScaleSlideDotsInverted from "../../../components/animations/ScaleSlideDots/ScaleSlideDotsInverted";
 
 import calendarIcon from "../../../assets/residence/calendar.svg"
 import phoneIcon from "../../../assets/residence/phoneIcon.svg"
@@ -38,18 +38,18 @@ function Placement() {
 			<div className={style.placementContainer}>
 				<div className={style.placementHeader}>
 					<div className={style.placementTitleWrap}>
-						<h1 className={style.placementTitle}>
+						<h1 className={style.placementTitleTop}>
 							{placement.title}
 						</h1>
-						<div className={style.placementTitleIcons}>
-							<SlidingRotatingCross/>
+						<div className={style.placementTitleIconsTop}>
+							<ScaleSlideDotsInverted/>
 						</div>
 					</div>
 					<div className={style.placementTitleWrap}>
-						<div className={style.placementTitleIcons}>
-							<ScaleCrossSlideBracketInverted />
+						<div className={style.placementTitleIconsBottom}>
+							<SlidingRotatingCross/>
 						</div>
-						<div className={style.placementTitle}>{placement.area}</div>
+						<div className={style.placementTitleBottom}>{placement.area}</div>
 					</div>
 				</div>
 
