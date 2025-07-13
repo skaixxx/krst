@@ -47,6 +47,7 @@
 
 }
 .cardImageContainer.variant1::after {
+    border-radius: .75rem;
     content: "";
     position: absolute;
     inset: 0;

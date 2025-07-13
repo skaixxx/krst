@@ -18,10 +18,10 @@ function SpecificLocations() {
     const { id, special } = useParams();
     console.log("start id ", id)
     var item = "";
-    if (id === "Restraunts") {
+    if (id === "restraunts") {
         item = restraunts.find((item) => item.id === special);
         console.log(id)
-    } else if (id === "MasterClasses") {
+    } else if (id === "masterClasses") {
         item = masterClasses.find((item) => item.id === special);
         console.log(id)
     } else if (id === "Exquisites") {
@@ -48,7 +48,7 @@ function SpecificLocations() {
                         <div className={style.animation2}><RotatingCross/></div>
                         }
                         <div className={clsx(style.title2, style.title)}>
-                            <p>{item.title}</p>
+                            <p>{item.title2}</p>
                         </div>
                         {isMobile && item.id === 9 &&
                             <div className={style.animation1}><SlidingRotatingCross/></div>
@@ -71,8 +71,8 @@ function SpecificLocations() {
                     </div>
                     :
                      <div className={style.datePriceContainer}>
-                        <div className={style.dateContainer}><span className={style.date}>{item.dates}</span></div>
-                        <div className={style.priceContainer}><span className={style.price}>от {item.price} ₽</span></div>
+                        <div className={style.dateContainer}><span className={style.date}>{item.sub}</span></div>
+                        <div className={style.priceContainer}><span className={style.price}>{item.price1}</span></div>
                     </div>
                 }
                 </div>
