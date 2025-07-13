@@ -2,7 +2,6 @@ import iconCapacityLight from "../assets/Locations/Icons/iconCapacityLight.svg";
 import iconCapacityDark from "../assets/Locations/Icons/iconCapacityDark.svg"; 
 import iconRubLight from "../assets/Locations/Icons/icon1.svg";
 import iconRubDark from "../assets/Locations/Icons/icon3.svg";
-
 export const restraunts = [
     {
 		id: "nomad",
@@ -15,8 +14,10 @@ export const restraunts = [
 		subText3: 'Средний чек',
 		subText4: 'Вместимость ресторана',
 		text1: 'NOMAND — культовое место для гурманов, где утро начинается с лучших завтраков в городе. Наше меню это европейский comfort food в сердце Петроградской стороны.',
-		cardIcon1: iconRubLight,
-		cardIcon2: iconCapacityLight,
+		cardIcon1Desktop: iconRubLight,
+		cardIcon2Desktop: iconCapacityLight,
+		cardIcon1Mobile: iconRubDark,
+		cardIcon2Mobile: iconCapacityDark,
 		price1: 'от 3 500 ₽',
 		price: 'от 3 500 руб',
 		tags: [
@@ -47,8 +48,10 @@ export const restraunts = [
 		subText3: 'Средний чек',
 		subText4: 'Вместимость ресторана',
 		text1: 'Старик Хинкалыч — популярное заведение, специализирующееся на грузинской кухне. Основная гордость ресторана — хинкали, разнообразные по начинкам.',
-		cardIcon1: iconRubDark,
-		cardIcon2: iconCapacityDark,
+		cardIcon1Desktop: iconRubDark,
+		cardIcon2Desktop: iconCapacityDark,
+		cardIcon1Mobile: iconRubDark,
+		cardIcon2Mobile: iconCapacityDark,
 		price1: 'от 2 000 ₽',
 		price: 'от 2 000 руб',
 		tags: [
@@ -79,8 +82,10 @@ export const restraunts = [
 		subText3: 'Средний чек',
 		subText4: 'Вместимость ресторана',
 		text1: 'Marsala — современное заведение, сочетающее в себе элементы итальянской кухни и уютную атмосферу.',
-		cardIcon1: iconRubDark,
-		cardIcon2: iconCapacityDark,
+		cardIcon1Desktop: iconRubDark,
+		cardIcon2Desktop: iconCapacityDark,
+		cardIcon1Mobile: iconRubDark,
+		cardIcon2Mobile: iconCapacityDark,
 		price1: 'от 1 500 ₽',
 		price: 'от 1 500 руб',
 		tags: [
@@ -112,8 +117,10 @@ export const restraunts = [
 		subText3: 'Средний чек',
 		subText4: 'Вместимость ресторана',
 		text1: 'Баклажан — уютный ресторан, посвященный средиземноморской кухне с акцентом на блюда из свежих овощей, морепродуктов и оливковых масел.',
-		cardIcon1: iconRubLight,
-		cardIcon2: iconCapacityLight,
+		cardIcon1Desktop: iconRubLight,
+		cardIcon2Desktop: iconCapacityLight,
+		cardIcon1Mobile: iconRubDark,
+		cardIcon2Mobile: iconCapacityDark,
 		price1: 'от 1 000 ₽',
 		price: 'от 1 000 руб',
 		tags: [
@@ -145,8 +152,10 @@ export const restraunts = [
 		subText3: 'Средний чек',
 		subText4: 'Вместимость ресторана',
 		text1: 'Tiger Lily — современный ресторан с азиатским уклоном, где сочетаются традиционные вкусы и новаторские подходы. Визитная карточка заведения это авторские роллы и острые тайские супы.',
-		cardIcon1: iconRubDark,
-		cardIcon2: iconCapacityDark,
+		cardIcon1Desktop: iconRubDark,
+		cardIcon2Desktop: iconCapacityDark,
+		cardIcon1Mobile: iconRubDark,
+		cardIcon2Mobile: iconCapacityDark,
 		price1: 'от 2 000 ₽',
 		price: 'от 2 000 руб',
 		tags: [
@@ -177,8 +186,10 @@ export const restraunts = [
 		subText3: 'Средний чек',
 		subText4: 'Вместимость ресторана',
 		text1: 'LETH — это современный ресторан, где сочетаются инновационные кулинарные техники и изысканные вкусы. Наше меню вдохновлено мировыми тенденциями, а каждое блюдо — это настоящее произведение искусства.',
-		cardIcon1: iconRubDark,
-		cardIcon2: iconCapacityDark,
+		cardIcon1Desktop: iconRubDark,
+		cardIcon2Desktop: iconCapacityDark,
+		cardIcon1Mobile: iconRubDark,
+		cardIcon2Mobile: iconCapacityDark,
 		price1: 'от 2 500 ₽',
 		price: 'от 2 500 руб',
 		tags: [
