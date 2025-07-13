@@ -8,7 +8,7 @@ export const restraunts = [
 		id: "nomad",
 		special: "nomad",
 		title: 'NOMAD',
-		image: "/images/locations/Restraunts/nomad.png",
+		image: "/images/locations/Restraunts/Nomad.png",
 		text: 'Самые вкусные и фотогеничные завтраки в Петербурге. У нас вы можете попробовать шакшуку, омлет с крабом или наш фирменный скрембл с мортаделлой или форелью.',
 		subText1: 'доступно',
 		subText2: '80 мест',
@@ -25,11 +25,11 @@ export const restraunts = [
 		],
 		insideText1: "Каждое блюдо в NOMAD — это диалог традиций и новаторства. В меню вы найдете как узнаваемые вкусы, так и неожиданные сочетания, где главную роль играют качественные сезонные ингредиенты. Сомелье поможет подобрать идеальное вино из нашей обширной коллекции.",
 		insideText2: "Интерьер ресторана — это гармоничное сочетание натурального дерева, латуни, стекла и мрамора. Особую атмосферу создает свет: каждый светильник — винтажный экземпляр 60-70-х годов, тщательно подобранный командой NOMAD.",
-		iconsInside: {
-			icon1: "",
-			icon2: "",
-			icon3: "",
-		},
+        iconsInside: {
+            icon1: "/images/locations/Restraunts/Nomad/icon_1.svg",
+            icon2: "/images/locations/Restraunts/Nomad/icon_2.svg",
+            icon3: "/images/locations/Restraunts/Nomad/icon_3.svg",
+        },
 		subIconsText: {
 			text1: "Авторские смузи и кофе",
 			text2: "Сезонные продукты",
@@ -57,11 +57,11 @@ export const restraunts = [
 		],
 		insideText1: "Грамотно подобранные вина из различных регионов Грузии подчеркнут вкус каждого угощения. Старик Хинкалыч часто принимает участие в кулинарных фестивалях и мастер-классах, где гости могут узнать секреты приготовления грузинских деликатесов.",
 		insideText2: "Уютная атмосфера и аутентичный интерьер создают ощущение грузинского дома. Здесь можно насладиться как деловыми обедами, так и дружескими встречами. ",
-		iconsInside: {
-			icon1: "",
-			icon2: "",
-			icon3: "",
-		},
+        iconsInside: {
+            icon1: "/images/locations/Restraunts/Old-man-Khinkalych/icon_1.svg",
+            icon2: "/images/locations/Restraunts/Old-man-Khinkalych/icon_2.svg",
+            icon3: "/images/locations/Restraunts/Old-man-Khinkalych/icon_3.svg",
+        },
 		subIconsText: {
 			text1: "Домашнее вино",
 			text2: "Национальные блюда",
@@ -90,11 +90,11 @@ export const restraunts = [
 		],
 		insideText1: "Тщательно отобранная винная карта с лучшими итальянскими винами дополняет гастрономический опыт. Marsala регулярно проводит тематические вечера и кулинарные мастер-классы, где гости могут научиться готовить традиционные итальянские блюда.",
 		insideText2: "Элегантный интерьер и теплая атмосфера делают ресторан идеальным местом для романтических ужинов, деловых встреч и семейных праздников.",
-		iconsInside: {
-			icon1: "",
-			icon2: "",
-			icon3: "",
-		},
+        iconsInside: {
+            icon1: "/images/locations/Restraunts/Marsala/icon_1.svg",
+            icon2: "/images/locations/Restraunts/Marsala/icon_2.svg",
+            icon3: "/images/locations/Restraunts/Marsala/icon_3.svg",
+        },
 		subIconsText: {
 			text1: "Блюда на дровяной печи",
 			text2: "Сырное ассорти",
@@ -123,11 +123,11 @@ export const restraunts = [
 		],
 		insideText1: "Наши повара ежедневно создают кулинарные шедевры, сочетая традиционные рецепты с современными техниками подачи. В винную карту вошли лучшие образцы из Италии, Франции и Греции.",
 		insideText2: "Просторный зал с панорамными окнами, терракотовой плиткой и живыми оливковыми деревьями создает атмосферу курортного ресторана где-то на побережье. Идеальное место для тех, кто ценит качественную кухню и непринужденную обстановку.",
-		iconsInside: {
-			icon1: "",
-			icon2: "",
-			icon3: "",
-		},
+        iconsInside: {
+            icon1: "/images/locations/Restraunts/Eggplant/icon_1.svg",
+            icon2: "/images/locations/Restraunts/Eggplant/icon_2.svg",
+            icon3: "/images/locations/Restraunts/Eggplant/icon_3.svg",
+        },
 		subIconsText: {
 			text1: "Собственные оливковые масла",
 			text2: "Национальные блюда",
@@ -155,11 +155,11 @@ export const restraunts = [
 		],
 		insideText1: "Шеф-повар Tiger Lily экспериментирует с ингредиентами, создавая уникальные сочетания. Ресторан регулярно проводит тематические ужины и мастер-классы по приготовлению суши.",
 		insideText2: "Минималистичный дизайн с акцентами в стиле джунглей и мягким светом делает пространство идеальным для романтических свиданий и вечеринок.",
-		iconsInside: {
-			icon1: "",
-			icon2: "",
-			icon3: "",
-		},
+        iconsInside: {
+            icon1: "/images/locations/Restraunts/Tiger-Lily/icon_1.svg",
+            icon2: "/images/locations/Restraunts/Tiger-Lily/icon_2.svg",
+            icon3: "/images/locations/Restraunts/Tiger-Lily/icon_3.svg",
+        },
 		subIconsText: {
 			text1: "Фирменные коктейли",
 			text2: "Паназиатская кухня",
@@ -187,11 +187,11 @@ export const restraunts = [
 		],
 		insideText1: "LETH славится уникальной атмосферой, где элегантность встречается с новаторством. Мы используем только лучшие сезонные продукты, чтобы создать неповторимые вкусовые сочетания. Ресторан регулярно проводит тематические ужины и коллаборации с известными шеф-поварами, предлагая гостям новые гастрономические впечатления.",
 		insideText2: "Идеальное место для романтических вечеров, деловых встреч и особых мероприятий.",
-		iconsInside: {
-			icon1: "",
-			icon2: "",
-			icon3: "",
-		},
+        iconsInside: {
+            icon1: "/images/locations/Restraunts/Leth/icon_1.svg",
+            icon2: "/images/locations/Restraunts/Leth/icon_2.svg",
+            icon3: "/images/locations/Restraunts/Leth/icon_3.svg",
+        },
 		subIconsText: {
 			text1: "Гастро-перформансы",
 			text2: "Молекулярные коктейли",
