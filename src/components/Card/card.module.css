@@ -94,6 +94,7 @@
 	.cardContent {
 		flex: none;
 		padding: 0;
+		gap: 1.4rem;
 	}
 
 	.cardTitle {
