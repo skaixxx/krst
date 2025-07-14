@@ -30,11 +30,11 @@ export const excursions = [
             icon2: "/images/locations/Excursions/Architecture/icon_2.svg",
             icon3: "/images/locations/Excursions/Architecture/icon_3.svg",
         },
-        subIconsText: {
-            text1: "Строительные решения",
-            text2: "Трансформация пространства",
-            text3: "Современные инсталляции"
-        }
+        subIconsText: [
+            "Строительные решения",
+            "Трансформация пространства",
+            "Современные инсталляции"
+        ]
     },
     {
         id: "prisonLife",
@@ -64,11 +64,11 @@ export const excursions = [
             icon2: "/images/locations/Excursions/Prison life/icon_2.svg",
             icon3: "/images/locations/Excursions/Prison life/icon_3.svg",
         },
-        subIconsText: {
-            text1: "Истории заключенных",
-            text2: "Погружение в атмосферу",
-            text3: "Система аудиогида"
-        },  
+        subIconsText: [
+            "Истории заключенных",
+            "Погружение в атмосферу",
+            "Система аудиогида"
+        ],  
     },
     {
         id: "escapes",
@@ -98,11 +98,11 @@ export const excursions = [
             icon2: "/images/locations/Excursions/Escapes/icon_2.svg",
             icon3: "/images/locations/Excursions/Escapes/icon_3.svg",
         },
-        subIconsText: {
-            text1: "Самые громкие случаи",
-            text2: "Невероятные уловки",
-            text3: "Последствия попыток"
-        }
+        subIconsText: [
+            "Самые громкие случаи",
+            "Невероятные уловки",
+            "Последствия попыток"
+        ]
     },
     {
         id: "guards",
@@ -131,11 +131,11 @@ export const excursions = [
             icon2: "/images/locations/Excursions/The-guards/icon_2.svg",
             icon3: "/images/locations/Excursions/The-guards/icon_3.svg",
         },
-        subIconsText: {
-            text1: "Методы надзора",
-            text2: "Истории сотрудников",
-            text3: "Эволюция тюремных правил"
-        }
+        subIconsText: [
+            "Методы надзора",
+            "Истории сотрудников",
+            "Эволюция тюремных правил"
+        ]
     },
     {
         id: "legends",
@@ -163,11 +163,11 @@ export const excursions = [
             icon2: "/images/locations/Excursions/Legends/icon_2.svg",
             icon3: "/images/locations/Excursions/Legends/icon_3.svg",
         },
-        subIconsText: {
-            text1: "Призраки и аномалии",
-            text2: "Необъяснимые случаи",
-            text3: "Тайные знаки и символы"
-        }
+        subIconsText: [
+            "Призраки и аномалии",
+            "Необъяснимые случаи",
+            "Тайные знаки и символы"
+        ]
     },
     {
         id: "thePrisoners",
@@ -196,10 +196,10 @@ export const excursions = [
             icon2: "/images/locations/Excursions/The prisoners/icon_2.svg",
             icon3: "/images/locations/Excursions/The prisoners/icon_3.svg",
         },
-        subIconsText: {
-            text1: "Политические заключенные",
-            text2: "Жизнь \"воров в законе\"",
-            text3: "Известные личности"
-        }
+        subIconsText: [
+            "Политические заключенные",
+            "Жизнь \"воров в законе\"",
+            "Известные личности"
+        ]
     }
 ]

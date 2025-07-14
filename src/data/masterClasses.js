@@ -30,11 +30,11 @@ export const masterClasses = [
             icon2: "/images/locations/MasterClasses/Parfurm/icon_2.svg",
             icon3: "/images/locations/MasterClasses/Parfurm/icon_3.svg",
         },
-        subIconsText: {
-            text1: "Стойкий запах",
-            text2: "Подберите свой аромат",
-            text3: "Натуральные компоненты"
-        }
+        subIconsText: [
+            "Стойкий запах",
+            "Подберите свой аромат",
+            "Натуральные компоненты"
+        ]
     },
     {
         id: "blacksmithing",
@@ -61,11 +61,11 @@ export const masterClasses = [
             icon2: "/images/locations/MasterClasses/Blacksmithing/icon_2.svg",
             icon3: "/images/locations/MasterClasses/Blacksmithing/icon_3.svg",
         },
-        subIconsText: {
-            text1: "Придумай и выкуй",
-            text2: "Историческая кузня",
-            text3: "Творческая свобода"
-        }
+        subIconsText: [
+            "Придумай и выкуй",
+            "Историческая кузня",
+            "Творческая свобода"
+        ]
     },
     {
         id: "ceramics",
@@ -93,11 +93,11 @@ export const masterClasses = [
             icon2: "/images/locations/MasterClasses/Ceramics/icon_2.svg",
             icon3: "/images/locations/MasterClasses/Ceramics/icon_3.svg",
         },
-        subIconsText: {
-            text1: "Яркая роспись",
-            text2: "Быстрая сушка",
-            text3: "Лепка вручную"
-        }
+        subIconsText: [
+            "Яркая роспись",
+            "Быстрая сушка",
+            "Лепка вручную"
+        ]
     },
     {
         id: "floristry",
@@ -125,11 +125,11 @@ export const masterClasses = [
             icon2: "/images/locations/MasterClasses/Floristry/icon_2.svg",
             icon3: "/images/locations/MasterClasses/Floristry/icon_3.svg",
         },
-        subIconsText: {
-            text1: "Оформи букет",
-            text2: "Создай свою композицию",
-            text3: "Разнообразие цветов"
-        }
+        subIconsText: [
+            "Оформи букет",
+            "Создай свою композицию",
+            "Разнообразие цветов"
+        ]
     },
     {
         id: "painting",
@@ -157,11 +157,11 @@ export const masterClasses = [
             icon2: "/images/locations/MasterClasses/Painting/icon_2.svg",
             icon3: "/images/locations/MasterClasses/Painting/icon_3.svg",
         },
-        subIconsText: {
-            text1: "Работа с цветом",
-            text2: "Удобное рабочее место",
-            text3: "Разные материалы"
-        }
+        subIconsText: [
+            "Работа с цветом",
+            "Удобное рабочее место",
+            "Разные материалы"
+        ]
     },
     {
         id: "candles",
