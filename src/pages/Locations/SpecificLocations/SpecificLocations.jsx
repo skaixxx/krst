@@ -42,7 +42,9 @@ function SpecificLocations() {
                         <div className={clsx(style.title1, style.title)}>
                             <p>{firstWord}</p>
                         </div>
-                            <div className={style.animation1}><SlidingRotatingCross/></div>  
+                        {firstWord !== "АРХИТЕКТУРА" && firstWord !== "ТЮРЕМНАЯ ЖИЗНЬ" && firstWord !== "НАДЗИРАТЕЛИ" && <div className={style.animation1}><SlidingRotatingCross/>
+                        
+                        </div>}  
                     </div>
                     <div className={style.titleContainerSub2}>
                         {!isMobile && afterWord &&
