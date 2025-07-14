@@ -106,9 +106,6 @@ export default function LocationsList() {
             {isMobile ? 
             
                 <div className={style.titleRow2}>
-                    <div className={style.titleAnimationContainer1}>
-                            <ScaleSlideDotsInverted/>
-                    </div>
                     <p className={clsx(style.titleText2, style.titleText)}>
                         {current.subtitle}
                     </p>

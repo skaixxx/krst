@@ -111,9 +111,15 @@
 @media screen and (max-width: 768px) {
     .titleText {
         font-size: 3.43rem;
+        width: max-content;
     }
     .titleRow1 {
         height: 2.5rem;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .titleAnimationContainer1 {
+        width: 35%;
     }
     .titleRow2 {
         height: 2.5rem;
