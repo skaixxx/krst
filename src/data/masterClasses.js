@@ -189,10 +189,10 @@ export const masterClasses = [
             icon2: "/images/locations/MasterClasses/Candles/icon_2.svg",
             icon3: "/images/locations/MasterClasses/Candles/icon_3.svg",
         },
-        subIconsText: {
-            text1: "Ручная работа",
-            text2: "Натуральные ароматы",
-            text3: "Эфирные масла"
-        }
+        subIconsText: [
+            "Ручная работа",
+            "Натуральные ароматы",
+            "Эфирные масла"
+        ]
     }
 ]
