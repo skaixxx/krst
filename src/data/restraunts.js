@@ -31,11 +31,11 @@ export const restraunts = [
             icon2: "/images/locations/Restraunts/Nomad/icon_2.svg",
             icon3: "/images/locations/Restraunts/Nomad/icon_3.svg",
         },
-		subIconsText: {
-			text1: "Авторские смузи и кофе",
-			text2: "Сезонные продукты",
-			text3: "Интерпретации европейской классики"
-		}
+		subIconsText: [
+			"Авторские смузи и кофе",
+			"Сезонные продукты",
+			"Интерпретации европейской классики"
+		]
 	},
 	{
 		id: "oldManKhinkalych",
@@ -65,11 +65,11 @@ export const restraunts = [
             icon2: "/images/locations/Restraunts/Old-man-Khinkalych/icon_2.svg",
             icon3: "/images/locations/Restraunts/Old-man-Khinkalych/icon_3.svg",
         },
-		subIconsText: {
-			text1: "Домашнее вино",
-			text2: "Национальные блюда",
-			text3: "Грузинская кухня"
-		}
+		subIconsText: [
+			"Домашнее вино",
+			"Национальные блюда",
+			"Грузинская кухня"
+		]
 	},
 	{
 		id: "marsala",
@@ -100,11 +100,11 @@ export const restraunts = [
             icon2: "/images/locations/Restraunts/Marsala/icon_2.svg",
             icon3: "/images/locations/Restraunts/Marsala/icon_3.svg",
         },
-		subIconsText: {
-			text1: "Блюда на дровяной печи",
-			text2: "Сырное ассорти",
-			text3: "Паста по старинным рецептам"
-		}
+		subIconsText: [
+			"Блюда на дровяной печи",
+			"Сырное ассорти",
+			"Паста по старинным рецептам"
+		]
 	},
 	{
 		id: "eggplant",
@@ -135,11 +135,11 @@ export const restraunts = [
             icon2: "/images/locations/Restraunts/Eggplant/icon_2.svg",
             icon3: "/images/locations/Restraunts/Eggplant/icon_3.svg",
         },
-		subIconsText: {
-			text1: "Собственные оливковые масла",
-			text2: "Национальные блюда",
-			text3: "Авторские овощные закуски"
-		}
+		subIconsText: [
+			"Собственные оливковые масла",
+			"Национальные блюда",
+			"Авторские овощные закуски"
+		]
 	},
 	{
 		id: "tigerLily",
@@ -169,11 +169,11 @@ export const restraunts = [
             icon2: "/images/locations/Restraunts/Tiger-Lily/icon_2.svg",
             icon3: "/images/locations/Restraunts/Tiger-Lily/icon_3.svg",
         },
-		subIconsText: {
-			text1: "Фирменные коктейли",
-			text2: "Паназиатская кухня",
-			text3: "Живая музыка"
-		}
+		subIconsText: [
+			"Фирменные коктейли",
+			"Паназиатская кухня",
+			"Живая музыка"
+		]
 	},
 	{
 		id: "leth",
@@ -203,10 +203,10 @@ export const restraunts = [
             icon2: "/images/locations/Restraunts/Leth/icon_2.svg",
             icon3: "/images/locations/Restraunts/Leth/icon_3.svg",
         },
-		subIconsText: {
-			text1: "Гастро-перформансы",
-			text2: "Молекулярные коктейли",
-			text3: "Меню-сюрприз"
-		}
+		subIconsText: [
+			"Гастро-перформансы",
+			"Молекулярные коктейли",
+			"Меню-сюрприз"
+		]
 	}
 ]
