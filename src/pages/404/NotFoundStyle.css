@@ -8,3 +8,13 @@
     font-weight: 700;
     font-size: 2rem;
 }
+@media screen and (max-width:768px) {
+    .not-found-page-container {
+        width: 89.33%;
+        margin: 0 auto;
+        margin-top: 9rem;
+        text-align: center;
+        padding: 2rem;
+        row-gap: 2rem;    
+    }
+}
