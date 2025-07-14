@@ -193,12 +193,6 @@
     box-shadow: -14px 0px 14px 0px hsla(0, 0%, 0%, 0.35);
     transition: margin 150ms linear;
     z-index: 1;
-
-    &:hover {
-        .cardNumber {
-            color: var(--accent-color);
-        }
-    }
 }
 
 .card:last-child {
