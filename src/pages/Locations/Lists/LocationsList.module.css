@@ -112,6 +112,16 @@
     .titleText {
         font-size: 3.43rem;
     }
+    .titleRow1 {
+        height: 2.5rem;
+    }
+    .titleRow2 {
+        height: 2.5rem;
+    }
+    .titleContainer {
+        height: max-content;
+        row-gap: 1.43rem;
+    }
     .container {
         margin-top: 9rem;
         width: 89.33%;

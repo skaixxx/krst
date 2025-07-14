@@ -86,14 +86,34 @@ export default function LocationsList() {
     return (
         <div className={style.container}>
             <div className={style.titleContainer}>
-                <div className={style.titleRow1}>
-                    <p className={clsx(style.titleText1, style.titleText)}>
-                        {current.title}
-                    </p>
-                    <div className={style.titleAnimationContainer1}>
-                        <ScaleSlideDotsInverted/>
+                {isMobile ? 
+                    <div className={style.titleRow1}>
+                        <p className={clsx(style.titleText1, style.titleText)}>
+                            {current.title}
+                        </p>
                     </div>
+                
+                :
+                    <div className={style.titleRow1}>
+                        <p className={clsx(style.titleText1, style.titleText)}>
+                            {current.title}
+                        </p>
+                        <div className={style.titleAnimationContainer1}>
+                            <ScaleSlideDotsInverted/>
+                        </div>
+                    </div>
+            }
+            {isMobile ? 
+            
+                <div className={style.titleRow2}>
+                    <div className={style.titleAnimationContainer1}>
+                            <ScaleSlideDotsInverted/>
+                    </div>
+                    <p className={clsx(style.titleText2, style.titleText)}>
+                        {current.subtitle}
+                    </p>
                 </div>
+                :
                 <div className={style.titleRow2}>
                     <div className={style.titleAnimationContainer2}>
                         <RotatingCross/>
@@ -102,7 +122,9 @@ export default function LocationsList() {
                         {current.subtitle}
                     </p>
                 </div>
+              }  
             </div>
+            
             <div className={style.fullscreenPicContainer}>
                 <img src={current.picture} alt={current.subtitle} className={style.fullscreenPic}/>
             </div>
