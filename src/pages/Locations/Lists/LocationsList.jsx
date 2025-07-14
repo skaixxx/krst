@@ -114,7 +114,7 @@ export default function LocationsList() {
                     <p className={clsx(style.titleText2, style.titleText)}>
                         {current.subtitle}
                     </p>
-                    {current.title === "МАСТЕР  —" || current.title === "ЭКСКУРСИИ" &&
+                    {(current.subtitle === "КЛАССЫ" || current.title === "ЭКСКУРСИИ") &&
                         <div className={style.titleAnimationContainer2}>
                             <ScaleSlideDotsInverted/>
                         </div>
