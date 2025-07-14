@@ -149,4 +149,7 @@
     .descriptionBox3 {
         align-items: start;
     }
+    .cardList {
+        row-gap: 3.57rem;
+    }
 }
