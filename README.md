@@ -7,6 +7,7 @@
   - [Maks75g](https://github.com/Maks75g) (code)
   - [Viсtoria Novozhilova](https://t.me/vixxxtract) (design)
   - [Eva Markova](https://t.me/www_markova) (design)
+  - [Arina Sheveleva](https://t.me/arrrino4ka16) (design)
 >Об версии 0.7.0:
 * ~~Выполняется предполётная подготовка~~
 * ~~Обновлена структура проекта~~
