@@ -8,6 +8,7 @@
   - [Viсtoria Novozhilova](https://t.me/vixxxtract) (design)
   - [Eva Markova](https://t.me/www_markova) (design)
   - [Arina Sheveleva](https://t.me/arrrino4ka16) (design)
+  - [charact3r1](https://www.behance.net/charact3r1) (design)
 >Об версии 0.7.0:
 * ~~Выполняется предполётная подготовка~~
 * ~~Обновлена структура проекта~~
