@@ -1,5 +1,5 @@
 # krst  v.0.7.0
->Проект официально завершён
+Проект официально завершён
 * Спасибо всем, кто работал над проектом
   - [Skaix](https://github.com/skaixxx) (code)
   - [mr0YES1](https://github.com/mr0YES1) (SEO)
