@@ -5,6 +5,8 @@
   - [mr0YES1](https://github.com/mr0YES1) (SEO)
   - [hecathe](https://github.com/hecathe) (code)
   - [Maks75g](https://github.com/Maks75g) (code)
+  - [Viktoria Novozhilova](https://t.me/vixxxtract) (design)
+  - Eva Markova (design)
 >Об версии 0.7.0:
 * ~~Выполняется предполётная подготовка~~
 * ~~Обновлена структура проекта~~
