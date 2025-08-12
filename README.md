@@ -2,7 +2,7 @@
 Проект официально завершён
 * Спасибо всем, кто работал над проектом
   - [Skaix](https://github.com/skaixxx) (code)
-  - [mr0YES1](https://github.com/mr0YES1) (SEO)
+  - [mr0YES1](https://github.com/mr0YES1) (CEO)
   - [hecathe](https://github.com/hecathe) (code)
   - [Maks75g](https://github.com/Maks75g) (code)
   - [Viсtoria Novozhilova](https://t.me/vixxxtract) (design)
