@@ -28,7 +28,13 @@
 **Запуск прооекта**
 1. npm i
 2. npm start
+# Информация о проекте
 ![MainPage](https://github.com/user-attachments/assets/5774c381-c8d9-4132-b335-15267c85d6a4)
+![history](https://github.com/user-attachments/assets/c71e7826-a980-4220-83cb-3b2d63ff312e)
+![locations](https://github.com/user-attachments/assets/b7ce6ac8-ca63-45d5-a78e-41bef569e728)
+![rent](https://github.com/user-attachments/assets/31c9febe-e966-47ec-b742-73c6e4415c50)
+![contacts](https://github.com/user-attachments/assets/59888b2d-ec7c-4b24-b2ac-71e017b2ffd5)
+![residence](https://github.com/user-attachments/assets/77f385dc-7c19-4851-8d47-a19057cf2c60)
 
 
 
