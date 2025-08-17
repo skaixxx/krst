@@ -28,3 +28,9 @@
 **Запуск прооекта**
 1. npm i
 2. npm start
+![MainPage](https://github.com/user-attachments/assets/5774c381-c8d9-4132-b335-15267c85d6a4)
+
+
+
+
+
