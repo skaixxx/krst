@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/krst/Home/static/css/main.e7c644a9.css",
-    "main.js": "/krst/Home/static/js/main.3c46209f.js",
+    "main.js": "/krst/Home/static/js/main.bd969d09.js",
     "static/js/453.d7f79876.chunk.js": "/krst/Home/static/js/453.d7f79876.chunk.js",
     "static/media/mainPage.png": "/krst/Home/static/media/mainPage.fcdaaf7b0e49acbaa6a7.png",
     "static/media/historyBg.png": "/krst/Home/static/media/historyBg.b2810e014a6d15eeb4a2.png",
@@ -67,11 +67,11 @@
     "static/media/red_dot.svg": "/krst/Home/static/media/red_dot.eee417283ee1ff0e67616fcdb62e4c4f.svg",
     "static/media/listPoint.svg": "/krst/Home/static/media/listPoint.8e6d3025cc7801198b3200cab1cee5f8.svg",
     "main.e7c644a9.css.map": "/krst/Home/static/css/main.e7c644a9.css.map",
-    "main.3c46209f.js.map": "/krst/Home/static/js/main.3c46209f.js.map",
+    "main.bd969d09.js.map": "/krst/Home/static/js/main.bd969d09.js.map",
     "453.d7f79876.chunk.js.map": "/krst/Home/static/js/453.d7f79876.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e7c644a9.css",
-    "static/js/main.3c46209f.js"
+    "static/js/main.bd969d09.js"
   ]
 }

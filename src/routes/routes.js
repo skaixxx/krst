@@ -14,7 +14,7 @@ import LocationsList from "../pages/Locations/Lists/LocationsList";
 import SpecificLocations from "../pages/Locations/SpecificLocations/SpecificLocations";
 const AppRoutes = () => {
     const navbar = [
-        {path: "krst/Home", element: <MainPage/>},
+        {path: "krst/", element: <MainPage/>},
         {path: "krst/History", element: <History/>},
         {path: "krst/Events", element: <Events/>},
         {path: "krst/Locations", element: <Locations/>},
