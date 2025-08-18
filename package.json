@@ -2,7 +2,7 @@
   "name": "krst",
   "version": "0.7.0",
   "private": true,
-  "homepage" : "https://skaixxx.github.io/krst",
+  "homepage" : "https://skaixxx.github.io/krst/Home",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",

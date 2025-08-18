@@ -14,18 +14,18 @@ import LocationsList from "../pages/Locations/Lists/LocationsList";
 import SpecificLocations from "../pages/Locations/SpecificLocations/SpecificLocations";
 const AppRoutes = () => {
     const navbar = [
-        {path: "/", element: <MainPage/>},
-        {path: "/History", element: <History/>},
-        {path: "/Events", element: <Events/>},
-        {path: "/Locations", element: <Locations/>},
-        {path: "/Locations/:id", element: <LocationsList/>},
-        {path: "/Locations/:id/:special", element: <SpecificLocations/>},
-        {path: "/Rent", element: <Rent/>},
-        {path: "/Rent/:id", element: <DetailRent/>},
-        {path: "/Rent/:id/:place", element: <Placement/>},
-        {path: "/Contacts", element: <Contacts/>},
-        {path: "/Residence", element: <Residence/>},
-        {path: "/Events/SpecificEvent/:id", element: <SpecificEvent/>},
+        {path: "krst/Home", element: <MainPage/>},
+        {path: "krst/History", element: <History/>},
+        {path: "krst/Events", element: <Events/>},
+        {path: "krst/Locations", element: <Locations/>},
+        {path: "krst/Locations/:id", element: <LocationsList/>},
+        {path: "krst/Locations/:id/:special", element: <SpecificLocations/>},
+        {path: "krst/Rent", element: <Rent/>},
+        {path: "krst/Rent/:id", element: <DetailRent/>},
+        {path: "krst/Rent/:id/:place", element: <Placement/>},
+        {path: "krst/Contacts", element: <Contacts/>},
+        {path: "krst/Residence", element: <Residence/>},
+        {path: "krst/Events/SpecificEvent/:id", element: <SpecificEvent/>},
         {path: "*", element:<NotFound/>}
     ]
     return(
