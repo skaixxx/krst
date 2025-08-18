@@ -2,7 +2,20 @@
 >Disclaimer: The names of restaurants and companies mentioned in the project are provided for reference and illustrative purposes only. They are not associated with this project and do not express support or participation on the part of the specified organizations. All rights belong to their owners.
 #
 >Дисклеймер: Названия ресторанов и компаний упомянутые в проекте, приведены исключительно в справочных и иллюстративных целях. Они не связаны с данным проектом и не выражают поддержки или участия со стороны указанных организаций. Все права принадлежат их владельцам.
+#
+✨ Project Description
 
+🏙 KRST is a demonstration project on React.js, created to visualize ideas for the possible reincarnation of public space.
+
+The goal of the project is not to offer a ready-made solution, but to show how public space could look after the renovation:
+
+🪑 new recreation areas
+
+🍴 examples of points of attraction (cafes, restaurants, cultural places)
+
+🏘 alternative scenarios for using public space
+
+The project is conceptual in nature and serves as inspiration for discussing the future of urban spaces.
 #
 ✨ Описание проекта
 
