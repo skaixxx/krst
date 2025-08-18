@@ -44,7 +44,7 @@ The project is conceptual in nature and serves as inspiration for discussing the
 
 ![residence](https://github.com/user-attachments/assets/77f385dc-7c19-4851-8d47-a19057cf2c60)
 
-* Спасибо всем, кто работал над проектом
+* Спасибо всем, кто работал над проектом | Thanks to everyone who worked on the project
   - [mr0YES1](https://github.com/mr0YES1) (CEO)
   - [Skaix](https://github.com/skaixxx) (code)
   - [hecathe](https://github.com/hecathe) (code)
