@@ -1,4 +1,3 @@
-import { useState } from 'react';
 
 import style from './filter.module.css';
 import iconClose from '../../assets/filter/close.svg'

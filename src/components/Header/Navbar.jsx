@@ -40,7 +40,7 @@ export default function Navbar() {
   }, [location.pathname])
   return (
     <div className={styles.headerContainer}>
-      <div className={styles.logoContainer}><a onClick={() => navigate("/")}><img className={styles.logo} src={logo} alt="logo"></img></a></div>
+      <div className={styles.logoContainer}><div onClick={() => navigate("/")}><img className={styles.logo} src={logo} alt="logo"></img></div></div>
       <nav className={`${styles.navigation} ${!showIndicator ? `${styles.noIndicator}` : ''}`}>
         <div className={styles.navLinks}>
           {navLinks.map(({ to, label }) => (

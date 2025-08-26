@@ -24,7 +24,7 @@ function SpecificEvent() {
                         <div className={clsx(style.title1, style.title)}>
                             <p>{item.title1}</p>
                         </div>
-                        {!isMobile || item.id !== 9 &&
+                        {!isMobile && item.id !== 9 &&
                             <div className={style.animation1}><SlidingRotatingCross/></div>
                         }   
                     </div>

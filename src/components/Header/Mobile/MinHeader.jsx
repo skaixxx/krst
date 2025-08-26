@@ -5,7 +5,7 @@ import menuIcon from "../../../assets/header/mobile/burgerMenu.svg";
 import menuIconLight from "../../../assets/header/mobile/menuLight.svg"
 import closeMenuIcon from "../../../assets/header/mobile/closeMobMenu.svg"
 import NavItem from "../NavItem";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import clsx from "clsx";
 import { useLocation, useNavigate } from "react-router";
 
@@ -19,9 +19,6 @@ const navLinks = [
 ];
 
 export default function MinHeader() {
-    
-    const navRefs = useRef({});
-    
     const [menuOpen, setMenuOpen] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
 

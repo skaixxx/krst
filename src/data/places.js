@@ -3,7 +3,7 @@ export const places = [
 		id: 1,
 		title: 'ГАРМОНИЯ',
 		area: '120 М²',
-		image: '/images/places/place-1-min.png',
+		image: `${process.env.PUBLIC_URL}/images/places/place-1-min.png`,
 		images: [
 			{
 				image: `${process.env.PUBLIC_URL}/images/places/place-1-min.png`,

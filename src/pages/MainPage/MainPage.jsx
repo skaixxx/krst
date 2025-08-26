@@ -116,7 +116,7 @@ function MainPage() {
                     backgroundImage: `url(${item.image})`,
                     backgroundPosition: "center",
                     backgroundSize: "cover"}}>
-                    <a className="cardEvent" key={item.id} onClick={() => handleClick(item.id)}>
+                    <div className="cardEvent" key={item.id} onClick={() => handleClick(item.id)}>
                         <div className="cardDate"><span>{item.dates}</span></div>
                         <div className="cardBody">
                             <div className="cardText"><p>{item.title}</p></div>
@@ -127,7 +127,7 @@ function MainPage() {
                                 />
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 ))}
                 <div className={style.animationContainer}>

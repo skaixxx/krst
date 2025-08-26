@@ -8,30 +8,29 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 
 const Locations = () => {
-
     const galleryPhotos = [
         {
+            title: "СПИСОК",
+            subtitle: "РЕСТОРАНОВ",
             id: "restraunts",
             url: `${process.env.PUBLIC_URL}/images/locations/restaurants.png`,
             alt: "Рестораны",
-            title: "СПИСОК",
-            subtitle: "РЕСТОРАНОВ",
             description: "Вкус, который запомнится: уникальные блюда и атмосфера наших ресторанов!"
         },
         {
+            title: "МАСТЕР  —",
+            subtitle: "КЛАССЫ",
             id: "masterClasses",
             url: `${process.env.PUBLIC_URL}/images/locations/masterClasses.png`,
             alt: "Мастер-классы",
-            title: "МАСТЕР  —",
-            subtitle: "КЛАССЫ",
             description: "Освойте новые навыки и вдохновитесь: вместе с нами вы сможете достичь невероятного!"
         },
         {
+            title: "ЭКСКУРСИИ",
+            subtitle: "ПО МУЗЕЮ",
             id: "excursions",
             url: `${process.env.PUBLIC_URL}/images/locations/excursions.png`,
             alt: "Экскурсии",
-            title: "ЭКСКУРСИИ",
-            subtitle: "ПО МУЗЕЮ",
             description: "Раскройте тайны прошлого в увлекательных экскурсиях по нашему музею!"
         }
     ];
@@ -40,6 +39,7 @@ const Locations = () => {
     const [selectedIndex, setSelectedIndex] = useState(0)
     const [displayedIndex, setDisplayedIndex] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
+    // eslint-disable-next-line
     const [actualId, setActualId] = useState("");
     
     const handleNavigation = () => {
@@ -57,6 +57,7 @@ const Locations = () => {
         
             return () => clearTimeout(timer);
         }
+        // eslint-disable-next-line
     }, [selectedIndex, displayedIndex]);
 
     return(

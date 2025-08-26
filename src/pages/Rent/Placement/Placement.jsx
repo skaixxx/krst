@@ -27,7 +27,7 @@ function Placement() {
         } 
 	};
 
-	const placement = places.find((item) => item.id == place);
+	const placement = places.find((item) => item.id === place);
 
 	useEffect(() => {
         window.scrollTo(0, 0)
