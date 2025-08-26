@@ -13,7 +13,7 @@ const Locations = () => {
             title: "СПИСОК",
             subtitle: "РЕСТОРАНОВ",
             id: "restraunts",
-            url: `${process.env.PUBLIC_URL}/images/locations/restaurants.png`,
+            url: "/images/locations/restaurants.png",
             alt: "Рестораны",
             description: "Вкус, который запомнится: уникальные блюда и атмосфера наших ресторанов!"
         },
@@ -21,7 +21,7 @@ const Locations = () => {
             title: "МАСТЕР  —",
             subtitle: "КЛАССЫ",
             id: "masterClasses",
-            url: `${process.env.PUBLIC_URL}/images/locations/masterClasses.png`,
+            url: "/images/locations/masterClasses.png",
             alt: "Мастер-классы",
             description: "Освойте новые навыки и вдохновитесь: вместе с нами вы сможете достичь невероятного!"
         },
@@ -29,7 +29,7 @@ const Locations = () => {
             title: "ЭКСКУРСИИ",
             subtitle: "ПО МУЗЕЮ",
             id: "excursions",
-            url: `${process.env.PUBLIC_URL}/images/locations/excursions.png`,
+            url: "/images/locations/excursions.png",
             alt: "Экскурсии",
             description: "Раскройте тайны прошлого в увлекательных экскурсиях по нашему музею!"
         }

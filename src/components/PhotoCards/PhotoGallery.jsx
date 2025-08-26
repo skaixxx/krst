@@ -108,7 +108,7 @@ const PhotoGallery = ({
                     }}    
                 >
                     <img
-                        src={photo.url}
+                        src={`${process.env.PUBLIC_URL}${photo.url}`}
                         alt={photo.alt || `Фото ${index + 1}`}
                         className={style.image}
                     />
