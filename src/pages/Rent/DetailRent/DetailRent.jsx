@@ -2,7 +2,6 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import { places } from '../../../data/places';
 import style from "./detailRent.module.css";
-import arrowBR from "../../../assets/mainPage/arrowsBR.svg"
 import Card from "../../../components/Card/Сard";
 import ScaleSlideDotsInverted from '../../../components/animations/ScaleSlideDots/ScaleSlideDotsInverted';
 import Filter from '../../../components/Filter/Filter';

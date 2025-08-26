@@ -23,7 +23,6 @@ export default function Navbar() {
     if (activeLink) {
       const { offsetLeft, offsetWidth } = activeLink;
       const center = offsetLeft + offsetWidth / 2;
-      console.log(center)
       setIndicatorStyle({
         width: `${offsetWidth * 1.2}px`,
         left: `${center - (offsetWidth * 1.2) / 2}px`,

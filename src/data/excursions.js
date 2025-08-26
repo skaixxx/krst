@@ -192,9 +192,9 @@ export const excursions = [
         insideText1: "Погрузитесь в глубины человеческих судеб, навсегда связанных с этим местом. Экскурсия расскажет о жизни политических заключенных 1930-х годов, \"воров в законе\" советской эпохи и современных знаменитостях, отбывавших здесь срок.",
         insideText2: "Вы услышите подлинные истории из дневников узников, увидите личные вещи, изготовленные в камерах, и познакомитесь с реконструкцией типичного дня заключенного разных исторических периодов.",
         iconsInside: {
-            icon1: "/images/locations/Excursions/The prisoners/icon_1.svg",
-            icon2: "/images/locations/Excursions/The prisoners/icon_2.svg",
-            icon3: "/images/locations/Excursions/The prisoners/icon_3.svg",
+            icon1: `${process.env.PUBLIC_URL}/images/locations/Excursions/The prisoners/icon_1.svg`,
+            icon2: `${process.env.PUBLIC_URL}/images/locations/Excursions/The prisoners/icon_2.svg`,
+            icon3: `${process.env.PUBLIC_URL}/images/locations/Excursions/The prisoners/icon_3.svg`,
         },
         subIconsText: [
             "Политические заключенные",

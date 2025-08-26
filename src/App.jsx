@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter} from 'react-router';
+import { HashRouter as Router} from 'react-router';
 import Footer from './components/Footer/footer';
 import Header from './components/Header/Header'
 import AppRoutes from './routes/routes';
@@ -7,11 +7,11 @@ import AppRoutes from './routes/routes';
 function App() {
   return (
     <React.StrictMode>
-      <BrowserRouter>
+      <Router>
           <Header/>
             <AppRoutes/>
           <Footer/>
-      </BrowserRouter>
+      </Router>
     </React.StrictMode>
   );
 }

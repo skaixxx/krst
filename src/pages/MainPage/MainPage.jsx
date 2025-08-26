@@ -5,8 +5,6 @@ import timeIcon from "../../assets/mainPage/time.svg"
 import mapImage from "../../assets/mainPage/map.png"
 import arrowBR from "../../assets/mainPage/arrowsBR.svg"
 import listPoint from "../../assets/mainPage/listPoint.svg"
-import mobBg from "../../assets/mainPage/mobileStaticMP.png"
-import fsBg from "../../assets/mainPage/staticMP.png"
 import SlidingRotatingCross from "../../components/animations/SRCross/SlidingRotatingCross"
 import { eventsData } from "../../data/events"
 import { useNavigate } from "react-router"
@@ -23,7 +21,6 @@ function MainPage() {
 
     const navigate = useNavigate();
     const isMobile = useMediaQuery('(max-width: 768px)');
-    const bgSectionStyle = isMobile ? mobBg : fsBg;
 
     const limitedCard = eventsData.map(item =>
     item.id === 4 && isMobile? eventsData.find(item => item.id === 8) : item).slice(0, 5);

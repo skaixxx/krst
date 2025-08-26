@@ -6,10 +6,10 @@ export const places = [
 		image: '/images/places/place-1-min.png',
 		images: [
 			{
-				image: '/images/places/place-1-min.png',
+				image: `${process.env.PUBLIC_URL}/images/places/place-1-min.png`,
 			},
 			{
-				image: '/images/places/place-1-min.png',
+				image: `${process.env.PUBLIC_URL}/images/places/place-1-min.png`,
 			},
 		],
 		text: 'Помещение идеально подходит для мастер-классов по керамике: здесь всё продумано до мелочей для удобства участников.',
@@ -20,12 +20,12 @@ export const places = [
 		},
 		specs: [
 			{
-				icon: '/images/card/icon-2.svg',
+				icon: `${process.env.PUBLIC_URL}/images/card/icon-2.svg`,
 				label: 'Площадь',
 				value: '120 М²',
 			},
 			{
-				icon: '/images/card/icon-1.svg',
+				icon: `${process.env.PUBLIC_URL}/images/card/icon-1.svg`,
 				label: 'Цена в месяц',
 				value: '87 000 ₽',
 			},
@@ -40,13 +40,13 @@ export const places = [
 		id: 2,
 		title: 'ФАНТАЗИЯ',
 		area: '110 М²',
-		image: '/images/places/place-2-min.png',
+		image: `${process.env.PUBLIC_URL}/images/places/place-2-min.png`,
 		images: [
 			{
-				image: '/images/places/place-2-min.png',
+				image: `${process.env.PUBLIC_URL}/images/places/place-2-min.png`,
 			},
 			{
-				image: '/images/places/place-2-min.png',
+				image: `${process.env.PUBLIC_URL}/images/places/place-2-min.png`,
 			},
 		],
 		text: 'Уютный и вдохновляющий зал с большими окнами, идеально подходящий для проведения мастер-классов по живописи.',
@@ -57,12 +57,12 @@ export const places = [
 		},
 		specs: [
 			{
-				icon: '/images/card/icon-2.svg',
+				icon: `${process.env.PUBLIC_URL}/images/card/icon-2.svg`,
 				label: 'Площадь',
 				value: '110 М²',
 			},
 			{
-				icon: '/images/card/icon-1.svg',
+				icon: `${process.env.PUBLIC_URL}/images/card/icon-1.svg`,
 				label: 'Цена в месяц',
 				value: '83 000 ₽',
 			},
@@ -78,13 +78,13 @@ export const places = [
 		id: 3,
 		title: 'ПЕРСПЕКТИВА',
 		area: '140 М²',
-		image: '/images/places/place-3-min.png',
+		image: `${process.env.PUBLIC_URL}/images/places/place-3-min.png`,
 		images: [
 			{
-				image: '/images/places/place-2-min.png',
+				image: `${process.env.PUBLIC_URL}/images/places/place-2-min.png`,
 			},
 			{
-				image: '/images/places/place-2-min.png',
+				image: `${process.env.PUBLIC_URL}/images/places/place-2-min.png`,
 			},
 		],
 		text: 'Светлый и просторный зал, идеально подходящий для создания фотостудии. Помещение оснащено современным оборудованием и удобной мебелью.',
@@ -95,12 +95,12 @@ export const places = [
 		},
 		specs: [
 			{
-				icon: '/images/card/icon-2.svg',
+				icon: `${process.env.PUBLIC_URL}/images/card/icon-2.svg`,
 				label: 'Площадь',
 				value: '140 М²',
 			},
 			{
-				icon: '/images/card/icon-1.svg',
+				icon: `${process.env.PUBLIC_URL}/images/card/icon-1.svg`,
 				label: 'Цена в месяц',
 				value: '110 000 ₽',
 			},
@@ -115,13 +115,13 @@ export const places = [
 		id: 4,
 		title: 'МЕЛОДИЯ',
 		area: '120 М²',
-		image: '/images/places/place-4-min.png',
+		image: `${process.env.PUBLIC_URL}/images/places/place-4-min.png`,
 		images: [
 			{
-				image: '/images/places/place-2-min.png',
+				image: `${process.env.PUBLIC_URL}/images/places/place-2-min.png`,
 			},
 			{
-				image: '/images/places/place-2-min.png',
+				image: `${process.env.PUBLIC_URL}/images/places/place-2-min.png`,
 			},
 		],
 		text: 'В данном помещении каждый найдет всё необходимое для раскрытия своего потенциала: удобная мебель, качественный звук и продуманное освещение.',
@@ -132,12 +132,12 @@ export const places = [
 		},
 		specs: [
 			{
-				icon: '/images/card/icon-2.svg',
+				icon: `${process.env.PUBLIC_URL}/images/card/icon-2.svg`,
 				label: 'Площадь',
 				value: '120 М²',
 			},
 			{
-				icon: '/images/card/icon-1.svg',
+				icon: `${process.env.PUBLIC_URL}/images/card/icon-1.svg`,
 				label: 'Цена в месяц',
 				value: '95 000 ₽',
 			},

@@ -21,7 +21,7 @@ function Rent() {
                 </h1>
 
                 <div className={style.rentPageBlock}>
-                    <img className={style.rentPageBlockImg} src="/images/rent/1.jpg" alt="" />
+                    <img className={style.rentPageBlockImg} src={`${process.env.PUBLIC_URL}/images/rent/1.jpg`} alt="" />
                     <div className={style.rentPageBlockRow}>
                         <div className={style.rentPageBlockItem}>
                             <h3 className={style.rentPageBlockItemTitle}>#преимущества</h3>
@@ -54,7 +54,7 @@ function Rent() {
                 <div className={style.cards}>
                     <Link className={style.card} to="/Rent/1">
                         <div className={style.cardImage}>
-                            <img src="/images/rent/photo-1.png" alt="" />
+                            <img src={`${process.env.PUBLIC_URL}/images/rent/photo-1.png`} alt="" />
                         </div>
                         <div className={style.cardContent}>
                             <div className={style.cardHeader}>
@@ -70,7 +70,7 @@ function Rent() {
                     </Link>
                     <Link className={style.card} to="/Rent/2">
                         <div className={style.cardImage}>
-                            <img src="/images/rent/photo-2.png" alt="" />
+                            <img src={`${process.env.PUBLIC_URL}/images/rent/photo-2.png`} alt="" />
                         </div>
                         <div className={style.cardContent}>
                             <div className={style.cardHeader}>
@@ -85,7 +85,7 @@ function Rent() {
                     </Link>
                     <Link className={style.card} to="/Rent/3">
                         <div className={style.cardImage}>
-                            <img src="/images/rent/photo-3.png" alt="" />
+                            <img src={`${process.env.PUBLIC_URL}/images/rent/photo-3.png`} alt="" />
                         </div>
                         <div className={style.cardContent}>
                             <div className={style.cardHeader}>
@@ -100,7 +100,7 @@ function Rent() {
                     </Link>
                     <Link className={style.card} to="/Rent/4">
                         <div className={style.cardImage}>
-                            <img src="/images/rent/photo-4.png" alt="" />
+                            <img src={`${process.env.PUBLIC_URL}/images/rent/photo-4.png`} alt="" />
                         </div>
                         <div className={style.cardContent}>
                             <div className={style.cardHeader}>

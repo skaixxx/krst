@@ -12,7 +12,7 @@ const Locations = () => {
     const galleryPhotos = [
         {
             id: "restraunts",
-            url: "./images/locations/restaurants.png",
+            url: `${process.env.PUBLIC_URL}/images/locations/restaurants.png`,
             alt: "Рестораны",
             title: "СПИСОК",
             subtitle: "РЕСТОРАНОВ",
@@ -20,7 +20,7 @@ const Locations = () => {
         },
         {
             id: "masterClasses",
-            url: "./images/locations/masterClasses.png",
+            url: `${process.env.PUBLIC_URL}/images/locations/masterClasses.png`,
             alt: "Мастер-классы",
             title: "МАСТЕР  —",
             subtitle: "КЛАССЫ",
@@ -28,7 +28,7 @@ const Locations = () => {
         },
         {
             id: "excursions",
-            url: "./images/locations/excursions.png",
+            url: `${process.env.PUBLIC_URL}/images/locations/excursions.png`,
             alt: "Экскурсии",
             title: "ЭКСКУРСИИ",
             subtitle: "ПО МУЗЕЮ",
@@ -53,7 +53,6 @@ const Locations = () => {
                 setDisplayedIndex(selectedIndex);
                 setIsAnimating(false);
                 setActualId(galleryPhotos[displayedIndex].id)
-                console.log("Actual id", actualId);
             }, 300);
         
             return () => clearTimeout(timer);

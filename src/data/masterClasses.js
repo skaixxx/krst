@@ -185,9 +185,9 @@ export const masterClasses = [
         insideText1: "Вы научитесь основам: подготовке воска и парафина, работе с фитилями, добавлению оттенков и ароматов. Разберём тонкости процесса - как добиться ровной поверхности, создавать слои и текстуры.",
         insideText2: "Это ремесло, где ваша внимательность превращается в ровный гладкий край, а творческая смелость — в необычные цветовые переходы.",
         iconsInside: {
-            icon1: "/images/locations/MasterClasses/Candles/icon_1.svg",
-            icon2: "/images/locations/MasterClasses/Candles/icon_2.svg",
-            icon3: "/images/locations/MasterClasses/Candles/icon_3.svg",
+            icon1: `${process.env.PUBLIC_URL}/images/locations/MasterClasses/Candles/icon_1.svg`,
+            icon2: `${process.env.PUBLIC_URL}/images/locations/MasterClasses/Candles/icon_2.svg`,
+            icon3: `${process.env.PUBLIC_URL}/images/locations/MasterClasses/Candles/icon_3.svg`,
         },
         subIconsText: [
             "Ручная работа",

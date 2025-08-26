@@ -141,7 +141,7 @@ function Residence() {
                         <div className="form-send-button"><ButtonGoToDesktop text="отправить"/></div>
                     </div>
                 </div>
-                <div className="bid-picture-container"><img src="./images/residence/residenceBottom.png" alt="bottomPhoto" className="bid-picture"></img></div>
+                <div className="bid-picture-container"><img src={`${process.env.PUBLIC_URL}/images/residence/residenceBottom.png`} alt="bottomPhoto" className="bid-picture"></img></div>
             </div>
         </div>
     );

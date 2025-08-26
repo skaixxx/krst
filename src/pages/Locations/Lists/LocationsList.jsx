@@ -4,7 +4,6 @@ import NotFound from "../../404/NotFound";
 import clsx from "clsx";
 import RotatingCross from "../../../components/animations/RotatingCross/RotatingCross";
 import ScaleSlideDotsInverted from "../../../components/animations/ScaleSlideDots/ScaleSlideDotsInverted";
-import Card from "../../../components/Card/Сard";
 import Filter from "../../../components/Filter/Filter";
 import { useEffect, useState } from "react";
 import { DataPick } from "../../../components/Locations/DataPick";
@@ -24,7 +23,7 @@ export default function LocationsList() {
             description: "В КРСТ представлены рестораны на любой вкус — от уютных кафе до премиальных заведений. Здесь вы легко найдете место для деловой встречи, семейного ужина или дружеских посиделок.",
             title: "СПИСОК",
             subtitle: "РЕСТОРАНОВ",
-            picture: "/images/locations/Restraunts/restrauntsMainPhoto.png",
+            picture: `${process.env.PUBLIC_URL}/images/locations/Restraunts/restrauntsMainPhoto.png`,
             price: "2 500 ₽",
             priceDescription: "Средний чек",
             places: "65",
@@ -37,7 +36,7 @@ export default function LocationsList() {
             description: "Бывшая тюрьма, ставшая творческим пространством, теперь открыта для мастер-классов по искусству. Здесь, среди исторических стен, профессиональные художники делятся своим опытом, помогая каждому раскрыть творческий потенциал.",
             title: "МАСТЕР  —",
             subtitle: "КЛАССЫ",
-            picture: "/images/locations/MasterClasses/MasterClassesMainPhoto.png",
+            picture: `${process.env.PUBLIC_URL}/images/locations/MasterClasses/MasterClassesMainPhoto.png`,
             price: "1 500 ₽",
             priceDescription: "Средний чек",
             places: "15",
@@ -50,7 +49,7 @@ export default function LocationsList() {
             description: "КРСТ — уникальное пространство, где история встречается с современным искусством. Бывшая тюрьма, сохранившая дух прошлого, теперь центр творчества и культуры. Наши экскурсии раскрывают истории этих стен через искусство, архитектуру и городские легенды.",
             title: "ЭКСКУРСИИ",
             subtitle: "ПО МУЗЕЮ",
-            picture: "/images/locations/Excursions/ExcursionsMainPhoto.png",
+            picture: `${process.env.PUBLIC_URL}/images/locations/Excursions/ExcursionsMainPhoto.png`,
             price: "4 часа",
             priceDescription: "Средняя продолжительность",
             places: "10 +",

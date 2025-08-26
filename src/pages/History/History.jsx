@@ -42,7 +42,7 @@ function History() {
     });
      
     useEffect(() => {
-        fetch('/data/history/carouselData.json')
+        fetch(`${process.env.PUBLIC_URL}/data/history/carouselData.json`)
         .then((res) => {
             if (!res.ok) {
                 throw new Error(`HTTP error! status: ${res.status}`);
@@ -53,7 +53,7 @@ function History() {
         .catch((err) => {
             console.error('ошибка загрузки данных', err);
         })
-        fetch('/data/history/famousPeople.json')
+        fetch(`${process.env.PUBLIC_URL}/data/history/famousPeople.json`)
         .then((res) => {
             if (!res.ok) {
                 throw new Error(`Fetch data error: ${res.status}`);
@@ -64,7 +64,7 @@ function History() {
         .catch((err) => {
             console.error('ошибка загрузки данных', err);
         })
-        fetch('/data/history/dangerousPeople.json')
+        fetch(`${process.env.PUBLIC_URL}/data/history/dangerousPeople.json`)
         .then((res) => {
             if (!res.ok) {
                 throw new Error(`Fetch data error: ${res.status}`);

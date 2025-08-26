@@ -16,17 +16,13 @@ function SpecificLocations() {
     }, [])
     const isMobile = useMediaQuery('(max-width: 768px)');
     const { id, special } = useParams();
-    console.log("start id ", id)
     var item = "";
     if (id === "restraunts") {
         item = restraunts.find((item) => item.id === special);
-        console.log(id)
     } else if (id === "masterClasses") {
         item = masterClasses.find((item) => item.id === special);
-        console.log(id)
     } else if (id === "excursions") {
         item = excursions.find((item) => item.id === special);
-        console.log(id)
     } else {
         return <NotFound/>
     }
