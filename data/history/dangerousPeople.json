@@ -7,7 +7,7 @@
         [
             {
                 "id":1,
-                "url": "`${process.env.PUBLIC_URL}/images/history/dangerous/1.png`",
+                "url": "../images/history/dangerous/1.png",
                 "name": "ЛЁНЬКА ПАНТЕЛЕЕВ",
                 "alt" : "Лёнька Пантелеев",
                 "year": "1922",
@@ -15,7 +15,7 @@
             },
             {
                 "id":2,
-                "url": "`${process.env.PUBLIC_URL}/images/history/dangerous/2.png`",
+                "url": "../images/history/dangerous/2.png",
                 "name": "МАДУЕВ СЕРГЕЙ АЛЕКСАНДРОВИЧ",
                 "alt" : "Мадуев Сергей Александрович",
                 "year": "1991",
@@ -23,7 +23,7 @@
             },
             {
                 "id":3,
-                "url": "`${process.env.PUBLIC_URL}/images/history/dangerous/3.png`",
+                "url": "../images/history/dangerous/3.png",
                 "name": "БАНДА ЮРИЯ ПЕРЕПЁЛКИНА",
                 "alt" : "Банда Юрия Перепелкина",
                 "year": "1992",
