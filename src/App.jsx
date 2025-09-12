@@ -8,9 +8,9 @@ function App() {
   return (
     <React.StrictMode>
       <Router>
-          <Header/>
-            <AppRoutes/>
-          <Footer/>
+            <Header/>
+              <AppRoutes/>
+            <Footer/>
       </Router>
     </React.StrictMode>
   );

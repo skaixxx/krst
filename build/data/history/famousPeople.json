@@ -7,7 +7,7 @@
         [
             {
                 "id":1,
-                "url": "../images/history/famous/1.png",
+                "url": "/images/history/famous/1.png",
                 "name": "ТРОЦКИЙ ЛЕВ ДАВИДОВИЧ",
                 "alt": "ТРОЦКИЙ ЛЕВ ДАВИДОВИЧ",
                 "year": "1905",
@@ -15,7 +15,7 @@
             },
             {
                 "id":2,
-                "url": "../images/history/famous/2.png",
+                "url": "/images/history/famous/2.png",
                 "name": "ГУМИЛЁВ ЛЕВ НИКОЛАЕВИЧ",
                 "alt": "ГУМИЛЁВ ЛЕВ НИКОЛАЕВИЧ",
                 "year": "1935",
@@ -23,7 +23,7 @@
             },
             {
                 "id":3,
-                "url": "../images/history/famous/3.png",
+                "url": "/images/history/famous/3.png",
                 "name": "РОКОССОВСКИЙ КОНСТАНТИН КОНСТАНТИНОВИЧ",
                 "alt": "РОКОССОВСКИЙ КОНСТАНТИН КОНСТАНТИНОВИЧ",
                 "year": "1937-1940",
@@ -31,7 +31,7 @@
             },
             {
                 "id":4,
-                "url": "../images/history/famous/4.png",
+                "url": "/images/history/famous/4.png",
                 "name": "БРОДСКИЙ ИОСИФ АЛЕКСАНДРОВИЧ",
                 "alt": "БРОДСКИЙ ИОСИФ АЛЕКСАНДРОВИЧ",
                 "year": "1964",
