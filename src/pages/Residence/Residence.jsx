@@ -11,7 +11,7 @@ import { useNavigate } from "react-router"
 import { usePopup } from "../../components/popup/popupContext"
 function Residence() {
     const navigate = useNavigate();
-    const { openPopUp } = usePopup();
+    const { openPopup } = usePopup();
     const isMobile = useMediaQuery('(max-width: 768px)');
     const inputFocus = (current) => {
         current.target.placeholder = '';
@@ -142,7 +142,7 @@ function Residence() {
                         <div className="form-birthday res-form"><input className="input-r" type="text" name="birthday" id="birthday" placeholder="дата рождения" data-placeholder='дата рождения' onFocus={inputFocus} onBlur={inputBlur}/><img className="calendar-icon" src={calendarIcon} alt="calendar"></img></div>
                         <div className="form-phone res-form"><input className="input-r" type="tel" name="phone" id="phone" placeholder="телефон" data-placeholder='телефон' onFocus={inputFocus} onBlur={inputBlur}/><img className="phone-icon" src={phoneIcon} alt="phone"/></div>
                         <div className="form-email res-form"><input className="input-r" type="email" name="email" id="email" placeholder="email" data-placeholder='email' onFocus={inputFocus} onBlur={inputBlur}/><img className="email-icon" src={emailIcon} alt="email"/></div>
-                        <div className="form-send-button"><ButtonGoToDesktop text="отправить" action={openPopUp}/></div>
+                        <div className="form-send-button"><ButtonGoToDesktop text="отправить" action={openPopup}/></div>
                     </div>
                 </div>
                 <div className="bid-picture-container"><img src={`${process.env.PUBLIC_URL}/images/residence/residenceBottom.png`} alt="bottomPhoto" className="bid-picture"></img></div>

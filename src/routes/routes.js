@@ -12,8 +12,6 @@ import SpecificEvent from "../pages/Events/SpecificEvent/SpecificEvent";
 import NotFound from "../pages/404/NotFound";
 import LocationsList from "../pages/Locations/Lists/LocationsList";
 import SpecificLocations from "../pages/Locations/SpecificLocations/SpecificLocations";
-import { PopupProvider } from "../components/popup/popupContext";
-import PopUp from "../components/popup/popup";
 const AppRoutes = () => {
     const navbar = [
         {path: "/", element: <MainPage/>},
@@ -31,14 +29,11 @@ const AppRoutes = () => {
         {path: "*", element:<NotFound/>}
     ]
     return(
-        <PopupProvider>
             <Routes>
                 {navbar.map((route) =>(
                     <Route key={route.path} path={route.path} element={route.element}/>
                 ))}
             </Routes>
-            <PopUp/>
-        </PopupProvider>
         );
 };
 export default AppRoutes;

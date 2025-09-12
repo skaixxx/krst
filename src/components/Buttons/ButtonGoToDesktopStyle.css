@@ -18,11 +18,14 @@
     opacity: 0.9;
     cursor: pointer;
 }
+.button-specific-events:active {
+    opacity: 0.8;
+    cursor: auto;
+}
 .button-arrow-pic {
     height: 36%;
     width: 9.47%;
 }
-
 @media (max-width: 768px) {
     .button-container-specific-events {
         height: fit-content;
