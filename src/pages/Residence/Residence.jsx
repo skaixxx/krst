@@ -9,10 +9,22 @@ import ScaleCrossSlideBracketInverted from "../../components/animations/ScaleCro
 import useMediaQuery from "../../components/Header/useMediaQuery"
 import { useNavigate } from "react-router"
 import { usePopup } from "../../components/popup/popupContext"
+import { useState } from "react"
 function Residence() {
     const navigate = useNavigate();
     const { openPopup } = usePopup();
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
+    const [birthday, setBirthday] = useState("");
     const isMobile = useMediaQuery('(max-width: 768px)');
+    const handleSubmit = () => {
+        if (!name || !email || !phone || !birthday) {
+            alert("Пожалуйста заполните все поля!")
+            return;
+        }
+        openPopup()
+    }
     const inputFocus = (current) => {
         current.target.placeholder = '';
     };
@@ -138,11 +150,11 @@ function Residence() {
                     }
                     
                     <div className="bid-form">
-                        <div className="form-name res-form"><input className="input-r" type="name" id="name" placeholder='фио' data-placeholder='фио' onFocus={inputFocus} onBlur={inputBlur}/><img className="profile-icon" src={profileIcon} alt="profile"/></div>
-                        <div className="form-birthday res-form"><input className="input-r" type="text" name="birthday" id="birthday" placeholder="дата рождения" data-placeholder='дата рождения' onFocus={inputFocus} onBlur={inputBlur}/><img className="calendar-icon" src={calendarIcon} alt="calendar"></img></div>
-                        <div className="form-phone res-form"><input className="input-r" type="tel" name="phone" id="phone" placeholder="телефон" data-placeholder='телефон' onFocus={inputFocus} onBlur={inputBlur}/><img className="phone-icon" src={phoneIcon} alt="phone"/></div>
-                        <div className="form-email res-form"><input className="input-r" type="email" name="email" id="email" placeholder="email" data-placeholder='email' onFocus={inputFocus} onBlur={inputBlur}/><img className="email-icon" src={emailIcon} alt="email"/></div>
-                        <div className="form-send-button"><ButtonGoToDesktop text="отправить" action={openPopup}/></div>
+                        <div className="form-name res-form"><input className="input-r" value={name} onChange={(e) => setName(e.target.value)} type="name" id="name" placeholder='фио' data-placeholder='фио' onFocus={inputFocus} onBlur={inputBlur}/><img className="profile-icon" src={profileIcon} alt="profile"/></div>
+                        <div className="form-birthday res-form"><input className="input-r" value={birthday} onChange={(e) => setBirthday(e.target.value)} type="text" name="birthday" id="birthday" placeholder="дата рождения" data-placeholder='дата рождения' onFocus={inputFocus} onBlur={inputBlur}/><img className="calendar-icon" src={calendarIcon} alt="calendar"></img></div>
+                        <div className="form-phone res-form"><input className="input-r" value={phone} onChange={(e) => setPhone(e.target.value)} type="tel" name="phone" id="phone" placeholder="телефон" data-placeholder='телефон' onFocus={inputFocus} onBlur={inputBlur}/><img className="phone-icon" src={phoneIcon} alt="phone"/></div>
+                        <div className="form-email res-form"><input className="input-r" value={email} onChange={(e) => setEmail(e.target.value)} type="email" name="email" id="email" placeholder="email" data-placeholder='email' onFocus={inputFocus} onBlur={inputBlur}/><img className="email-icon" src={emailIcon} alt="email"/></div>
+                        <div className="form-send-button"><ButtonGoToDesktop text="отправить" action={handleSubmit}/></div>
                     </div>
                 </div>
                 <div className="bid-picture-container"><img src={`${process.env.PUBLIC_URL}/images/residence/residenceBottom.png`} alt="bottomPhoto" className="bid-picture"></img></div>

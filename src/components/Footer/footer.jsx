@@ -95,7 +95,7 @@ function Footer() {
                 <div className="footer-mail-input-container">
                     <input
                         ref={inputRef}
-                        data-placeholder='Введите вашу почту'
+                        placeholder="Введите вашу почту"
                         className="footer-input-email"
                         onChange={positionCaret}
                         onSelect={positionCaret}
