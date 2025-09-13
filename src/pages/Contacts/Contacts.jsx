@@ -11,8 +11,32 @@ import ButtonGoToDesktop from '../../components/Buttons/ButtonGoToDesktop'
 import RotatingCross from '../../components/animations/RotatingCross/RotatingCross';
 import ScaleSlideBrackets from '../../components/animations/ScaleSlideBrackets/ScaleSlideBrackets';
 import clsx from 'clsx';
+import { useState } from 'react';
+import { usePopup } from '../../components/popup/popupContext';
 
 function Contacts() {
+    const { openPopup } = usePopup();
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
+    const [birthday, setBirthday] = useState("");
+    const [message, setMessage] = useState("");
+    const handleSubmit = () => {
+        if (!name || !email || !phone || !birthday || !message) {
+            openPopup(
+            <div className={style.popUpBox}>
+                <p>Пожалуйста, заполните все поля!</p>
+            </div>
+        )
+            return;
+        }
+        openPopup(
+            <div className={style.popUpBox}>
+                <p>Успешно отправлено!</p>
+                <p>Мы скоро с вами свяжемся!</p>
+            </div>
+        )
+    }
     const isMobile = useMediaQuery('(max-width: 768px)');
     const inputFocus = (current) => {
         current.target.placeholder = '';
@@ -76,20 +100,20 @@ function Contacts() {
                     </div>
                     }
                     <div className={style.contactForm}>
-                        <div className={style.nameFormContainer}><input type="text" className={style.contactsName} placeholder="фио" data-placeholder='фио' onFocus={inputFocus} onBlur={inputBlur}></input><img src={personalInfoIcon} alt="persInfoIcon" className={style.personalInfoIcon}/></div>
-                        <div className={style.contactsDateBirthContainer}><input name="birthday" type="text" className={style.contactsDateBirth} placeholder="дата рождения" data-placeholder='дата рождения' onFocus={inputFocus} onBlur={inputBlur}/><img src={calendar} alt="calendar" className={style.dateBirthIcon}/></div>
-                        <div className={style.emailFormContainer}><input type="email" className={style.contactsEmail} placeholder="email" data-placeholder='email' onFocus={inputFocus} onBlur={inputBlur}/><img src={letterIcon} alt="letterIcon" className={style.emailIcon}/></div>
-                        <div className={style.phoneFormContainer}><input type="tel" className={style.contactsPhone} placeholder="телефон" data-placeholder='телефон' onFocus={inputFocus} onBlur={inputBlur} pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"/><img src={phoneIcon} alt="phoneIcon" className={style.phoneIcon}/></div>
+                        <div className={style.nameFormContainer}><input type="text" className={style.contactsName} value={name} onChange={(e) => setName(e.target.value)} placeholder="фио" data-placeholder='фио' onFocus={inputFocus} onBlur={inputBlur}></input><img src={personalInfoIcon} alt="persInfoIcon" className={style.personalInfoIcon}/></div>
+                        <div className={style.contactsDateBirthContainer}><input name="birthday" type="text" className={style.contactsDateBirth} value={birthday} onChange={(e) => setBirthday(e.target.value)} placeholder="дата рождения" data-placeholder='дата рождения' onFocus={inputFocus} onBlur={inputBlur}/><img src={calendar} alt="calendar" className={style.dateBirthIcon}/></div>
+                        <div className={style.emailFormContainer}><input type="email" className={style.contactsEmail} value={email} onChange={(e) => setEmail(e.target.value)} placeholder="email" data-placeholder='email' onFocus={inputFocus} onBlur={inputBlur}/><img src={letterIcon} alt="letterIcon" className={style.emailIcon}/></div>
+                        <div className={style.phoneFormContainer}><input type="tel" className={style.contactsPhone} value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="телефон" data-placeholder='телефон' onFocus={inputFocus} onBlur={inputBlur} pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"/><img src={phoneIcon} alt="phoneIcon" className={style.phoneIcon}/></div>
                         <div className={style.messageFormContainer}>
                             {isMobile? 
-                            <textarea type="text" className={style.contactsMessageArea} placeholder="сообщение" data-placeholder='сообщение' onFocus={inputFocus} onBlur={inputBlur} />
+                            <textarea type="text" value={message} onChange={(e) => setMessage(e.target.value)} className={style.contactsMessageArea} placeholder="сообщение" data-placeholder='сообщение' onFocus={inputFocus} onBlur={inputBlur} />
                             :
-                            <input type="text" className={style.contactsMessage} placeholder="сообщение" data-placeholder='сообщение' onFocus={inputFocus} onBlur={inputBlur}/>
+                            <input type="text" value={message} onChange={(e) => setMessage(e.target.value)} className={style.contactsMessage} placeholder="сообщение" data-placeholder='сообщение' onFocus={inputFocus} onBlur={inputBlur}/>
                             }
                             <img src={messageIcon} alt="messageIcon" className={style.messageIcon}/>
                         </div>
                         <div className={style.sendButtonFormContainer}>
-                            <ButtonGoToDesktop text="отправить"/>
+                            <ButtonGoToDesktop text="отправить" action={handleSubmit}/>
                         </div>
                     </div>
                 </div>

@@ -12,7 +12,7 @@ import { usePopup } from "../../components/popup/popupContext"
 import { useState } from "react"
 function Residence() {
     const navigate = useNavigate();
-    const { openPopup, content } = usePopup();
+    const { openPopup } = usePopup();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
@@ -20,7 +20,9 @@ function Residence() {
     const isMobile = useMediaQuery('(max-width: 768px)');
     const handleSubmit = () => {
         if (!name || !email || !phone || !birthday) {
-            alert("Пожалуйста заполните все поля!")
+            openPopup(
+                <p>Пожалуйста, заполните все поля!</p>
+            )
             return;
         }
         openPopup(
