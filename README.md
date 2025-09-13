@@ -4,6 +4,7 @@
 >Дисклеймер: Названия ресторанов и компаний упомянутые в проекте, приведены исключительно в справочных и иллюстративных целях. Они не связаны с данным проектом и не выражают поддержки или участия со стороны указанных организаций. Все права принадлежат их владельцам.
 #
 >Path notes: PopUp forms in progress. Now PopUp works on Residency and Contacts page with input check and PopUp form can accept JSX and render it.
+#
 >Обновление: Работа над созданием всплывающих форм. Теперь всплывающее окно работает на страницах Резидентство и Контакты с проверкой ввода, а всплывающая форма может принимать JSX и отображать его.
 #
 ✨ Project Description
@@ -46,7 +47,7 @@ The project is conceptual in nature and serves as inspiration for discussing the
 ![contacts](https://github.com/user-attachments/assets/59888b2d-ec7c-4b24-b2ac-71e017b2ffd5)
 
 ![residence](https://github.com/user-attachments/assets/77f385dc-7c19-4851-8d47-a19057cf2c60)
-
+<img width="960" height="398" alt="изображение" src="https://github.com/user-attachments/assets/7ecaba96-08bb-4b8d-bb18-c0a383dd71cc" />
 * Спасибо всем, кто работал над проектом | Thanks to everyone who worked on the project
   - [mr0YES1](https://github.com/mr0YES1) (CEO)
   - [Skaix](https://github.com/skaixxx) (code)
