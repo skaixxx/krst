@@ -12,7 +12,7 @@ import { usePopup } from "../../components/popup/popupContext"
 import { useState } from "react"
 function Residence() {
     const navigate = useNavigate();
-    const { openPopup } = usePopup();
+    const { openPopup, content } = usePopup();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
@@ -23,7 +23,9 @@ function Residence() {
             alert("Пожалуйста заполните все поля!")
             return;
         }
-        openPopup()
+        openPopup(
+            <p>Успешно отправлено!</p>
+        )
     }
     const inputFocus = (current) => {
         current.target.placeholder = '';
