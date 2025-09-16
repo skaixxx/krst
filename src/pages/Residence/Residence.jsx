@@ -8,11 +8,11 @@ import ButtonGoToDesktop from "../../components/Buttons/ButtonGoToDesktop";
 import ScaleCrossSlideBracketInverted from "../../components/animations/ScaleCrossSlideBracket_inverted/ScaleCrossSlideBracket_inverted";
 import useMediaQuery from "../../components/Header/useMediaQuery"
 import { useNavigate } from "react-router"
-import { usePopup } from "../../components/popup/popupContext"
+import { useAppContext } from "../../components/popup/popupContext"
 import { useState } from "react"
 function Residence() {
     const navigate = useNavigate();
-    const { openPopup } = usePopup();
+    const { popup } = useAppContext();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
@@ -20,12 +20,12 @@ function Residence() {
     const isMobile = useMediaQuery('(max-width: 768px)');
     const handleSubmit = () => {
         if (!name || !email || !phone || !birthday) {
-            openPopup(
+            popup.openPopup(
                 <p>Пожалуйста, заполните все поля!</p>
             )
             return;
         }
-        openPopup(
+        popup.openPopup(
             <p>Успешно отправлено!</p>
         )
     }

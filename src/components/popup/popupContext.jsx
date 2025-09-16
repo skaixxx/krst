@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useState } from "react";
 
 const PopupContext = createContext();
 
@@ -15,10 +15,39 @@ export const usePopup = () =>
             setIsPopupOpen(false);
             setContent(null);
         }, []);
-        console.log("Pop up open")
+        // Translation Provider
+        const [language, setLanguage] = useState("ru");
+        useEffect(() => {
+            const savedLanguage = localStorage.getItem("language");
+            if (savedLanguage) {
+                setLanguage(savedLanguage);
+            } else {
+                const userLanguage = navigator.language.startsWith("ru") ? "ru" : "en";
+                setLanguage(userLanguage);
+                localStorage.setItem("language", userLanguage);
+            }
+        }, []);
+        const changeLanguage = (lang) => {
+            setLanguage(lang);
+            localStorage.setItem("language", lang);
+        };
+
+        const value = {
+            popup : {
+                isPopupOpen,
+                openPopup,
+                closePopup,
+                content
+            },
+            languageState : {
+                language,
+                changeLanguage,
+            }
+        };
         return (
-            <PopupContext.Provider value={{ isPopupOpen, openPopup, closePopup, content}}>
+            <PopupContext.Provider value={value}>
                 {children}
             </PopupContext.Provider>
         );
     };
+export const useAppContext = () => useContext(PopupContext);

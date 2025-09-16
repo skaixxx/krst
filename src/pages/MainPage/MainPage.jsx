@@ -13,9 +13,10 @@ import { useEffect, useRef } from 'react';
 
 import lottie from "lottie-web";
 import AnimationData from '../../assets/animation/main/mainAnimationData.json';
-
+import { useTranslation } from "../../hooks/useTranslation"
+import MainPageTranslation from "./MainPage.translations.ts"
 function MainPage() {
-    
+    const t = useTranslation(MainPageTranslation);
     const containerRef = useRef(null);
     const animationRef = useRef(null);
 
@@ -78,10 +79,10 @@ function MainPage() {
         <div className={style.mainPage}>
             <div className={style.fullScreenContainer1}>
                 <div className={style.pageTitle}>
-                        <p className={style.titleText1}>ОБЩЕСТВЕННОЕ</p>
+                        <p className={style.titleText1}>{t("titleText1")}</p>
                 </div>
             </div>
-            <div className={style.topRow}><div className={style.topRow1}><p className={style.titleText2}>ПРОСТРАНСТВО</p></div></div>
+            <div className={style.topRow}><div className={style.topRow1}><p className={style.titleText2}>{t("titleText2")}</p></div></div>
             <div ref={containerRef} className={style.fullScreenContainer2}>
             </div>
             <div className={style.interactiveLine}>
@@ -90,7 +91,7 @@ function MainPage() {
                         <img src={weatherIcon} alt="weatherIcon" className={style.weatherIcon}/>
                         <div className={style.iLineTextBlock}>
                             <p className={style.titleInfo}>4°C</p>
-                            <p className={style.subText}>осадки</p>
+                            <p className={style.subText}>{t("weatherText")}</p>
                         </div>
                     </div>
                     <div className={style.iLineElement}>
@@ -98,13 +99,13 @@ function MainPage() {
                         <div className={style.iLineTextBlock}>
                             <p className={style.titleInfo}>30%</p>
                             
-                            <div className={style.statusInfo}><div className={style.freeIndicator}></div><p className={style.subText}>свободно</p></div>
+                            <div className={style.statusInfo}><div className={style.freeIndicator}></div><p className={style.subText}>{t("workloadText")}</p></div>
                         </div>
                     </div>
                     <div className={style.iLineElement}>
                         <img src={timeIcon} alt="timeIcon" className={style.timeIcon}/>
                         <div className={style.iLineTextBlock}>
-                            <p className={style.titleInfo}>ПН-ВС</p>
+                            <p className={style.titleInfo}>{t("dateText")}</p>
                             <p className={style.subText}>10:00-22:00</p>
                         </div>
                     </div>
@@ -133,7 +134,7 @@ function MainPage() {
                 <div className={style.animationContainer}>
                     <SlidingRotatingCross/>
                 </div>
-                <p className={style.anonsText}>АНОНСЫ</p>
+                <p className={style.anonsText}>{t("announcement")}</p>
             </div>
             <div className={style.mapContainer}>
                 <img src={mapImage} alt="map" className={style.mapImage}/>
@@ -141,39 +142,39 @@ function MainPage() {
             <div className={style.rulesContainer}>
                 <div className={style.rulesTitleRow}>
                     <div className={style.rulesStroke1}>
-                        <p className={style.rulesStroke1Text}>ПРАВИЛА</p>
+                        <p className={style.rulesStroke1Text}>{t("rulesTitle1")}</p>
                         <img src={arrowBR} alt="arrows" className={style.rulesStrokeAnimation}/>
                     </div>
                     <div className={style.rulesStroke2}>
                         <p className={style.rulesStroke2Text}>
-                            ПОСЕЩЕНИЯ
+                            {t("rulesTitle2")}
                         </p>
                     </div>
                 </div>
                 <div className={style.listContainer}>
                     <div className={style.listItem}>
                         <img src={listPoint} alt="listPoint" className={style.listPointIcon}/>
-                        <p className={style.listItemText}>Уважайте пространство, людей и экспонаты</p>
+                        <p className={style.listItemText}>{t("rulesText1")}</p>
                     </div>
                     <div className={style.listItem}>
                         <img src={listPoint} alt="listPoint" className={style.listPointIcon}/>
-                        <p className={style.listItemText}>Фотосъёмка разрешена, но без нарушения приватности</p>
+                        <p className={style.listItemText}>{t("rulesText2")}</p>
                     </div>
                     <div className={style.listItem}>
                         <img src={listPoint} alt="listPoint" className={style.listPointIcon}/>
-                        <p className={style.listItemText}>Соблюдайте чистоту — используйте урны, возвращайте вещи на место.</p>
+                        <p className={style.listItemText}>{t("rulesText3")}</p>
                     </div>
                     <div className={style.listItem}>
                         <img src={listPoint} alt="listPoint" className={style.listPointIcon}/>
-                        <p className={style.listItemText}>Дети до 14 лет — только с взрослыми, животные — на поводке</p>
+                        <p className={style.listItemText}>{t("rulesText4")}</p>
                     </div>
                     <div className={style.listItem}>
                         <img src={listPoint} alt="listPoint" className={style.listPointIcon}/>
-                        <p className={style.listItemText}>Соблюдайте безопасность — не заходите в закрытые зоны, следуйте инструкциям</p>
+                        <p className={style.listItemText}>{t("rulesText5")}</p>
                     </div>
                     <div className={style.listItem}>
                         <img src={listPoint} alt="listPoint" className={style.listPointIcon}/>
-                        <p className={style.listItemText}>Запрещены курение, алкоголь, агрессия и нарушения порядка</p>
+                        <p className={style.listItemText}>{t("rulesText6")}</p>
                     </div>
                 </div>
             </div>

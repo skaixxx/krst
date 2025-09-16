@@ -12,10 +12,10 @@ import RotatingCross from '../../components/animations/RotatingCross/RotatingCro
 import ScaleSlideBrackets from '../../components/animations/ScaleSlideBrackets/ScaleSlideBrackets';
 import clsx from 'clsx';
 import { useState } from 'react';
-import { usePopup } from '../../components/popup/popupContext';
+import { useAppContext } from '../../components/popup/popupContext';
 
 function Contacts() {
-    const { openPopup } = usePopup();
+    const { popup } = useAppContext();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
@@ -23,14 +23,14 @@ function Contacts() {
     const [message, setMessage] = useState("");
     const handleSubmit = () => {
         if (!name || !email || !phone || !birthday || !message) {
-            openPopup(
+            popup.openPopup(
             <div className={style.popUpBox}>
                 <p>Пожалуйста, заполните все поля!</p>
             </div>
         )
             return;
         }
-        openPopup(
+        popup.openPopup(
             <div className={style.popUpBox}>
                 <p>Успешно отправлено!</p>
                 <p>Мы скоро с вами свяжемся!</p>

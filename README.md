@@ -1,11 +1,19 @@
-# [КРСТ | KRST  v.0.7.6](https://skaixxx.github.io/krst/)
+# [КРСТ | KRST  v.0.8.0](https://skaixxx.github.io/krst/)
 >Disclaimer: The names of restaurants and companies mentioned in the project are provided for reference and illustrative purposes only. They are not associated with this project and do not express support or participation on the part of the specified organizations. All rights belong to their owners.
 #
 >Дисклеймер: Названия ресторанов и компаний упомянутые в проекте, приведены исключительно в справочных и иллюстративных целях. Они не связаны с данным проектом и не выражают поддержки или участия со стороны указанных организаций. Все права принадлежат их владельцам.
 #
->Path notes: PopUp forms in progress. Now PopUp works on Residency and Contacts page with input check and PopUp form can accept JSX and render it.
+>Path notes:
+- Added the ability to change the language (now partially working on the main page).
+- The language is automatically detected by the system.
+- PopUp forms in progress.
+- Now PopUp works on Residency and Contacts page with input check and PopUp form can accept JSX and render it.
 #
->Обновление: Работа над созданием всплывающих форм. Теперь всплывающее окно работает на страницах Резидентство и Контакты с проверкой ввода, а всплывающая форма может принимать JSX и отображать его.
+>Обновление:
+- Добавлена возможность смены языка(сейчас работает частично на главной странице).
+- Язык автоматически определяется системой.
+- Работа над созданием всплывающих форм.
+- Теперь всплывающее окно работает на страницах Резидентство и Контакты с проверкой ввода, а всплывающая форма может принимать JSX и отображать его.
 #
 ✨ Project Description
 
