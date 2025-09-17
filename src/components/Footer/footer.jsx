@@ -9,9 +9,10 @@ import tgIcon from "../../assets/footer/tgIcon.svg"
 import vkIcon from "../../assets/footer/vkIcon.svg"
 import LanguageSelector from "./LanguageSelector"
 import { useRef } from "react"
-
+import { useTranslation } from "../../hooks/useTranslation"
+import FooterTranslation from "./Footer.translation.ts"
 function Footer() {
-    
+    const t = useTranslation(FooterTranslation);
     const caretRef = useRef(null);
     const inputRef = useRef(null);
 
@@ -65,37 +66,36 @@ function Footer() {
                 <div className="footer-rounds">
                     <div className="footer-round-stroke1">
                         <div className="footer-round-element">
-                            <p className="footer-round-element-text">#творчество</p>
+                            <p className="footer-round-element-text">{t("hashtag1Text")}</p>
                         </div>
                     </div>
                     <div className="footer-round-stroke2">
                         <div className="footer-round-element">
-                            <p className="footer-round-element-text">#память</p>
+                            <p className="footer-round-element-text">{t("hashtag2Text")}</p>
                         </div>
                         <div className="footer-round-element">
-                            <p className="footer-round-element-text">#жизнь</p>
+                            <p className="footer-round-element-text">{t("hashtag3Text")}</p>
                         </div>
                     </div>
                     <div className="footer-round-stroke3">
                         <div className="footer-round-element">
-                            <p className="footer-round-element-text">#энергия</p>
+                            <p className="footer-round-element-text">{t("hashtag4Text")}</p>
                         </div>
                         <div className="footer-round-element">
-                            <p className="footer-round-element-text">#будущее</p>
+                            <p className="footer-round-element-text">{t("hashtag5Text")}</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="grid-col2">
                 <div className="footer-mailing-text">
-                    <p className="footer-mailing-title">Подпишитесь на рассылку</p>
-                    <p className="footer-mailing-paragraph">Узнавай актуальные новости о нас и наших
-                    мероприятиях одним из первых</p>
+                    <p className="footer-mailing-title">{t("submitMailingText")}</p>
+                    <p className="footer-mailing-paragraph">{t("aboutMailingText")}</p>
                 </div>
                 <div className="footer-mail-input-container">
                     <input
                         ref={inputRef}
-                        placeholder="Введите вашу почту"
+                        placeholder={t("inputEmailText")}
                         className="footer-input-email"
                         onChange={positionCaret}
                         onSelect={positionCaret}
@@ -109,9 +109,9 @@ function Footer() {
                 <div className="footer-contacts-info">
                     <div className="footer-phone-adress">
                         <div className="footer-phone"><img src={phoneIcon} alt="phone"></img><p>8 800 000-00-00</p></div>
-                        <div className="footer-adress"><img src={locationIcon} alt="location"></img><p>Арсенальная наб, д. 7</p></div>
+                        <div className="footer-adress"><img src={locationIcon} alt="location"></img><p>{t("adressText")}</p></div>
                     </div>
-                    <div className="footer-work-days"><p className="footer-schedule">График работы</p><div className="days-time-container"><p className="days">ПН-ВС</p><p className="time">10:00–22:00</p></div></div>
+                    <div className="footer-work-days"><p className="footer-schedule">{t("workScheduleText")}</p><div className="days-time-container"><p className="days">{t("daysText")}</p><p className="time">10:00–22:00</p></div></div>
                 </div>
             </div>
             <div className="grid-col3">
@@ -124,9 +124,9 @@ function Footer() {
                     </div>
                     <div className="footer-politico">
                         <a href="/" className="politico-link">
-                            <p className="politico-text">Политика конфедициальности</p>
+                            <p className="politico-text">{t("politicoText")}</p>
                         </a>
-                        <p className="copyrihgt-text">© 2025 КРСТ.Все права защищены.</p>
+                        <p className="copyrihgt-text">{t("allRightText")}</p>
                     </div>
                 </div>
             </div>
