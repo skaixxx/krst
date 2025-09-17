@@ -1,9 +1,12 @@
 import longArrow from "../assets/events/cardButtonIconLong.svg";
 import arrow from "../assets/events/cardButtonIcon.svg";
-export const eventsData = [
+const eventsData = [
     {
         id: 1,
-        title: "ПОЙМАЙ МОМЕНТ",
+        title: {
+            ru: "ПОЙМАЙ МОМЕНТ",
+            en: "CATCH THE MOMENT",
+        },
         title1:"ПОЙМАЙ",
         title2:"МОМЕНТ",
         dates: "20.03 — 25.03",
@@ -25,7 +28,10 @@ export const eventsData = [
     },
     {
         id: 2,
-        title: "ЯРКИЕ ГОРИЗОНТЫ",
+        title: {
+            ru: "ЯРКИЕ ГОРИЗОНТЫ",
+            en: "BRIGHT HORIZONS"
+        },
         title1:"ЯРКИЕ",
         title2:"ГОРИЗОНТЫ",
         dates: "10.04 — 15.04",
@@ -47,7 +53,10 @@ export const eventsData = [
     },
     {
         id: 3,
-        title: "ЗВУКИ ГОРОДА", 
+        title: {
+            ru:"ЗВУКИ ГОРОДА",
+            en: "SOUNDS OF CITY"
+        }, 
         title1:"ЗВУКИ", 
         title2:"ГОРОДА", 
         dates: "14.04 — 30.04", 
@@ -69,7 +78,9 @@ export const eventsData = [
     },
     {
         id: 4, 
-        title: "КВЕСТ ЛАБИРИНТ", 
+        title: {ru:"КВЕСТ ЛАБИРИНТ",
+            en: "QUEST LABIRINTH",
+        }, 
         title1:"КВЕСТ", 
         title2:"ЛАБИРИНТ", 
         dates: "10.04 — 20.04", 
@@ -91,7 +102,9 @@ export const eventsData = [
     },
     {
         id: 5, 
-        title: "ТАЙНА ВРЕМЕНИ", 
+        title: {ru: "ТАЙНА ВРЕМЕНИ",
+            en: "SECRET OF TIME",
+        }, 
         title1:"ТАЙНА", 
         title2:"ВРЕМЕНИ", 
         dates: "25.04 — 30.04", 
@@ -113,7 +126,9 @@ export const eventsData = [
     },
     {
         id: 6, 
-        title: "УЛИЧНЫЙ ТЕАТР", 
+        title: {ru: "УЛИЧНЫЙ ТЕАТР",
+            en: "STREET THEATRE",
+        }, 
         title1:"УЛИЧНЫЙ", 
         title2:"ТЕАТР", 
         dates: "26.04", 
@@ -135,7 +150,9 @@ export const eventsData = [
     },
     {
         id: 7, 
-        title: "МОДНЫЙ ВИНТАЖ", 
+        title: {ru: "МОДНЫЙ ВИНТАЖ",
+            en: "FASHION VINTAGE"
+        }, 
         title1:"МОДНЫЙ", 
         title2:"ВИНТАЖ", 
         dates: "15.05 — 31.05", 
@@ -157,7 +174,9 @@ export const eventsData = [
     },
     {
         id: 8, 
-        title: "ИГРОВАЯ АРЕНА", 
+        title: {ru: "ИГРОВАЯ АРЕНА",
+            en: "PLAY ARENA",
+        }, 
         title1:"ИГРОВАЯ", 
         title2:"АРЕНА", 
         dates: "01.05 — 15.05", 
@@ -179,7 +198,9 @@ export const eventsData = [
     },
     {
         id: 9, 
-        title: "ТВОРЧЕСКАЯ ЛАВКА", 
+        title: {ru :"ТВОРЧЕСКАЯ ЛАВКА",
+            en: "CREATIVITY SHOP"
+        }, 
         title1:"ТВОРЧЕСКАЯ", 
         title2:"ЛАВКА", 
         dates: "01.06 — 15.06", 
@@ -201,7 +222,9 @@ export const eventsData = [
     },
     {
         id: 10,
-        title: "ПЕСНЯ ЭПОХИ", 
+        title: {ru: "ПЕСНЯ ЭПОХИ",
+            en: "SONG OF ERA",
+        }, 
         title1:"ПЕСНЯ", 
         title2:"ЭПОХИ", 
         dates: "12.06", 
@@ -222,3 +245,4 @@ export const eventsData = [
         paragraph3:"Это больше чем концерт — это погружение в мир, где каждая мелодия становится частью большого музыкального полотна. Приходите, чтобы услышать звуки, которые пишут историю сегодня."
     },
 ];
+export default eventsData;

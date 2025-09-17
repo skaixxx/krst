@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import NotFound from "../../404/NotFound";
 import clsx from "clsx";
 import useMediaQuery from "../../../components/Header/useMediaQuery";
-import { eventsData } from "../../../data/events";
+import eventsData from "../../../data/events";
 function SpecificEvent() {
     const isMobile = useMediaQuery('(max-width: 768px)');
     const { id } = useParams();

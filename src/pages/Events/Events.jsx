@@ -3,11 +3,14 @@ import "../../components/general.css";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { CardsProvider } from "../../routes/CardsContext";
-import { eventsData } from "../../data/events";
+import eventsData from "../../data/events";
+import { useTranslation } from "../../hooks/useTranslation";
+import { useAppContext } from "../../components/popup/popupContext";
 function Events() {
+    const { languageState } = useAppContext();
     const navigate = useNavigate();
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
+    const t = useTranslation(eventsData);
     const isMobile = windowWidth <= 768;
 
     const handleClick = (id) => {
@@ -28,19 +31,19 @@ function Events() {
         };
 
     }, []);
-
     return (
         <CardsProvider data={eventsData}>
         <div className="grid-container-events">
-            {eventsData.map((item) =>(
-                <div className={`card card${item.id}`} style={{
+            {eventsData.map((item) => {
+                console.log(item.title);
+                return (                <div className={`card card${item.id}`} style={{
                     backgroundImage: `url(${item.image})`,
                     backgroundPosition: "center",
                     backgroundSize: "cover"}}>
                     <div className="cardEvent" key={item.id} onClick={() => handleClick(item.id)}>
-                        <div className="cardDate"><span>{item.dates}</span></div>
+                        <div className="cardDate"><span>{t(item.dates)}</span></div>
                         <div className="cardBody">
-                            <div className="cardText"><p>{item.title}</p></div>
+                            <div className="cardText"><p>{t(item.title)}</p></div>
                             <div className="cardIconBox">
                                 <img 
                                     src={isMobile ? item.iconMobile : item.icon}
@@ -50,7 +53,8 @@ function Events() {
                         </div>
                     </div>
                 </div>
-            ))}
+            )
+            })}
             <div className="TextBox TextBox1"><span>КУДА</span></div>
             <div className="TextBox TextBox2"><span>ТЫ</span></div>
             <div className="TextBox TextBox3"><span>ИДЕШЬ</span></div>

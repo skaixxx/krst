@@ -1,6 +1,6 @@
 import ButtonGoToDesktop from "../Buttons/ButtonGoToDesktop";
 import style from "./popup.module.css"
-import { useAppContext, usePopup } from "./popupContext";
+import { useAppContext } from "./popupContext";
 
 export default function PopUp() {
     const { popup } = useAppContext();

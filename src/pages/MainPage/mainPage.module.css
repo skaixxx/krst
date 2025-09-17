@@ -230,6 +230,7 @@
     font-size: 6.4rem;
     font-weight: 700;
     color: var(--accent-color);
+    word-break: break-all;
 }
 .mapContainer {
     height: 58.56vw;
@@ -399,7 +400,7 @@
         "card1 card1 . card3 card3 card3"
         "card1 card1 . . . ."
         "card1 card1 . . card8 card8"
-        ". . . . card8 card8"
+        "text1 text1 text1 text1 card8 card8"
         "text1 text1 text1 text1 card8 card8"
         "card2 card2 card2 . . ."
         "card2 card2 card2 card5 card5 card5";   
@@ -410,6 +411,9 @@
     }
 
     .anonsText {
+        display: flex;
+        align-items: center;
+        line-height: 80%;
         font-size: 3.5rem;
         color: var(--secondary-color);
     }

@@ -6,15 +6,16 @@ import mapImage from "../../assets/mainPage/map.png"
 import arrowBR from "../../assets/mainPage/arrowsBR.svg"
 import listPoint from "../../assets/mainPage/listPoint.svg"
 import SlidingRotatingCross from "../../components/animations/SRCross/SlidingRotatingCross"
-import { eventsData } from "../../data/events"
+import eventsData from "../../data/events"
 import { useNavigate } from "react-router"
 import useMediaQuery from "../../components/Header/useMediaQuery"
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef} from 'react';
 
 import lottie from "lottie-web";
 import AnimationData from '../../assets/animation/main/mainAnimationData.json';
 import { useTranslation } from "../../hooks/useTranslation"
 import MainPageTranslation from "./MainPage.translations.ts"
+import { useAppContext } from "../../components/popup/popupContext.jsx"
 function MainPage() {
     const t = useTranslation(MainPageTranslation);
     const containerRef = useRef(null);
@@ -29,7 +30,6 @@ function MainPage() {
     const handleClick = (id) => {
         navigate(`/Events/SpecificEvent/${id}`)
     }
-
     useEffect(() => {
     
         // Инициализация анимации
@@ -74,7 +74,6 @@ function MainPage() {
     if (!limitedCard || limitedCard.length === 0) {
         return <p>Данные загружаются...</p>
     };
-
     return (
         <div className={style.mainPage}>
             <div className={style.fullScreenContainer1}>
@@ -118,9 +117,9 @@ function MainPage() {
                     backgroundPosition: "center",
                     backgroundSize: "cover"}}>
                     <div className="cardEvent" key={item.id} onClick={() => handleClick(item.id)}>
-                        <div className="cardDate"><span>{item.dates}</span></div>
+                        <div className="cardDate"><span>{t(item.dates)}</span></div>
                         <div className="cardBody">
-                            <div className="cardText"><p>{item.title}</p></div>
+                            <div className="cardText"><p>{t(item.title)}</p></div>
                             <div className="cardIconBox">
                                 <img
                                     src={isMobile ? item.iconMobile : item.icon} alt="cardButton"
@@ -134,7 +133,7 @@ function MainPage() {
                 <div className={style.animationContainer}>
                     <SlidingRotatingCross/>
                 </div>
-                <p className={style.anonsText}>{t("announcement")}</p>
+                    <p className={style.anonsText}>{t("announcement")}</p>
             </div>
             <div className={style.mapContainer}>
                 <img src={mapImage} alt="map" className={style.mapImage}/>
