@@ -4,16 +4,18 @@ import { useLocation } from 'react-router-dom';
 import logo from "../../assets/header/logo.svg"
 import { useNavigate } from "react-router";
 import styles from "./header.module.css"
+import { useTranslation } from '../../hooks/useTranslation';
 const navLinks = [
-  { to: '/History', label: 'история'},
-  { to: '/Events', label: 'мероприятия'},
-  { to: '/Locations', label: 'локации'},
-  { to: '/Rent', label: 'аренда'},
-  { to: '/Contacts', label: 'контакты'}, 
+  { to: '/History', label: {ru: "история", en: "history"}},
+  { to: '/Events', label: {ru: "мероприятия", en: "events"}},
+  { to: '/Locations', label: {ru: "локации", en: "locations"}},
+  { to: '/Rent', label: {ru: "аренда", en: "rent"}},
+  { to: '/Contacts', label: {ru: "контакты", en: "contacts"}}, 
 ];
 
 export default function Navbar() {
   const [indicatorStyle, setIndicatorStyle] = useState({});
+  const t = useTranslation(navLinks);
   const [showIndicator, setShowIndicator] = useState(false);
   const location = useLocation();
   const navRefs = useRef({});
@@ -50,7 +52,7 @@ export default function Navbar() {
               ref={(el) => navRefs.current[to] = el}
               showIndicator={showIndicator}
             >
-              <NavItem to={to} label={label} className={styles.navLink}/>
+              <NavItem to={to} label={t(label)} className={styles.navLink}/>
             </div>
           ))}
           {showIndicator && <div className={styles.activeIndicator} style={indicatorStyle}></div>}

@@ -6,8 +6,9 @@ import { CardsProvider } from "../../routes/CardsContext";
 import eventsData from "../../data/events";
 import { useTranslation } from "../../hooks/useTranslation";
 import { useAppContext } from "../../components/popup/popupContext";
+import EventsTranslation from "./Events.translation.ts";
 function Events() {
-    const { languageState } = useAppContext();
+    const t2 = useTranslation(EventsTranslation)
     const navigate = useNavigate();
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const t = useTranslation(eventsData);
@@ -55,10 +56,10 @@ function Events() {
                 </div>
             )
             })}
-            <div className="TextBox TextBox1"><span>КУДА</span></div>
-            <div className="TextBox TextBox2"><span>ТЫ</span></div>
-            <div className="TextBox TextBox3"><span>ИДЕШЬ</span></div>
-            <div className="TextBox TextBox4"><span>СЕГОДНЯ?</span></div>
+            <div className="TextBox TextBox1"><span>{t2("text1")}</span></div>
+            <div className="TextBox TextBox2"><span>{t2("text2")}</span></div>
+            <div className="TextBox TextBox3"><span>{t2("text3")}</span></div>
+            <div className="TextBox TextBox4"><span>{t2("text4")}</span></div>
         </div>
     </CardsProvider>
     );

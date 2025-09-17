@@ -1,9 +1,10 @@
-# [КРСТ | KRST  v.0.8.2 beta](https://skaixxx.github.io/krst/)
+# [КРСТ | KRST  v.0.8.2](https://skaixxx.github.io/krst/)
 >Disclaimer: The names of restaurants and companies mentioned in the project are provided for reference and illustrative purposes only. They are not associated with this project and do not express support or participation on the part of the specified organizations. All rights belong to their owners.
 #
 >Дисклеймер: Названия ресторанов и компаний упомянутые в проекте, приведены исключительно в справочных и иллюстративных целях. Они не связаны с данным проектом и не выражают поддержки или участия со стороны указанных организаций. Все права принадлежат их владельцам.
 #
 >Path notes:
+- Header translation
 - Added partially translation of events cards and updated hook.
 - Added footer translation
 - Added the ability to change the language (now partially working on the main page).
@@ -12,6 +13,7 @@
 - Now PopUp works on Residency and Contacts page with input check and PopUp form can accept JSX and render it.
 #
 >Обновление:
+- Переведена шапка сайта
 - Добавлен частичный перевод карточек мероприятий, обновлен хук.
 - Добавлен перевод футера
 - Добавлена возможность смены языка(сейчас работает частично на главной странице).

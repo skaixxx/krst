@@ -8,7 +8,9 @@ import NotFound from "../../404/NotFound";
 import clsx from "clsx";
 import useMediaQuery from "../../../components/Header/useMediaQuery";
 import eventsData from "../../../data/events";
+import { useTranslation } from "../../../hooks/useTranslation";
 function SpecificEvent() {
+    const t = useTranslation(eventsData);
     const isMobile = useMediaQuery('(max-width: 768px)');
     const { id } = useParams();
     const item = eventsData.find((item) => item.id === Number(id));
@@ -62,9 +64,9 @@ function SpecificEvent() {
                 }
                 </div>
                 <div className={style.strokeContainer}>
-                    <div className={style.strokeElement}><img src={item.inIcon1} alt="icon" className={style.strokeElementIcon}/><p>{item.inText1}</p></div>
-                    <div className={style.strokeElement}><img src={item.inIcon2} alt="icon" className={style.strokeElementIcon}/><p>{item.inText2}</p></div>
-                    <div className={style.strokeElement}><img src={item.inIcon3} alt="icon" className={style.strokeElementIcon}/><p>{item.inText3}</p></div>
+                    <div className={style.strokeElement}><img src={item.inIcon1} alt="icon" className={style.strokeElementIcon}/><p>{t(item.inText1)}</p></div>
+                    <div className={style.strokeElement}><img src={item.inIcon2} alt="icon" className={style.strokeElementIcon}/><p>{t(item.inText2)}</p></div>
+                    <div className={style.strokeElement}><img src={item.inIcon3} alt="icon" className={style.strokeElementIcon}/><p>{t(item.inText3)}</p></div>
                 </div>
                 <div className={style.contentContainer}>
                     <div className={style.paragraph2}>
