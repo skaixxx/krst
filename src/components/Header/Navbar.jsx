@@ -12,7 +12,10 @@ const navLinks = [
   { to: '/Rent', label: {ru: "аренда", en: "rent"}},
   { to: '/Contacts', label: {ru: "контакты", en: "contacts"}}, 
 ];
-
+const residency = {
+  ru: "резидентство",
+  en: "residency"
+}
 export default function Navbar() {
   const [indicatorStyle, setIndicatorStyle] = useState({});
   const t = useTranslation(navLinks);
@@ -59,7 +62,7 @@ export default function Navbar() {
           
         </div>
       </nav>
-      <div className={styles.buttonContainer}><input type="button" onClick={() => navigate("/Residence")} className={styles.residencyBtn} value="резидентство"></input></div>
+      <div className={styles.buttonContainer}><input type="button" onClick={() => navigate("/Residence")} className={styles.residencyBtn} value={t(residency)}></input></div>
     </div>
   );
 }

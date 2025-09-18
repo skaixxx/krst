@@ -21,19 +21,37 @@ import ScaleSlideDotsInverted from "../../components/animations/ScaleSlideDots/S
 import useMediaQuery from "../../components/Header/useMediaQuery";
 import ScaleCrossSlideBracketInverted from "../../components/animations/ScaleCrossSlideBracket_inverted/ScaleCrossSlideBracket_inverted";
 import ScrollToTopBtn from "../../components/History/ScrollToTop";
+import HistoryTranslate from "./History.translate";
+import { useTranslation } from "../../hooks/useTranslation";
+import { useAppContext } from "../../components/popup/popupContext";
 function History() {
+    const t = useTranslation(HistoryTranslate);
+    const { languageState } = useAppContext();
     const isMobile = useMediaQuery('(max-width: 768px)');
-    const [items, setItems] = useState([]);
-   
-    const [data1, setData1] = useState({ 
+    const [itemsRU, setItemsRU] = useState([]);
+    const [itemsEN, setItemsEN] = useState([]);
+    const [data1RU, setData1RU] = useState({ 
         desktopSize: {
             width: "", 
             height: ""
         }, 
         items: [] 
     });
-
-    const [data2, setData2] = useState({
+    const [data1EN, setData1EN] = useState({ 
+        desktopSize: {
+            width: "", 
+            height: ""
+        }, 
+        items: [] 
+    });
+    const [data2RU, setData2RU] = useState({
+        desktopSize: {
+            width: "", 
+            height: ""
+        }, 
+        items: [] 
+    });
+    const [data2EN, setData2EN] = useState({
         desktopSize: {
             width: "", 
             height: ""
@@ -42,36 +60,69 @@ function History() {
     });
      
     useEffect(() => {
-        fetch(`${process.env.PUBLIC_URL}/data/history/carouselData.json`)
+        fetch(`${process.env.PUBLIC_URL}/data/history/ru_carouselData.json`)
         .then((res) => {
             if (!res.ok) {
                 throw new Error(`HTTP error! status: ${res.status}`);
             }
             return res.json();
         })
-        .then(setItems)
+        .then(setItemsRU)
         .catch((err) => {
             console.error('ошибка загрузки данных', err);
         })
-        fetch(`${process.env.PUBLIC_URL}/data/history/famousPeople.json`)
+        fetch(`${process.env.PUBLIC_URL}/data/history/en_carouselData.json`)
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error(`HTTP error! status: ${res.status}`);
+            }
+            return res.json();
+        })
+        .then(setItemsEN)
+        .catch((err) => {
+            console.error('ошибка загрузки данных', err);
+        })
+        fetch(`${process.env.PUBLIC_URL}/data/history/ru_famousPeople.json`)
         .then((res) => {
             if (!res.ok) {
                 throw new Error(`Fetch data error: ${res.status}`);
             }
             return res.json()
         })
-        .then(setData1)
+        .then(setData1RU)
         .catch((err) => {
             console.error('ошибка загрузки данных', err);
         })
-        fetch(`${process.env.PUBLIC_URL}/data/history/dangerousPeople.json`)
+        fetch(`${process.env.PUBLIC_URL}/data/history/en_famousPeople.json`)
         .then((res) => {
             if (!res.ok) {
                 throw new Error(`Fetch data error: ${res.status}`);
             }
             return res.json()
         })
-        .then(setData2)
+        .then(setData1EN)
+        .catch((err) => {
+            console.error('ошибка загрузки данных', err);
+        })
+        fetch(`${process.env.PUBLIC_URL}/data/history/ru_dangerousPeople.json`)
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error(`Fetch data error: ${res.status}`);
+            }
+            return res.json()
+        })
+        .then(setData2RU)
+        .catch((err) => {
+            console.error('ошибка загрузки данных', err);
+        })
+        fetch(`${process.env.PUBLIC_URL}/data/history/en_dangerousPeople.json`)
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error(`Fetch data error: ${res.status}`);
+            }
+            return res.json()
+        })
+        .then(setData2EN)
         .catch((err) => {
             console.error('ошибка загрузки данных', err);
         })
@@ -80,33 +131,33 @@ function History() {
         <div className={style.historyPage}>
             <div className={style.fullScreenContainer1} id="triggerForScrollBtn">
                 <div className={style.pageTitle}>
-                        <p className={style.titleText1}>ИСТОРИЯ</p>
+                        <p className={style.titleText1}>{t("titleText1")}</p>
                 </div>
                 <div className={style.dateContainer}>
                     <div className={style.dateContainerRow1}><p className={style.dateContainerRowText}>1884–</p></div>
                     <div className={style.dateContainerRow2}><p className={style.dateContainerRowText}>2025</p></div>
                 </div>
             </div>
-            <div className={style.topRow}><div className={style.topRow1}><img src={titleIcon} alt="titleIcon" className={style.titleIcon}/><p className={style.titleText2}>КРЕСТОВ</p></div></div>
+            <div className={style.topRow}><div className={style.topRow1}><img src={titleIcon} alt="titleIcon" className={style.titleIcon}/><p className={style.titleText2}>{t("titleText2")}</p></div></div>
             <div className={style.interactiveLine}>
-                <Carousel items={items} />
+                <Carousel items={languageState.language === "ru" ? itemsRU : itemsEN} />
                 <div className={style.interactiveLineProgressBar}></div>      
             </div>
             <div className={style.fullScreenContainer2}>
                 <div className={style.wideContainer1}>
                     <div className={style.wideContainer1Col1}>
                         <p className={style.wideContainer1Title}>
-                        АНТОНИЙ ОСИПОВИЧ ТОМИШКО (1851–1900)
+                            {t("container1Title")}
                         </p>
                         <div className={style.wideContainerTextBox}>
                             <p className={style.wideContainerText}>
-                                Антоний Осипович Томишко родился 6 апреля 1851 года в небольшом чешском городке Германув-Местец. 
+                                 {t("container1Text1")}
                             </p>
                             <p className={style.wideContainerText}>
-                               Самой значимой постройке Томишко за всю его жизнь была разработка тюрьмы «Кресты». 
+                                {t("container1Text2")}
                             </p>
                             <p className={style.wideContainerText}>
-                                С точки зрения архитектуры, тюрьма «Кресты» особенно интересна благодаря своей уникальной планировке: здания тюрьмы имеют форму крестов, что облегчает наблюдение за заключёнными. До Томишко тюрьмы с подобной конструкцией возводились как в России, так и за границей, но именно Томишко воплотил этот замысел в реальность!
+                                {t("container1Text3")}
                             </p>
                         </div>
                     </div>
@@ -132,10 +183,10 @@ function History() {
                     </div>
                     <div className={style.container1892Row2}>
                             <p>
-                               Тюрьма «Кресты» была построена на Выборгской стороне Петербурга в 1884–1892 годах. Комплекс занимал 4,5 га и включал более 20 зданий, главные из которых — два пятиэтажных корпуса в форме крестов.
+                               {t("c1892Text1")}
                             </p>
                             <p>
-                               Первоначально тюрьма была предназначена для размещения 1150 заключённых, которых собирались размещать в 960 камерах. Позднее количество камер, задуманных как одиночные, увеличилось до 999, каждая площадью 8 м².
+                               {t("c1892Text2")}
                             </p>
                     </div>
                 </div>
@@ -153,7 +204,7 @@ function History() {
                     <div className={style.container1905Row2}>
                         
                         <p className={style.container1905Text}>
-                            После революции сюда перемещали политических заключённых, которым была разрешена относительная свобода передвижения в пределах тюрьмы.
+                            {t("c1905Text1")}
                         </p>
                     </div>
                     
@@ -166,9 +217,7 @@ function History() {
                     </div>
                     <div className={style.container1917Col2}>
                         <p className={style.paragraph1917}>
-                        После революции в тюрьме произошли большие изменения. В жёстких условиях и под строгим надзором оказались сторонники монархии.
-                        В начале XX века «Кресты» превратились в лагерь принудительного труда для особо опасных преступников. Особенно часто там содержали тех, кто был склонён к побегу, так как считалось, что 
-                        из этой тюрьмы невозможно выбраться.
+                            {t("c1917Text1")}
                         </p>
                     </div>
                     <div className={style.container1917Row2}>
@@ -186,12 +235,10 @@ function History() {
                         </div>
                         <div className={style.container1937Col1Row2}>
                             <p>
-                            В годы Большого террора в «Крестах» содержалось множество людей, обвинённых 
-                            в контрреволюционной деятельности. В каждой одиночной камере площадью 8 м² находилось 
-                            по 15–17 арестованных. В этот период в тюрьме оказались выдающиеся деятели науки и культуры.
+                                {t("c1937Text1")}
                             </p>
                             <p>
-                                Позднее, в составе «Крестов» появились так называемые «шарашкины конторы» - особые конструкторские бюро, где работали осуждённые, в том числе из военной сферы. Эти закрытые учреждения использовали труд заключённых для решения научно-технических задач.
+                                {t("c1937Text2")}
                             </p>
                         </div>
                     </div>
@@ -217,11 +264,10 @@ function History() {
                         </div>
                         <div className={style.container1941Col2Row2}>
                         <p>
-                        В блокадные дни «Кресты» стали не только тюрьмой, но и укреплённым пунктом обороны. Персонал организовал защиту комплекса — 
-                        на набережной Невы, прямо напротив главных ворот, возвели пулемётный дот.
+                            {t("c1941Text1")}
                         </p>
                         <p>
-                            Тюремные корпуса регулярно подвергались артобстрелам. Один из самых разрушительных ударов пришёлся на 7 ноября 1941 года: снаряды снесли Северные ворота, под обломками погибли двое часовых. Голод и лишения не щадили никого — за время блокады от истощения умерли десятки заключённых и несколько сотрудников.
+                           {t("c1941Text2")} 
                         </p>
                         </div>
                     </div>
@@ -236,7 +282,7 @@ function History() {
                         </div>
                         <div className={style.container1958Col1Row2}>
                             <p className={style.container1958Text}>
-                                В послевоенные годы тюрьма «Кресты» столкнулась с острой нехваткой средств на ремонт и содержание. Чтобы решить проблему, в 1958 году начальник учреждения подполковник Н.Е. Орловский организовал на территории картонажную фабрику. Всего за год удалось создать полноценное производство с заготовительным цехом, которое быстро стало приносить доход. К 1960 году мастерские возглавил И.К. Капустин, сформировав постоянный штат рабочих.
+                                {t("c1958Text1")}
                             </p>
                         </div>
                     </div>
@@ -256,10 +302,10 @@ function History() {
                         </div>
                         <div className={style.container1990Col2Row2}>
                             <p>
-                               В тюрьме одиночные камеры переделали под размещение шести человек, из-за чего общее число заключённых достигло 12 тысяч.
+                               {t("c1990Text1")}
                             </p>
                             <p>
-                               Перенаселённая тюрьма не справлялась и люди страдали от тесноты, голода и холода. Этот период оставил тяжёлые воспоминания на судьбах многих людей. 
+                                {t("c1990Text2")}
                             </p>
                         </div>
                     </div>    
@@ -279,7 +325,7 @@ function History() {
                         </div>
                          <div className={style.container2006Col1Row2}>
                             <p>
-                            В 2000-х власти обратили внимание на хроническую переполненность СИЗО. Ранее, в годы репрессий и в 1990-е, в камерах площадью 8 м² содержали по 20 и более человек. В 2006 году приняли решение о строительстве нового комплекса «Кресты-2» на 35 га в Колпино.
+                                {t("c2006Text1")}
                             </p>
                         </div>
                     </div>
@@ -296,7 +342,7 @@ function History() {
                         </div>
                         <div className={style.container2017Col1Row2}>
                             <p className={style.paragraph2017}>
-                            В 2017 году завершилось строительство нового тюремного комплекса, состоящего из двух восьмиэтажных крестообразных корпусов. 22 декабря того же года последние заключённые были переведены из старых «Крестов» в новый следственный изолятор в Колпино, который в народе сразу прозвали «Новые Кресты» или «Кресты-2». Исторический комплекс на Арсенальной набережной окончательно прекратил функционировать как тюрьма.
+                                {t("c2017Text1")}
                             </p>
                         </div>
                     </div>
@@ -317,7 +363,7 @@ function History() {
                         </div>
                         <div className={style.container2025Col2Row2}>
                             <p className={style.paragraph2025}>
-                            21 февраля 2025 года состоялась официальная продажа тюремного комплекса «Кресты». Группа компаний «КВС» выступила покупателем, заплатив за объект 1,136 миллиарда рублей. Официальное оформление сделки произошло 4 марта с подписанием договора купли-продажи.
+                                {t("c2025Text1")}
                             </p>
                         </div>
                     </div>
@@ -325,23 +371,23 @@ function History() {
                 <div className={style.containerAboutPeople}>
                     <div className={style.famousPeopleBlock}>
                         <div className={style.famousPeopleBlockTitle}>
-                            <p className={style.famousPeopleBlockTitleText1}>ИЗВЕСТНЫЕ</p>
+                            <p className={style.famousPeopleBlockTitleText1}>{t("famousTitle1")}</p>
                             <div className={style.famousPeopleBlockTitleSub}>
                                 <div className={style.famousPeopleBlockTitleSubAnimation}><RotatingCross/></div>
-                                <p className={style.famousPeopleBlockTitleText2}>ЛИЧНОСТИ</p>
+                                <p className={style.famousPeopleBlockTitleText2}>{t("famousTitle2")}</p>
                             </div>
                         </div>
-                        <FamousCards data={data1}/>
+                        <FamousCards data={languageState.language === "ru" ? data1RU : data1EN}/>
                     </div>
                     <div className={style.containerDangerousPeople}>
                         <div className={style.dangerousPeopleBlockTitle}>
-                            <p className={style.dangerousPeopleBlockTitleText1}>ОПАСНЫЕ</p>
+                            <p className={style.dangerousPeopleBlockTitleText1}>{t("dangerousTitle1")}</p>
                             <div className={style.dangerousPeopleBlockTitleSub}>
-                                <p className={style.dangerousPeopleBlockTitleText2}>ЗАКЛЮЧЁННЫЕ</p>
+                                <p className={style.dangerousPeopleBlockTitleText2}>{t("dangerousTitle2")}</p>
                                 <div className={style.dangerousPeopleBlockTitleSubAnimation}><ScaleCrossSlideBracketInverted/></div>
                             </div>
                         </div>
-                        <FamousCards data={data2}/>
+                        <FamousCards data={languageState.language === "ru" ? data2RU : data2EN}/>
                     </div>
                 </div>
             </div>

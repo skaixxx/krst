@@ -78,7 +78,7 @@ const Carousel = ({ items }) => {
     updateActiveIndex();
   };
 
-  // Drag and Swipe handlers
+  // Свайпы и перетаскивания
   const onMouseDown = (e) => {
     isDragging.current = true;
     dragStartX.current = e.pageX;
@@ -139,7 +139,7 @@ const Carousel = ({ items }) => {
     }, 300);
   };
 
-  // Нахождение ширины для элементов 
+  // Находим ширину для элементов 
   useEffect(() => {
 
     if (cardsRefs.current.length === 0) return;
@@ -178,7 +178,6 @@ const Carousel = ({ items }) => {
         {extendedItems.map((item, index) => {
           const trueIndex = index % sectionLength;
           const isActive = trueIndex === activeIndex;
-
           return (
             <a  
               key={index}

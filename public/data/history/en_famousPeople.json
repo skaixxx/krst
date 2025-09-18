@@ -1,0 +1,41 @@
+{
+    "desktopSize": {
+        "width": "13.8rem",
+        "height": "11.7rem" 
+    }, 
+    "items":
+        [
+            {
+                "id":1,
+                "url": "/images/history/famous/1.png",
+                "name": "TROTSKY LEV DAVIDOVICH",
+                "alt": "TROTSKY LEV DAVIDOVICH",
+                "year": "1905",
+                "description": "Leo Trotsky, after his arrest, ended up in the famous «KRESTY» prison, where he had already been held before — in December 1905. This time, in 1917, his stay in prison turned out to be longer."
+            },
+            {
+                "id":2,
+                "url": "/images/history/famous/2.png",
+                "name": "GUMILEV LEV NIKOLAEVICH",
+                "alt": "GUMILEV LEV NIKOLAEVICH",
+                "year": "1935",
+                "description": "Lev Gumilev, the son of the poets Nikolai Gumilev and Anna Akhmatova, first came to «KRESTY» in 1935. In 1938, his mother, Anna Akhmatova, spent 17 months visiting the prison walls until her son was sent to the Norilsk camp. These events inspired Akhmatova to create Requiem. Today, in the square between Shpalernaya Street and Voskresenskaya Embankment, there is a monument to the poetess, whose fate was connected with this place."
+            },
+            {
+                "id":3,
+                "url": "/images/history/famous/3.png",
+                "name": "ROKOSSOVSKY KONSTANTIN KONSTANTINOVICH",
+                "alt": "ROKOSSOVSKY KONSTANTIN KONSTANTINOVICH",
+                "year": "1937-1940",
+                "description": "The future marshal of the Soviet Union was kept in the walls of the legendary «KRESTY». For two and a half years, he was under investigation, enduring severe torture and systematic beatings. Despite the inhumane conditions, the military commander showed incredible resilience — he refused to sign false confessions about himself and other people."
+            },
+            {
+                "id":4,
+                "url": "/images/history/famous/4.png",
+                "name": "BRODSKY, JOSEPH ALEXANDROVICH",
+                "alt": "BRODSKY, JOSEPH ALEXANDROVICH",
+                "year": "1964",
+                "description": "In 1964, Joseph Brodsky was convicted of parasitism and imprisoned in «KRESTY», which negatively affected his health — he had a heart attack. A monument to the «Victims of Political Repression» with symbolic sphinxes showing the duality of the era: a woman's face and a skull has been erected opposite the prison on the Voskresenskaya Embankment."
+            }
+        ]
+}
