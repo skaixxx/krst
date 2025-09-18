@@ -8,20 +8,21 @@ import NavItem from "../NavItem";
 import { useState } from "react";
 import clsx from "clsx";
 import { useLocation, useNavigate } from "react-router";
+import { useTranslation } from "../../../hooks/useTranslation";
 
 const navLinks = [
-  { to: '/History', label: 'история' },
-  { to: '/Events', label: 'мероприятия' },
-  { to: '/Locations', label: 'локации' },
-  { to: '/Rent', label: 'аренда' },
-  { to: '/Contacts', label: 'контакты' },
-  { to: '/Residence', label: 'резидентство'}
+  { to: '/History', label: {ru: "история", en: "history"}},
+  { to: '/Events', label: {ru: "мероприятия", en: "events"}},
+  { to: '/Locations', label: {ru: "локации", en: "locations"}},
+  { to: '/Rent', label: {ru: "аренда", en: "rent"}},
+  { to: '/Contacts', label: {ru: "контакты", en: "contacts"}},
+  { to: '/Residence', label: {ru: "резидентство", en: "residency"}}, 
 ];
 
 export default function MinHeader() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
-
+    const t = useTranslation(navLinks);
     const navigate = useNavigate();
     const location = useLocation();
     const isLightLogo = ['/', '/History'].includes(location.pathname);
@@ -60,7 +61,7 @@ export default function MinHeader() {
                     {navLinks.map(({ to, label }, index) => { 
                         const isLast = index === navLinks.length -1;
                         return(
-                            <NavItem to={to} label={label} onClick={() => setMenuOpen(false)} className={`${styles.navLinkMobile} ${isLast ? styles.navLinkMobileLast : ""}`}/>
+                            <NavItem to={to} label={t(label)} onClick={() => setMenuOpen(false)} className={`${styles.navLinkMobile} ${isLast ? styles.navLinkMobileLast : ""}`}/>
                 )})}
                 </div>
                 <div className={styles.burgerMenuIconLink} onClick={handleMenuToggle}>

@@ -1,4 +1,4 @@
-import "./footer.css"
+import style from "./footer.module.css"
 import "../general.css"
 import footerLogo from "../../assets/footer/footerLogo.svg"
 import phoneIcon from "../../assets/footer/phoneIcon.svg"
@@ -59,74 +59,74 @@ function Footer() {
     }
 
     return (
-        <footer className="footer">
-        <div className="footer-grid">
-            <div className="grid-col1">
-                <div className="footer-logo-container"><a href="/" className="footer-logo-link"><img src={footerLogo} alt="footerLogo" className="footer-logo"></img></a></div>
-                <div className="footer-rounds">
-                    <div className="footer-round-stroke1">
-                        <div className="footer-round-element">
-                            <p className="footer-round-element-text">{t("hashtag1Text")}</p>
+        <footer className={style.footer}>
+        <div className={style.footerGrid}>
+            <div className={style.gridCol1}>
+                <div className={style.logoContainer}><a href="/" className="footer-logo-link"><img src={footerLogo} alt="footerLogo" className="footer-logo"></img></a></div>
+                <div className={style.rounds}>
+                    <div className={style.roundStroke1}>
+                        <div className={style.roundElement}>
+                            <p className={style.roundElementText}>{t("hashtag1Text")}</p>
                         </div>
                     </div>
-                    <div className="footer-round-stroke2">
-                        <div className="footer-round-element">
-                            <p className="footer-round-element-text">{t("hashtag2Text")}</p>
+                    <div className={style.roundStroke2}>
+                        <div className={style.roundElement}>
+                            <p className={style.roundElementText}>{t("hashtag2Text")}</p>
                         </div>
-                        <div className="footer-round-element">
-                            <p className="footer-round-element-text">{t("hashtag3Text")}</p>
+                        <div className={style.roundElement}>
+                            <p className={style.roundElementText}>{t("hashtag3Text")}</p>
                         </div>
                     </div>
-                    <div className="footer-round-stroke3">
-                        <div className="footer-round-element">
-                            <p className="footer-round-element-text">{t("hashtag4Text")}</p>
+                    <div className={style.roundStroke3}>
+                        <div className={style.roundElement}>
+                            <p className={style.roundElementText}>{t("hashtag4Text")}</p>
                         </div>
-                        <div className="footer-round-element">
-                            <p className="footer-round-element-text">{t("hashtag5Text")}</p>
+                        <div className={style.roundElement}>
+                            <p className={style.roundElementText}>{t("hashtag5Text")}</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="grid-col2">
-                <div className="footer-mailing-text">
-                    <p className="footer-mailing-title">{t("submitMailingText")}</p>
-                    <p className="footer-mailing-paragraph">{t("aboutMailingText")}</p>
+            <div className={style.gridCol2}>
+                <div className={style.mailingText}>
+                    <p className={style.mailingTitle}>{t("submitMailingText")}</p>
+                    <p className={style.mailingParagraph}>{t("aboutMailingText")}</p>
                 </div>
-                <div className="footer-mail-input-container">
+                <div className={style.mailInputContainer}>
                     <input
                         ref={inputRef}
                         placeholder={t("inputEmailText")}
-                        className="footer-input-email"
+                        className={style.inputEmail}
                         onChange={positionCaret}
                         onSelect={positionCaret}
                     />
                     <div
                         ref={caretRef}
-                        className="custom-caret"
+                        className={style.customCaret}
                     />
-                    <button className="send-email-button"><img className="send-email-arrow-pic" src={arrowIcon} alt="arrow"></img></button>
+                    <button className={style.sendEmailButton}><img className={style.sendEmailArrowPic} src={arrowIcon} alt="arrow"></img></button>
                 </div>
-                <div className="footer-contacts-info">
-                    <div className="footer-phone-adress">
-                        <div className="footer-phone"><img src={phoneIcon} alt="phone"></img><p>8 800 000-00-00</p></div>
-                        <div className="footer-adress"><img src={locationIcon} alt="location"></img><p>{t("adressText")}</p></div>
+                <div className={style.contactsInfo}>
+                    <div className={style.phoneAdress}>
+                        <div className={style.phone}><img src={phoneIcon} alt="phone"></img><p>8 800 000-00-00</p></div>
+                        <div className={style.adress}><img src={locationIcon} alt="location"></img><p>{t("adressText")}</p></div>
                     </div>
-                    <div className="footer-work-days"><p className="footer-schedule">{t("workScheduleText")}</p><div className="days-time-container"><p className="days">{t("daysText")}</p><p className="time">10:00–22:00</p></div></div>
+                    <div className={style.workDays}><p className={style.schedule}>{t("workScheduleText")}</p><div className={style.daysTimeContainer}><p className={style.days}>{t("daysText")}</p><p className={style.time}>10:00–22:00</p></div></div>
                 </div>
             </div>
-            <div className="grid-col3">
+            <div className={style.gridCol3}>
                 <LanguageSelector/>
-                <div className="footer-socuals-politico-container">
-                    <div className="footer-socials">
-                        <a href="https://dzen.ru" target="_blank" rel="noreferrer" className="link-dzen"><img src={dzenIcon} alt="dzen" className="dzen-logo"></img></a>
-                        <a href="https://telegram.org" target="_blank" rel="noreferrer" className="link-tg"><img src={tgIcon} alt="tg" className="tg-logo"></img></a>
-                        <a href="https://vk.com" target="_blank" rel="noreferrer" className="link-vk"><img src={vkIcon} alt="vk" className="vk-logo"></img></a>
+                <div className={style.socualsPoliticoContainer}>
+                    <div className={style.socials}>
+                        <a href="https://dzen.ru" target="_blank" rel="noreferrer" className={style.linkDzen}><img src={dzenIcon} alt="dzen" className={style.dzenLogo}></img></a>
+                        <a href="https://telegram.org" target="_blank" rel="noreferrer" className={style.linkTg}><img src={tgIcon} alt="tg" className={style.tgLogo}></img></a>
+                        <a href="https://vk.com" target="_blank" rel="noreferrer" className={style.linkVk}><img src={vkIcon} alt="vk" className={style.vkLogo}></img></a>
                     </div>
-                    <div className="footer-politico">
-                        <a href="/" className="politico-link">
-                            <p className="politico-text">{t("politicoText")}</p>
+                    <div className={style.politico}>
+                        <a href="/" className={style.politicoLink}>
+                            <p className={style.politicoText}>{t("politicoText")}</p>
                         </a>
-                        <p className="copyrihgt-text">{t("allRightText")}</p>
+                        <p className={style.copyrihgtText}>{t("allRightText")}</p>
                     </div>
                 </div>
             </div>

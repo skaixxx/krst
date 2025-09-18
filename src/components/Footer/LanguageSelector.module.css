@@ -1,26 +1,26 @@
-.footer-lang-change {
+.langChange {
   width: 100%;
   display: flex;
   justify-content: end;
 }
 
-.lang-select-container{
+.langSelectContainer{
   display: inline-flex;
   position: relative;  
 }
 
-.lang-select-btn{
+.langSelectBtn{
   cursor: pointer;
   display: flex;
   gap: 0.4rem;
 }
 
-.arrow-select {   
+.arrowSelect {   
   width: 0.875rem;
   transition: transform 0.3s ease;
 }
 
-.arrow-select.rotate {
+.arrowSelect.rotate {
   transform: rotate(-180deg);
 }
 

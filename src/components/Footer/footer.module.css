@@ -14,7 +14,7 @@
     justify-content: center;
     align-items: center;
 }
-.footer-grid {
+.footerGrid {
     width: 91.142%;
     height: 71.4286%;
     display: grid;
@@ -23,7 +23,7 @@
     grid-template-areas: "col1 col1 col1 . col2 col2 col2 col2 . col3 col3 col3";
     column-gap: 1rem;
 }
-.grid-col1 {
+.gridCol1 {
     grid-area: col1;
     height: 100%;
     width: 100%;
@@ -31,7 +31,7 @@
     flex-direction: column;
     justify-content: space-between;
 }
-.grid-col2 {
+.gridCol2 {
     grid-area: col2;
     height: 100%;
     width: 100%;
@@ -39,7 +39,7 @@
     flex-direction: column;
     justify-content: space-between;
 }
-.grid-col3 {
+.gridCol3 {
     grid-area: col3;
     height: 100%;
     width: 100%;
@@ -48,19 +48,19 @@
     justify-content: space-between;
 }
 /* 1 колонка */
-.footer-logo-container {
+.logoContainer {
     width: 27.635%;
     height: 34.4%;
 }
-.footer-logo-link {
+.logoLink {
     width: 100%;
     height: 100%;
 }
-.footer-logo {
+.logo {
     width: 100%;
     height: 100%;
 }
-.footer-rounds {
+.rounds {
     height: 53%;
     width: 100%;
     display: flex;
@@ -69,26 +69,26 @@
     align-items: start;
     gap: .5rem;
 }
-.footer-round-stroke1 {
+.roundStroke1 {
     height: 25.7576%;
     display: flex;
     justify-content: start;
     column-gap: .5rem;
 }
-.footer-round-stroke2 {
+.roundStroke2 {
     height: 25.7576%;
     display: flex;
     justify-content: start;
     column-gap: .5rem;
 }
-.footer-round-stroke3 {
+.roundStroke3 {
     height: 25.7576%;
     display: flex;
     justify-content: start;
     column-gap: .5rem;
 }
 
-.footer-round-element {
+.roundElement {
     height: 100%;
     display: flex;
     align-items: center;
@@ -101,22 +101,22 @@
     padding: .5rem 1rem;
 }
 /* 2 колонка */
-.footer-mailing-text {
+.mailingText {
     display: flex;
     flex-direction: column;
     align-content: start;
     row-gap: .75rem;
 }
-.footer-mailing-title {
+.mailingTitle {
     font-size: .9rem;
     font-weight: bold;
     line-height: 100%;
 }
-.footer-mailing-paragraph {
+.mailingParagraph {
     font-size: .8rem;
     font-weight: 400;
 }
-.footer-mail-input-container {
+.mailInputContainer {
     width: 100%;
     height: 20%;
     position: relative;
@@ -124,7 +124,7 @@
     border-radius: 1.25rem;
     background-color: #F2ECE4;
 }
-.footer-input-email {
+.inputEmail {
     width: 100%;
     height: 100%;
     padding-left: 1rem;
@@ -136,7 +136,7 @@
     padding-right: 0.45rem;
 }
 
-.custom-caret {
+.customCaret {
     position: absolute;
     left: 1rem;
     top: 50%;
@@ -148,7 +148,7 @@
     transition: opacity 0.3s ease-in-out;
 }
 
-.footer-input-email:focus ~ .custom-caret {
+.inputEmail:focus ~ .customCaret {
     opacity: 1;
     animation: blink 1s ease-in-out 0.3s infinite;
 }
@@ -158,7 +158,7 @@
     50% { opacity: 0; }
 }
 
-.send-email-button {
+.sendEmailButton {
     width: 6rem;
     height: 100%;
     border: none;
@@ -170,51 +170,51 @@
     top: 0;
     right: 0;
 }
-.send-email-button:hover {
+.sendEmailButton:hover {
     cursor: pointer;
     opacity: 0.9;
 }
-.send-email-arrow-pic {
+.sendEmailArrowPic {
     height: 40%;
 }
-.footer-contacts-info {
+.contactsInfo {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.footer-phone-adress {
+.phoneAdress {
     width: 60%;
     display: flex;
     flex-direction: column;
     row-gap: .75rem;
 }
-.footer-phone {
+.phone {
     width: 100%;
     display: flex;
     justify-content: start;
     align-items: center;
     font-size: .8rem;
 }
-.footer-phone img{
+.phone img{
     height: 95%;
 }
-.footer-phone p {
+.phone p {
     padding-left: .5rem;
 }
-.footer-adress {
+.adress {
     width: 100%;
     display: flex;
     justify-content: start;
     align-items: center;
     font-size: .8rem;
 }
-.footer-adress img{
+.adress img{
     height: 95%;
 }
-.footer-adress p {
+.adress p {
     padding-left: .5rem;
 }
-.footer-work-days {
+.workDays {
     width: 40%;
     display: flex;
     flex-wrap: wrap;
@@ -222,53 +222,53 @@
     row-gap: .75rem;
     font-size: .8rem;
 }
-.footer-schedule {
+.schedule {
     width: 100%;
     font-weight: bold;
 }
-.days-time-container {
+.daysTimeContainer {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 /* 3 колонка */
 
-.footer-socuals-politico-container {
+.socualsPoliticoContainer {
     width: 100%;
     height: 42.4%;
 }
-.footer-socials {
+.socials {
     width: 100%;
     height: 28.3019%;
     display: flex;
     justify-content: end;
     column-gap: .5rem;
 }
-.link-dzen {
+.linkDzen {
     width: 10.13%;
     height: 100%;
 }
-.dzen-logo {
+.dzenLogo {
     width: 100%;
     height: 100%;
 }
-.link-tg {
+.linkTg {
     width: 10.13%;
     height: 100%;
 }
-.tg-logo {
+.tgLogo {
     width: 100%;
     height: 100%;
 }
-.link-vk {
+.linkVk {
     width: 10.13%;
     height: 100%;
 }
-.vk-logo {
+.vkLogo {
     width: 100%;
     height: 100%;
 }
-.footer-politico {
+.politico {
     width: 100%;
     height: 71.6981%;
     display: flex;
@@ -280,11 +280,11 @@
     row-gap: 0.9rem;
     letter-spacing: 3%;
 }
-.politico-link {
+.politicoLink {
     text-decoration: none;
     color: #F2ECE4;
 }
-.copyrihgt-text {
+.copyrihgtText {
     width: 100%;
     text-align: end;
     text-wrap: nowrap;
@@ -296,7 +296,7 @@
         padding: 40px 20px 48px;
     }
 
-    .footer-grid {
+    .footerGrid {
         width: 100%;
         height: auto;
         grid-template-columns: 1fr;
@@ -305,96 +305,96 @@
         gap: 40px;
     }
 
-    .grid-col1 {
+    .gridCol1 {
         grid-area: auto;
         flex-direction: row;
         justify-content: space-between;
     }
 
-    .grid-col2 {
+    .gridCol2 {
         grid-area: auto;
     }
 
-    .grid-col3 {
+    .gridCol3 {
         position: relative;
         grid-area: auto;
     }
 
-    .footer-mailing-text {
+    .mailingText {
         row-gap: 5px;
     }
 
-    .footer-logo-container {
+    .logoContainer {
         min-width: 85px;
         width: 85px;
         height: 85px;
     }
 
-    .footer-rounds {
+    .rounds {
         height: auto;
         flex-direction: column;
         align-items: flex-end;
         gap: 5px;
     }
 
-    .footer-round-element {
+    .roundElement {
         font-size: 12px;
         border-radius: 25px;
         padding: 5.5px 10px;
     }
 
-    .footer-round-stroke1 {
+    .roundStroke1 {
         height: auto;
     }
-    .footer-round-stroke2 {
+    .roundStroke2 {
         height: auto;
     }
-    .footer-round-stroke3 {
+    .roundStroke3 {
         height: auto;
     }
 
-    .footer-mailing-title {
+    .mailingTitle {
         font-weight: 400;
         font-size: 20px;
     }
 
-    .footer-mailing-paragraph {
+    .mailingParagraph {
         font-size: 14px;
     }
 
-    .footer-mail-input-container {
+    .mailInputContainer {
         height: 40px;
         margin-top: 20px;
         margin-bottom: 40px;
     }
 
-    .footer-socuals-politico-container {
+    .socualsPoliticoContainer {
         height: auto;
     }
 
-    .footer-politico {
+    .politico {
         height: auto;
         align-items: flex-start;
     }
     
-    .footer-socials {
+    .socials {
         height: auto;
         justify-content: flex-start;
         margin-bottom: 35px;
     }
     
-    .copyrihgt-text {
+    .copyrihgtText {
         text-align: left;
     }
 
-    .footer-phone, .footer-adress, .footer-work-days {
-        font-size: 14px;
+    .phone, .adress, .workDays {
+        font-size: 1rem;
     }
-    .footer-schedule {
+    .schedule {
         display: none;
     }
     
-    .days-time-container {
+    .daysTimeContainer {
         flex-direction: column;
         align-items: flex-end;
         gap: .75rem;
