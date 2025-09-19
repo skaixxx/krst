@@ -4,6 +4,7 @@
 >Дисклеймер: Названия ресторанов и компаний упомянутые в проекте, приведены исключительно в справочных и иллюстративных целях. Они не связаны с данным проектом и не выражают поддержки или участия со стороны указанных организаций. Все права принадлежат их владельцам.
 #
 >Path notes:
+- Added a translation for Residency and Contact pages
 - History page was translated
 - Selectors isolation done
 - Header translation
@@ -15,6 +16,7 @@
 - Now PopUp works on Residency and Contacts page with input check and PopUp form can accept JSX and render it.
 #
 >Обновление:
+- Добавлен перевод страниц: Резидентство и Контакты
 - Страница История переведена
 - Доделана изоляция классов
 - Переведена шапка сайта

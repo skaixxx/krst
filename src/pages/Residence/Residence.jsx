@@ -11,7 +11,10 @@ import { useNavigate } from "react-router"
 import { useAppContext } from "../../components/popup/popupContext"
 import { useState } from "react"
 import clsx from "clsx"
+import { useTranslation } from "../../hooks/useTranslation"
+import ResidenceTranslate from "./Residence.translate"
 function Residence() {
+    const t = useTranslation(ResidenceTranslate);
     const navigate = useNavigate();
     const { popup } = useAppContext();
     const [name, setName] = useState("");
@@ -44,37 +47,37 @@ function Residence() {
                 <div className={style.titleBox1}>
                     <div className={clsx(style.pageTitle, style.pageTitle1)}>
                         {isMobile ?
-                        <p>РЕЗИДЕНТ</p>
+                        <p>{t("titleTextMobile")}</p>
                         :
-                        <p>РЕЗИДЕНТСТВО</p>
+                        <p>{t("titleTextDesktop1")}</p>
                         }
                     </div>
                     <div className={clsx(style.pageTitle, style.pageTitle2)}>
-                        <p>ОТКРЫВАЙ</p>
+                        <p>{t("titleTextDesktop2")}</p>
                     </div>
                     <div className={clsx(style.pageTitle, style.pageTitle3)}>
-                        <p>ВДОХНОВЛЯЙ</p>
+                        <p>{t("titleTextDesktop3")}</p>
                     </div>
                 </div>
                 <div className={style.titleBox2}>
                     <div className={style.icon}><ScaleCrossSlideBracketInverted/></div>
                     <div className={style.sameText}>
-                        <p>Найди идеальное помещение для аренды прямо сейчас.</p>
+                        <p>{t("titleParagraph")}</p>
                     </div>
                     <div className={style.buttonGoContainer}><ButtonGoToDesktop text="перейти" action={() => navigate("/Rent")}/></div>
                 </div>
             </div>
             <div className={style.paragraphs}>
                 <div className={style.paragraph1}>
-                    <p className={style.paragraphTitle}>#КОЛЛАБОРАЦИЯ</p>
+                    <p className={style.paragraphTitle}>{t("hashtag1Title")}</p>
                     <p className={style.paragraphText}>
-                        Мы приглашаем художников, ремесленников, музыкантов, кураторов, дизайнеров, исследователей и культурных предпринимателей стать частью пространства. Здесь можно не просто арендовать мастерскую или студию — здесь можно запускать процессы, находить соавторов, взаимодействовать с публикой и местом.
+                        {t("hashtag1Text")}
                     </p>
                 </div>
                 <div className={style.paragraph2}>
-                    <p className={style.paragraphTitle}>#ПРОСТРАНСТВО</p>
+                    <p className={style.paragraphTitle}>{t("hashtag2Title")}</p>
                     <p className={style.paragraphText}>
-                        КРСТ — это территория, где каждый резидент становится участником большого культурного эксперимента. Работай. Исследуй. Делай шум. Резидентство в КРСТ — это когда пространство работает вместе с тобой.
+                        {t("hashtag2Text")}
                     </p>
                 </div>
             </div>
@@ -144,20 +147,20 @@ function Residence() {
                 <div className={style.bidCol1}>
                     {isMobile?
                         <div className={style.bidText}>
-                            <p className={style.bidDefaultText}>КАК ИМ СТАТЬ?</p>
-                            <p className={style.bidAccentText}>ЗАПОЛНИ ЗАЯВКУ!</p>
+                            <p className={style.bidDefaultText}>{t("bidText1")}</p>
+                            <p className={style.bidAccentText}>{t("bidAccent1")}</p>
                         </div>
                         :
                         <div className={style.bidText}>
-                            <p className={style.bidDefaultText}>ОСТАВЬ ЗАЯВКУ</p>
-                            <p className={style.bidAccentText}>МЕНЕДЖЕРАМ</p>
+                            <p className={style.bidDefaultText}>{t("bidText2")}</p>
+                            <p className={style.bidAccentText}>{t("bidAccent2")}</p>
                         </div> 
                     }
                     
                     <div className={style.bidForm}>
-                        <div className={clsx(style.formName, style.resForm)}><input className={style.inputR} value={name} onChange={(e) => setName(e.target.value)} type="name" id="name" placeholder='фио' data-placeholder='фио' onFocus={inputFocus} onBlur={inputBlur}/><img className={style.profileIcon} src={profileIcon} alt="profile"/></div>
-                        <div className={clsx(style.formBirthday, style.resForm)}><input className={style.inputR} value={birthday} onChange={(e) => setBirthday(e.target.value)} type="text" name="birthday" id="birthday" placeholder="дата рождения" data-placeholder='дата рождения' onFocus={inputFocus} onBlur={inputBlur}/><img className={style.calendarIcon} src={calendarIcon} alt="calendar"></img></div>
-                        <div className={clsx(style.formPhone, style.resForm)}><input className={style.inputR} value={phone} onChange={(e) => setPhone(e.target.value)} type="tel" name="phone" id="phone" placeholder="телефон" data-placeholder='телефон' onFocus={inputFocus} onBlur={inputBlur}/><img className={style.phoneIcon} src={phoneIcon} alt="phone"/></div>
+                        <div className={clsx(style.formName, style.resForm)}><input className={style.inputR} value={name} onChange={(e) => setName(e.target.value)} type="name" id="name" placeholder={t("namePlaceholder")} data-placeholder={t("namePlaceholder")} onFocus={inputFocus} onBlur={inputBlur}/><img className={style.profileIcon} src={profileIcon} alt="profile"/></div>
+                        <div className={clsx(style.formBirthday, style.resForm)}><input className={style.inputR} value={birthday} onChange={(e) => setBirthday(e.target.value)} type="text" name="birthday" id="birthday" placeholder={t("birthdayPlaceholder")} data-placeholder={t("birthdayPlaceholder")} onFocus={inputFocus} onBlur={inputBlur}/><img className={style.calendarIcon} src={calendarIcon} alt="calendar"></img></div>
+                        <div className={clsx(style.formPhone, style.resForm)}><input className={style.inputR} value={phone} onChange={(e) => setPhone(e.target.value)} type="tel" name="phone" id="phone" placeholder={t("phonePlaceholder")} data-placeholder={t("phonePlaceholder")} onFocus={inputFocus} onBlur={inputBlur}/><img className={style.phoneIcon} src={phoneIcon} alt="phone"/></div>
                         <div className={clsx(style.formEmail, style.resForm)}><input className={style.inputR} value={email} onChange={(e) => setEmail(e.target.value)} type="email" name="email" id="email" placeholder="email" data-placeholder='email' onFocus={inputFocus} onBlur={inputBlur}/><img className={style.emailIcon} src={emailIcon} alt="email"/></div>
                         <div className={style.formSendButton}><ButtonGoToDesktop text="отправить" action={handleSubmit}/></div>
                     </div>

@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { CardsProvider } from "../../routes/CardsContext";
 import eventsData from "../../data/events";
 import { useTranslation } from "../../hooks/useTranslation";
-import { useAppContext } from "../../components/popup/popupContext";
 import EventsTranslation from "./Events.translation.ts";
 function Events() {
     const t2 = useTranslation(EventsTranslation)

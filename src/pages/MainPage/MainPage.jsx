@@ -15,7 +15,6 @@ import lottie from "lottie-web";
 import AnimationData from '../../assets/animation/main/mainAnimationData.json';
 import { useTranslation } from "../../hooks/useTranslation"
 import MainPageTranslation from "./MainPage.translations.ts"
-import { useAppContext } from "../../components/popup/popupContext.jsx"
 function MainPage() {
     const t = useTranslation(MainPageTranslation);
     const containerRef = useRef(null);
