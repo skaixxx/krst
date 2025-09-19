@@ -13,9 +13,12 @@ import ScaleSlideBrackets from '../../components/animations/ScaleSlideBrackets/S
 import clsx from 'clsx';
 import { useState } from 'react';
 import { useAppContext } from '../../components/popup/popupContext';
-
+import ContactsTranslate from './Contacts.translate.js';
+import { useTranslation } from '../../hooks/useTranslation.jsx';
 function Contacts() {
+    const { languageState } = useAppContext();
     const { popup } = useAppContext();
+    const t = useTranslation(ContactsTranslate);
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
@@ -48,11 +51,11 @@ function Contacts() {
     };
     return (
         <div className={style.containerContacts}>
-            <div className={style.titleBoxContacts}>
+            <div className={languageState.language === "ru" ? style.titleBoxContacts : clsx(style.titleBoxContacts, style.en)}>
                 {!isMobile &&
                 <div className={style.contactsTitleStrokeBox}>
                     <div className={clsx(style.contactsTitle, style.contactsTitle1)}>
-                        <p>КОНТАКТЫ</p>
+                        <p>{t("titleText1")}</p>
                     </div> 
                     <div className={style.contactsStyleElement1}>
                         <ScaleSlideBrackets/>
@@ -60,12 +63,12 @@ function Contacts() {
                     
                 </div>
                 }
-                <div className={style.contactsTitleBigBox}>
+                <div className={languageState.language === "ru" ? style.contactsTitleBigBox : clsx(style.contactsTitleBigBox, style.en)}>
                     {isMobile ? 
                     <div className={style.contactsTitleContainer}>
                         <div className={style.contactsTitleStroke1}>
                             <div className={clsx(style.contactsTitle, style.contactsTitle1)}>
-                            <p>КОНТАКТЫ</p>
+                            <p>{t("titleText1")}</p>
                             </div> 
                             <div className={style.contactsStyleElement1}>
                             <ScaleSlideBrackets/>
@@ -76,39 +79,39 @@ function Contacts() {
                                     <RotatingCross/>
                             </div>
                             <div className={clsx(style.contactsTitle, style.contactsTitle2)}>
-                                    <p>ДЛЯ</p>
+                                    <p>{t("titleText2")}</p>
                             </div>
                             <div className={clsx(style.contactsTitle, style.contactsTitle3)}>
-                                <p>СВЯЗИ</p>
+                                <p>{t("titleText3")}</p>
                             </div>
                         </div>
                     </div>
                     :
-                    <div className={style.contactsTitleContainer}>
-                        <div className={style.contactsTitleSubContainer}>
+                    <div className={languageState.language === "ru" ? style.contactsTitleContainer : clsx(style.contactsTitleContainer, style.en)}>
+                        <div className={languageState.language === "ru" ? style.contactsTitleSubContainer : clsx(style.contactsTitleSubContainer, style.en)}>
                             <div className={clsx(style.contactsTitle, style.contactsTitle2)}>
-                            <p>ДЛЯ</p>
+                            <p>{t("titleText2")}</p>
                             </div>
                             <div className={style.contactsStyleElement2}>
                             <RotatingCross/>
                             </div>
                         </div>
                         <div className={clsx(style.contactsTitle, style.contactsTitle3)}>
-                                <p>СВЯЗИ</p>
+                                <p>{t("titleText3")}</p>
                         </div>
                         
                     </div>
                     }
-                    <div className={style.contactForm}>
-                        <div className={style.nameFormContainer}><input type="text" className={style.contactsName} value={name} onChange={(e) => setName(e.target.value)} placeholder="фио" data-placeholder='фио' onFocus={inputFocus} onBlur={inputBlur}></input><img src={personalInfoIcon} alt="persInfoIcon" className={style.personalInfoIcon}/></div>
-                        <div className={style.contactsDateBirthContainer}><input name="birthday" type="text" className={style.contactsDateBirth} value={birthday} onChange={(e) => setBirthday(e.target.value)} placeholder="дата рождения" data-placeholder='дата рождения' onFocus={inputFocus} onBlur={inputBlur}/><img src={calendar} alt="calendar" className={style.dateBirthIcon}/></div>
+                    <div className={languageState.language === "ru" ? style.contactForm : clsx(style.contactForm, style.en)}>
+                        <div className={style.nameFormContainer}><input type="text" className={style.contactsName} value={name} onChange={(e) => setName(e.target.value)} placeholder={t("namePlaceholder")} data-placeholder={t("namePlaceholder")} onFocus={inputFocus} onBlur={inputBlur}></input><img src={personalInfoIcon} alt="persInfoIcon" className={style.personalInfoIcon}/></div>
+                        <div className={style.contactsDateBirthContainer}><input name="birthday" type="text" className={style.contactsDateBirth} value={birthday} onChange={(e) => setBirthday(e.target.value)} placeholder={t("birthdayPlaceholder")} data-placeholder={t("birthdayPlaceholder")} onFocus={inputFocus} onBlur={inputBlur}/><img src={calendar} alt="calendar" className={style.dateBirthIcon}/></div>
                         <div className={style.emailFormContainer}><input type="email" className={style.contactsEmail} value={email} onChange={(e) => setEmail(e.target.value)} placeholder="email" data-placeholder='email' onFocus={inputFocus} onBlur={inputBlur}/><img src={letterIcon} alt="letterIcon" className={style.emailIcon}/></div>
-                        <div className={style.phoneFormContainer}><input type="tel" className={style.contactsPhone} value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="телефон" data-placeholder='телефон' onFocus={inputFocus} onBlur={inputBlur} pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"/><img src={phoneIcon} alt="phoneIcon" className={style.phoneIcon}/></div>
+                        <div className={style.phoneFormContainer}><input type="tel" className={style.contactsPhone} value={phone} onChange={(e) => setPhone(e.target.value)} placeholder={t("phonePlaceholder")} data-placeholder={t("phonePlaceholder")} onFocus={inputFocus} onBlur={inputBlur} pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"/><img src={phoneIcon} alt="phoneIcon" className={style.phoneIcon}/></div>
                         <div className={style.messageFormContainer}>
                             {isMobile? 
-                            <textarea type="text" value={message} onChange={(e) => setMessage(e.target.value)} className={style.contactsMessageArea} placeholder="сообщение" data-placeholder='сообщение' onFocus={inputFocus} onBlur={inputBlur} />
+                            <textarea type="text" value={message} onChange={(e) => setMessage(e.target.value)} className={style.contactsMessageArea} placeholder={t("messagePlaceholder")} data-placeholder={t("messagePlaceholder")} onFocus={inputFocus} onBlur={inputBlur} />
                             :
-                            <input type="text" value={message} onChange={(e) => setMessage(e.target.value)} className={style.contactsMessage} placeholder="сообщение" data-placeholder='сообщение' onFocus={inputFocus} onBlur={inputBlur}/>
+                            <input type="text" value={message} onChange={(e) => setMessage(e.target.value)} className={style.contactsMessage} placeholder={t("messagePlaceholder")} data-placeholder={t("messagePlaceholder")} onFocus={inputFocus} onBlur={inputBlur}/>
                             }
                             <img src={messageIcon} alt="messageIcon" className={style.messageIcon}/>
                         </div>
@@ -124,34 +127,31 @@ function Contacts() {
                     <p className={style.contactsAboutUsText}>krst@krst.ru</p>
                 </div>
                 <div className={style.contactsAboutUsBox}>
-                    <p className={style.contactsAboutUsTitle}>ТЕЛЕФОН</p>
+                    <p className={style.contactsAboutUsTitle}>{t("phoneText")}</p>
                     <p className={style.contactsAboutUsText}>+7 (888) 888-88-88</p>
                 </div>
                 {!isMobile &&
                     <div className={style.contactsAboutUsBox}>
-                        <p className={style.contactsAboutUsTitle}>АДРЕС</p>
-                        <p className={style.contactsAboutUsText}>Санкт-Петербург, Арсенальная наб. 7</p>
+                        <p className={style.contactsAboutUsTitle}>{t("adressText")}</p>
+                        <p className={style.contactsAboutUsText}>{t("addressText2")}</p>
                     </div>
                 }
             </div>
             <div className={style.contactsInfo}>
                 <div className={style.contactsInfo1}>
                     <p className={style.contactsInfoHashtag}>
-                        #ЦЕНИМ
+                        {t("hashtag1")}
                     </p>
                     <p className={style.contactsInfoText}>
-                        Мы ценим каждого нашего клиента и всегда стремимся 
-                        к общению. Нам важна ваша обратная связь, ведь именно 
-                        благодаря вам мы становимся лучше.
+                        {t("hashtag1Text")}
                     </p>
                 </div>
                 <div className={style.contactsInfo2}>
                     <p className={style.contactsInfoHashtag}>
-                        #СВЯЗЬ
+                        {t("hashtag2")}
                     </p>
                     <p className={style.contactsInfoText}>
-                        Свяжитесь с нами любым удобным способом — мы всегда 
-                        готовы ответить на ваши вопросы и помочь!
+                        {t("hashtag2Text")}
                     </p>
                 </div>
             </div>
@@ -160,7 +160,7 @@ function Contacts() {
                     <img className={style.contactsContentBottomPicture} src={mapPicture} alt="map" />
                     {isMobile && 
                         <div className={style.onMapAdress}>
-                            <p className={style.contactsAboutUsText}>Санкт-Петербург, Арсенальная наб. 7</p>
+                            <p className={style.contactsAboutUsText}>{t("addressText2")}</p>
                         </div>
                     }
                 </div>

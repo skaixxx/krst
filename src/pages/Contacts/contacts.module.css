@@ -17,6 +17,14 @@
     flex-direction: column;
     justify-content: space-between;
 }
+.titleBoxContacts.en {
+    width: 91.2153%;
+    height: max-content;
+    row-gap: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .contactsTitleStrokeBox {
     width: 100%;
     height: 22.7273%;
@@ -29,6 +37,13 @@
     display: flex;
     justify-content: space-between;
 }
+.contactsTitleBigBox.en {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    row-gap: 1rem;
+    flex-direction: column;
+}
 .contactsTitleContainer {
     width: 49.2369%;
     height: 77.0492%;
@@ -36,11 +51,23 @@
     flex-direction: column;
     justify-content: space-between;
 }
+.contactsTitleContainer.en {
+    width: 100%;
+    height: auto;
+    display: flex;
+    row-gap: 1.75rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .contactsTitleSubContainer {
     height: 42.735%;
     width: 100%;
     display: flex;
-
+}
+.contactsTitleSubContainer.en {
+    height: max-content;
+    width: 100%;
+    display: flex;
 }
 .contactsTitle {
     font-size: 6.4rem;
@@ -76,6 +103,17 @@
     align-self: flex-end;
     position: relative;
     width: 49.2369%;
+    height: 78.6885%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+}
+.contactForm.en {
+    justify-self: end;
+    align-self: flex-end;
+    position: relative;
+    width: 100%;
     height: 78.6885%;
     display: flex;
     justify-content: space-between;
@@ -300,7 +338,13 @@
     .titleBoxContacts {
         display: contents;
     }
+    .titleBoxContacts.en {
+        display: contents;
+    }
     .contactsTitleBigBox {
+        display: contents;
+    }
+    .contactsTitleBigBox.en {
         display: contents;
     }
     .contactsTitleContainer {
@@ -320,6 +364,8 @@
         height: 38.89%;
         width: 100%;
         display: flex;
+        flex-wrap: wrap;
+        row-gap: 1em;
         justify-content: space-between;
     }
     .contactsTitle {
@@ -394,7 +440,11 @@
         height: max-content;
         order: 6;
     }
-
+    .contactForm.en {
+        width: 100%;
+        height: max-content;
+        order: 6;
+    }
     .nameFormContainer {
         width: 100%;
     }
