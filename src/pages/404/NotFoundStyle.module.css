@@ -1,4 +1,4 @@
-.not-found-page-container {
+.container {
     margin-top: 15vw;
     height:  100dvh;
     display: flex;
@@ -7,9 +7,10 @@
     flex-direction: column;
     font-weight: 700;
     font-size: 2rem;
+    row-gap: 2rem;
 }
 @media screen and (max-width:768px) {
-    .not-found-page-container {
+    .container {
         width: 89.33%;
         margin: 0 auto;
         margin-top: 9rem;

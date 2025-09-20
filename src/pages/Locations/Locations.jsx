@@ -6,34 +6,56 @@ import PhotoGallery from "../../components/PhotoCards/PhotoGallery";
 import style from "./Locations.module.css"
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import { useTranslation } from "../../hooks/useTranslation";
 
 const Locations = () => {
+    
     const galleryPhotos = [
         {
-            title: "СПИСОК",
-            subtitle: "РЕСТОРАНОВ",
+            title: {ru: "СПИСОК",
+                en: "LIST"
+            },
+            subtitle: {ru: "РЕСТОРАНОВ",
+                en: "RESTRAUNTS"
+            },
             id: "restraunts",
             url: "/images/locations/restaurants.png",
             alt: "Рестораны",
-            description: "Вкус, который запомнится: уникальные блюда и атмосфера наших ресторанов!"
+            description: {ru: "Вкус, который запомнится: уникальные блюда и атмосфера наших ресторанов!",
+                en: "A taste that will be remembered: the unique dishes and atmosphere of our restaurants!"
+            }
         },
         {
-            title: "МАСТЕР  —",
-            subtitle: "КЛАССЫ",
+            title: {ru: "МАСТЕР  —",
+                en: "MASTER  —"
+            },
+            subtitle: {ru: "КЛАССЫ",
+                en: "CLASSES"
+            },
             id: "masterClasses",
             url: "/images/locations/masterClasses.png",
             alt: "Мастер-классы",
-            description: "Освойте новые навыки и вдохновитесь: вместе с нами вы сможете достичь невероятного!"
+            description: {ru: "Освойте новые навыки и вдохновитесь: вместе с нами вы сможете достичь невероятного!",
+                en: "Learn new skills and get inspired: together with us you can achieve incredible things!"
+            }
         },
         {
-            title: "ЭКСКУРСИИ",
-            subtitle: "ПО МУЗЕЮ",
+            title: {ru: "ЭКСКУРСИИ",
+                en: "MUSEUM"
+            },
+            subtitle: {ru: "ПО МУЗЕЮ",
+                en: "TOURS"
+            },
             id: "excursions",
             url: "/images/locations/excursions.png",
             alt: "Экскурсии",
-            description: "Раскройте тайны прошлого в увлекательных экскурсиях по нашему музею!"
+            description: {ru: "Раскройте тайны прошлого в увлекательных экскурсиях по нашему музею!",
+                en: "Discover the secrets of the past on fascinating tours of our museum!"
+            }
         }
+        
     ];
+    const t = useTranslation(galleryPhotos);
     const navigate = useNavigate();
     // Состояние для хранения выбранного индекса
     const [selectedIndex, setSelectedIndex] = useState(0)
@@ -68,7 +90,7 @@ const Locations = () => {
             <div className={style.contentContainer}>
                 <div className={style.titleBlock}>
                     <div className={style.titleWithIcon}>
-                        <h1 className={`${style.title} ${isAnimating ? style.fadeOut : style.fadeIn}`}>{galleryPhotos[displayedIndex].title}</h1>
+                        <h1 className={`${style.title} ${isAnimating ? style.fadeOut : style.fadeIn}`}>{t(galleryPhotos[displayedIndex].title)}</h1>
                         {displayedIndex === 0 && (
                             <div className={`${style.icon} ${isAnimating ? style.fadeOut : style.fadeIn}`}>
                                 <ScaleCrossSlideBracket/>
@@ -87,12 +109,12 @@ const Locations = () => {
                                 <RotatingCross/>
                             </div>
                         )}
-                        <h1 className={`${style.subtitle} ${isAnimating ? style.fadeOut : style.fadeIn}`}>{galleryPhotos[displayedIndex].subtitle}</h1>
+                        <h1 className={`${style.subtitle} ${isAnimating ? style.fadeOut : style.fadeIn}`}>{t(galleryPhotos[displayedIndex].subtitle)}</h1>
                     </div> 
                 </div>
                 <div className={style.textContainer}>
                     <p className={`${style.description} ${isAnimating ? style.fadeOut : style.fadeIn}`}>
-                        {galleryPhotos[displayedIndex].description} 
+                        {t(galleryPhotos[displayedIndex].description)} 
                     </p>
                     <ButtonGoToDesktop text="перейти" action={handleNavigation}/>                        
                 </div>            
