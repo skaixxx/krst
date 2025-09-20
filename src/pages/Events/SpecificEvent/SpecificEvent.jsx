@@ -9,8 +9,10 @@ import clsx from "clsx";
 import useMediaQuery from "../../../components/Header/useMediaQuery";
 import eventsData from "../../../data/events";
 import { useTranslation } from "../../../hooks/useTranslation";
+import SpecificEventTranslation from "./SpecificEvent.Translation.ts";
 function SpecificEvent() {
     const t = useTranslation(eventsData);
+    const t2 = useTranslation(SpecificEventTranslation);
     const isMobile = useMediaQuery('(max-width: 768px)');
     const { id } = useParams();
     const item = eventsData.find((item) => item.id === Number(id));
@@ -24,7 +26,7 @@ function SpecificEvent() {
                 <div className={style.titleContainer}>
                     <div className={style.titleContainerSub1}>
                         <div className={clsx(style.title1, style.title)}>
-                            <p>{item.title1}</p>
+                            <p>{t(item.title1)}</p>
                         </div>
                         {!isMobile && item.id !== 9 &&
                             <div className={style.animation1}><SlidingRotatingCross/></div>
@@ -35,7 +37,7 @@ function SpecificEvent() {
                         <div className={style.animation2}><RotatingCross/></div>
                         }
                         <div className={clsx(style.title2, style.title)}>
-                            <p>{item.title2}</p>
+                            <p>{t(item.title2)}</p>
                         </div>
                         {isMobile && item.id === 9 &&
                             <div className={style.animation1}><SlidingRotatingCross/></div>
@@ -44,22 +46,22 @@ function SpecificEvent() {
 
                 </div>
                 <div className={style.mainInfoBlock}>
-                    <div className={style.paragraph1}><p>{item.paragraph1}</p></div>
+                    <div className={style.paragraph1}><p>{t(item.paragraph1)}</p></div>
                 {isMobile ?
                     <div className={style.datePriceContainer}>
                         <div className={style.dateContainer}>
                             <span className={style.date}>{item.dates}</span>
-                            <span className={style.subText}>Период проведения</span>
+                            <span className={style.subText}>{t2("timeOfEvent")}</span>
                         </div>
                         <div className={style.priceContainer}>
-                            <span className={style.price}>от {item.price} ₽</span>
-                            <span className={style.subText}>Стоимость билета</span>
+                            <span className={style.price}>{t2("ticketPriceTextFrom")} {item.price} ₽</span>
+                            <span className={style.subText}>{t2("ticketPriceText")}</span>
                         </div>
                     </div>
                     :
                      <div className={style.datePriceContainer}>
                         <div className={style.dateContainer}><span className={style.date}>{item.dates}</span></div>
-                        <div className={style.priceContainer}><span className={style.price}>от {item.price} ₽</span></div>
+                        <div className={style.priceContainer}><span className={style.price}>{t2("ticketPriceTextFrom")} {item.price} ₽</span></div>
                     </div>
                 }
                 </div>
@@ -71,10 +73,10 @@ function SpecificEvent() {
                 <div className={style.contentContainer}>
                     <div className={style.paragraph2}>
                         <div className={style.paragraph2Text}>
-                            <p>{item.paragraph2}</p>
-                            <p>{item.paragraph3}</p>
+                            <p>{t(item.paragraph2)}</p>
+                            <p>{t(item.paragraph3)}</p>
                         </div>
-                        <div className={style.btnContainer}><SpecificEventButton text="перейти"/></div>
+                        <div className={style.btnContainer}><SpecificEventButton text={t2("buttonText")}/></div>
                     </div>
                     <div className={style.bigPictureContainer}><img src={item.image} alt="pic" className={style.bigPicture}/></div>
                 </div>
