@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { data, useParams } from "react-router-dom";
 import SpecificEventButton from "../../../components/Buttons/ButtonGoToDesktop";
 import style from "./SpecificLocation.module.css";
 import SlidingRotatingCross from "../../../components/animations/SRCross/SlidingRotatingCross";
@@ -7,18 +7,20 @@ import { useEffect } from "react";
 import NotFound from "../../404/NotFound";
 import clsx from "clsx";
 import useMediaQuery from "../../../components/Header/useMediaQuery";
-import { restraunts } from "../../../data/restraunts";
+import { restaurants } from "../../../data/restaurants";
 import { masterClasses } from "../../../data/masterClasses";
 import { excursions } from "../../../data/excursions";
+import { useTranslation } from "../../../hooks/useTranslation";
 function SpecificLocations() {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
+    const t = useTranslation();
     const isMobile = useMediaQuery('(max-width: 768px)');
     const { id, special } = useParams();
     var item = "";
-    if (id === "restraunts") {
-        item = restraunts.find((item) => item.id === special);
+    if (id === "restaurants") {
+        item = restaurants.find((item) => item.id === special);
     } else if (id === "masterClasses") {
         item = masterClasses.find((item) => item.id === special);
     } else if (id === "excursions") {
@@ -29,6 +31,7 @@ function SpecificLocations() {
     const words = item.title.split(" ");
     const firstWord = words[0];
     const afterWord = words.slice(1).join(" ")
+    
     return (
         <div className={style.specific}>
             {item ? (
@@ -56,21 +59,21 @@ function SpecificLocations() {
 
                 </div>
                 <div className={style.mainInfoBlock}>
-                    <div className={style.paragraph1}><p>{item.text1}</p></div>
+                    <div className={style.paragraph1}><p>{t(item.text1)}</p></div>
                 {isMobile ?
                     <div className={style.datePriceContainer}>
                         <div className={style.dateContainer}>
-                            <span className={style.date}>{item.subText2}</span>
-                            <span className={style.subText}>{item.subText4}</span>
+                            <span className={style.date}>{t(item.subText2)}</span>
+                            <span className={style.subText}>{t(item.subText4)}</span>
                         </div>
                         <div className={style.priceContainer}>
                             <span className={style.price}>{item.price1}</span>
-                            <span className={style.subText}>{item.subText3}</span>
+                            <span className={style.subText}>{t(item.subText3)}</span>
                         </div>
                     </div>
                     :
                      <div className={style.datePriceContainer}>
-                        <div className={style.dateContainer}><span className={style.date}>{item.subText1} {item.subText2}</span></div>
+                        <div className={style.dateContainer}><span className={style.date}>{t(item.subText1)} {t(item.subText2)}</span></div>
                         <div className={style.priceContainer}><span className={style.price}>{item.price1}</span></div>
                     </div>
                 }

@@ -17,12 +17,12 @@ export default function LocationsList() {
     const [isFilterOpen, setIsFilterOpen] = useState(false);
     const isMobile = useMediaQuery('(max-width: 768px)');
     const data = {
-        restraunts: {
+        restaurants: {
             tag: "#ОПИСАНИЕ",
             description: "В КРСТ представлены рестораны на любой вкус — от уютных кафе до премиальных заведений. Здесь вы легко найдете место для деловой встречи, семейного ужина или дружеских посиделок.",
             title: "СПИСОК",
             subtitle: "РЕСТОРАНОВ",
-            picture: `${process.env.PUBLIC_URL}/images/locations/Restraunts/restrauntsMainPhoto.png`,
+            picture: `${process.env.PUBLIC_URL}/images/locations/Restaurants/restrauntsMainPhoto.png`,
             price: "2 500 ₽",
             priceDescription: "Средний чек",
             places: "65",

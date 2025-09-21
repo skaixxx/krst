@@ -1,9 +1,9 @@
-import { restraunts } from "../../data/restraunts";
+import { restaurants } from "../../data/restaurants";
 import { excursions } from "../../data/excursions";
 import { masterClasses } from "../../data/masterClasses";
 export function DataPick(id) {
     const map = {
-        restraunts,
+        restaurants,
         masterClasses,
         excursions,
     }

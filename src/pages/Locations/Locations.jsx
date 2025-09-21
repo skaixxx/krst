@@ -16,9 +16,9 @@ const Locations = () => {
                 en: "LIST"
             },
             subtitle: {ru: "РЕСТОРАНОВ",
-                en: "RESTRAUNTS"
+                en: "OF RESTAURANTS"
             },
-            id: "restraunts",
+            id: "restaurants",
             url: "/images/locations/restaurants.png",
             alt: "Рестораны",
             description: {ru: "Вкус, который запомнится: уникальные блюда и атмосфера наших ресторанов!",
