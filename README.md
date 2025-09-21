@@ -2,7 +2,6 @@
 >Disclaimer: The names of restaurants and companies, as well as images, illustrations, and photo-video content mentioned in the project are provided for reference and illustrative purposes only. They are not associated with this project and do not express support or participation on the part of the specified organizations. All rights belong to their owners.
 #
 >Дисклеймер: Названия ресторанов и компаний, а также изображения, иллюстрации и фото-видео контент упомянутые в проекте, приведены исключительно в справочных и иллюстративных целях. Они не связаны с данным проектом и не выражают поддержки или участия со стороны указанных организаций. Все права принадлежат их владельцам.
->Дисклеймер: Названия ресторанов и компаний, а также изображения, иллюстрации и фото-видео контент упомянутые в проекте, приведены исключительно в справочных и иллюстративных целях. Они не связаны с данным проектом и не выражают поддержки или участия со стороны указанных организаций. Все права принадлежат их владельцам.
 #
 >Path notes:
 - Restaurants changed
