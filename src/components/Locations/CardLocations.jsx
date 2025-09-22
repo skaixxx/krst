@@ -1,11 +1,13 @@
 import { useTranslation } from "../../hooks/useTranslation";
 import ButtonGoToDesktop from "../Buttons/ButtonGoToDesktop"
 import useMediaQuery from "../Header/useMediaQuery"
+import { useAppContext } from "../popup/popupContext";
 import style from "./CardLocations.module.css"
 export default function CardLocations({ data, float, btnText, btnAction }) {
     const varClass = style[`variant${float}`]
     const isMobile = useMediaQuery('(max-width: 768px)');
     const t = useTranslation(data);
+    const {languageState} = useAppContext();
     return (
         <div className={`${style.card} ${varClass}`}>
             <div className={`${style.cardImageContainer} ${varClass}`}>
@@ -18,7 +20,7 @@ export default function CardLocations({ data, float, btnText, btnAction }) {
                 <div className={`${style.cardTagsBox} ${varClass}`}>
                         {data.tags.map((tag, index) => (
                         <div key={index} className={`${style.cardTag} ${varClass}`}>
-                            <p className={style.cardTagText}>{tag.name}</p>
+                            <p className={style.cardTagText}>{t(tag.name)}</p>
                         </div>
                         ))}
                 </div>
@@ -27,12 +29,12 @@ export default function CardLocations({ data, float, btnText, btnAction }) {
                 </div>
                 <div className={style.bottomRow}>
                     <div className={style.cardButtonBox}>
-                        <ButtonGoToDesktop text={btnText} action={btnAction}/>
+                        <ButtonGoToDesktop text={t(btnText)} action={btnAction}/>
                     </div>
                     <div className={`${style.minInfoBox} ${varClass}`}>
                         <div className={`${style.priceBox} ${varClass}`}>
                             <img src={isMobile? data.cardIcon1Mobile:data.cardIcon1Desktop} alt="icon1" className={style.cardIcon}/>
-                            <p className={style.priceText}>{data.price}</p>
+                            <p className={style.priceText}>{t(data.price)}</p>
                         </div>
                         <div className={`${style.subBox} ${varClass}`}>
                             <img src={isMobile? data.cardIcon2Mobile:data.cardIcon2Desktop} alt="icon2" className={style.cardIcon}/>

@@ -4,9 +4,9 @@ import iconClose from '../../assets/filter/close.svg'
 import iconArrowDown from '../../assets/filter/arrow-down.svg'
 
 import IconClose from './IconClose'
+import { useTranslation } from '../../hooks/useTranslation';
 
 export default function Filter({tags, selectedTags, onChange, isOpen, onToggle}) {
-	
 	const togglePopup = () => onToggle(!isOpen);
 	const closePopup = () => onToggle(false);
 

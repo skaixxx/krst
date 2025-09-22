@@ -9,10 +9,12 @@ import { useEffect, useState } from "react";
 import { DataPick } from "../../../components/Locations/DataPick";
 import CardLocations from "../../../components/Locations/CardLocations";
 import useMediaQuery from "../../../components/Header/useMediaQuery";
+import { useTranslation } from "../../../hooks/useTranslation";
 export default function LocationsList() {
     useEffect(() => {
             window.scrollTo(0, 0)
     }, [])
+    const t = useTranslation();
     const [selectedTags, setSelectedTags] = useState([]);
     const [isFilterOpen, setIsFilterOpen] = useState(false);
     const isMobile = useMediaQuery('(max-width: 768px)');
@@ -27,7 +29,9 @@ export default function LocationsList() {
             priceDescription: "Средний чек",
             places: "65",
             placesDescription: "Заведений",
-            buttonText: "забронировать"
+            buttonText: {ru: "забронировать",
+                en: "to book"
+            }
         },
         masterClasses: {
             tag: "#ОПИСАНИЕ",
@@ -39,7 +43,9 @@ export default function LocationsList() {
             priceDescription: "Средний чек",
             places: "15",
             placesDescription: "Мест в группе",
-            buttonText: "записаться"
+            buttonText: {ru: "записаться",
+                en: "sign up"
+            }
         },
         excursions: {
             tag: "#ОПИСАНИЕ",
@@ -51,7 +57,9 @@ export default function LocationsList() {
             priceDescription: "Средняя продолжительность",
             places: "10 +",
             placesDescription: "Уникальных маршрутов",
-            buttonText: "купить"
+            buttonText: {ru: "купить",
+                en: "buy"
+            }
         }
     }
     const { id } = useParams();
@@ -61,7 +69,7 @@ export default function LocationsList() {
         navigate(`/Locations/${id}/${special}`)
     }
     const UniqueTags = [
-    ...new Set(someData.flatMap(obj => obj.tags.map(tag =>  tag.name)))
+    ...new Set(someData.flatMap(obj => obj.tags.map(tag =>  t(tag.name))))
     ];
     const TagGroup = [
         {
@@ -76,7 +84,7 @@ export default function LocationsList() {
     const filteredPlaces = selectedTags.length === 0
     ? someData
     : someData.filter(someData =>
-        someData.tags.some(tagObj => selectedTags.includes(tagObj.name))
+        someData.tags.some(tagObj => selectedTags.includes(t(tagObj.name)))
     );
 
     return (

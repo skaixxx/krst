@@ -11,10 +11,12 @@ import { restaurants } from "../../../data/restaurants";
 import { masterClasses } from "../../../data/masterClasses";
 import { excursions } from "../../../data/excursions";
 import { useTranslation } from "../../../hooks/useTranslation";
+import { useAppContext } from "../../../components/popup/popupContext";
 function SpecificLocations() {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
+    const { languageState } = useAppContext();
     const t = useTranslation();
     const isMobile = useMediaQuery('(max-width: 768px)');
     const { id, special } = useParams();
@@ -67,31 +69,31 @@ function SpecificLocations() {
                             <span className={style.subText}>{t(item.subText4)}</span>
                         </div>
                         <div className={style.priceContainer}>
-                            <span className={style.price}>{item.price1}</span>
+                            <span className={style.price}>{t(item.price1)}</span>
                             <span className={style.subText}>{t(item.subText3)}</span>
                         </div>
                     </div>
                     :
                      <div className={style.datePriceContainer}>
                         <div className={style.dateContainer}><span className={style.date}>{t(item.subText1)} {t(item.subText2)}</span></div>
-                        <div className={style.priceContainer}><span className={style.price}>{item.price1}</span></div>
+                        <div className={style.priceContainer}><span className={style.price}>{t(item.price1)}</span></div>
                     </div>
                 }
                 </div>
                 <div className={style.strokeContainer}>
                     {Object.values(item.iconsInside).map((icon, index) => (
                         <div key={index} className={style.strokeElement}><img src={icon} alt="icon" className={style.strokeElementIcon}/>
-                            <p>{item.subIconsText[index]}</p>
+                            <p>{languageState.language === "ru" ? item.subIconsTextRU[index] : item.subIconsTextEN[index]}</p>
                         </div>
                     ))}
                 </div>
                 <div className={style.contentContainer}>
                     <div className={style.paragraph2}>
                         <div className={style.paragraph2Text}>
-                            <p>{item.insideText1}</p>
-                            <p>{item.insideText2}</p>
+                            <p>{t(item.insideText1)}</p>
+                            <p>{t(item.insideText2)}</p>
                         </div>
-                        <div className={style.btnContainer}><SpecificEventButton text="перейти"/></div>
+                        <div className={style.btnContainer}><SpecificEventButton text={t(item.insideBtnText)}/></div>
                     </div>
                     <div className={style.bigPictureContainer}><img src={item.image} alt="pic" className={style.bigPicture}/></div>
                 </div>
