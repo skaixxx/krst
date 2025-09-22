@@ -30,7 +30,7 @@ function SpecificLocations() {
     } else {
         return <NotFound/>
     }
-    const words = item.title.split(" ");
+    const words = t(item.title).split(" ");
     const firstWord = words[0];
     const afterWord = words.slice(1).join(" ")
     

@@ -15,7 +15,7 @@ export default function CardLocations({ data, float, btnText, btnAction }) {
             </div>
             <div className={`${style.cardContent} ${varClass}`}>
                 <div className={style.cardTitleBox}>
-                    <p className={`${style.cardTitle} ${varClass}`}>{data.title}</p>
+                    <p className={`${style.cardTitle} ${varClass}`}>{t(data.title)}</p>
                 </div>
                 <div className={`${style.cardTagsBox} ${varClass}`}>
                         {data.tags.map((tag, index) => (

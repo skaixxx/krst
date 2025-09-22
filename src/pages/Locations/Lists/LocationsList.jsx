@@ -20,43 +20,49 @@ export default function LocationsList() {
     const isMobile = useMediaQuery('(max-width: 768px)');
     const data = {
         restaurants: {
-            tag: "#ОПИСАНИЕ",
-            description: "В КРСТ представлены рестораны на любой вкус — от уютных кафе до премиальных заведений. Здесь вы легко найдете место для деловой встречи, семейного ужина или дружеских посиделок.",
-            title: "СПИСОК",
-            subtitle: "РЕСТОРАНОВ",
+            tag: {ru: "#ОПИСАНИЕ", en: "#DESCRIPTION"},
+            description: {ru: "В КРСТ представлены рестораны на любой вкус — от уютных кафе до премиальных заведений. Здесь вы легко найдете место для деловой встречи, семейного ужина или дружеских посиделок.",
+                en: "KRST offers restaurants for every taste, from cozy cafes to premium establishments. Here you can easily find a place for a business meeting, a family dinner or friendly gatherings."
+            },
+            title: {ru: "СПИСОК", en: "LIST"},
+            subtitle: {ru: "РЕСТОРАНОВ", en: "OF RESTAURANTS"},
             picture: `${process.env.PUBLIC_URL}/images/locations/Restaurants/restrauntsMainPhoto.png`,
-            price: "2 500 ₽",
-            priceDescription: "Средний чек",
+            price: {ru: "2 500 ₽", en: "2 500 ₽"},
+            priceDescription: {ru: "Средний чек", en: "Average receipt"},
             places: "65",
-            placesDescription: "Заведений",
+            placesDescription: {ru: "Заведений", en: "Establishments"},
             buttonText: {ru: "забронировать",
                 en: "to book"
             }
         },
         masterClasses: {
-            tag: "#ОПИСАНИЕ",
-            description: "Бывшая тюрьма, ставшая творческим пространством, теперь открыта для мастер-классов по искусству. Здесь, среди исторических стен, профессиональные художники делятся своим опытом, помогая каждому раскрыть творческий потенциал.",
-            title: "МАСТЕР  —",
-            subtitle: "КЛАССЫ",
+            tag: {ru: "#ОПИСАНИЕ", en: "#DESCRIPTION"},
+            description: {ru: "Бывшая тюрьма, ставшая творческим пространством, теперь открыта для мастер-классов по искусству. Здесь, среди исторических стен, профессиональные художники делятся своим опытом, помогая каждому раскрыть творческий потенциал.",
+                en: "The former prison, which has become a creative space, is now open for art workshops. Here, among the historical walls, professional artists share their experiences, helping everyone unlock their creative potential."
+            },
+            title: {ru: "МАСТЕР  —", en: "MASTER  —"},
+            subtitle: {ru: "КЛАССЫ", en: "CLASSES"},
             picture: `${process.env.PUBLIC_URL}/images/locations/MasterClasses/MasterClassesMainPhoto.png`,
-            price: "1 500 ₽",
-            priceDescription: "Средний чек",
+            price: {ru: "1 500 ₽", en: "1 500 ₽"},
+            priceDescription: {ru: "Средний чек", en: "Average receipt"},
             places: "15",
-            placesDescription: "Мест в группе",
+            placesDescription: {ru: "Мест в группе", en: "Places in the group"},
             buttonText: {ru: "записаться",
                 en: "sign up"
             }
         },
         excursions: {
-            tag: "#ОПИСАНИЕ",
-            description: "КРСТ — уникальное пространство, где история встречается с современным искусством. Бывшая тюрьма, сохранившая дух прошлого, теперь центр творчества и культуры. Наши экскурсии раскрывают истории этих стен через искусство, архитектуру и городские легенды.",
-            title: "ЭКСКУРСИИ",
-            subtitle: "ПО МУЗЕЮ",
+            tag: {ru: "#ОПИСАНИЕ", en: "#DESCRIPTION"},
+            description: {ru: "КРСТ — уникальное пространство, где история встречается с современным искусством. Бывшая тюрьма, сохранившая дух прошлого, теперь центр творчества и культуры. Наши экскурсии раскрывают истории этих стен через искусство, архитектуру и городские легенды.",
+                en: "KRST is a unique space where history meets modern art. A former prison that preserved the spirit of the past, it is now a center of creativity and culture. Our guided tours reveal the stories of these walls through art, architecture, and urban legends."
+            },
+            title: {ru: "ЭКСКУРСИИ", en: "MUSEUM"},
+            subtitle: {ru: "ПО МУЗЕЮ", en: "TOURS"},
             picture: `${process.env.PUBLIC_URL}/images/locations/Excursions/ExcursionsMainPhoto.png`,
-            price: "4 часа",
-            priceDescription: "Средняя продолжительность",
+            price: {ru: "4 часа", en: "4 hours"},
+            priceDescription: {ru: "Средняя продолжительность", en: "Average duration"},
             places: "10 +",
-            placesDescription: "Уникальных маршрутов",
+            placesDescription: {ru: "Уникальных маршрутов", en: "Unique routes"},
             buttonText: {ru: "купить",
                 en: "buy"
             }
@@ -93,7 +99,7 @@ export default function LocationsList() {
                 {isMobile ? 
                     <div className={style.titleRow1}>
                         <p className={clsx(style.titleText1, style.titleText)}>
-                            {current.title}
+                            {t(current.title)}
                         </p>
                         {current.title === "СПИСОК" &&
                             <div className={style.titleAnimationContainer1}>
@@ -105,7 +111,7 @@ export default function LocationsList() {
                 :
                     <div className={style.titleRow1}>
                         <p className={clsx(style.titleText1, style.titleText)}>
-                            {current.title}
+                            {t(current.title)}
                         </p>
                         <div className={style.titleAnimationContainer1}>
                             <ScaleSlideDotsInverted/>
@@ -116,9 +122,9 @@ export default function LocationsList() {
             
                 <div className={style.titleRow2}>
                     <p className={clsx(style.titleText2, style.titleText)}>
-                        {current.subtitle}
+                        {t(current.subtitle)}
                     </p>
-                    {(current.subtitle === "КЛАССЫ" || current.title === "ЭКСКУРСИИ") &&
+                    {(t(current.subtitle) === "КЛАССЫ" || t(current.subtitle) === "ЭКСКУРСИИ") &&
                         <div className={style.titleAnimationContainer2}>
                             <ScaleSlideDotsInverted/>
                         </div>
@@ -130,7 +136,7 @@ export default function LocationsList() {
                         <RotatingCross/>
                     </div>
                     <p className={clsx(style.titleText2, style.titleText)}>
-                        {current.subtitle}
+                        {t(current.subtitle)}
                     </p>
                 </div>
               }  
@@ -141,17 +147,17 @@ export default function LocationsList() {
             </div>
             <div className={style.descriptionRow}>
                 <div className={style.descriptionBox1}>
-                    <p className={style.descriptionTitle}>{current.tag}</p>
-                    <p className={style.descriptionText}>{current.description}</p>
+                    <p className={style.descriptionTitle}>{t(current.tag)}</p>
+                    <p className={style.descriptionText}>{t(current.description)}</p>
                 </div>
                 <div className={style.descriptionRowCol1}>
                     <div className={style.descriptionBox2}>
-                        <p className={style.descriptionPrice}>{current.price}</p>
-                        <p className={style.descriptionPriceSub}>{current.priceDescription}</p>
+                        <p className={style.descriptionPrice}>{t(current.price)}</p>
+                        <p className={style.descriptionPriceSub}>{t(current.priceDescription)}</p>
                     </div>
                     <div className={style.descriptionBox3}>
                         <p className={style.descriptionPlaces}>{current.places}</p>
-                        <p className={style.descriptionPlacesSub}>{current.placesDescription}</p>
+                        <p className={style.descriptionPlacesSub}>{t(current.placesDescription)}</p>
                     </div>
                 </div>
             </div>

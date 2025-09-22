@@ -7,9 +7,19 @@ import IconClose from './IconClose'
 import { useTranslation } from '../../hooks/useTranslation';
 
 export default function Filter({tags, selectedTags, onChange, isOpen, onToggle}) {
+	const filterText = {
+		ru: {
+			placeholder: "фильтры",
+			menuTitle: "ФИЛЬТРЫ"
+		},
+		en: {
+			placeholder: "filters",
+			menuTitle: "FILTERS"
+		}
+	}
 	const togglePopup = () => onToggle(!isOpen);
 	const closePopup = () => onToggle(false);
-
+	const t = useTranslation(filterText);
 	const toggleTag = (tag, e) => {
 		
 		e.stopPropagation();
@@ -26,7 +36,6 @@ export default function Filter({tags, selectedTags, onChange, isOpen, onToggle})
 	const clearFilter = () => {
 		onChange([]);
 	};
-
 	return (
 		<div onClick={togglePopup} className={style.filter}>
 			<div className={style.filterTags}>
@@ -43,7 +52,7 @@ export default function Filter({tags, selectedTags, onChange, isOpen, onToggle})
 						</div>
 					))
 				) : (
-					<div className={style.filterPlaceholder}>фильтры</div>
+					<div className={style.filterPlaceholder}>{t("placeholder")}</div>
 				)}
 			</div>
 			<div className={style.filterActions}>
@@ -61,7 +70,7 @@ export default function Filter({tags, selectedTags, onChange, isOpen, onToggle})
 			{isOpen && (
 				<div className={style.filterMenu}>
 					<div className={style.filterMenuHeader}>
-						<h2 className={style.filterMenuTitle}>Фильтры</h2>
+						<h2 className={style.filterMenuTitle}>{t("menuTitle")}</h2>
 						<button className={style.filterMenuCloseBtn} onClick={closePopup}>
 							<img src={iconClose} alt="" />
 						</button>

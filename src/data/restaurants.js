@@ -6,7 +6,7 @@ export const restaurants = [
     {
 		id: "nightly",
 		special: "nightly",
-		title: 'NIGHTLY',
+		title: {ru: "NIGHTLY", en: "NIGHTLY"},
 		image: `${process.env.PUBLIC_URL}/images/locations/Restaurants/night.png`,
 		text: {ru: "Nightly — это футуристичный ресторан, в котором современный дизайн и инновационные технологии создают атмосферу будущего.",
 			en: "Nightly is a futuristic restaurant where modern design and innovative technologies create an atmosphere of the future."
@@ -70,7 +70,7 @@ export const restaurants = [
 	{
 		id: "georgian",
 		special: "georgian",
-		title: 'GK',
+		title: {ru: "GK", en: "GK"},
 		image: `${process.env.PUBLIC_URL}/images/locations/Restaurants/Georgian.png`,
 		text: 'GK — традиционный ресторан грузинской кухни, где каждый гость может ощутить настоящий колорит Грузии.',
 		subText1: {ru: "доступно",
@@ -127,7 +127,7 @@ export const restaurants = [
 	{
 		id: "green",
 		special: "green",
-		title: 'GREENX',
+		title: {ru: "GREENX", en: "GREENX"},
 		image: `${process.env.PUBLIC_URL}/images/locations/Restaurants/Green.png`,
 		text: 'GREENX — ресторан, где природа встречается с гастрономией. ',
 		subText1: {ru: "доступно",
@@ -184,7 +184,7 @@ export const restaurants = [
 	{
 		id: "vegi",
 		special: "vegi",
-		title: 'VEGI',
+		title: {ru: "VEGI", en: "VEGI"},
 		image: `${process.env.PUBLIC_URL}/images/locations/Restaurants/vegetablesOnly.png`,
 		text: 'VEGI — ресторан, созданный специально для вегетарианцев и тех, кто ценит лёгкую и полезную пищу.',
 		subText1: {ru: "доступно",
@@ -242,7 +242,7 @@ export const restaurants = [
 	{
 		id: "asian",
 		special: "asian",
-		title: 'ASIAN D',
+		title: {ru: "ASIAN D", en: "ASIAN D"},
 		image: `${process.env.PUBLIC_URL}/images/locations/Restaurants/Asian.png`,
 		text: 'ASIAN D — ресторан высокой азиатской кухни, оформленный в классическом стиле Востока. ',
 		subText1: {ru: "доступно",
@@ -298,7 +298,7 @@ export const restaurants = [
 	{
 		id: "default",
 		special: "default",
-		title: 'DEFAULT',
+		title: {ru: "DEFAULT", en: "DEFAULT"},
 		image: `${process.env.PUBLIC_URL}/images/locations/Restaurants/DefaultEu.png`,
 		text: 'Default — классический ресторан европейской кухни, где подают знакомые и любимые блюда в современном исполнении. Интерьер выполнен в универсальном стиле, который подойдёт как для деловых встреч, так и для семейных ужинов. Отличный выбор для тех, кто ценит проверенные вкусы и комфорт.',
 		subText1: {ru: "доступно",
