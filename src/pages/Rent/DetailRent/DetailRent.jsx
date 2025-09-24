@@ -1,27 +1,21 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from "react";
-import { places } from '../../../data/places';
+import places from '../../../data/places';
 import style from "./detailRent.module.css";
 import Card from "../../../components/Card/Сard";
 import ScaleSlideDotsInverted from '../../../components/animations/ScaleSlideDots/ScaleSlideDotsInverted';
 import Filter from '../../../components/Filter/Filter';
-
-
 function DetailRent() {
-	
 	const [selectedTags, setSelectedTags] = useState([]);
 	const [isFilterOpen, setIsFilterOpen] = useState(false);
-
 	const { id } = useParams();
 	const navigate = useNavigate();
 	const goToPlace = (placeId) => {
 		navigate(`/rent/${id}/${placeId}`);
 	};
-
 	useEffect(() => {
         window.scrollTo(0, 0)
 	}, [])
-
 	const tagGroups = [
 		{
 			title: 'Удобства',
@@ -40,13 +34,11 @@ function DetailRent() {
 			]
 		}
 	];
-
 	const filteredPlaces = selectedTags.length === 0
   	? places
   	: places.filter(place =>
     	place.tags.some(tagObj => selectedTags.includes(tagObj.name))
     );
-	
     return (
 		<div className={style.detailRent}>
 			<div className={style.detailRentContainer}>

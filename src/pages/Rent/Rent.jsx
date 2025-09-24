@@ -67,7 +67,7 @@ function Rent() {
                             </div>
                             <div className={style.cardArea}>
                                 <div className={style.cardAreaInner}>
-                                   <span>{t("totalArea")}</span>
+                                   <span>{t("totalArea1")}</span>
                                 </div>
                             </div>
                         </div>

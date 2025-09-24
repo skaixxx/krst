@@ -1,7 +1,9 @@
+import { useTranslation } from "../../hooks/useTranslation";
 import ButtonGoToDesktop from "../Buttons/ButtonGoToDesktop";
 import style from "./card.module.css";
 
-export default function Card({ data, reverse, btnText, btnAction }) {	
+export default function Card({ data, reverse, btnText, btnAction }) {
+	const t = useTranslation();	
 	return (
 		<div className={`${style.card} ${reverse ? style.cardReverse : ''}`}>
 			<div className={style.cardImg}>
@@ -10,15 +12,15 @@ export default function Card({ data, reverse, btnText, btnAction }) {
 			<div className={style.cardContent}>
 				<div className={style.cardContentTop}>
 					<div className={style.cardContentHeader}>
-						<h3 className={style.cardTitle}>{data.title}</h3>
+						<h3 className={style.cardTitle}>{t(data.title)}</h3>
 
 						<div className={style.cardTags}>
 							{data.tags.map((tag, index) => (
-								<div key={index} className={style.cardTag}>{tag.name}</div>
+								<div key={index} className={style.cardTag}>{t(tag.name)}</div>
 							))}
 						</div>
 					</div>
-					<p className={style.cardDescription} dangerouslySetInnerHTML={{ __html: data.text }}></p>
+					<p className={style.cardDescription}>{t(data.text)}</p>
 				</div>
 				
 				<div className={style.cardContentBottom}>

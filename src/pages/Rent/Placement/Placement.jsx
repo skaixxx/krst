@@ -1,23 +1,19 @@
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
-import { places } from "../../../data/places.js"
-
+import places from "../../../data/places.js"
 import style from "./placement.module.css"
-
 import Slider from "../../../components/Slider/Slider.jsx";
 import ButtonGoToDesktop from "../../../components/Buttons/ButtonGoToDesktop";
-
 import SlidingRotatingCross from '../../../components/animations/SRCross/SlidingRotatingCross';
 import ScaleSlideDotsInverted from "../../../components/animations/ScaleSlideDots/ScaleSlideDotsInverted";
-
 import calendarIcon from "../../../assets/residence/calendar.svg"
 import phoneIcon from "../../../assets/residence/phoneIcon.svg"
 import profileIcon from "../../../assets/residence/profileIcon.svg"
 import emailIcon from "../../../assets/residence/letterIcon.svg"
-
+import { useTranslation } from "../../../hooks/useTranslation.jsx";
 function Placement() {
 	const { place } = useParams();
-
+	const t = useTranslation();
 	const inputFocus = (current) => {
         current.target.placeholder = '';
 	};
@@ -26,20 +22,17 @@ function Placement() {
             current.target.placeholder = current.target.dataset.placeholder || '';
         } 
 	};
-
 	const placement = places.find((item) => item.id === place);
-
 	useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
-	
 	return (
 		<div className={style.placement}>
 			<div className={style.placementContainer}>
 				<div className={style.placementHeader}>
 					<div className={style.placementTitleWrap}>
 						<h1 className={style.placementTitleTop}>
-							{placement.title}
+							{t(placement.title)}
 						</h1>
 						<div className={style.placementTitleIconsTop}>
 							<ScaleSlideDotsInverted/>
@@ -52,7 +45,6 @@ function Placement() {
 						<div className={style.placementTitleBottom}>{placement.area}</div>
 					</div>
 				</div>
-
 				<div className={style.placementBlock}>
 					<div className={style.placementBlockLeft}>
 						<Slider list={placement.images}></Slider>
@@ -60,17 +52,17 @@ function Placement() {
 					<div className={style.placementBlockRight}>
 						<div className={style.placementBlockRightItem}>
 							<h3 className={style.placementLabel}>
-								<span>{placement.detail.title}</span>
-								<span>{placement.detail.place}</span>
+								<span>{t(placement.detail.title)}</span>
+								<span>{t(placement.detail.place)}</span>
 							</h3>
-							<p>{placement.detail.text}</p>
+							<p>{t(placement.detail.text)}</p>
 						</div>
 						<div className={style.placementBlockRightItem}>
 							<div className={style.specList}>
 								{placement.specs.map((item, index) => (
 									<div key={index} className={style.specItem}>
 										<div className={style.specValue}>{item.value}</div>
-										<div className={style.specLabel}>{item.label}</div>
+										<div className={style.specLabel}>{t(item.label)}</div>
 									</div>
 								))}
 							</div>
@@ -82,67 +74,66 @@ function Placement() {
 					</div>
 				</div>
 			</div>
-
 			<div className={style.placementContainer}>
-				<div className={`rollingStroke-container ${style.rollingStrokeContainer}`}>
-					<div className={`rollingStroke1 ${style.rollingStroke1}`}>
-						<div className="rolling-ticker">
-							<div className={`rol-element ${style.rolElement}`}><span>ЗВУКОВАЯ СИСТЕМА</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ЗЕРКАЛА</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ВЫСОКИЕ ПОТОЛКИ</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ЭКРАН</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>КОНДИЦИОНЕР</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>WI — FI</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ПРОЕКТОР</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>КОФЕМАШИНА</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ЖИВЫЕ РАСТЕНИЯ</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>БИБЛИОТЕКА</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ЛОФТ-ИНТЕРЬЕР</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ФОТОЗОНА</span></div>
+				<div className={style.rollingStrokeContainer}>
+					<div className={style.rollingStroke1}>
+						<div className={style.rollingTicker}>
+							<div className={style.rolElement}><span>ЗВУКОВАЯ СИСТЕМА</span></div>
+							<div className={style.rolElement}><span>ЗЕРКАЛА</span></div>
+							<div className={style.rolElement}><span>ВЫСОКИЕ ПОТОЛКИ</span></div>
+							<div className={style.rolElement}><span>ЭКРАН</span></div>
+							<div className={style.rolElement}><span>КОНДИЦИОНЕР</span></div>
+							<div className={style.rolElement}><span>WI — FI</span></div>
+							<div className={style.rolElement}><span>ПРОЕКТОР</span></div>
+							<div className={style.rolElement}><span>КОФЕМАШИНА</span></div>
+							<div className={style.rolElement}><span>ЖИВЫЕ РАСТЕНИЯ</span></div>
+							<div className={style.rolElement}><span>БИБЛИОТЕКА</span></div>
+							<div className={style.rolElement}><span>ЛОФТ-ИНТЕРЬЕР</span></div>
+							<div className={style.rolElement}><span>ФОТОЗОНА</span></div>
 						</div>
-						<div className="rolling-ticker">
-							<div className={`rol-element ${style.rolElement}`}><span>ЗВУКОВАЯ СИСТЕМА</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ЗЕРКАЛА</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ВЫСОКИЕ ПОТОЛКИ</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ЭКРАН</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>КОНДИЦИОНЕР</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>WI — FI</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ПРОЕКТОР</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>КОФЕМАШИНА</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ЖИВЫЕ РАСТЕНИЯ</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>БИБЛИОТЕКА</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ЛОФТ-ИНТЕРЬЕР</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ФОТОЗОНА</span></div>
+						<div className={style.rollingTicker}>
+							<div className={style.rolElement}><span>ЗВУКОВАЯ СИСТЕМА</span></div>
+							<div className={style.rolElement}><span>ЗЕРКАЛА</span></div>
+							<div className={style.rolElement}><span>ВЫСОКИЕ ПОТОЛКИ</span></div>
+							<div className={style.rolElement}><span>ЭКРАН</span></div>
+							<div className={style.rolElement}><span>КОНДИЦИОНЕР</span></div>
+							<div className={style.rolElement}><span>WI — FI</span></div>
+							<div className={style.rolElement}><span>ПРОЕКТОР</span></div>
+							<div className={style.rolElement}><span>КОФЕМАШИНА</span></div>
+							<div className={style.rolElement}><span>ЖИВЫЕ РАСТЕНИЯ</span></div>
+							<div className={style.rolElement}><span>БИБЛИОТЕКА</span></div>
+							<div className={style.rolElement}><span>ЛОФТ-ИНТЕРЬЕР</span></div>
+							<div className={style.rolElement}><span>ФОТОЗОНА</span></div>
 						</div>
 					</div>
-					<div className={`rollingStroke2 ${style.rollingStroke2}`}>
-						<div className="rolling-ticker">
-							<div className={`rol-element ${style.rolElement}`}><span>ЗВУКОВАЯ СИСТЕМА</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ЗЕРКАЛА</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ВЫСОКИЕ ПОТОЛКИ</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ЭКРАН</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>КОНДИЦИОНЕР</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>WI — FI</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ПРОЕКТОР</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>КОФЕМАШИНА</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ЖИВЫЕ РАСТЕНИЯ</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>БИБЛИОТЕКА</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ЛОФТ-ИНТЕРЬЕР</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ФОТОЗОНА</span></div>
+					<div className={style.rollingStroke2}>
+						<div className={style.rollingTicker}>
+							<div className={style.rolElement}><span>ЗВУКОВАЯ СИСТЕМА</span></div>
+							<div className={style.rolElement}><span>ЗЕРКАЛА</span></div>
+							<div className={style.rolElement}><span>ВЫСОКИЕ ПОТОЛКИ</span></div>
+							<div className={style.rolElement}><span>ЭКРАН</span></div>
+							<div className={style.rolElement}><span>КОНДИЦИОНЕР</span></div>
+							<div className={style.rolElement}><span>WI — FI</span></div>
+							<div className={style.rolElement}><span>ПРОЕКТОР</span></div>
+							<div className={style.rolElement}><span>КОФЕМАШИНА</span></div>
+							<div className={style.rolElement}><span>ЖИВЫЕ РАСТЕНИЯ</span></div>
+							<div className={style.rolElement}><span>БИБЛИОТЕКА</span></div>
+							<div className={style.rolElement}><span>ЛОФТ-ИНТЕРЬЕР</span></div>
+							<div className={style.rolElement}><span>ФОТОЗОНА</span></div>
 						</div>
-						<div className="rolling-ticker">
-							<div className={`rol-element ${style.rolElement}`}><span>ЗВУКОВАЯ СИСТЕМА</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ЗЕРКАЛА</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ВЫСОКИЕ ПОТОЛКИ</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ЭКРАН</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>КОНДИЦИОНЕР</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>WI — FI</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ПРОЕКТОР</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>КОФЕМАШИНА</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ЖИВЫЕ РАСТЕНИЯ</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>БИБЛИОТЕКА</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ЛОФТ-ИНТЕРЬЕР</span></div>
-							<div className={`rol-element ${style.rolElement}`}><span>ФОТОЗОНА</span></div>
+						<div className={style.rollingTicker}>
+							<div className={style.rolElement}><span>ЗВУКОВАЯ СИСТЕМА</span></div>
+							<div className={style.rolElement}><span>ЗЕРКАЛА</span></div>
+							<div className={style.rolElement}><span>ВЫСОКИЕ ПОТОЛКИ</span></div>
+							<div className={style.rolElement}><span>ЭКРАН</span></div>
+							<div className={style.rolElement}><span>КОНДИЦИОНЕР</span></div>
+							<div className={style.rolElement}><span>WI — FI</span></div>
+							<div className={style.rolElement}><span>ПРОЕКТОР</span></div>
+							<div className={style.rolElement}><span>КОФЕМАШИНА</span></div>
+							<div className={style.rolElement}><span>ЖИВЫЕ РАСТЕНИЯ</span></div>
+							<div className={style.rolElement}><span>БИБЛИОТЕКА</span></div>
+							<div className={style.rolElement}><span>ЛОФТ-ИНТЕРЬЕР</span></div>
+							<div className={style.rolElement}><span>ФОТОЗОНА</span></div>
 						</div>
 					</div>
 				</div>
@@ -179,5 +170,4 @@ function Placement() {
 		</div>
 	)
 }
-
 export default Placement;

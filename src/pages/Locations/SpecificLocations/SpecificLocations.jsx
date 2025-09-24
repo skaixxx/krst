@@ -1,4 +1,4 @@
-import { data, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import SpecificEventButton from "../../../components/Buttons/ButtonGoToDesktop";
 import style from "./SpecificLocation.module.css";
 import SlidingRotatingCross from "../../../components/animations/SRCross/SlidingRotatingCross";

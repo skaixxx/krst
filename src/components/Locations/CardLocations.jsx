@@ -1,13 +1,11 @@
 import { useTranslation } from "../../hooks/useTranslation";
 import ButtonGoToDesktop from "../Buttons/ButtonGoToDesktop"
 import useMediaQuery from "../Header/useMediaQuery"
-import { useAppContext } from "../popup/popupContext";
 import style from "./CardLocations.module.css"
 export default function CardLocations({ data, float, btnText, btnAction }) {
     const varClass = style[`variant${float}`]
     const isMobile = useMediaQuery('(max-width: 768px)');
     const t = useTranslation(data);
-    const {languageState} = useAppContext();
     return (
         <div className={`${style.card} ${varClass}`}>
             <div className={`${style.cardImageContainer} ${varClass}`}>
