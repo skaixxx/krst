@@ -1,35 +1,39 @@
 import { Link } from "react-router-dom";
 import style from "./rent.module.css"
 import ScaleSlideBrackets from "../../components/animations/ScaleSlideBracketsToRight/ScaleSlideBracketsToRight"
-
+import { useTranslation } from "../../hooks/useTranslation";
+import RentTranslation from "./Rent.translation";
+import TextSlicer from "../../components/TextSlicer/TextSlicer";
 function Rent() {
+    const t = useTranslation(RentTranslation);
+
     return (
         <div className={style.rentPage}>
             <div className={style.rentPageContainer}>
                 <h1 className={style.rentPageTitle}>
-                    <span>
-                        АРЕНДА 
+                    <div className={style.titleRow1}>
+                        <p className={style.titleText1}>{t("titleText1")}</p>
                         <div className={style.rentPageTitleIconMobile}>
                             <ScaleSlideBrackets/>
                         </div>
-                        <span> У&nbsp;НАС</span>
+                        
                         <div className={style.rentPageTitleIcon}>
                             <ScaleSlideBrackets/>
                         </div>
-                    </span>
-                    <span> ЛЕГКО И БЫСТРО</span>
+                    </div>
+                    <span>{t("titleText2")}</span>
                 </h1>
 
                 <div className={style.rentPageBlock}>
                     <img className={style.rentPageBlockImg} src={`${process.env.PUBLIC_URL}/images/rent/1.jpg`} alt="" />
                     <div className={style.rentPageBlockRow}>
                         <div className={style.rentPageBlockItem}>
-                            <h3 className={style.rentPageBlockItemTitle}>#преимущества</h3>
-                            <p className={style.rentPageBlockItemText}>Аренда помещения в общественном пространстве КРСТ — это уникальная возможность для вашего бизнеса, творчества или мероприятий.</p>
+                            <h3 className={style.rentPageBlockItemTitle}>{t("hashtag1")}</h3>
+                            <p className={style.rentPageBlockItemText}>{t("hashtag1Text")}</p>
                         </div>
                         <div className={style.rentPageBlockItem}>
-                            <h3 className={style.rentPageBlockItemTitle}>#среда</h3>
-                            <p className={style.rentPageBlockItemText}>Мы создали идеальную среду, где комфорт и функциональность сочетаются с вдохновением и инновациями.</p>
+                            <h3 className={style.rentPageBlockItemTitle}>{t("hashtag2")}</h3>
+                            <p className={style.rentPageBlockItemText}>{t("hashtag2Text")}</p>
                         </div>
                     </div>
                 </div>
@@ -38,15 +42,15 @@ function Rent() {
             <div className={style.specificEventStrokeContainer}>
                 <div className={style.specificEventStrokeElement}>
                     <span className={style.specificEventStrokeTerm}>4,17</span>
-                    <p>гектара<br/> общая площадь</p>
+                    <TextSlicer text={t("squareText")} ratios={[0.33, 0.67]}/>
                 </div>
                 <div className={style.specificEventStrokeElement}>
                     <span className={style.specificEventStrokeTerm}>50</span>
-                    <p>кол-во<br/> помещений</p>
+                    <TextSlicer text={t("apCountsText")} ratios={[0.33, 0.67]}/>
                 </div>
                 <div className={style.specificEventStrokeElement}>
                     <span className={style.specificEventStrokeTerm}>16</span>
-                    <p>кол-во<br/> зданий</p>
+                    <TextSlicer text={t("buildCountsText")} ratios={[0.33, 0.67]}/>
                 </div>
             </div>
 
@@ -59,11 +63,11 @@ function Rent() {
                         <div className={style.cardContent}>
                             <div className={style.cardHeader}>
                                 <div className={style.cardNumber}>1</div>
-                                <div className={style.cardTitle}>кулинарный корпус</div>
+                                <div className={style.cardTitle}>{t("culinaryBuilding")}</div>
                             </div>
                             <div className={style.cardArea}>
                                 <div className={style.cardAreaInner}>
-                                    общая площадь <span>44 839 м²</span>
+                                   <span>{t("totalArea")}</span>
                                 </div>
                             </div>
                         </div>
@@ -75,11 +79,11 @@ function Rent() {
                         <div className={style.cardContent}>
                             <div className={style.cardHeader}>
                                 <div className={style.cardNumber}>2</div>
-                                <div className={style.cardTitle}>творческий центр</div>
+                                <div className={style.cardTitle}>{t("творческий центр")}</div>
                             </div>
                             <div className={style.cardArea}>
                                 <div className={style.cardAreaInner}>
-                                    общая площадь <span>7 320 м²</span></div>
+                                   <span>{t("totalArea2")}</span></div>
                                 </div>
                         </div>
                     </Link>
@@ -90,11 +94,11 @@ function Rent() {
                         <div className={style.cardContent}>
                             <div className={style.cardHeader}>
                                 <div className={style.cardNumber}>3</div>
-                                <div className={style.cardTitle}>территория движения</div>
+                                <div className={style.cardTitle}>{t("moveArea")}</div>
                             </div>
                             <div className={style.cardArea}>
                                 <div className={style.cardAreaInner}>
-                                    общая площадь <span>8 540 м²</span></div>
+                                    <span>{t("totalArea3")}</span></div>
                                 </div>
                         </div>
                     </Link>
@@ -105,11 +109,11 @@ function Rent() {
                         <div className={style.cardContent}>
                             <div className={style.cardHeader}>
                                 <div className={style.cardNumber}>4</div>
-                                <div className={style.cardTitle}>центр развития</div>
+                                <div className={style.cardTitle}>{t("developmentCenter")}</div>
                             </div>
                             <div className={style.cardArea}>
                                 <div className={style.cardAreaInner}>
-                                    общая площадь <span>5 360 м²</span></div>
+                                    <span>{t("totalArea4")}</span></div>
                                 </div>
                         </div>
                     </Link>

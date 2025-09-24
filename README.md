@@ -1,9 +1,10 @@
-# [КРСТ | KRST  v.0.9.0](https://skaixxx.github.io/krst/)
+# [КРСТ | KRST  v.0.9.1](https://skaixxx.github.io/krst/)
 >Disclaimer: The names of restaurants and companies, as well as images, illustrations, and photo-video content mentioned in the project are provided for reference and illustrative purposes only. They are not associated with this project and do not express support or participation on the part of the specified organizations. All rights belong to their owners.
 #
 >Дисклеймер: Названия ресторанов и компаний, а также изображения, иллюстрации и фото-видео контент упомянутые в проекте, приведены исключительно в справочных и иллюстративных целях. Они не связаны с данным проектом и не выражают поддержки или участия со стороны указанных организаций. Все права принадлежат их владельцам.
 #
 >Path notes:
+- Rent translation is 1/4
 - Locations page was fully translated
 - Restaurants changed, they was translated
 - Events page fully translated
@@ -19,6 +20,7 @@
 - Now PopUp works on Residency and Contacts page with input check and PopUp form can accept JSX and render it.
 #
 >Обновление:
+- Аренда переведена на 1/4
 - Локации полностью переведены
 - Изменены рестораны, выполнен их перевод
 - Мероприятия переведены
